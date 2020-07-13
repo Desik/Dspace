@@ -1,0 +1,31 @@
+2020-06-30 01:15:49,182 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=B2D05B88329381F6771DA01916820316:ip_addr=189.202.28.41:view_community_list:
+2020-06-30 01:16:01,676 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=E6FFCF031EBB857B42C91E832F9E7163:ip_addr=35.237.4.214:view_community_list:
+2020-06-30 01:16:11,193 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=B2D05B88329381F6771DA01916820316:ip_addr=189.202.28.41:view_community_list:
+2020-06-30 01:16:16,780 INFO  org.dspace.usage.LoggerUsageEventListener @ anonymous:session_id=B2D05B88329381F6771DA01916820316:ip_addr=189.202.28.41:view_community:community_id=6059d840-3e2a-48ef-b2b3-e876c1cf9d42
+2020-06-30 01:16:18,940 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=17C82569856B3DC0CD8E0DFF26BAAAFF:ip_addr=189.203.148.88:view_community_list:
+2020-06-30 01:16:19,628 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=B2D05B88329381F6771DA01916820316:ip_addr=189.202.28.41:view_community_list:
+2020-06-30 01:16:26,295 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=B2D05B88329381F6771DA01916820316:ip_addr=189.202.28.41:view_community_list:
+2020-06-30 01:20:28,809 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=B2D05B88329381F6771DA01916820316:ip_addr=189.202.28.41:view_community_list:
+2020-06-30 13:34:03,463 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=8BAE34EE95DC59165A11E64310C6377E:ip_addr=189.202.28.41:view_community_list:
+2020-06-30 14:05:24,349 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:view_community_list:
+2020-06-30 14:05:27,515 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:view_community_list:
+2020-06-30 14:07:17,039 INFO  org.dspace.eperson.AccountServiceImpl @ Sent registration information to david_alberto_bc@hotmail.com
+2020-06-30 14:07:41,443 INFO  org.dspace.app.xmlui.aspect.eperson.EditProfile @ anonymous:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:view_profile:
+2020-06-30 14:07:41,902 INFO  org.dspace.app.xmlui.aspect.eperson.EditProfile @ anonymous:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:view_profile:
+2020-06-30 14:07:55,474 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:view_community_list:
+2020-06-30 14:08:58,189 INFO  org.dspace.eperson.EPersonServiceImpl @ anonymous:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:create_eperson:eperson_id=c17c1d1f-dc2d-4ac1-943d-b0471b81469b
+2020-06-30 14:08:58,226 INFO  org.dspace.eperson.EPersonServiceImpl @ anonymous:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:update_eperson:eperson_id=c17c1d1f-dc2d-4ac1-943d-b0471b81469b
+2020-06-30 14:08:58,248 INFO  org.dspace.eperson.EPersonServiceImpl @ david_alberto_bc@hotmail.com:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:update_eperson:eperson_id=c17c1d1f-dc2d-4ac1-943d-b0471b81469b
+2020-06-30 14:08:58,258 INFO  org.dspace.eperson.EPersonServiceImpl @ david_alberto_bc@hotmail.com:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:update_eperson:eperson_id=c17c1d1f-dc2d-4ac1-943d-b0471b81469b
+2020-06-30 14:08:59,935 INFO  org.dspace.eperson.EPersonConsumer @ david_alberto_bc@hotmail.com:session_id=BB38E7871E9DD4B39678A7936787A5B8:ip_addr=177.232.82.220:registerion_alert:user=david_alberto_bc@hotmail.com
+2020-06-30 14:26:20,176 INFO  org.dspace.app.xmlui.aspect.discovery.AbstractSearch @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:search:query="null",results=(0,0,0)
+2020-06-30 14:26:20,190 INFO  org.dspace.app.xmlui.aspect.discovery.CSVExportDiscoveryNavigation @ uri: discover
+2020-06-30 14:26:20,190 INFO  org.dspace.app.xmlui.aspect.discovery.CSVExportDiscoveryNavigation @ query: *
+2020-06-30 14:26:20,190 INFO  org.dspace.app.xmlui.aspect.discovery.CSVExportDiscoveryNavigation @ scope: ~
+2020-06-30 14:26:20,190 INFO  org.dspace.app.xmlui.aspect.discovery.CSVExportDiscoveryNavigation @ filters: 
+2020-06-30 14:28:30,969 INFO  org.dspace.usage.LoggerUsageEventListener @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:view_community:community_id=db7d52fa-d72d-4d3e-85ff-a148400c2188
+2020-06-30 14:32:42,684 INFO  org.dspace.usage.LoggerUsageEventListener @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:view_community:community_id=db7d52fa-d72d-4d3e-85ff-a148400c2188
+2020-06-30 14:32:44,975 INFO  org.dspace.usage.LoggerUsageEventListener @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:view_collection:collection_id=eb2b4b3e-c4af-431e-a8d4-fe3ca43a469a
+2020-06-30 14:32:45,350 INFO  org.dspace.usage.LoggerUsageEventListener @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:view_bitstream:bitstream_id=b4967648-b012-410f-99d3-6cc2b0ac7f2c
+2020-06-30 14:43:50,038 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=3A27F51D0911C86594117327CF58C332:ip_addr=177.232.82.183:view_community_list:
+2020-06-30 18:53:33,964 INFO  org.dspace.app.xmlui.aspect.artifactbrowser.CommunityBrowser @ anonymous:session_id=7ADDD65F7DC071BD08B84513E2F369E4:ip_addr=189.202.28.41:view_community_list:

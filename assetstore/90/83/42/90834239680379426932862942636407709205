@@ -1,0 +1,2619 @@
+   
+ 
+ 
+  
+TESIS 
+TÍTULO DEL PROYECTO: Medición de Impacto de Acciones en las 
+Redes Sociales: Twitter, Facebook y Google+. 
+PRESENTADO POR: 
+Franz Dayit López Cruz      M09011279 
+PARA OBTENER EL GRADO DE: 
+Maestro en Sistemas Computacionales 
+DIRECTOR DE TESIS: 
+M.S.C. Luis Ángel Reyes Hernández 
+ 
+ 
+   
+ 
+Índice 
+Índice de Figuras ...................................................................................................................... i 
+Índice de Tablas .....................................................................................................................iii 
+Resumen ................................................................................................................................ iv 
+Introducción ............................................................................................................................ 1 
+Capítulo 1 Antecedentes.......................................................................................................... 3 
+1.1 Marco teórico............................................................................................................ 3 
+1.1.1 Publicidad .......................................................................................................... 3 
+1.1.1.1 Medios publicitarios ....................................................................................... 3 
+1.1.1.2 Publicidad en Internet .................................................................................... 4 
+1.1.1.3 Publicidad en las Redes Sociales .................................................................... 4 
+1.1.2 Web 2.0 ............................................................................................................. 4 
+1.1.3 Red social .......................................................................................................... 5 
+1.1.3.1 Facebook ........................................................................................................ 5 
+1.1.3.2 Twitter ........................................................................................................... 6 
+1.1.3.3 Google+ ......................................................................................................... 6 
+1.1.4 Blog ................................................................................................................... 6 
+1.1.4.1 Wiki ............................................................................................................... 7 
+1.1.5 Seguridad en la Web .......................................................................................... 7 
+1.1.5.1 Oauth ............................................................................................................. 8 
+1.1.6 Servicios Web para la gestión de las Redes Sociales .......................................... 8 
+1.1.6.1 Twittercounter ................................................................................................ 8 
+1.1.6.2 Agorapulse ..................................................................................................... 8 
+1.1.6.3 Circloscope .................................................................................................... 8 
+1.2 Planteamiento del Problema ...................................................................................... 8 
+1.2.1 Situación Problemática de la Empresa ..................................................................... 9 
+1.3 Objetivo general y objetivos específicos.................................................................. 10 
+1.3.1 Objetivo general .................................................................................................... 10 
+1.3.2 Objetivos específicos ....................................................................................... 10 
+1.4 Justificación ............................................................................................................ 11 
+Capítulo 2 Estado de la Práctica ............................................................................................ 12 
+ 
+ 
+   
+ 
+2.1 Trabajos relacionados .................................................................................................. 12 
+2.2 Análisis comparativo ................................................................................................... 17 
+2.3 Propuesta de solución ............................................................................................. 22 
+2.3.1 Justificación de la solución seleccionada .......................................................... 22 
+Capítulo 3 Metodología ............................................................................................................ 23 
+3.1 Arquitectura de la aplicación ................................................................................... 23 
+3.1.1 Descripción de los componentes de la arquitectura ................................................ 23 
+3.2 Herramientas utilizadas ........................................................................................... 24 
+3.2.1 Desarrollo ........................................................................................................ 24 
+3.2.2 Ejecución ......................................................................................................... 24 
+3.2.3 Tecnologías ..................................................................................................... 25 
+3.3 Protección de datos personales ................................................................................ 25 
+3.3.1 Datos personales sensibles ............................................................................... 25 
+3.3.2 Política de privacidad ....................................................................................... 26 
+3.3.3 Seguridad......................................................................................................... 27 
+3.4 Metodología XP ...................................................................................................... 28 
+3.4.1 Historias de usuario ......................................................................................... 29 
+3.4.1.1 Diagrama de casos de uso ............................................................................. 29 
+3.4.1.2 Diseño navegacional .................................................................................... 30 
+3.4.1.3 Tarjetas de historia de usuario ...................................................................... 31 
+3.4.1.3.1 Mostrar datos de una publicación ............................................................ 31 
+3.4.1.3.2 Agregar publicación ................................................................................ 32 
+3.4.1.3.3 Mostrar diagrama de interacción en publicaciones................................... 33 
+3.4.1.3.4 Iniciar sesión en Facebook ...................................................................... 33 
+3.4.1.3.5 Iniciar sesión en Twitter .......................................................................... 34 
+3.4.1.3.6 Iniciar sesión en Google+ ........................................................................ 35 
+3.4.1.3.7 Mostrar publicaciones recientes .............................................................. 35 
+3.4.1.3.8 Generar reporte ....................................................................................... 36 
+3.4.1.3.9 Generar graficas ...................................................................................... 36 
+3.4.1.3.10 Mostrar diagrama de interacción de usuarios ......................................... 37 
+3.4.1.4 Diagramas de secuencia ............................................................................... 38 
+ 
+ 
+   
+ 
+3.4.1.4.1 Mostrar datos de una publicación ............................................................ 38 
+3.4.1.4.2 Realizar Publicación ............................................................................... 39 
+3.4.1.4.3 Mostrar diagrama de interacción en publicaciones................................... 40 
+3.4.1.4.4 Iniciar sesión en Facebook ...................................................................... 41 
+3.4.1.4.5 Iniciar sesión en Twitter .......................................................................... 42 
+3.4.1.4.6 Iniciar sesión en Google+ ........................................................................ 42 
+3.4.1.4.7 Mostrar publicaciones recientes .............................................................. 43 
+3.4.1.4.8 Generar reporte ....................................................................................... 44 
+3.4.1.4.9 Generar gráficas ...................................................................................... 45 
+3.4.1.4.10 Mostrar diagrama de interacción de usuarios ......................................... 46 
+3.4.1.5 Diagrama de despliegue ............................................................................... 47 
+3.4.2 Pruebas de aceptación ...................................................................................... 47 
+3.4.2.1 Prototipos de interfaz.................................................................................... 47 
+Capítulo 4 Resultados ............................................................................................................... 51 
+4.1 Registro de la aplicación en las páginas de las Redes Sociales para desarrolladores . 51 
+4.2 Caso de estudio: MI-DEPI ...................................................................................... 54 
+4.2.1 Solicitud de permisos ....................................................................................... 55 
+4.2.1.1 Política de la aplicación ................................................................................ 56 
+4.2.2 Proceso de autenticación .................................................................................. 56 
+4.2.3 Proceso de autorización ................................................................................... 58 
+4.2.4 Facebook ......................................................................................................... 60 
+4.2.5 Twitter ............................................................................................................. 64 
+4.2.6 Google+ ........................................................................................................... 67 
+4.2.7 Diagramas de red ............................................................................................. 69 
+4.2.7.1 Diagrama desde el punto de vista de los usuarios que interactúan en una 
+publicación determinada ............................................................................................. 69 
+4.2.7.2 Diagrama desde el punto de vista de las publicaciones realizadas en las tres 
+redes sociales ............................................................................................................. 70 
+4.2.8 Agregar nueva publicación............................................................................... 71 
+Capítulo 5 Conclusiones ........................................................................................................... 74 
+5.1 Conclusiones ............................................................................................................... 74 
+5.2 Trabajos a futuro.......................................................................................................... 75 
+ 
+ 
+   
+ 
+Terminología ........................................................................................................................ 76 
+Productos académicos .............................................................................................................. 77 
+Referencias ........................................................................................................................... 78 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+Índice de Figuras 
+ 
+Fig. 3.1 Arquitectura de la aplicación .................................................................................... 24 
+Fig. 3.2 Diagrama de Casos de Uso de la aplicación .............................................................. 30 
+Fig. 3.3 Diseño navegacional de la aplicación ....................................................................... 31 
+Fig. 3.4 Mostrar datos de una publicación ............................................................................. 39 
+Fig. 3.5 Realizar publicación ................................................................................................. 40 
+Fig. 3.6 Mostrar diagrama de interacción de publicaciones .................................................... 41 
+Fig. 3.7 Iniciar sesión en Facebook ....................................................................................... 41 
+Fig. 3.8 Iniciar sesión en Twitter ........................................................................................... 42 
+Fig. 3.9 Iniciar sesión en Google+ ......................................................................................... 43 
+Fig. 3.10 Mostrar publicaciones recientes .............................................................................. 44 
+Fig. 3.11 Generar reporte ...................................................................................................... 45 
+Fig. 3.12 Generar gráficas ..................................................................................................... 46 
+Fig. 3.13 Mostrar diagrama de interacción de usuarios .......................................................... 46 
+Fig. 3.14 Diagrama de despliegue de la aplicación ................................................................ 47 
+Fig. 3.15 Primera pantalla de la aplicación y los botones de Twitter y Google+ ..................... 48 
+Fig. 3.16 Extracción de datos de Facebook ............................................................................ 49 
+Fig. 3.17 Extracción de datos de Twitter ............................................................................... 49 
+Fig. 3.18 Extracción de datos de Google+ ............................................................................. 50 
+Fig. 3.19 Agregar Publicación ............................................................................................... 50 
+Fig. 4.1 Página de Facebook para desarrolladores ................................................................. 51 
+Fig. 4.2 Página de Twitter para desarrolladores ..................................................................... 52 
+Fig. 4.3 Página de Google para desarrolladores ..................................................................... 52 
+Fig. 4.4 Página principal de la aplicación en Facebook .......................................................... 52 
+Fig. 4.5 Página principal de la aplicación en Twitter ............................................................. 53 
+Fig. 4.6 Página principal de la aplicación en Google ............................................................. 54 
+Fig. 4.7 Página principal de la aplicación .............................................................................. 55 
+Fig. 4.8 Política de privacidad de la aplicación ...................................................................... 56 
+Fig. 4.9 Pantalla de autenticación de Facebook...................................................................... 57 
+Fig. 4.10 Pantalla de autenticación de Twitter ....................................................................... 57 
+Fig. 4.11 Pantallas de autenticación de Google ...................................................................... 58 
+Fig. 4.12 Autorización de los datos del usuario en Facebook ................................................. 58 
+Fig. 4.13 Autorización de funciones de páginas en Facebook ................................................ 59 
+Fig. 4.14 Página principal de la aplicación después de autorizar el acceso ............................. 59 
+Fig. 4.15 Publicaciones del muro de la página de Facebook .................................................. 61 
+Fig. 4.16 Lista de las publicaciones de Facebook en la aplicación ......................................... 61 
+Fig. 4.17 Ventana emergente de la publicación en Facebook ................................................. 62 
+Fig. 4.18 Gráficas de la publicación de Facebook .................................................................. 63 
+i 
+ 
+   
+ 
+Fig. 4.19 Visualización de los datos de la publicación de Facebook en PDF .......................... 63 
+Fig. 4.20 Publicaciones en el muro de la página de Twitter ................................................... 64 
+Fig. 4.21 Lista de las publicaciones de Twitter en la aplicación ............................................. 65 
+Fig. 4.22 Ventana emergente de la publicación en Twitter ..................................................... 66 
+Fig. 4.23 Gráficas de la publicación de Twitter ..................................................................... 66 
+Fig. 4.24 Publicaciones en el muro de la página de Google+ ................................................. 67 
+Fig. 4.25 Lista de las publicaciones de Google+ en la aplicación ........................................... 68 
+Fig. 4.26 Ventana emergente de la publicación en Google+................................................... 68 
+Fig. 4.27 Gráficas de la publicación de Google+ ................................................................... 69 
+Fig. 4.28 Diagrama de red de los usuarios que interactuaron en una publicación ................... 69 
+Fig. 4.29 Alerta de interacciones del diagrama de red de usuarios ......................................... 70 
+Fig. 4.30 Diagrama de red de las publicaciones existentes en las cuentas activas ................... 70 
+Fig. 4.31 Alerta de resumen de interacciones en el diagrama de publicaciones ...................... 71 
+Fig. 4.32 Pantalla principal de la función Agregar nueva publicación .................................... 72 
+Fig. 4.33 Prueba de la función de Agregar nueva publicación en Facebook ........................... 72 
+Fig. 4.34 Prueba de la función de Agregar nueva publicación en Twitter ............................... 73 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ii 
+ 
+   
+ 
+ 
+Índice de Tablas 
+Tabla 1.1 Comparación entre Wikis y Blogs ........................................................................... 7 
+Tabla 2.1 Trabajos Relacionados con las Redes Sociales ....................................................... 17 
+Tabla 3.1 Datos que se extraerán de las redes sociales ........................................................... 28 
+Tabla 4.1 Datos utilizados de las publicaciones en Facebook................................................. 60 
+Tabla 4.2 Datos utilizados de las publicaciones de Twitter .................................................... 64 
+Tabla 4.3 Datos utilizados de las publicaciones de Google+ .................................................. 67 
+ 
+ 
+ 
+ 
+iii 
+ 
+ 
+Resumen 
+ 
+La publicidad es fundamental para las marcas, debido a que mejora el posicionamiento que 
+estas tienen en el mercado al dar a conocer sus productos o servicios ante la sociedad.  
+ 
+Uno de los medios publicitaros más utilizados en la actualidad es el Internet. Existen diversas 
+formas de ofrecer difusión en la red de Internet. Las redes sociales son un método efectivo 
+para la publicidad en Internet, debido a que se encuentran en un gran apogeo y día con día se 
+incrementa el número de personas que acceden a estos sitios. 
+ 
+Las redes sociales más populares en la actualidad son Twitter, la cual es famosa debido a su 
+función de envío y recepción de mensajes cortos; Facebook, que ofrece una interfaz cómoda y 
+funciones atractivas; Google+, que es un servicio de la empresa Google Inc. 
+ 
+El protocolo Oauth 2.0 permite el acceso seguro a los datos de algunos sitios Web 2.0 para 
+utilizarlos en aplicaciones móviles, aplicaciones de escritorio o aplicaciones Web terceras. Las 
+herramientas de Internet más populares para medir el impacto de las redes sociales 
+(Agorapulse, Twittercounter, por mencionar algunas) utilizan el protocolo Oauth para la 
+autorización de acceso a los datos y para proteger las credenciales del usuario.  
+ 
+El presente trabajo propone el uso de herramientas de medición de impacto en las redes 
+sociales de gran importancia en la actualidad (Facebook, Twitter y Google+), para analizar el 
+impacto que generaron las publicaciones y acciones de una marca u organización en cada una 
+de las redes sociales. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+iv 
+ 
+ 
+Introducción 
+ 
+En la actualidad, el Internet es uno de los medios de comunicación más importantes y de gran 
+alcance. El número de personas que utilizan las redes sociales como medio de comunicación y 
+de información incrementó por la facilidad de uso que éstas tienen. Debido a ello, las marcas 
+comerciales utilizan las redes sociales como un medio efectivo de publicidad. 
+  
+Para las marcas es necesario saber si la estrategia de publicidad que utilizan es efectiva para 
+atraer a la sociedad. Por esa razón, es necesario medir el tamaño de la audiencia que tienen las 
+marcas en sus perfiles de redes sociales. Asimismo, se necesita saber el número de usuarios 
+activos en sus redes sociales, es decir, el número de personas que siguen día con día las acciones 
+que realizan las marcas en sus redes sociales. 
+ 
+El presente trabajo propone el uso de herramientas para medición de impacto en las redes 
+sociales de gran importancia en la actualidad: Facebook, Twitter y Google+. Estas herramientas 
+acceden a los datos de los perfiles de las redes sociales de manera segura para mostrar resultados 
+precisos por medio de gráficas fáciles de entender. Algunas de estas herramientas utilizan una 
+Interfaz de Programación de Aplicaciones (API) para utilizar sus funciones en una aplicación 
+determinada. 
+ 
+Este documento se estructura de la siguiente manera: 
+ 
+El capítulo 1 presenta los conceptos fundamentales para el desarrollo del proyecto, el 
+planteamiento del problema, objetivos que se desean cumplir y los argumentos que revelan la 
+importancia del proyecto.  
+ 
+El capítulo 2 presenta resúmenes de algunos artículos relacionados a las redes sociales y el 
+análisis comparativo de estos artículos. Asimismo, muestra la propuesta de solución para el 
+presente proyecto. 
+ 
+El capítulo 3 describe la metodología elegida para este proyecto, el desarrollo del proyecto 
+empleando dicha metodología y la arquitectura adecuada para la aplicación. 
+ 
+1 
+ 
+ 
+El capítulo 4 presenta los resultados de la aplicación, incluyendo una especificación de cada 
+función que realiza y el caso de estudio utilizado como prueba de la aplicación. 
+ 
+El capítulo 5 incluye los comentarios finales del proyecto, y los trabajos a futuro que se 
+realizarán a partir de éste. 
+  
+2 
+ 
+Capítulo 1 Antecedentes 
+Capítulo 1 Antecedentes 
+ 
+Este capítulo presenta la información previa al desarrollo del proyecto. Asimismo, contiene el 
+problema, el objetivo general, los objetivos específicos y la justificación de la solución 
+planteada.  
+ 
+1.1 Marco teórico 
+ 
+1.1.1 Publicidad 
+Es un método que utilizan las empresas o negocios para darse a conocer ante el público, para 
+presentar sus productos o servicios con el objetivo de obtener más ganancias y/o incrementar su 
+audiencia [1]. Este método se utiliza en los medios de comunicación que tengan gran cantidad 
+de seguidores. En la Web, se encuentra publicidad en diversos sitios, tanto en sitios dinámicos 
+de las empresas o negocios, como en sitios Web 2.0, incluyendo las redes sociales.  
+ 
+1.1.1.1 Medios publicitarios 
+Los medios publicitarios son los canales que utilizan las marcas para compartir información al 
+público. A continuación se muestran los Medios de publicidad más utilizados en la actualidad. 
+ Televisión.- Medio de gran impacto visual utilizado por una gran cantidad de personas, 
+mediante el cual satisfacen las necesidades de información y entretenimiento.   
+ Radio.- Medio auditivo que aprovecha las diversas estaciones para emitir la información 
+al público. Las estaciones de radio son gratuitas y varían de acuerdo a la zona donde se 
+encuentren. 
+ Periódicos.- Medio impreso de comunicación usado para informar, educar y entretener 
+al público ubicado en la región donde se encuentre vigente.  
+ Revistas.- Medio impreso semanal o mensual que presenta información a un tipo de 
+público especializado. 
+ Espectaculares.- Medio impreso de gran tamaño con contenido altamente creativo que 
+se ubica en zonas altas de las ciudades. 
+3 
+ 
+Capítulo 1 Antecedentes 
+ Internet.- Medio de contenido dinámico que tiene alcance a nivel mundial. Implica el 
+uso de sitios Web, programas publicitarios, correo electrónico y redes sociales [2]. 
+ 
+1.1.1.2 Publicidad en Internet 
+Actualmente se crearon varias formas de presentar publicidad a través de la red de Internet. 
+Algunas de ellas se presentan a continuación. 
+ Banners.- Espacio publicitario pequeño ubicado dentro de una página de Internet. 
+ Sitios Web.- Página Web propia en donde se publica información específica de la marca. 
+Algunos sitios de marcas cuentan con un sistema de comunicación con clientes. 
+ Ventanas emergentes.- Páginas publicitarias que se muestran al realizar una acción en 
+cualquier página Web. 
+ Correos electrónicos.- Envío de correos publicitarios con sistemas de envío masivos. 
+  
+1.1.1.3 Publicidad en las Redes Sociales 
+En la actualidad, el número de personas que tienen acceso a Internet se incrementó a pasos 
+agigantados. Un sinfín de personas con acceso a Internet tiene una cuenta en una red social y 
+son miembros activos. Por esa razón, es común que la mayoría de las marcas dispongan de una 
+red social, la cual se usa para publicar información relevante acerca de la marca o de sus 
+productos. 
+La colocación de publicidad en las redes sociales es una práctica común hoy en día, debido a 
+que los consumidores están altamente involucrados con las redes sociales. Por lo tanto, estos 
+medios son una herramienta óptima y eficaz para promover sus productos y analizar el 
+comportamiento del consumidor [3]. 
+Algunas redes sociales cuentan con funcionalidad especial para las marcas, brindando así una 
+mejor gestión de sus publicaciones y sus seguidores. 
+ 
+1.1.2 Web 2.0 
+Se refiere a las aplicaciones Web que se moldean a libertad de los usuarios, haciendo de éstas 
+unas aplicaciones dinámicas, en las cuales su información varía de acuerdo a sus necesidades. 
+De igual manera, estas aplicaciones ofrecen al usuario la posibilidad de publicar información 
+4 
+ 
+Capítulo 1 Antecedentes 
+para compartirla con otros usuarios y de complementar la información de otros usuarios. Abarca 
+una gran variedad de servicios conectados entre sí cuyo objetivo es el intercambio ágil de 
+información entre los usuarios y la colaboración para la creación y edición de contenidos [4].  
+A continuación se muestran los servicios que se asocian a la Web 2.0. 
+ 
+1.1.3 Red social 
+Sitio orientado a la Web 2.0 alojado en Internet, que ofrece la posibilidad de la comunicación 
+virtual para personas de todo el mundo a través de un servicio de Internet.  En este sitio se 
+intercambia información de suma importancia para la comunidad mediante las publicaciones, 
+que visualizan los contactos del usuario. La mayoría de las plataformas sociales tienen 
+mecanismos que permiten a los usuarios generar, compartir y comunicarse entre sí por sus temas 
+de interés. Las personas también visitan los perfiles o realizan comentarios sobre las marcas 
+sociales (por ejemplo, celebridades, institutos, organizaciones, compañías y productos) [5]. 
+A continuación se muestran las redes sociales más populares en la actualidad. 
+ 
+1.1.3.1 Facebook 
+Es una red social de uso libre y de alcance mundial, con interfaz cómoda. Actualmente es la 
+segunda red social más popular debido a su facilidad de uso, sus funciones atractivas y su gran 
+cantidad de usuarios registrados de todo el mundo. En 2016, se reportó que Facebook se 
+encuentra traducido en 110 idiomas, por esa razón, dispone de  1,000.000.000 de usuarios 
+registrados [6], con un total de 1,550 millones de usuarios activos [7].  
+Los servicios más destacados que brinda esta red social son los siguientes: 
+ Lista de amigos.- Servicio de búsqueda y gestión de usuarios. 
+ Chat.- Servicio de mensajería instantánea. 
+ Grupos.- Sitios de Facebook para reunir a personas de intereses comunes. 
+ Páginas.- Sitios de información destinados a personajes específicos y a marcas.  
+ Botón Me gusta.- Función utilizada para valorar si el contenido es del agrado del usuario. 
+ 
+ 
+ 
+5 
+ 
+Capítulo 1 Antecedentes 
+1.1.3.2 Twitter 
+Es una red social famosa a nivel mundial debido a que dispone de la función de Microblogging, 
+en donde se ofrece a los usuarios la posibilidad de enviar y recibir mensajes de 140 caracteres 
+como máximo, denominados Tweets. Este sitio ofrece una funcionalidad, que, entre otros usos, 
+es de gran relevancia en el contexto de Trending Topics (TT), que se describen oficialmente 
+como: "los temas emergentes más populares (o “la mejor noticia de última hora”) [8]. Hasta 
+enero del 2016 se registraron 320 millones de usuarios activos en la red social [7]. 
+ 
+1.1.3.3 Google+ 
+Es una red social fundada y desarrollada como un servicio de Google Inc. Al crear una cuenta 
+en Google, automáticamente se tiene acceso a esta red social y a otros servicios que Google 
+ofrece, y con los cuales Google+ se vincula. Actualmente cuenta con 540 millones de usuarios 
+activos [9]. 
+Los servicios más destacados que brinda esta red social son los siguientes: 
+ Círculos.- Servicio de gestión de usuarios en grupos o listas para compartir información. 
+ Hangouts.- Servicio de mensajería instantánea y VideoChat para comunicarse con los 
+contactos de los círculos personales. 
+ Comunidades.- Es una manera rápida de reunir grupos de intereses comunes para darles 
+seguimiento a las personas que se encuentren en él y compartir información. 
+ Novedades.- Espacio para ver las actualizaciones de los contactos que se encuentran en 
+los círculos personales.  
+ 
+1.1.4 Blog 
+Es una página Web de uso personal en la cual se agrega contenido nuevo de un tema en 
+específico para visualizarlo en orden cronológico. El contenido que se publica en estas páginas 
+se visualiza y se comenta por otros miembros del blog. Para el autor o autores de un blog, se 
+trata de un sistema que facilita la publicación de contenidos multimedia en Internet ofreciendo 
+en todo momento el control y libertad para editar y modificar la información publicada. Existen 
+blogs personales, periodísticos, empresariales, tecnológicos, educativos, políticos, por 
+mencionar algunos [10]. 
+6 
+ 
+Capítulo 1 Antecedentes 
+1.1.4.1 Wiki 
+Es un sistema informático accesible a través de Internet que se basa en la colaboración de 
+miembros para generar y editar el contenido con el fin de compartirlo. Este contenido se edita a 
+través de la plataforma Web. 
+A continuación, se muestra una tabla comparativa en donde se explica la diferencia que tienen 
+los Wiki sobre los Blogs. 
+ 
+Tabla 1.1 Comparación entre Wikis y Blogs 
+Blogs Wikis 
+ Normalmente un sólo autor/editor  Muchos autores al mismo nivel 
++ comentarios  La estructura es variada, 
+ Estructura cronológica sustituyéndose las versiones a 
+empezando por la última medida que se modifica. 
+"entrada"  Links externos e internos[11] 
+ Links externos 
+ 
+ 
+1.1.5 Seguridad en la Web 
+La seguridad en términos generales se refiere a la certeza de que algo funcionará de la manera 
+correcta y sin la posibilidad de sufrir riesgos al ejecutar cierta acción. En la Web, la seguridad 
+es la característica más importante que tiene que ofrecer una aplicación, debido a que los 
+usuarios que almacenan sus datos en los sitios Web, sufren el riesgo de pérdida de estos o acceso 
+a dichos datos por otras personas o aplicaciones sin autorización. Hoy en día se incrementaron 
+las técnicas para el acceso mal intencionado a los datos en la Web. Sin embargo, existen 
+diferentes tipos de métodos para asegurar la protección de los datos de los sitios Web. A 
+continuación, se muestra un método para la seguridad de la Web. 
+ 
+ 
+ 
+7 
+ 
+Capítulo 1 Antecedentes 
+1.1.5.1 Oauth 
+Es un protocolo de seguridad destinado a aquellas aplicaciones Web que necesiten obtener datos 
+de suma importancia de los usuarios de algunos sitios orientados a la Web 2.0, como las redes 
+sociales. Este protocolo les permite a las aplicaciones Web acceder a los datos de los usuarios 
+de los sitios Web 2.0 sin guardar los datos de acceso, evitando así el conocimiento de éstos a 
+personas o aplicaciones no autorizadas. 
+ 
+1.1.6 Servicios Web para la gestión de las Redes Sociales 
+ 
+1.1.6.1 Twittercounter 
+Es un servicio Web que realiza un análisis profundo sobre el desempeño de un usuario de Twitter 
+y muestra los resultados usando diversos tipos de estadísticas. Este servicio ofrece la promoción 
+de cuentas de usuario para incrementar la influencia de marcas. Asimismo, realiza una 
+comparación entre cuentas [30].  
+ 
+1.1.6.2 Agorapulse 
+Es un servicio Web que ofrece una administración sencilla para Facebook, Twitter e Instagram. 
+Este servicio permite visualizar estadísticas sobre el alcance de las publicaciones realizadas por 
+el usuario y genera reportes sobre éstas. Asimismo, dispone de la función de crear campañas de 
+marketing para atraer a los clientes [29]. 
+ 
+1.1.6.3 Circloscope  
+Es una herramienta Web que permite tener un control sencillo para los círculos de Google+. 
+Este servicio dispone de muchas funciones, entre ellas la de visualizar estadísticas sobre los 
+seguidores activos e inactivos de un usuario [31]. 
+ 
+1.2 Planteamiento del Problema 
+La sociedad en la actualidad está mayormente influenciada por los medios digitales, ya que el 
+uso de dispositivos móviles hace que el usuario se conecte a la red en un tiempo prolongado. A 
+partir de esto, publicitarse en Internet presenta las características para la obtención del 
+8 
+ 
+Capítulo 1 Antecedentes 
+posicionamiento deseado frente al público, debido a que se trata de una red millones de usuarios, 
+donde cada uno se convierte en un público potencial si se trata de manera correcta. 
+Con el paso del tiempo, los publicistas y diseñadores elaboraron estudios en los que se dieron 
+cuenta que el uso de las redes sociales es efectivo para la publicidad, ya que estas se encuentran 
+en un gran apogeo y tienen mucha aceptación de parte de toda la sociedad. La apertura de 
+mercado que utiliza las redes sociales hace que se conviertan en un medio efectivo para 
+publicitar una marca. Todos estos individuos que están en contacto con estas redes son los 
+clientes a los cuales las marcas quieren llegar, con el objetivo de lograr posicionamiento a través 
+de una estrategia de difusión. Así como las personas son usuarios de cualquier red social, así 
+también son desconocedores de sus alcances para la promoción de una marca, de las 
+herramientas específicas que existen y la excelente funcionalidad de estas. 
+El éxito o el fracaso de cualquier acción táctica en las redes sociales dependen en gran parte del 
+seguimiento y monitoreo permanente de los efectos que ésta tiene. El tamaño de la audiencia es 
+quizás el indicador más básico en el ejercicio de medición de la estrategia. Más allá de saber 
+cuántas personas forman parte de su comunidad, la relevancia de este indicador radica en evaluar 
+y llevar un registro del crecimiento y evolución de su audiencia antes, durante y después de 
+implementar su estrategia digital. 
+Con esto, entonces, “más” no siempre significa mejor, así que vale centrar la estrategia en 
+aumentar la comunidad de seguidores activos, es decir, de personas que se suscriben a su 
+actividad porque encuentran en su propuesta de valor elementos con los que se identifican, y 
+por lo tanto, conviertan dicha suscripción en una fuente de beneficios. 
+ 
+1.2.1 Situación Problemática de la Empresa 
+El Instituto Tecnológico de Orizaba (ITO) es una institución que pertenece al Tecnológico 
+Nacional de México, que se encuentra ubicado en Oriente 9, Colonia Emiliano Zapata, en la 
+ciudad de Orizaba. Veracruz. Esta institución ofrece carreras de licenciatura, maestría y 
+doctorado. En el área de maestrías ofrece las carreras de Maestría en Ingeniería Electrónica, 
+Maestría en Ingeniería Industrial, Maestría en Ciencias en Ingeniería Química, Maestría en 
+Ingeniería Administrativa y la Maestría en Sistemas Computacionales. Actualmente cuenta con 
+9 
+ 
+Capítulo 1 Antecedentes 
+páginas en las redes sociales en donde se publica información relevante sobre las carreras que 
+oferta con el objetivo de invitar a la población a cursar una de ellas. 
+La institución no cuenta con una aplicación que monitorice adecuadamente las publicaciones 
+realizadas por las marcas en las redes sociales propuestas para conocer el impacto que obtienen 
+ante la sociedad y tomar decisiones importantes de estrategia de publicidad.  
+ 
+1.3 Objetivo general y objetivos específicos 
+ 
+1.3.1 Objetivo general 
+Desarrollar una aplicación Web que mida el impacto de las publicaciones y acciones de las 
+marcas en las redes sociales: Twitter, Facebook y Google+, utilizando herramientas de 
+medición. 
+ 
+1.3.2 Objetivos específicos 
+ Analizar el estado del arte de trabajos relacionados a las redes sociales para comprender 
+la importancia que éstas tienen en la investigación. 
+ Estudiar el protocolo Oauth en cada red social planteada para conocer su modo de 
+empleo. 
+ Aplicar el protocolo de autorización Oauth para extraer información en alguna cuenta 
+de red social. 
+ Identificar los requisitos necesarios para establecer la conexión del protocolo con el 
+lenguaje de programación a emplear. 
+ Aplicar una metodología de desarrollo de proyectos para sustentar el avance del tema en 
+cuestión. 
+ Diseñar y estudiar una arquitectura apropiada para definir la estructura de la aplicación. 
+ Desarrollar una aplicación Web que se conecte a cada red social para revisar las 
+tendencias de la cuenta. 
+ Probar un caso de estudio similar para verificar que la aplicación es funcional en cada 
+red social planteada. 
+ Obtener y analizar los resultados obtenidos para establecer la validez del proyecto. 
+10 
+ 
+Capítulo 1 Antecedentes 
+ 
+ 
+1.4 Justificación 
+El Internet es una red en donde se encuentra gran cantidad de información útil para las personas. 
+Cada día aumenta considerablemente el número de personas con acceso a esta información, con 
+el objetivo de comprender los temas de su interés y de comunicarse con personas de todo el 
+mundo. Las redes sociales son sitios de esta red en las cuales las personas se comunican 
+fácilmente y compartir información relevante. Estos sitios representan el mayor tráfico de 
+usuarios en la red, debido a que el número de usuarios que utilizan las redes sociales incrementa 
+día con día. Para las marcas, publicar información en las redes sociales sobre sus productos y 
+servicios es útil, debido a que algunas de ellas disponen de características especiales que son de 
+vital importancia para las marcas. Al publicar contenido en sus cuentas, es visualizado por 
+cualquier usuario que se encuentre suscrito a la cuenta de la marca o al ser una tendencia en 
+algún momento. Es de suma importancia conocer de qué manera influyen las publicaciones 
+realizadas por las marcas, con el objetivo de conocer si alcanzaron la audiencia esperada. El 
+Proyecto de Innovación propone acceder a datos de las redes sociales Facebook, Twitter y 
+Google+, para generar resultados reales y precisos, con el objetivo de mostrar la importancia de 
+las publicaciones de las marcas y productos en diferentes redes sociales mostrando el impacto 
+en cada una de ellas. Al usar la aplicación, las marcas conocerán la red o redes sociales que 
+tienen más relevancia para sus seguidores, y con ello, tomarán decisiones para mejorar la 
+estrategia que utilizan para publicar y promocionar.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11 
+ 
+Capítulo 2 Estado de la práctica 
+Capítulo 2 Estado de la Práctica 
+ 
+En esta sección se presenta un breve resumen de artículos sobre aspectos generales de las redes 
+sociales en relación con la mercadotecnia, y aspectos específicos de las redes sociales Facebook, 
+Twitter y Google+. 
+ 
+2.1 Trabajos relacionados 
+En [1] se estableció que la difusión selectiva se refiere a la segmentación específica de la 
+difusión en medios de comunicación, y se presentó como una contraparte de la radiodifusión. 
+En este trabajo se presentó un estudio que evalúa la difusión selectiva de publicidad como un 
+enfoque para compartir en una red social en línea. Se realizó una prueba a un prototipo de 
+difusión selectiva en Facebook con 54 participantes en un periodo que duró cuatro semanas. 
+Como resultado, el trabajo proporcionó implicaciones para compartir en línea, lo que sugiere 
+que la difusión selectiva es una estrategia efectiva para las plataformas sociales en línea.  
+ 
+En [8] se estableció que las redes sociales en línea cambiaron la forma en la que las personas se 
+comunican. Los temas del momento de las redes sociales son una herramienta poderosa para 
+usarse en contextos de mercadotecnia y publicidad, sin embargo, no existe un análisis riguroso 
+que lo demuestra. En este trabajo se presentó una metodología para analizar a fondo la 
+visibilidad de los Trending Topics (Temas del momento) que fueron de gran valor para los 
+expertos de diferentes disciplinas en el contexto de la mercadotecnia y publicidad. Los 
+resultados obtenidos aplicando estas metodologías indicaron que los Trending Topics presentan 
+una visibilidad que se compara a otros canales tradicionales de publicidad y por lo tanto se 
+consideran una herramienta útil para la comercialización.  
+ 
+En [5] se estableció que las personas utilizan los medios sociales para generar, compartir y 
+comunicar información a otras personas. Sin embargo, los algoritmos existentes de aprendizaje 
+automático no logran obtener información con eficiencia debido al gran volumen de datos que 
+se incrementa día a día en los medios sociales. En este trabajo se desarrolló un algoritmo basado 
+en la regresión escalable que permite identificar a los usuarios potenciales. Los experimentos 
+12 
+ 
+Capítulo 2 Estado de la práctica 
+llevados a cabo con datos de Facebook lograron demostrar que todas las técnicas propuestas son 
+escalables y eficientes para la publicidad dirigida al público de los medios sociales.  
+ 
+En [3] se estableció que, para las empresas alemanas, fue de suma importancia ofrecer sus 
+productos en el mercado alemán para competir con otras marcas por el consumidor final. Los 
+medios sociales facilitan la comercialización de sus productos. En este trabajo se expuso 
+brevemente un marco para el estudio de la aplicación de los medios sociales como herramienta 
+para la comercialización de productos. Como resultado se presentó la metodología básica, 
+objetivos y desafíos de la aplicación de los medios sociales para comercializar los productos.   
+ 
+En [12] se estableció que el Internet de las cosas amplía las capacidades para identificar 
+productos con nuevas tecnologías. La identificación permite recuperar información extendida y 
+el conocimiento de los productos. En este trabajo se evaluó la comercialización participativa en 
+una plataforma social que integró conocimientos y experiencias de los clientes y en una 
+plataforma móvil que interactuó con los productos a través de algunas tecnologías de 
+identificación. Como resultado se demostró que fue posible la participación como resultado de 
+los medios de identificación integrados en los productos y los teléfonos móviles. Asimismo, la 
+participación logró la extensión de la mercadotecnia en los medios sociales y la 
+comercialización impulsaron una relación más interactiva con los clientes. 
+ 
+El sitio Wikipedia se convirtió en una fuente estándar de información en la Web, por esa razón, 
+es altamente referenciado en las redes sociales. En [13] se analizó el uso de Wikipedia en la red 
+social Twitter, tomando en cuenta los idiomas utilizados en ambos sitios de la Web 2.0, 
+funciones de contenido de los artículos publicados y ediciones de los mismos artículos. 
+Asimismo, se buscaron las relaciones interesantes entre los Tweets (Mensajes cortos de Twitter) 
+y algunos artículos de Wikipedia. Como resultado del análisis se determinó que la popularidad 
+de los artículos en Wikipedia no se relaciona directamente con el número de ediciones de un 
+artículo para las cuales se realizaron Tweets en un tiempo determinado. 
+ 
+13 
+ 
+Capítulo 2 Estado de la práctica 
+El crecimiento de las redes sociales en los últimos años generó una enorme riqueza de 
+información. La cantidad de información en Twitter fue la motivación por la cual se investigaron 
+los atributos que influyen en los juicios de credibilidad de usuario. Sin embargo, la gente lo usa 
+en algunos riesgos para obtener actualizaciones y muchos usuarios publican Tweets sobre estos 
+eventos. En [14] se investigó cómo algunas características de Twitter afectan las percepciones 
+de los usuarios hacia la credibilidad de los Tweets hacia los usuarios, utilizando un experimento 
+de multitud de abastecimiento. Como resultado se descubrió que, al mostrar la dirección original 
+de los contenidos de los Tweets, se aumentaba su credibilidad, y por lo tanto, aumentaba el 
+impacto hacia los usuarios.  
+ 
+La publicidad en línea y fuera de línea se encuentra omnipresente. Twitter es un medio social 
+de intercambio de mensajes, el cuál es apto para publicar anuncios de Internet tradicionales. Sin 
+embargo, no se sabe con exactitud cómo perciben los usuarios de Twitter el uso de anuncios. En 
+[15] se realizó un estudio mediante encuestas para evaluar las actitudes de ese tiempo hacia la 
+publicidad en Twitter. Como resultado se encontró que el uso de Twitter se asoció con el gusto 
+y la tendencia de una visión más favorable y de confianza en la publicidad, y que el uso de la 
+información en los anuncios en el medio social facilitó la toma de decisiones sobre la compra 
+de productos. 
+ 
+Twitter pasó de ser un medio de conversación o intercambio de opinión entre amigos a ser una 
+plataforma para compartir y difundir información sobre acontecimientos actuales. No todo el 
+contenido publicado en Twitter es confiable o útil para proporcionar información sobre el 
+evento. En [16] se generó un algoritmo de aprendizaje automático y la retroalimentación de 
+relevancia supervisada utilizando características que se identificaron en el análisis de eventos 
+de noticias de alto impacto del 2011 a nivel mundial. Con la aplicación del algoritmo se mostró 
+que la extracción de información creíble de Twitter se genera con alta confianza.  
+ 
+Las redes sociales cambiaron la vida de la humanidad. Una gran cantidad de datos se crea todos 
+los días, y se utiliza para la toma de decisiones importantes a través de la minería de datos. En 
+[17] se presentó un caso de estudio sobre la influencia de los valores del modelo de negocio y 
+14 
+ 
+Capítulo 2 Estado de la práctica 
+sobre la privacidad detrás de una plataforma de medios sociales en los resultados de la minería 
+de datos sobre los datos de los servicios. Como resultado se mostró una comparación entre 
+Facebook y Twitter tomando en cuenta el modelo de negocio y la configuración de privacidad 
+al aplicar minería de datos. 
+ 
+ Los medios sociales son fundamentales para facilitar la comunicación de las marcas. Por ello, 
+están surgiendo nuevas oportunidades para conectar con los consumidores de dichas marcas. 
+Sin embargo, se necesitaba una nueva manera de planificar las interacciones con el fin de 
+monitorear y responder a los consumidores de manera eficiente. En [18] se examinaron las 
+maneras en que las marcas se comunican a través de los medios sociales, analizando 44 de las 
+marcas más grandes del mundo para descubrir la forma en que se comunican a través de 
+publicaciones en el muro de Facebook y Twitter. Como resultado se demostró la importancia 
+que no solamente se basa en publicar contenido interesante para una página Web, si no en la 
+creación de una experiencia participativa y atractiva, donde los consumidores se sienten 
+cómodos al momento de comunicarse con la marca y con otros consumidores de una manera 
+honesta y auténtica. 
+ 
+Las empresas están recurriendo cada vez más a los medios de comunicación social como una 
+manera de relacionarse con sus clientes y promover su marca y productos.  Facebook introdujo 
+las páginas de fans, que cambiaron drásticamente la forma en la que el contenido se presenta a 
+los usuarios. Los autores de este proyecto realizaron un estudio exploratorio a las páginas de 
+Facebook de las 100 mejores marcas desde una perspectiva de comercio electrónico puro para 
+comprender mejor cómo las empresas utilizan los medios sociales. En [19] se mostró que las 
+diferentes marcas utilizaron diferentes tipos de mensajes y obtuvieron diferentes niveles de 
+compromiso por parte de los usuarios con base en la categoría de la empresa.  
+ 
+La escalabilidad es esencial para las aplicaciones Web con gran número de usuarios. Las altas 
+tasas de crecimiento en aplicaciones Web de gran cantidad de usuarios que acceden 
+continuamente dan lugar a grandes problemas de tiempo de respuesta para los usuarios que 
+tratan de recibir la información al mismo tiempo. La arquitectura actual de Facebook es muy 
+15 
+ 
+Capítulo 2 Estado de la práctica 
+grande y se compone de muchas tecnologías y miles de servidores. Los autores de este proyecto 
+describieron ampliamente la arquitectura de Facebook y la manera en que se manejan los 
+problemas de escalabilidad en esta red social. En [20] se presentó totalmente la arquitectura de 
+Facebook para ayudar a los lectores a tener una mejor comprensión de cómo funciona realmente 
+esta red social. 
+ 
+Diversos estudios demostraron la eficacia de la tutoría como estrategia de enseñanza. Se prestó 
+relativamente poca atención al potencial de la Web para llevar tutoría personalizada a los 
+estudiantes en riesgo. Los autores de este proyecto presentaron “Tutoring From the Desktop”, 
+un programa en el que los estudiantes de preparatoria en California usan Google+ y Hangouts 
+para dar clases a los estudiantes en Kolhapur, India. En [21] se demostró como un simple 
+programa estructurado se utiliza para superar las barreras de las zonas horarias, lejanía, acentos, 
+entre otras dificultades. 
+ 
+Las redes sociales se convirtieron en la actividad en línea más popular en todo el mundo. Para 
+competir en este campo, Google puso en marcha en junio del 2011 su propia red social llamada 
+Google+. Una vez que Google+ se convirtió en una red social popular, es importante entender 
+cómo se compara con otras redes sociales. Los autores de este proyecto presentaron un análisis 
+detallado de la red social de Google+, identificando las principales diferencias y similitudes con 
+otras redes sociales, para determinar si es un nuevo paradigma u otra red social. En [22] se 
+describió completamente la plataforma, destacando las principales diferencias con respecto a 
+otros modelos de redes sociales más populares, basándose en una gran cantidad de datos 
+recopilados que abarcaron 27 millones de perfiles de usuarios y sus conexiones a otros usuarios.  
+ 
+Durante décadas, las comunidades en línea proporcionaron una forma para que los usuarios 
+realizaran conexión en torno a sus intereses, hacer preguntas, y proporcionar apoyo a otras 
+personas. Los autores de este proyecto realizaron un estudio usando métodos mixtos para 
+conocer los diferentes tipos de comunidades públicas que existen en la red social Google+. En 
+[23] se logró presentar un marco para entender los diferentes tipos de comunidades que existen 
+16 
+ 
+Capítulo 2 Estado de la práctica 
+en la red social de Google. Se encontró que existen dos tipos: espacios para conocer gente nueva, 
+y las juntas de temas para discutir intereses comunes. 
+ 
+2.2 Análisis comparativo 
+A continuación, se muestra una tabla comparativa en donde se detallan las características 
+principales de los trabajos relacionados. 
+ 
+Tabla 2.1 Trabajos Relacionados con las Redes Sociales 
+Autores Artículo Problema Objetivo Estado actual y 
+futuro 
+Jorge Narrowcasting La difusión Realizar un El trabajo 
+Goncalves, in social selectiva se estudio que proporciona 
+Vassilis media: effects presenta como evalúa la implicaciones para 
+Kostakos, and una contraparte difusión compartir en línea 
+Jayant perceptions. de la selectiva de 
+Venkatanatha radiodifusión. publicidad como 
+n un enfoque para 
+[1] compartir en una 
+red social en 
+línea. 
+Juan Miguel Are trending No existe un Presentar una Se pretende 
+Carrascosa, topics useful análisis metodología explorar diferentes 
+Roberto for riguroso que para analizar a estrategias que las 
+González, marketing?: demuestra que fondo la empresas usarán 
+Rubén visibility of las redes visibilidad de los para crear Trending 
+Cuevas, trending topics sociales son temas del Topics en Twitter, 
+Arturo vs traditional una momento así como sus costos 
+Azcorra advertisement. herramienta (Trending asociados en 
+[8] poderosa para Topics). comparación con 
+17 
+ 
+Capítulo 2 Estado de la práctica 
+contextos de la los canales de 
+mercadotecnia publicidad 
+y publicidad. tradicionales. 
+Kunpeng Scalable Los algoritmos Desarrollar un Se pretende 
+Zhang, audience existentes de algoritmo comprender e 
+Aris M. targeted aprendizaje basado en la incorporar la 
+Ouksel, models for automático no regresión semántica de los 
+Shaokun Fan, brand logran obtener escalable que contenidos 
+Hengchang advertising on información permite generados por los 
+Liu social con eficiencia identificar a los usuarios. Buscar 
+[5] networks. debido al gran usuarios algoritmos de 
+volumen de potenciales. aprendizaje 
+datos que se predictivos más 
+incrementa día precisos y rápidos. 
+a día en los 
+medios 
+sociales. 
+Artur Social media Los medios Presentar un Se pretende 
+Lugmayr marketing for sociales marco para el descubrir cómo los 
+[3] financial facilitan la estudio de la medios sociales se 
+products. comercializaci aplicación de los utilizarán para 
+ón de sus medios sociales analizar las 
+productos. como tendencias en la 
+herramienta para bolsa de valores. 
+la 
+comercializació
+n de productos. 
+Antonio J. Participative La Evaluar la La participación 
+Jara, marketing: identificación comercializació logró la extensión 
+18 
+ 
+Capítulo 2 Estado de la práctica 
+María C. extending permite n participativa de la mercadotecnia 
+Parra, social media recuperar en una en los medios 
+Antonio F. marketing información plataforma sociales y la 
+Skarmeta through the extendida y el social para los comercialización 
+[12] identification conocimiento clientes y en una impulsaron una 
+ and interaction de los plataforma relación más 
+capabilities productos. móvil para los interactiva con los 
+from the productos a clientes. 
+Internet of través de algunas  
+things tecnologías de 
+identificación. 
+Eva Zangerle, Wikipedia on Wikipedia es Analizar los Se pretende 
+Georg Twitter: altamente Tweets del sitio investigar sobre los 
+Schmidhamm analyzing referenciado en Wikipedia en vínculos en el 
+er, tweets about las redes Twitter. lenguaje y por qué 
+Günther Wikipedia. sociales. se usan enlaces 
+Specht entre lenguaje. 
+[13] 
+Suliman Tweet Author La gente usa Investigar los Se pretende 
+Aladhadh, Location Twitter en riesgos que expandir el tamaño 
+Xiuzhen Impacts on algunos riesgos dañan la de los conjuntos de 
+Zhang, Tweet para obtener credibilidad de datos para   predecir 
+Mark Credibility. actualizaciones los mensajes de manera correcta 
+Sanderson y muchos cortos en la credibilidad de 
+[14] usuarios Twitter. los Tweets. 
+publican 
+Tweets sobre 
+estos eventos. 
+19 
+ 
+Capítulo 2 Estado de la práctica 
+Andrew L. Ad-itudes: No se sabe con Evaluar las Se pretende probar 
+Brooks, Twitter Users exactitud cómo actitudes de las los primeros 
+Coye & Advertising. perciben los personas  hacia resultados 
+Cheshire usuarios de la publicidad en utilizando un 
+[15] Twitter el uso Twitter en un método mixto para 
+de anuncios tiempo definido. entender el papel y 
+publicitarios. el uso de la 
+publicidad en 
+Twitter y los 
+servicios 
+emergentes 
+similares de 
+Internet. 
+Aditi Gupta, Credibility No todo el Desarrollar un Se pretende 
+Ponnurangam Ranking of contenido algoritmo de desarrollar un 
+Kumaraguru Tweets during publicado en aprendizaje mecanismo de 
+[16] High Impact Twitter es automático y la autoaprendizaje que 
+Events confiable o útil retroalimentació funcione de forma 
+para n de relevancia automática que no 
+proporcionar supervisada requiera entradas 
+información utilizando manuales de 
+sobre el evento. características codificación. 
+identificadas en 
+el análisis. 
+Carsten Social Media Gran cantidad Presentar un Se pretende realizar 
+Ellwein, Mining: Impact de datos de las caso de estudio una comparación de 
+Benedikt of the Business redes sociales sobre la los datos con 
+Noller Model and se crea todos influencia de los licencia a través de 
+[17] los días, y se valores del 
+20 
+ 
+Capítulo 2 Estado de la práctica 
+Privacy utiliza para la modelo de DataSift y 
+Settings. toma de negocio y sobre Firehouse. 
+decisiones la privacidad 
+importantes a detrás de una 
+través de la plataforma de 
+minería de medios sociales 
+datos. en los resultados 
+de la minería de 
+datos sobre los 
+datos de los 
+servicios 
+ 
+ 
+En los artículos analizados se logró determinar que las redes sociales no solo permiten facilitar 
+la comunicación digital a las personas de todo el mundo, sino que son utilizadas por las marcas 
+para ofrecer publicidad sobre sus productos o servicios. Las redes sociales tuvieron éxito en el 
+ámbito de la publicidad, ya que cada día incrementa el número de personas que acceden a este 
+medio para comunicarse. Las redes sociales son consideradas como los sitios con mayor tráfico 
+de usuarios en la red, y se comparan con los medios publicitarios de mayor auge. 
+  
+21 
+ 
+Capítulo 2 Estado de la práctica 
+2.3 Propuesta de solución 
+PHP y JSP son lenguajes similares con los cuales se desarrollan aplicaciones de manera 
+efectiva. XP y Scrum son metodologías ágiles de desarrollo de Software que utilizan las historias 
+de usuario. Sin embargo, se seleccionó el lenguaje PHP para el desarrollo de la aplicación, y 
+una adecuación de la metodología XP para planificar y controlar el proceso de desarrollo del 
+proyecto.  
+ 
+2.3.1 Justificación de la solución seleccionada 
+Se seleccionó el lenguaje de programación PHP debido a que es el más utilizado en la 
+actualidad, además de que ofrece la comunidad más grande con respecto a programación Web, 
+cuenta con amplia variedad de documentación, componentes y bibliotecas que se utilizan 
+libremente en cualquier proyecto y cuenta con servicio de alojamiento Web de bajo costo. Se 
+propone la utilización de la metodología XP (Programación Extrema) debido a que es la 
+metodología ágil más popular, a que las interacciones de entrega son más rápidas, y a que se 
+basa en el conocimiento adecuado de las necesidades reales del cliente, siguiendo su orden de 
+prioridad de las tareas definido con anterioridad. Debido a que esta metodología requiere del 
+desarrollo de proyecto en parejas, se propone la realización del proyecto por parte del autor 
+principal del proyecto, y la constante revisión del director del proyecto.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+22 
+ 
+Capítulo 3 Metodología 
+Capítulo 3 Metodología 
+ 
+En este capítulo se presenta la metodología elegida para este proyecto, se desarrolla el proyecto 
+empleando dicha metodología y se presenta la arquitectura adecuada para la aplicación. 
+ 
+3.1 Arquitectura de la aplicación 
+La arquitectura de Software es la estructura del sistema en función de la definición de los 
+componentes y sus interacciones. Es considerada como puente entre los requisitos del sistema y 
+la implementación [32]. La arquitectura de la aplicación presenta la manera en la cual son 
+separados los componentes de Software que se desarrollarán u ocuparán a lo largo del proyecto. 
+Para el desarrollo de la aplicación, se eligió el diseño arquitectónico En capas aplicado por el 
+patrón arquitectónico Modelo-Vista-Controlador. El patrón MVC es un paradigma que divide 
+las partes que conforman una aplicación en el Modelo, las Vistas y los Controladores, 
+permitiendo la implementación por separado de cada elemento, garantizando así la actualización 
+y mantenimiento del Software de forma sencilla y en un reducido espacio de tiempo [33]. 
+ 
+3.1.1 Descripción de los componentes de la arquitectura 
+Modelo 
+Representan los componentes que acceden a los datos manejados por la aplicación, que se 
+encuentran gestionados por un servidor de recursos de cada red social. Los datos no son 
+manipulables directamente por la aplicación, sino que son consultados y modificados por las 
+API´s de las redes sociales mediante sus SDK’s para PHP. 
+ 
+Vista 
+Representa la interfaz de usuario del sistema que incluye una clase principal PHP, validaciones 
+en JavaScript y el tema de la aplicación mediante hojas de estilo (CSS). Esta capa no tiene 
+interacción directa con los datos de la aplicación. 
+ 
+ 
+ 
+23 
+ 
+Capítulo 3 Metodología 
+Controlador 
+En esta capa se encuentran los SDK´s que permiten la comunicación del lenguaje PHP con las 
+API´s de Facebook, Twitter y Google+. Asimismo, en esta capa se incluyen las clases PHP 
+encargadas de la lógica del negocio de la aplicación, es decir, la funcionalidad de la misma, que 
+funcionan como intermediarias entre la Vista y el Modelo y requieren de las SDK´s de las redes 
+sociales. En la Fig. 3.1 se muestra la arquitectura de la aplicación. 
+Fig. 3.1 Arquitectura de la aplicación 
+ 
+3.2 Herramientas utilizadas 
+ 
+3.2.1 Desarrollo 
+Para el desarrollo de la aplicación Web se utilizaron las siguientes herramientas. Todas las 
+herramientas son gratuitas. 
+ 
+ Notepad++ 7.2 para escribir el código necesario de la aplicación.  
+ Visual Paradigm versión 14.1 Community Edition para la creación de diagramas UML. 
+ FileZilla Client 3.22.2.2 released para subir los archivos de la aplicación al servidor 
+Web. 
+ 
+3.2.2 Ejecución 
+El Software que se utilizó para la ejecución de la aplicación Web es el siguiente: 
+ 
+ Apache como Servidor para aplicaciones Web en PHP. 
+24 
+ 
+Capítulo 3 Metodología 
+ Un dominio para acceder a la aplicación por medio de internet. 
+ Un visualizador de páginas de Internet (Google Chrome, Mozilla Firefox, Internet 
+Explorer, entre otros). 
+ 
+3.2.3 Tecnologías 
+ PHP. 
+ SDK para PHP de la Api de Facebook, Twitter y Google+. 
+ 
+3.3 Protección de datos personales 
+Los datos de cualquier aplicación o sistema son fundamentales para el funcionamiento de la 
+misma. Es por esa razón que es necesario que dichos datos sean seguros, es decir, que no sean 
+accesibles por aplicaciones maliciosas o para fines distintos a los aceptados por el usuario. El 
+Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales 
+(INAI) expidió la Ley Federal de Protección de Datos Personales en Posesión de los 
+Particulares, la cual tiene como objetivo regular el tratamiento legítimo, controlado e informado 
+de los datos, con el fin de garantizar la privacidad y el derecho a la autodeterminación 
+informativa de los individuos [34]. En las Redes Sociales se manejan gran cantidad de datos que 
+son capturados por los usuarios como requisito para crear nuevas cuentas. Estos datos tienen 
+que ser protegidos a consideración del usuario tanto en las Redes Sociales como en las 
+aplicaciones que acceden a ellas.  
+  
+3.3.1 Datos personales sensibles 
+De acuerdo a la LFPDPPP [34], cualquier información concerniente a una persona física 
+identificada o identificable se conoce como Datos Personales. Asimismo, establece que los datos 
+personales sensibles son aquellos cuya utilización indebida pueda dar origen a discriminación o 
+conlleve un riesgo grave para éste.  
+Los datos personales sensibles son los siguientes: 
+ Religión 
+ Preferencias sexuales 
+ Afiliación Sindical 
+25 
+ 
+Capítulo 3 Metodología 
+ Opiniones políticas 
+ Origen Racial o étnico 
+ Estado de Salud Presente y Futuro 
+ Información Genética 
+ Creencias filosóficas y morales 
+ 
+Algunos de estos datos son utilizados por las Redes Sociales para conocer los gustos de la 
+persona, con el objetivo de que conozca personas con gustos parecidos o para mostrarles 
+información de su interés. El Artículo 9 de la LFPDPPP establece que el responsable obtendrá 
+el consentimiento expreso y por escrito del titular para el tratamiento de los datos personales 
+sensibles, a través de su firma autógrafa, firma electrónica o cualquier mecanismo de 
+autenticación que al efecto se establezca. 
+ 
+3.3.2 Política de privacidad 
+Los artículos 15 y 16 de la LFPDPPP establecen que es necesario realizar un Aviso de 
+Privacidad para informar a los titulares de los datos la información que se recaba de ellos y sus 
+fines, el cual contendrá los siguientes datos: 
+ La identidad y domicilio del responsable que los recaba 
+ Las finalidades del tratamiento de datos 
+ Las opciones y medios que el responsable ofrezca a los titulares para limitar el uso o 
+divulgación de los datos 
+ Los medios para ejercer los derechos de acceso, rectificación, cancelación u oposición, 
+de conformidad con lo dispuesto en esta Ley 
+ En su caso, las transferencias de datos que se efectúen 
+ El procedimiento y medio por el cual el responsable comunicará a los titulares de 
+cambios al aviso de privacidad, de conformidad con lo previsto de esta Ley 
+Asimismo, en el artículo 17 se establece que el aviso de privacidad se pondrá a disposición de 
+los titulares a través de formatos impresos, digitales, visuales, sonoros o cualquier otra 
+tecnología de la siguiente manera: 
+26 
+ 
+Capítulo 3 Metodología 
+ Cuando los datos personales se obtuvieron personalmente del titular, el aviso de 
+privacidad se facilitará en el momento en que se recaba el dato de forma clara y 
+fehaciente, a través de los formatos por los que se recaban, salvo que se hubiera facilitado 
+el aviso con anterioridad 
+ Cuando   los   datos   personales   sean   obtenidos   directamente   del   titular   por   
+cualquier   medio electrónico, óptico, sonoro, visual, o a través de cualquier otra 
+tecnología, el responsable proporcionará al titular de manera inmediata, al menos la 
+información a que se refiere las fracciones I y II del artículo anterior, así como proveer 
+los mecanismos para que el titular conozca el texto completo del aviso de privacidad 
+[34]. 
+ 
+El Aviso de Privacidad se encontrará en una sección de la aplicación, por lo cual todas las 
+personas que utilizarán la aplicación tendrán acceso a este documento para conocer los datos 
+personales que se utilizarán y conocer los datos de los responsables de la aplicación.  
+ 
+3.3.3 Seguridad 
+Para incrementar la seguridad de los datos de los usuarios, el artículo 19 de la LFPDPPP [34] 
+establece que todo el responsable que lleve a cabo tratamiento de los datos personales 
+dictaminará y mantendrá medidas de seguridad administrativas, técnicas y físicas que permitan 
+proteger los datos personales contra daño, pérdida, alteración, destrucción o el uso, acceso o 
+tratamiento no autorizado. Asimismo, el artículo 20 establece que las vulneraciones de 
+seguridad ocurridas en cualquier fase del tratamiento que afecten de forma significativa los 
+derechos patrimoniales o morales de los titulares, serán informadas de forma inmediata por el 
+responsable al titular, a fin que este último pueda tomar las medidas correspondientes a la 
+defensa de sus derechos. En el artículo 21 se establece que el responsable o terceros que 
+intervengan en cualquier fase del tratamiento de datos personales deberán guardar 
+confidencialidad respecto de estos, obligación que subsistirá aun después de finalizar sus 
+relaciones con el titular, o, en su caso, con el responsable. 
+Como medida de seguridad para esta aplicación se utiliza el protocolo de autorización Oauth, 
+que protege el usuario y contraseña de las cuentas de las redes sociales y realiza solicitudes de 
+27 
+ 
+Capítulo 3 Metodología 
+forma anónima utilizando un Token de acceso. Para realizar éstas solicitudes, el propietario de 
+las cuentas de redes sociales tendrá que ofrecer un permiso para acceder a los datos necesarios 
+para el funcionamiento de la aplicación. La Tabla 3.1 muestra los datos que se extraerán de las 
+redes sociales. 
+ 
+Tabla 3.1 Datos que se extraerán de las redes sociales 
+Dato Tipo de dato 
+Nombre de usuario No sensible 
+Correo electrónico No sensible 
+Nombre de la página (Facebook) No sensible 
+Número de seguidores No sensible 
+Datos de las publicaciones No sensible 
+ 
+3.4 Metodología XP 
+Una metodología propone una serie de pasos a seguir para desarrollar y documentar 
+exitosamente un proyecto de Software. La metodología XP (Xtreme Programming por sus siglas 
+en inglés) es una metodología de desarrollo de procesos ágiles para el desarrollo de Software. 
+Incluye características que se adaptaron de las mejores metodologías de desarrollo. Esta 
+metodología se centra en potenciar las relaciones interpersonales como clave para el éxito en 
+desarrollo de Software, promoviendo el trabajo en equipo, preocupándose por el aprendizaje de 
+los desarrolladores, y propiciando un buen clima de trabajo.  
+ 
+Ventajas 
+• Programación organizada.   
+• Menor taza de errores.   
+• Satisfacción del programador.   
+• Solución de errores de programas.   
+• Versiones nuevas. 
+• Comunicación entre clientes y desarrolladores. 
+• Facilita los cambios. 
+28 
+ 
+Capítulo 3 Metodología 
+• Ahorra tiempo y dinero. 
+ 
+Desventajas 
+• Recomendado para proyectos de corto plazo. 
+• Altas comisiones en caso de fallar. 
+• Imposible prever todo antes de programar. 
+• No siempre es más fácil que el desarrollo tradicional [35]. 
+ 
+Para dar seguimiento a esta metodología, se asignan los siguientes roles a los desarrolladores 
+del proyecto: 
+Programador (escritor de la codificación de la aplicación): Franz Dayit López Cruz 
+Encargado de pruebas (Tester): Franz Dayit López Cruz 
+Encargado de seguimiento (Tracker): Franz Dayit López Cruz 
+Jefe del proyecto o Big Boss (Coordina al cliente y a los programadores): Franz Dayit López 
+Cruz 
+Consultor (miembro externo del equipo con conocimientos temas necesarios para el desarrollo 
+del proyecto): Luis Ángel Reyes Hernández 
+Entrenador (Coach): Luis Ángel Reyes Hernández 
+ 
+3.4.1 Historias de usuario 
+En la primera etapa de la metodología XP, se analizan y establecen los requerimientos del cliente 
+para plasmarlos en la aplicación. Esto se realiza por medio de lenguaje natural, que después son 
+documentadas mediante tarjetas como parte de la documentación. Se utilizará el lenguaje de 
+modelado UML para comprender las historias de usuario mediante un Diagrama de Casos de 
+uso. 
+ 
+3.4.1.1 Diagrama de casos de uso 
+Se identificó un solo usuario para la aplicación, debido a que no se detectaron características 
+diferentes para las personas que la utilizarán. Se requiere que el usuario tenga una cuenta activa 
+29 
+ 
+Capítulo 3 Metodología 
+de Facebook, Twitter y Google+, debido a que la aplicación extraerá información de esas 
+cuentas. Los casos de uso identificados para el usuario son los siguientes: 
+ 
+ Iniciar sesión en Facebook 
+ Iniciar sesión en Twitter 
+ Iniciar sesión en Google+ 
+ Mostrar datos de una publicación 
+ Generar reporte 
+ Realizar publicación 
+ Mostrar publicaciones recientes 
+ Mostrar información de visitas 
+ 
+En la Fig. 3.2 se muestra el diagrama de casos de uso a partir de los requerimientos 
+enlistados. 
+Fig. 3.2 Diagrama de Casos de Uso de la aplicación 
+ 
+3.4.1.2 Diseño navegacional 
+El diseño navegacional establece las rutas que se van a seguir en la utilización de la aplicación. 
+En la Fig. 3.3 se presenta el diseño navegacional de la aplicación. 
+30 
+ 
+Capítulo 3 Metodología 
+Página de 
+inicio
+Inicio de Inicio de Inicio de 
+sesión en sesión en sesión en 
+Facebook Twitter Google+
+Página Página Página 
+principal principal principal
+ 
+Fig. 3.3 Diseño navegacional de la aplicación 
+ 
+3.4.1.3 Tarjetas de historia de usuario 
+A continuación, se presentan las Tarjetas de historia de usuario en base a los casos de uso 
+identificados para el usuario. 
+ 
+3.4.1.3.1 Mostrar datos de una publicación 
+Historia de Usuario 
+Número: 1 Usuario: Administrador 
+Nombre historia: Mostrar datos de una publicación 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Alta  Media 
+Puntos estimados: 4 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+31 
+ 
+Capítulo 3 Metodología 
+Descripción: 
+Presenta los datos que se obtuvieron de una publicación realizada en las diversas redes 
+sociales con el objetivo de conocer el impacto que se obtuvo en cada una de ellas por medio 
+de gráficas. 
+ 
+Observaciones:  
+ 
+3.4.1.3.2 Agregar publicación 
+Historia de Usuario 
+Número: 2 Usuario: Administrador 
+Nombre historia: Agregar publicación 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Media Media 
+Puntos estimados: 3 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+Registra una nueva publicación en cada una de las distintas redes sociales que se encuentren 
+registradas y configuradas en la aplicación. 
+ 
+Observaciones:  
+ 
+ 
+32 
+ 
+Capítulo 3 Metodología 
+3.4.1.3.3 Mostrar diagrama de interacción en publicaciones 
+Historia de Usuario 
+Número: 3 Usuario: Administrador 
+Nombre historia: Mostrar diagrama de interacción en publicaciones 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Media Media 
+Puntos estimados: 3 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+Presenta la información relacionada con las publicaciones realizadas en las redes sociales 
+activas en la aplicación mediante diagrama de red y presenta un resumen de interacción de 
+las publicaciones. 
+ 
+Observaciones:  
+ 
+3.4.1.3.4 Iniciar sesión en Facebook 
+Historia de Usuario 
+Número: 4 Usuario: Administrador 
+Nombre historia: Iniciar sesión en Facebook 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Alta  Media 
+Puntos estimados: 1 Iteración asignada: 1 
+33 
+ 
+Capítulo 3 Metodología 
+Programador responsable: Franz Dayit López Cruz 
+ 
+Descripción: 
+Presenta el formulario en el cuál se capturarán los datos necesarios para acceder a la cuenta 
+de usuario de la red social Facebook. 
+ 
+Observaciones:  
+ 
+3.4.1.3.5 Iniciar sesión en Twitter 
+Historia de Usuario 
+Número: 5 Usuario: Administrador 
+Nombre historia: Iniciar sesión en Twitter 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Alta  Media 
+Puntos estimados: 1 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+Presenta el formulario en el cuál se capturarán los datos necesarios para acceder a la cuenta 
+de usuario de la red social Twitter. 
+ 
+Observaciones:  
+ 
+ 
+34 
+ 
+Capítulo 3 Metodología 
+3.4.1.3.6 Iniciar sesión en Google+ 
+Historia de Usuario 
+Número: 6 Usuario: Administrador 
+Nombre historia: Iniciar sesión en Google+ 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Alta  Media 
+Puntos estimados: 1 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+Presenta el formulario en el cuál se capturarán los datos necesarios para acceder a la cuenta 
+de usuario de la red social Google+. 
+ 
+Observaciones:  
+ 
+3.4.1.3.7 Mostrar publicaciones recientes 
+Historia de Usuario 
+Número: 7 Usuario: Administrador 
+Nombre historia: Mostrar publicaciones recientes 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Alta Media 
+Puntos estimados: 3 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+35 
+ 
+Capítulo 3 Metodología 
+Descripción: 
+Presenta una lista de las últimas publicaciones realizadas en las cuentas de las redes sociales 
+registradas. 
+ 
+Observaciones:  
+ 
+3.4.1.3.8 Generar reporte 
+Historia de Usuario 
+Número: 8 Usuario: Administrador 
+Nombre historia: Generar reporte 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Media Media 
+Puntos estimados: 3 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+Presenta la información detallada de una publicación o publicaciones en formato listo para 
+ser impreso. 
+ 
+Observaciones:  
+ 
+3.4.1.3.9 Generar graficas 
+Historia de Usuario 
+Número: 9 Usuario: Administrador 
+36 
+ 
+Capítulo 3 Metodología 
+Nombre historia: Generar graficas 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Media Media 
+Puntos estimados: 3 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+Muestra el número de interacciones de una publicación en una gráfica de barras y la 
+comparación de interacciones de una publicación entre las tres redes sociales en una gráfica 
+de anillo. 
+Observaciones:  
+ 
+ 
+3.4.1.3.10 Mostrar diagrama de interacción de usuarios 
+Historia de Usuario 
+Número: 10 Usuario: Administrador 
+Nombre historia: Mostrar diagrama de interacción de usuarios 
+Prioridad en negocio:   Riesgo en desarrollo:  
+Media Media 
+Puntos estimados: 3 Iteración asignada: 1 
+Programador responsable: Franz Dayit López Cruz 
+Descripción: 
+37 
+ 
+Capítulo 3 Metodología 
+Muestra los usuarios que interactuaron en una publicación determinada en las redes sociales 
+activas en la aplicación mediante un diagrama de red. Asimismo, presenta las interacciones 
+que tuvieron los usuarios sobre dicha publicación. 
+Observaciones:  
+ 
+3.4.1.4 Diagramas de secuencia 
+Los diagramas de secuencia presentan la interacción entre los objetos que colaboran para lograr 
+el objetivo acordado en el caso de uso. A continuación, se detalla cada caso de uso utilizando 
+diagramas de secuencia. 
+ 
+3.4.1.4.1 Mostrar datos de una publicación 
+En la Fig. 3.4 se detalla la interacción entre los objetos para el caso de uso Mostrar datos de una 
+publicación. Para acceder a esta función el usuario requiere tener la sesión iniciada en las tres 
+redes sociales. La aplicación mostrará una lista de las publicaciones que se asemejan en las tres 
+redes sociales para que el usuario elija a la que desea consultar. Al elegir la publicación, la 
+aplicación mostrará datos de ella y graficas que presentarán el impacto que obtuvo. 
+38 
+ 
+Capítulo 3 Metodología 
+Fig. 3.4 Mostrar datos de una publicación 
+ 
+3.4.1.4.2 Realizar Publicación 
+En la Fig. 3.5 se detalla la interacción entre los objetos para el caso de uso Realizar Publicación. 
+Para acceder a esta función el usuario requiere tener la sesión iniciada en Facebook y Twitter. 
+La aplicación mostrará un formulario para escribir el mensaje de la publicación que se desea 
+publicar en las redes sociales. El mensaje será publicado en Facebook y Twitter por medio de 
+sus SDK y se mostrará en la página principal donde se enlistan las publicaciones para cada red 
+social. 
+39 
+ 
+Capítulo 3 Metodología 
+Fig. 3.5 Realizar publicación 
+ 
+3.4.1.4.3 Mostrar diagrama de interacción en publicaciones 
+En la Fig. 3.6 se detalla la interacción entre los objetos para el caso de uso Mostrar datos de 
+visitas. Para acceder a esta función el usuario requiere tener la sesión iniciada en Facebook, 
+Twitter o Google+. La aplicación utilizará el SDK de Cytoscape en JavaScript para mostrar un 
+diagrama de red sobre los datos de las publicaciones existentes en las cuentas activas en la 
+aplicación. 
+ 
+ 
+ 
+ 
+40 
+ 
+Capítulo 3 Metodología 
+ 
+ 
+Fig. 3.6 Mostrar diagrama de interacción de publicaciones 
+3.4.1.4.4 Iniciar sesión en Facebook 
+En la Fig. 3.7 se detalla la interacción entre los objetos para el caso de uso Iniciar sesión en 
+Facebook. La página principal de la aplicación dirige al usuario a la página de inicio de sesión, 
+en donde capturará el correo y la contraseña para ingresar a la cuenta de Facebook. Una vez 
+iniciada la sesión, se mostrará la página principal de la aplicación con la lista de las 
+publicaciones realizadas en Facebook. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.7 Iniciar sesión en Facebook 
+ 
+ 
+41 
+ 
+Capítulo 3 Metodología 
+3.4.1.4.5 Iniciar sesión en Twitter 
+En la Fig. 3.8 se detalla la interacción entre los objetos para el caso de uso Iniciar sesión en 
+Twitter. La página principal de la aplicación dirige al usuario a la página de inicio de sesión en 
+Twitter, en donde capturará el correo y la contraseña para ingresar a la cuenta. Una vez iniciada 
+la sesión, se mostrará la página principal de la aplicación con la lista de las publicaciones 
+realizadas en Twitter. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.8 Iniciar sesión en Twitter  
+ 
+3.4.1.4.6 Iniciar sesión en Google+ 
+En la Fig. 3.9 se detalla la interacción entre los objetos para el caso de uso Iniciar sesión en 
+Google+. La página principal de la aplicación dirige al usuario a la página de inicio de sesión 
+en Google+, en donde capturará el correo y la contraseña para ingresar a la cuenta. Una vez 
+iniciada la sesión, se mostrará la página principal de la aplicación con la lista de las 
+publicaciones realizadas en Google+. 
+ 
+ 
+42 
+ 
+Capítulo 3 Metodología 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.9 Iniciar sesión en Google+  
+ 
+3.4.1.4.7 Mostrar publicaciones recientes 
+En la Fig. 3.10 se detalla la interacción entre los objetos para el caso de uso Mostrar 
+publicaciones recientes. Para acceder a esta función el usuario requiere tener la sesión iniciada 
+en la red social de la cual quiera consultar las publicaciones. El objeto de Red social y los SDK´s 
+que requieren son independientes para cada red social. Sin embargo, la secuencia es la misma 
+para las tres redes sociales. La aplicación mostrará una lista de publicaciones que se encuentran 
+en las cuentas de la red social elegida. En el caso de Facebook, las publicaciones que muestra 
+son extraídas de una página creada con la cuenta de Facebook vinculada. 
+ 
+43 
+ 
+Capítulo 3 Metodología 
+Fig. 3.10 Mostrar publicaciones recientes 
+ 
+3.4.1.4.8 Generar reporte 
+En la Fig. 3.11 se detalla la interacción entre los objetos para el caso de uso Generar reporte. 
+Para acceder a esta función el usuario requiere tener la sesión iniciada en Facebook, Twitter y 
+Google+. La aplicación realizará la solicitud a las SDK’s de cada una de las redes sociales para 
+consultar los datos que necesita para realizar los reportes. Se utilizarán bibliotecas que ayudan 
+a la generación de reportes en PDF. 
+ 
+ 
+44 
+ 
+Capítulo 3 Metodología 
+Fig. 3.11 Generar reporte 
+ 
+3.4.1.4.9 Generar gráficas 
+En la Fig. 3.12 se detalla la interacción entre los objetos para el caso de uso Generar gráficas. 
+Para acceder a esta función el usuario requiere tener la sesión iniciada en Facebook, Twitter o 
+Google+. La aplicación utilizará el SDK de pChart para mostrar gráficas de barras y de anillo 
+con la información de las interacciones de cada red social. 
+ 
+ 
+ 
+ 
+45 
+ 
+Capítulo 3 Metodología 
+Fig. 3.12 Generar gráficas 
+ 
+3.4.1.4.10 Mostrar diagrama de interacción de usuarios 
+En la Fig. 3.13 se detalla la interacción entre los objetos para el caso de uso Mostrar diagrama 
+de interacción de usuarios. Para acceder a esta función el usuario requiere tener la sesión iniciada 
+en Facebook, Twitter o Google+. La aplicación utilizará el SDK de Cytoscape en JavaScript 
+para mostrar un diagrama de red sobre los usuarios que interactúan en las publicaciones 
+existentes en las cuentas activas en la aplicación. 
+Fig. 3.13 Mostrar diagrama de interacción de usuarios 
+ 
+ 
+ 
+46 
+ 
+Capítulo 3 Metodología 
+3.4.1.5 Diagrama de despliegue 
+El diagrama de despliegue muestra la relación entre el hardware (nodo) necesario para que 
+funcione la aplicación y el Software que se instala o se requiere en los nodos. En la figura se 
+muestra que la aplicación se aloja en un Web Hosting, que incluye el servidor Apache y el 
+servidor de base de datos. Dentro del servidor Apache se incluye la codificación de la aplicación 
+y las bibliotecas necesarias en PHP. Los usuarios de la aplicación necesitan tener una 
+computadora con acceso a Internet. En la Fig. 3.14 se muestra el diagrama de despliegue de la 
+aplicación. 
+Fig. 3.14 Diagrama de despliegue de la aplicación 
+ 
+3.4.2 Pruebas de aceptación 
+Cuando se desarrolla un proyecto, es necesario conocer si las ventajas que le ofrecen al cliente 
+funcionan de la forma esperada. Es por eso que se realizan las pruebas de aceptación, que 
+evalúan la calidad del Software desarrollado.  
+ 
+3.4.2.1 Prototipos de interfaz 
+A continuación, se presenta la primera versión de la aplicación, la cual incluye parte de su 
+funcionalidad y el diseño inicial de la misma. Al acceder a la aplicación Web, la pantalla inicial 
+muestra un acordeón que divide las tres redes sociales. Este acordeón contiene botones para 
+iniciar sesión en cada red social. En la Fig. 3.15 se muestra la pantalla inicial de la aplicación 
+incluyendo los botones de inicio de sesión para Twitter y Google+. 
+47 
+ 
+Capítulo 3 Metodología 
+ 
+Fig. 3.15 Primera pantalla de la aplicación y los botones de Twitter y Google+ 
+ 
+Al momento de iniciar sesión en cada red social, se muestran los datos relevantes de las cuentas 
+que se registraron. En el caso de Facebook, los datos que se muestran pertenecen a una página 
+registrada con la cuenta ingresada. En las Fig. 3.16, 3.17 y 3.18 se muestra la pantalla después 
+de iniciar sesión, en las cuales se muestran los datos extraídos de cada red social.  
+ 
+ 
+ 
+ 
+ 
+48 
+ 
+Capítulo 3 Metodología 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.16 Extracción de datos de Facebook 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 3.17 Extracción de datos de Twitter 
+ 
+ 
+49 
+ 
+Capítulo 3 Metodología 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.18 Extracción de datos de Google+ 
+ 
+ 
+Al iniciar sesión de las cuentas de Facebook y Twitter, se habilita la opción de Agregar 
+publicación. En la Fig. 3.19 se muestra el formulario para agregar una nueva publicación. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 3.19 Agregar Publicación 
+ 
+ 
+50 
+ 
+Capítulo 4 Resultados 
+Capítulo 4 Resultados 
+ 
+En este capítulo se muestra el caso de estudio para este trabajo sobre la realización de la 
+aplicación Web para la medición de impacto de acciones (publicaciones) en las redes sociales 
+Facebook, Twitter y Google+.  
+ 
+Esta aplicación se encuentra disponible en la Web, funcionando en cualquier cuenta de 
+Facebook, Twitter y Google+, siendo necesario disponer de una cuenta para cada red social. 
+Para utilizar esta aplicación, el usuario iniciará sesión en las tres redes sociales, autorizando el 
+acceso a los datos que son de utilidad para la aplicación. Una vez realizada la autenticación y 
+autorización, el usuario accederá a diversos tipos de gráficas y diagramas que explican el 
+impacto de las publicaciones en las distintas redes sociales. Asimismo, la aplicación permite 
+agregar nuevas publicaciones en una página de la cuenta registrada de Facebook y en la cuenta 
+de Twitter, y permite exportar la información de las publicaciones en formato PDF. 
+ 
+4.1 Registro de la aplicación en las páginas de las Redes Sociales para desarrolladores 
+Para acceder a datos de las redes sociales y utilizar el protocolo Oauth como mecanismo de 
+autorización, es necesario registrar la aplicación en los sitios para desarrolladores de las 
+diferentes redes sociales. Este registro permite ligar la aplicación Web en PHP con las redes 
+sociales para generar códigos con los cuales se realizan solicitudes a las cuentas de dichas redes. 
+En Facebook, Twitter y Google+ el registro de una aplicación es similar. En las Fig. 4.1, 4.2 y 
+4.3 se muestran las páginas de desarrolladores para Facebook, Twitter y Google+.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.1 Página de Facebook para desarrolladores 
+ 
+51 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.2 Página de Twitter para desarrolladores 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.3 Página de Google para desarrolladores 
+ 
+En el caso de Facebook, al momento de registrar una nueva aplicación, es necesario establecer 
+el nombre que tendrá y un correo electrónico para el contacto como datos de primera instancia. 
+Más adelante, se presenta la página principal de la aplicación creada, como se muestra en la Fig. 
+4.4.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.4 Página principal de la aplicación en Facebook 
+ 
+52 
+ 
+Capítulo 4 Resultados 
+Una vez dentro de la página principal de la aplicación, es necesario realizar algunas 
+configuraciones de suma importancia, tales como los dominios de la aplicación, la URL del sitio, 
+tipo de aplicación (de escritorio, Web, entre otras) y algunas restricciones. Asimismo, es 
+necesario habilitar el inicio de sesión con Facebook, en donde se establecerá el URI de al cuál 
+se dirigirá la aplicación una vez que el cliente se autenticó y autorizó el acceso.  
+ 
+Al momento de registrar una aplicación en Twitter, se presenta una página en donde es necesario 
+introducir datos como el nombre, la descripción de la aplicación, el sitio Web y la página a la 
+cual se dirige después de la autenticación y autorización y aceptar el acuerdo de Desarrollador 
+de Twitter. Después de culminar con el registro de la aplicación, se presenta su página principal 
+como se muestra en la Fig. 4.5. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.5 Página principal de la aplicación en Twitter 
+ 
+En el caso del registro en Google+, es necesario entrar a la consola de API´s de Google y crear 
+un nuevo proyecto. Una vez creado, se necesita habilitar la API de Google+ y configurarla. En 
+la Fig. 4.6 se muestra la página principal de la aplicación registrada para Google+.  
+ 
+53 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.6 Página principal de la aplicación en Google 
+ 
+Después de registrar la aplicación en cada red social, se tendrá acceso a los códigos de 
+identificación para poderlos utilizar en aplicaciones terceras. 
+ 
+4.2 Caso de estudio: MI-DEPI 
+MI-DEPI es una aplicación Web que se encarga del seguimiento y monitorización de las cuentas 
+de redes sociales Facebook, Twitter y Google+ del Departamento de Postgrado e Investigación 
+del Instituto Tecnológico de Orizaba (DEPI). Esta aplicación se encuentra en la Web y es 
+accesible por medio de la siguiente dirección: http://proyectodyt.com/. La página principal 
+incluye una sección para cada red social, la cual presenta un botón que dirigirá a la pantalla de 
+inicio de sesión y de autorización para acceder a datos y funciones en nombre de las cuentas de 
+usuario de dichas redes sociales (como se muestra en la Fig. 4.7). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+54 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.7 Página principal de la aplicación 
+ 
+4.2.1 Solicitud de permisos 
+En el caso de Facebook, la aplicación funciona para cualquier cuenta que sea administradora de 
+por lo menos una página de fans. Sin embargo, la aplicación al inicio solo incluía los permisos 
+de acceso para los datos principales de la cuenta, como correo electrónico, perfil del usuario y 
+la información principal de los amigos del usuario. Para que la aplicación funcione de manera 
+correcta, se necesitan los permisos para gestionar y publicar en páginas, y acceder a las 
+estadísticas de dichas páginas. Es por esa razón que se solicitaron los permisos en la plataforma 
+de Facebook para desarrolladores, para lo cual se requiere configurar lo siguiente: 
+ Enlace de la Política de privacidad de la aplicación 
+ Configurar icono de la aplicación 
+ 
+Antes de realizar la solicitud de los permisos, cada permiso necesita configurarse en el sitio, 
+para lo cual es necesario realizar lo siguiente: 
+ Determinar la manera en la que la aplicación utiliza el permiso 
+ Definir una lista de actividades para probar la aplicación 
+ Subir un video para mostrar la utilización del permiso en la aplicación 
+ 
+ 
+55 
+ 
+Capítulo 4 Resultados 
+4.2.1.1 Política de la aplicación 
+ 
+Esta aplicación accede a los datos que los usuarios registraron y que se encuentran almacenados 
+por las redes sociales Facebook, Twitter y Google+. Es por esa razón que es necesario respetar 
+el reglamento de acceso a datos personales en función de los particulares y las normas para los 
+desarrolladores de Facebook, Twitter y Google+. Estas normas establecen que es necesario que 
+el usuario de la aplicación conozca los datos que se extraerán de sus cuentas de redes sociales y 
+sean manejados de forma segura, sin utilizarlos para discriminar al usuario o para cualquier uso 
+indebido. Estos puntos se establecen en la Política de privacidad de la aplicación, la cual es 
+accesible a través del siguiente enlace: http://proyectodyt.com/politica.php, como se muestra en 
+la Fig. 4.8. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.8 Política de privacidad de la aplicación 
+ 
+4.2.2 Proceso de autenticación 
+La autenticación es el servicio que trata de asegurar que una comunicación sea auténtica, es 
+decir, verificar que el origen de los datos es el correcto, quién los envió y cuándo fueron 
+enviados y recibidos también sean correctos [36]. En el caso de la autenticación en las redes 
+56 
+ 
+Capítulo 4 Resultados 
+sociales, es necesario que el usuario de la cuenta se identifique como el dueño de la misma, 
+ofreciendo en el formulario el correo que utilizó para crear la cuenta y el dato que solo él conoce: 
+la contraseña. En las Fig. 4.9, 4.10 y 4.11, se muestra la pantalla de autenticación para Facebook, 
+Twitter y Google+. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.9 Pantalla de autenticación de Facebook 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.10 Pantalla de autenticación de Twitter 
+57 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.11 Pantallas de autenticación de Google 
+ 
+Una vez iniciada la sesión, inicia el proceso de autorización de datos y funciones en la cuenta 
+de red social en la cual se autenticó el usuario.  
+ 
+4.2.3 Proceso de autorización 
+La autorización es fundamental en esta aplicación, debido a que ofrece seguridad al dueño de 
+las cuentas de usuario de las redes sociales, y a que éste elige los datos y las funciones que 
+utilizará la aplicación tercera. En el caso de Facebook, como primera instancia, la pantalla de 
+autorización solicita el acceso a los datos que utilizará la aplicación, como se muestra en la Fig. 
+4.12.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.12 Autorización de los datos del usuario en 
+ Facebook 
+58 
+ 
+Capítulo 4 Resultados 
+Al aceptar y presionar el botón de continuar, se muestra una pantalla para solicitar permiso para 
+realizar publicaciones en nombre de la página del usuario autenticado, y permite elegir los 
+permisos para la gestión de dicha página, como se muestra en la Fig. 4.13. 
+Fig. 4.13 Autorización de funciones de páginas en Facebook 
+ 
+En el caso de Twitter, la autorización se muestra en la misma pantalla de autenticación, por lo 
+que se realizan los dos procesos al mismo tiempo. En Google+, se excluye el proceso de 
+autorización a los datos. 
+ 
+Al iniciar sesión en cualquier red social, se muestra una lista de las publicaciones realizadas 
+recientemente por el propietario de la cuenta de usuario de dicha red, como se muestra en la Fig. 
+4.14.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.14 Página principal de la aplicación después de autorizar el acceso 
+ 
+59 
+ 
+Capítulo 4 Resultados 
+ 
+4.2.4 Facebook 
+Para utilizar la aplicación, el usuario necesita tener una cuenta administradora de una página. Al 
+iniciar sesión, el usuario autorizará el acceso a los datos principales de las publicaciones y a 
+algunas estadísticas calculadas en función de éstas. Los datos que se requieren extraer de cada 
+publicación se enlistan en la Tabla 4.1. 
+ 
+Tabla 4.1 Datos utilizados de las publicaciones en Facebook 
+Nombre Descripción 
+Consumidores Número de personas que hicieron clic en cualquier lugar de la publicación 
+sin comprometerse con ella. 
+Compromiso Número de personas que aportaron con una reacción, han comentado o 
+compartido las publicaciones. 
+Impresiones El número de veces que una publicación fue presentada a los usuarios, si se 
+hace clic o no sobre la publicación. 
+Alcance La cantidad de usuarios únicos que vieron una publicación. 
+Métricas de compromiso en Facebook 
+Compartidas Veces en las que se compartió una publicación de Facebook. 
+de la 
+publicación 
+Reacciones de Reacciones sobre la publicación en Facebook. 
+la publicación 
+Comentarios Comentarios sobre la publicación de Facebook. 
+en la 
+publicación 
+Número de Personas que han dado clic a la publicación en Facebook. 
+clics en la 
+publicación 
+ 
+Después de iniciar sesión con la cuenta de Facebook y autorizar el acceso a los datos y a la 
+función de publicar, se muestra una lista de publicaciones. Estas publicaciones se realizaron por 
+la página del usuario autenticado y se visualizan en el muro de Facebook en la sección de 
+“Publicaciones” de dicha página, como se muestra en la Fig. 4.15. 
+ 
+ 
+ 
+60 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.15 Publicaciones del muro de la página de Facebook 
+ 
+Las publicaciones recientes de la página se muestran en la aplicación en forma de lista, que 
+incluye solamente el mensaje de la publicación, la fecha y hora en las cuáles se realizaron las 
+publicaciones y enlaces para consultar información detallada y para acceder al diagrama de red, 
+como se muestra en la Fig. 4.16. 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.16 Lista de las publicaciones de Facebook en la 
+aplicación 
+ 
+ 
+61 
+ 
+Capítulo 4 Resultados 
+Debido a que existen veces en las que las páginas de Facebook presentan gran número de 
+publicaciones, en la tabla se muestran cinco de ellas, permitiendo visualizar las publicaciones 
+restantes por medio de los botones localizados debajo de la tabla. Si el usuario quiere acceder a 
+los datos completos de la publicación, tendrá que dar clic al enlace con la leyenda “Ver 
+información”, la cual presenta una ventana emergente con dichos datos, como se muestra en la 
+Fig. 4.17. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.17 Ventana emergente de la publicación en 
+ Facebook 
+ 
+En la ventana emergente se visualiza una tabla para los comentarios de esa publicación, y otra 
+en donde se muestran sus reacciones obtenidas. Asimismo, es posible acceder a algunas gráficas 
+para que el usuario conozca de manera fácil el nivel de interacción con la cuenta por parte de 
+los usuarios, como se muestra en la Fig. 4.18. La gráfica titulada “Comparación de 
+Interacciones” permite visualizar el nivel de interacción entre las tres redes sociales, siempre y 
+cuando exista el mismo mensaje publicado en ellas y la sesión iniciada en Facebook, Twitter y 
+Google+. En la gráfica “Impresiones de la publicación en Facebook” se muestra una gráfica de 
+barras que presenta una comparación entre las impresiones, el número de personas a las cuales 
+fue alcanzada la publicación y el número de personas que dieron clic a la aplicación sin 
+reaccionar, comentar o compartir la publicación. En la gráfica “Interacciones de la publicación 
+en Facebook” existe una comparación entre el número de reacciones, el número de comentarios 
+realizados a esa publicación y el número de veces que se compartió la publicación. 
+62 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.18 Gráficas de la publicación de Facebook 
+ 
+Los datos presentados en la ventana emergente se visualizan en formato PDF para almacenarlos 
+o imprimirlos, como se muestra en la Fig. 4.19. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.19 Visualización de los datos de la 
+ 
+publicación de Facebook en PDF 
+ 
+ 
+63 
+ 
+Capítulo 4 Resultados 
+4.2.5 Twitter 
+La API de Twitter no brinda acceso a las estadísticas de los Tweets, por lo que los datos que se 
+utilizan para la medición de impacto se enfocan en el compromiso. Los datos extraídos de las 
+publicaciones de Twitter se muestran en la Tabla 4.2. 
+ 
+Tabla 4.2 Datos utilizados de las publicaciones de Twitter 
+Nombre Descripción 
+Seguidores Número de personas que siguen a la cuenta en Twitter. 
+Compromiso Número de personas que aportaron con Favorito, han 
+comentado o compartido las publicaciones. 
+ 
+Métricas de Compromiso en Twitter 
+Retweets Tweets que fueron compartidos por otros usuarios sin agregar 
+texto. 
+Favoritos El número de veces que los Tweets fueron favorecidos por 
+otros usuarios. 
+Menciones Respuestas a los Tweets mediante menciones al usuario. 
+ 
+La información que utiliza la aplicación proviene de los Tweets que la cuenta de Twitter publicó 
+en su muro y se visualizan en la sección de Tweets de la plataforma, como se muestra en la Fig. 
+4.20. A diferencia de Facebook, Twitter no tiene soporte para crear y administrar páginas para 
+fans, por lo que se utiliza el muro de una cuenta normal. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.20 Publicaciones en el muro de la 
+ 
+página de Twitter 
+64 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+Al momento de iniciar sesión en la aplicación con la cuenta de Twitter, se muestra una tabla que 
+incluye los Tweets recientes, la fecha de creación y enlaces para acceder a más información, 
+como se muestra en la Fig. 4.21. 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.21 Lista de las publicaciones de Twitter en la aplicación 
+Al dar clic al enlace con la leyenda “Ver información” de cualquier publicación, se presenta una 
+ventana emergente que incluye tablas para las menciones realizadas a esa publicación y el 
+nombre de las personas que establecieron dicha publicación como favorita, como se muestra en 
+la Fig. 4.22. 
+65 
+ 
+Capítulo 4 Resultados 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.22 Ventana emergente de la publicación en Twitter 
+ 
+Al igual que Facebook, se muestra la gráfica de “Comparación de Interacciones”, siempre y 
+cuando el mensaje de dicha publicación se encuentre igualmente en Facebook y Google+. 
+Asimismo, se incluye una gráfica para comparar el número de Favoritos, el número de 
+menciones y el número de Retweets de la publicación, como se muestra en la Fig. 4.23. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.23 Gráficas de la publicación de Twitter 
+ 
+ 
+66 
+ 
+Capítulo 4 Resultados 
+4.2.6 Google+ 
+Las publicaciones que son utilizadas por la aplicación son las que fueron publicadas por la 
+cuenta de Google en su muro, y son accesibles en el perfil de la cuenta en Google+, como se 
+muestra en la Fig. 4.24. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.24 Publicaciones en el muro de la página de Google+  
+ 
+Al igual que Twitter, la medición de impacto en Google+ solamente depende de los atributos de 
+compromiso, debido a las limitaciones de su API. Los atributos utilizados de las publicaciones 
+de Google+ se muestran en la Tabla 4.3. 
+ 
+Tabla 4.3 Datos utilizados de las publicaciones de Google+ 
+Nombre Descripción 
+Seguidores Número de personas que siguen a la cuenta en Google+. 
+Compromiso Número de personas que aportaron con +1, han comentado o 
+compartido las publicaciones. 
+Métricas de Compromiso en Google+ 
+Compartidas de la Actividades que fueron compartidas por otros usuarios. 
+actividad 
++1 El número de veces que los Tweets fueron favorecidos por 
+otros usuarios. 
+Comentarios Respuestas de otros usuarios a las actividades. 
+ 
+67 
+ 
+Capítulo 4 Resultados 
+Al iniciar sesión con la cuenta de Google+ en la aplicación, se muestra una lista que contiene 
+las actividades (publicaciones) recientes de la cuenta y los enlaces para obtener mayor 
+información de cada publicación, como se muestra en la Fig. 4.25. 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ Fig. 4.25 Lista de las publicaciones de Google+ en la aplicación 
+Cuando el usuario da clic en el enlace con la leyenda “Ver información” de cualquier 
+publicación, se muestra una ventana emergente en la cual se presentan algunos datos sobre las 
+interacciones de esa publicación y gráficas que los representa visualmente. Los datos sobre los 
+comentarios y los +1 (Me gusta) de las publicaciones se visualizan en tablas, como se muestra 
+en la Fig. 4.26. 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.26 Ventana emergente de la publicación en 
+ 
+Google+ 
+ 
+Igualmente, se muestran gráficas para comparar la interacción del mismo mensaje entre todas 
+las redes sociales y el número de cada tipo de interacción, como se muestra en la Fig. 4.27. 
+68 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.27 Gráficas de la publicación de Google+ 
+ 
+4.2.7 Diagramas de red 
+Los diagramas de red facilitan la visualización de los datos, debido a que utilizan nodos para 
+representar cualquier cosa y la relación entre dichos nodos dependiendo del contexto. La 
+herramienta Cytoscape para JavaScript incluye gran número de funciones para el diseño y 
+administración de diagramas de red, las cuales son útiles para la visualización de los datos a 
+partir de los nodos de la red. Para ofrecer una visualización óptima de la medición de impacto 
+en las publicaciones, se crearon dos tipos de diagramas de red que se detallan a continuación.  
+4.2.7.1 Diagrama desde el punto de vista de los usuarios que interactúan en una 
+publicación determinada 
+En este diagrama existen tres niveles: Los nodos que representan las redes sociales (Facebook, 
+Twitter y Google+), los nodos del tipo de interacción que existe en cada red social y los nodos 
+de los usuarios que interactúan en esa publicación, como se muestra en la Fig. 4.28. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.28 Diagrama de red de los usuarios que interactuaron en una publicación 
+69 
+ 
+Capítulo 4 Resultados 
+El tamaño de los nodos de usuario depende del número de interacciones que tuvo con la 
+publicación de la cuenta. Los usuarios presentados en los nodos son diferentes para cada red 
+social, debido a que son cuentas diferentes. Al hacer clic a cualquier nodo de usuario, se muestra 
+una alerta con las interacciones que tuvo dicho usuario con la publicación, como se muestra en 
+la Fig. 4.29. En la tabla se muestra el sentimiento calculado a partir del comentario que realizó 
+en la publicación. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.29 Alerta de interacciones del diagrama de red 
+ de usuarios 
+ 
+4.2.7.2 Diagrama desde el punto de vista de las publicaciones realizadas en las tres redes 
+sociales 
+Este diagrama tiene como finalidad mostrar todas las publicaciones existentes en las tres redes 
+sociales, y visualizar en cuales de estas tres se encuentran presentes. En este diagrama existen 
+dos niveles: el nivel que representa las redes sociales (Facebook, Twitter y Google+), y el nivel 
+de las publicaciones, como se muestra en la Fig. 4.30. 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.30 Diagrama de red de las publicaciones existentes en las cuentas 
+ 
+activas 
+70 
+ 
+Capítulo 4 Resultados 
+ 
+En este diagrama se observa que los nodos de publicación tienen diferente tamaño. Esto es 
+porque su tamaño cambia dependiendo del número de interacciones que tiene en todas las redes 
+sociales. Igualmente, al momento de dar clic sobre cualquier nodo de publicación, se mostrará 
+una contabilización de interacciones mediante una alerta, como se muestra en la Fig. 4.31. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.31 Alerta de resumen de interacciones en el 
+ diagrama de publicaciones 
+ 
+4.2.8 Agregar nueva publicación 
+La aplicación ofrece la función de registrar una nueva publicación en la página de la cuenta de 
+Facebook y/o en la cuenta de Twitter. Esta función realiza la publicación a la o las cuentas que 
+se encuentren activas al mismo tiempo, sin necesidad de tener forzosamente activas las dos 
+cuentas. La pantalla principal de la función presenta un cuadro de texto para ingresar el mensaje 
+a publicar, como se muestra en la Fig. 4.32.  
+ 
+71 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 4.32 Pantalla principal de la función Agregar nueva publicación 
+ 
+Al momento de capturar el mensaje y dar clic en el botón “Publicar”, el mensaje será publicado 
+en las redes sociales que se encuentren activas en la aplicación, y se mostrará en la tabla de 
+publicaciones que se visualiza en las secciones de Facebook o Twitter, dependiendo de la red a 
+la cual se realizó su publicación, como se muestra en las Fig. 4.33 y 4.34. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.33 Prueba de la función de Agregar nueva publicación en Facebook 
+ 
+ 
+ 
+72 
+ 
+Capítulo 4 Resultados 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fig. 4.34 Prueba de la función de Agregar nueva publicación en Twitter 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+73 
+ 
+Capítulo 5 Conclusiones 
+Capítulo 5 Conclusiones 
+ 
+Este capítulo presenta los comentarios finales del proyecto y los trabajos que se realizarán en el 
+futuro a partir de este proyecto. 
+ 
+5.1 Conclusiones 
+ 
+Las redes sociales se encuentran en gran apogeo en la actualidad, debido a que cada día 
+incrementa el número de personas que las utilizan para comunicarse y para estar enterados de 
+las actividades que realizan las marcas de su preferencia o los artistas que siguen. Las marcas u 
+organizaciones aprovechan la popularidad de las redes sociales para hacer llegar la información 
+acerca de sus productos o servicios a los fans que existen en sus cuentas. El análisis de los 
+trabajos relacionados describe la importancia que tienen las redes sociales en la sociedad, 
+incluyendo información relevante para conocer más a detalle el objetivo de cada una de ellas y 
+la manera en la que se utilizan en el ámbito publicitario.  
+ 
+Existen diversos lenguajes de programación para aplicaciones Web y metodologías de 
+desarrollo para la creación de un proyecto de Software. El análisis de las tecnologías propuestas 
+reveló las características que éstas tienen, para compararlas y elegir las que se adecúan al 
+desarrollo del proyecto. Se eligió el lenguaje de programación PHP debido a que es uno de los 
+lenguajes de programación más utilizado en la actualidad, a que posee una gran comunidad e 
+incluye gran número de complementos para el desarrollo de aplicaciones. Asimismo, se utiliza 
+la metodología XP (Programación Extrema), ya que es una de las metodologías más utilizadas 
+en la actualidad y que cuenta con una taza de errores muy pequeña. 
+ 
+Una manera para medir el impacto de una publicación en una cuenta de cualquier red social es 
+conociendo las interacciones que tuvo departe de sus seguidores. Estas interacciones representan 
+un cierto compromiso de parte de los seguidores de la cuenta, debido a que de esa manera 
+demuestran si son miembros activos de la misma. La importancia de desarrollar una aplicación 
+para medir el impacto de las publicaciones de Facebook, Twitter y Google+, es juntar la 
+información de las publicaciones de las tres redes sociales en la misma aplicación, sin necesidad 
+de utilizar una aplicación por red. Asimismo, las gráficas que crea a partir de dichos datos, 
+incluyendo una para la comparación de interacciones que tuvo la publicación si se encuentra 
+existente en las tres cuentas de redes sociales, permiten darle a conocer al usuario el impacto de 
+cada publicación de manera fácil y sencilla, y exportarla a formatos para impresión. Gracias al 
+uso de los diagramas de red, el usuario conocerá en cuáles redes sociales activas se encuentran 
+74 
+ 
+Capítulo 5 Conclusiones 
+las publicaciones, cuáles de ellas tuvieron mayor impacto y en cuál red social se obtuvieron más 
+interacciones por parte de sus seguidores. 
+ 
+5.2 Trabajos a futuro 
+ 
+En la actualidad, las redes sociales son la plataforma de internet más utilizada y más popular. 
+Por tal motivo, se crearon nuevas redes sociales, ofreciendo alternativas diferentes para la 
+comunicación virtual y para compartir contenido. Como trabajo a futuro, se pretende agregar 
+más redes sociales a la aplicación con el objetivo de realizar una medición de impacto más 
+profunda y que pueda abarcar la mayor cantidad de plataformas utilizadas por las marcas u 
+organizaciones.  
+ 
+Asimismo, se pretende realizar una aplicación para dispositivos móviles, con el fin de conocer 
+el impacto de las actividades realizadas en las redes sociales que sólo funcionan en dichos 
+dispositivos. 
+ 
+Algunas veces, los comentarios y las publicaciones son realizadas utilizando imágenes en lugar 
+de texto. Por esa razón, es necesario crear una función que procese las imágenes para conocer 
+si éstas representan algún sentimiento positivo o negativo si son utilizadas en los comentarios 
+de las publicaciones, o para saber si se publicó la misma imagen en varias cuentas de las redes 
+sociales y así medir el impacto en cada una de ellas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+75 
+ 
+Terminología 
+Terminología 
+ 
+API.- Es un conjunto de funciones y procedimientos que cumplen una o varias funciones para 
+ser utilizadas por otro Software. 
+JavaScript.- Es un lenguaje de programación que se utiliza para ampliar las posibilidades de los 
+sitios Web desarrollados con HTML haciéndolos más interactivos.  
+OAuth.- Es un protocolo abierto que permite la autorización segura a los datos de algunos sitios 
+orientados a la Web 2.0. 
+SDK.- Es un conjunto de herramientas y programas de desarrollo que permite al programador 
+crear aplicaciones para un determinado paquete de Software, estructura de Software, plataforma 
+de hardware, sistema de computadora, sistema operativo, entre otros. 
+Software.- Es el conjunto de programas y rutinas que le permiten a la computadora realizar gran 
+número de tareas. 
+Tweet.- Es una publicación o actualización de estado realizada en la plataforma de la red social 
+Twitter. Esta publicación tiene como extensión 140 caracteres y puede contener letras, números, 
+signos y/o enlaces. 
+UML.- Es un estándar adoptado por numerosos organismos y empresas para crear esquemas, 
+diagramas y documentación relativa a los desarrollos de Software. 
+URI.- Es una cadena corta de caracteres que identifica inequívocamente un recurso (que puede 
+ser servicio, página, documento, dirección de correo electrónico, entre otros), que es accesible 
+en una red o sistema. 
+URL.- Es una secuencia de caracteres que sigue un estándar y que permite denominar recursos 
+dentro del entorno de Internet para que puedan ser localizados. 
+WEB.- Es un documento electrónico que contiene información, cuyo formato se adapta para ser 
+insertado en la World Wide Web, de manera que los usuarios a nivel mundial puedan entrar a 
+la misma por medio del uso de un navegador de internet. 
+WEB Hosting.- Es un negocio que consiste en alojar, servir y mantener archivos que son 
+utilizados por uno o más sitios de internet.  
+ 
+ 
+ 
+ 
+76 
+ 
+Productos académicos 
+Productos académicos 
+ 
+Franz Dayit López Cruz, Luis Ángel Reyes Hernández, Giner Alor Hernández, Beatriz 
+Alejandra Olivares Zepahua & Celia Romero Torres. (Mayo del 2017). Aplicación Web de 
+seguimiento de publicaciones de Facebook, Twitter y Google+, utilizando el protocolo Oauth. 
+4to. Congreso Internacional de Robótica y Computación, CIRC 2017. Los Cabos, Baja California 
+Sur. 
+ 
+77 
+ 
+Referencias 
+Referencias 
+ 
+[1] Jorge Goncalves, Vassilis Kostakos, and Jayant Venkatanathan, “Narrowcasting in social 
+media: effects and perceptions”,  In Proceedings of the 2013 IEEE/ACM International 
+Conference on Advances in Social Networks Analysis and Mining (ASONAM '13). ACM, New 
+York, NY, USA, 2013, pp. 502-509.  
+[2] Medios Publicitarios [En línea]. Disponible: 
+http://brd.unid.edu.mx/recursos/Mercadotecnia/MM05/Lecturas/3_Medios_publicitarios.pdf?6
+03f00. 
+[3] Artur Lugmayr, “Social media marketing for financial products”, In Proceeding of the 16th 
+International Academic MindTrek Conference (MindTrek '12). ACM, New York, NY, USA, 
+2012, pp. 231-232.  
+[4] Concepto de Web 2.0 [En línea]. Disponible: 
+http://www.ite.educacion.es/formacion/materiales/155/cd/modulo_1_Iniciacionblog/concepto_
+de_web_20.html.  
+[5] Kunpeng Zhang, Aris M. Ouksel, Shaokun Fan, and Hengchang Liu, “Scalable audience 
+targeted models for brand advertising on social networks”,  In Proceedings of the 8th ACM 
+Conference on Recommender systems (RecSys '14). ACM, New York, NY, USA, 2014, pp. 
+341-344. 
+[6] Facebook [En línea]. Disponible: https://www.facebook.com/FacebookMexico/timeline. 
+[7] Leading social networks worldwide as of January 2016, ranked by number of active users 
+(in millions) [En línea]. Disponible: http://www.statista.com/statistics/272014/global-social-
+networks-ranked-by-number-of-users/.  
+[8] Juan Miguel Carrascosa, Roberto González, Rubén Cuevas, and Arturo Azcorra, “Are 
+trending topics useful for marketing?: visibility of trending topics vs traditional advertisement”,  
+In Proceedings of the first ACM conference on Online social networks (COSN '13). ACM, New 
+York, NY, USA, 2013, pp. 165-176.  
+[9] Social Media Monthly Active Users for 2016 [En línea]. Disponible: 
+http://www.business2community.com/infographics/social-media-monthly-active-users-2016-
+infographic-01437877. 
+78 
+ 
+Referencias 
+[10] ¿Qué es un blog? [En línea]. Disponible: 
+http://www.ite.educacion.es/formacion/materiales/155/cd/modulo_1_Iniciacionblog/qu_es_un
+_blog.html. 
+[11] Isabel Pérez Torres, ¿Qué son los Wikis? [En línea]. Disponible: 
+http://www.isabelperez.com/taller1/wiki.htm. 
+[12] Antonio J. Jara, María Concepción Parra, and Antonio F. Skarmeta, "Participative 
+marketing: extending social media marketing through the identification and interaction 
+capabilities from the Internet of things”, In Personal Ubiquitous Comput 18, 4, 2014, pp. 997-
+1011.  
+[13] Eva Zangerle, Georg Schmidhammer, and Günther Specht, “#Wikipedia on Twitter: 
+analyzing tweets about Wikipedia”, In Proceedings of the 11th International Symposium on 
+Open Collaboration (OpenSym '15). ACM, New York, NY, USA, 2015, Article 14 , 8 pages. 
+[14] Suliman Aladhadh, Xiuzhen Zhang, and Mark Sanderson, “Tweet Author Location Impacts 
+on Tweet Credibility”, In Proceedings of the 2014 Australasian Document Computing 
+Symposium (ADCS '14), J. Shane Culpepper, Laurence Park, and Guido Zuccon (Eds.). ACM, 
+New York, NY, USA, 2014, Pages 73 , 4 pages. 
+[15] Andrew L. Brooks and Coye Cheshire, “Ad-itudes: twitter users & advertising”, In 
+Proceedings of the ACM 2012 conference on Computer Supported Cooperative Work 
+Companion (CSCW '12). ACM, New York, NY, USA, 2012, pp. 63-66. 
+[16] Aditi Gupta and Ponnurangam Kumaraguru, “Credibility ranking of tweets during high 
+impact events”, In Proceedings of the 1st Workshop on Privacy and Security in Online Social 
+Media (PSOSM '12). ACM, New York, NY, USA, 2012, Article 2 ,7 pages. 
+[17] Carsten Ellwein and Benedikt Noller, “Social Media Mining: Impact of the Business Model 
+and Privacy Settings”, In Proceedings of the 1st ACM Workshop on Social Media World 
+Sensors (SIdEWayS '15). ACM, New York, NY, USA, 2015, pp. 3-8. 
+[18] William Ryan, Adam Peruta, and Suzanne Chouman, “Social media and the transformation 
+of brand communication”, In Proceedings of International Conference on Making Sense of 
+Converging Media (AcademicMindTrek '13). ACM, New York, NY, USA, 2013, Pages 146 ,8 
+pages. 
+79 
+ 
+Referencias 
+[19] Kyle Taylor and Omar Alonso, “Insights from brands in Facebook”, In Proceedings of the 
+2014 ACM conference on Web science (WebSci '14). ACM, New York, NY, USA, 2014, pp. 
+247-248. 
+[20] Hugo Barrigas, Daniel Barrigas, Melyssa Barata, Pedro Furtado, and Jorge Bernardino, 
+“Overview of Facebook scalable architecture”, In Proceedings of the International Conference 
+on Information Systems and Design of Communication (ISDOC '14). ACM, New York, NY, 
+USA, 2014, pp. 173-176. 
+[21] Neel Guha, “Tutoring from the desktop: facilitating learning through Google+ hangouts”, 
+In Proceedings of the 23rd International Conference on World Wide Web (WWW '14 
+Companion). ACM, New York, NY, USA, 2014, pp. 1087-1092. 
+[22] Gabriel Magno, Giovanni Comarela, Diego Saez-Trumper, Meeyoung Cha, and Virgilio 
+Almeida, “New kid on the block: exploring the google+ social graph” In Proceedings of the 
+2012 ACM conference on Internet measurement conference (IMC '12). ACM, New York, NY, 
+USA, 2012, pp. 159-170. 
+[23] Michael J. Brzozowski, Phil Adams, and Ed H. Chi, “Google+ Communities as Plazas and 
+Topic Boards”, In Proceedings of the 33rd Annual ACM Conference on Human Factors in 
+Computing Systems (CHI '15). ACM, New York, NY, USA, 2015, pp. 3779-3788. 
+[24] PHP Tutorial :: Introduction [En línea]. Disponible: 
+http://freevst.x10.mx/morethandreams/php_000.php.  
+[25] JavaServer Faces(JSF) [En línea]. Disponible: 
+http://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/101. 
+[26] Lenguajes de programación (Perl, Php, Asp.Net) [En línea]. Disponible: 
+http://avga21.blogspot.mx/2012/04/lenguajes-de-programacion-perl-php.html. 
+[27] Programación Extrema XP [En línea]. Disponible: 
+http://ingenieriadesoftware.mex.tl/52753_XP---Extreme-Programing.html. 
+[28] Scrum, Metodología de Desarrollo de Software ágil [En línea]. Disponible: 
+http://blog.espol.edu.ec/elpoli/scrum-metodologia-de-desarrollo-de-solftware-agil/. 
+[29] Agorapulse [En línea]. Disponible: http://www.agorapulse.com/es/.   
+[30] Twittercounter [En línea]. Disponible: http://twittercounter.com/.  
+[31] Circloscope [En línea]. Disponible: http://circloscope.com/. 
+80 
+ 
+Referencias 
+[32] Gillermo E. Badillo Astudillo, Arquitectura de Software II.- Conceptualizando la 
+Arquitectura de Software [En línea]. Disponible: 
+https://profesores.ing.unab.cl/~gbadillo/archivos/cursos/software-
+arch/Lectures%20Notes/1%20Conceptualizando_ArqSw_c1.pdf.  
+[33] Yenisleidy Fernández Romero, Yanette Díaz González, Patrón Modelo-Vista-Controlador 
+[En línea]. Disponible: 
+http://revistatelematica.cujae.edu.cu/index.php/tele/article/download/15/10. 
+[34] Ley Federal de Protección de Datos Personales en Posesión de los Particulares [En línea]. 
+Disponible: http://inicio.ifai.org.mx/LFPDPPP/LFPDPPP.pdf. 
+[35] Programación Extrema XP [En línea]. Disponible: 
+http://ingenieriadesoftware.mex.tl/52753_XP---Extreme-Programing.html. 
+[36] Fundamentos de Seguridad Informática.- Servicios de Seguridad Informática [En línea]. 
+Disponible: http://redyseguridad.fi-p.unam.mx/proyectos/seguridad/ServAutenticacion.php. 
+ 
+ 
+81 
+ 

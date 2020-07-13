@@ -1,0 +1,2513 @@
+ 
+ “2019, Año del Caudillo del Sur, Emiliano Zapata”. 
+                                                             
+ Instituto Tecnológico de Orizaba 
+División de Estudios de Posgrado e Investigación 
+Maestría en Sistemas Computacionales 
+ 
+OPCION I.- TESIS 
+     
+TRABAJO PROFESIONAL 
+ 
+“Desarrollo de un generador de juegos serios 
+educativos multi-dispositivo con implementación de 
+realidad aumentada” 
+  
+PARA OBTENER EL GRADO DE: 
+MAESTRO EN SISTEMAS COMPUTACIONALES 
+ 
+PRESENTA: 
+ITC. JOSÉ GREGORIO GARCÍA AGUILAR 
+M17011427 
+ 
+DIRECTOR DE TESIS: 
+DR. GINER ALOR HERNÁNDEZ 
+ 
+Orizaba, Veracruz, México                                                       
+ 
+    
+ 
+ 
+ Avenida Oriente 9 Núm. 852, Colonia Emiliano Zapata. C.P. 94320 Orizaba, Veracruz, México. 
+ Tel. 0 1 (272) 7 24 40 96, Fax. 01 (272) 7 25 17 28   e-mail: orizaba@itorizaba.edu.mx 
+www.orizaba.tecnm.mx 
+ 
+ 
+Índice General 
+ 
+Índice de figuras .................................................................................................... 4 
+Índice de tablas ..................................................................................................... 5 
+Resumen ................................................................................................................ 6 
+Abstract .................................................................................................................. 7 
+Introducción ........................................................................................................... 8 
+Capítulo 1. Antecedentes.................................................................................... 10 
+1.1 Marco Teórico ............................................................................................................... 10 
+1.1.1 Juegos Serios .............................................................................................................. 10 
+1.1.2 Clasificación de juegos serios ....................................................................................... 11 
+1.1.3 Realidad aumentada ................................................................................................... 11 
+1.1.4 Reconocimiento por marcadores.................................................................................. 12 
+1.1.5 Reconocimiento sin marcadores .................................................................................. 13 
+1.1.6 Bibliotecas de funciones con soporte a realidad aumentada .......................................... 14 
+1.1.7 Gamificación ............................................................................................................... 16 
+1.1.8 Constructivismo .......................................................................................................... 17 
+1.1.9 Categorías de juegos serios .......................................................................................... 17 
+1.1.10 Marcos de trabajo para el desarrollo de video juegos .................................................. 19 
+1.1.11 Generación automática de software ........................................................................... 20 
+1.1.12 MDA (Arquitectura Dirigida por Modelos) ................................................................... 20 
+1.1.13 FDD (Enfoque de desarrollo basado en características) ................................................ 21 
+1.2 Planteamiento de problema ........................................................................................... 22 
+1.3 Objetivo general y específicos ......................................................................................... 22 
+1.3.1. Objetivo general ......................................................................................................... 23 
+1.3.2. Objetivos específicos .................................................................................................. 23 
+1.4. Justificación .................................................................................................................. 23 
+Capítulo 2. Estado de la práctica ....................................................................... 25 
+2.1 Trabajos relacionados .................................................................................................... 25 
+2.2 Análisis Comparativo ...................................................................................................... 33 
+2 
+ 
+2.3 Propuesta de solución .................................................................................................... 39 
+2.3.1 Lenguajes de Programación ......................................................................................... 39 
+2.3.2 Metodologías de desarrollo de video juegos ................................................................. 41 
+2.3.3 Tipos de video juegos a considerar en el proceso de generación. ................................... 41 
+Capítulo 3. Aplicación de la metodología.......................................................... 44 
+3.1 Metodología ................................................................................................................. 44 
+3.2 Fase de análisis .................................................................................................................................. 45 
+3.2.1 Análisis de requerimientos ............................................................................................................. 45 
+3.2.2 Análisis de marcos de trabajo basados en HTML5 para la implementación de realidad aumentada
+ ................................................................................................................................................................. 47 
+3.3.3 Identificación de acciones dentro de los video juegos ................................................................... 52 
+3.4 Fase de diseño ................................................................................................................................... 54 
+3.4.1 Definición del proceso de generación propuesto para el desarrollo de video juegos serios 
+educativos con característica de realidad aumentada. ........................................................................... 54 
+3.4.2 Definición de interfaces de la herramienta generadora. ................................................................ 58 
+3.4.3 Definir la arquitectura de desarrollo .............................................................................................. 63 
+Capítulo 4. Resultados ........................................................................................ 77 
+4.1 Caso de Estudio Enseñanza de figuras geométricas mediante un memorama incorporando 
+características de realidad aumentada. ................................................................................................... 77 
+4.2 Caso de Estudio: Enseñanza de sumas y restas en un juego basado en reglas con realidad 
+aumentada. .............................................................................................................................................. 82 
+Capítulo 5 Conclusiones y recomendaciones .................................................. 86 
+5.1 Conclusiones ...................................................................................................................................... 86 
+5.2 Recomendaciones .............................................................................................................................. 86 
+Anexo 1 Terminología involucrada .......................................................................................................... 88 
+Productos Académicos ............................................................................................................................ 89 
+Referencias .............................................................................................................................................. 90 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+Índice de figuras 
+ 
+Figura 1.1 Ejemplo de marcador utilizado en sistemas de reconocimiento. .................................... 12 
+Figura 3.1 Metodología de desarrollo para el proceso de generación de video juegos serios 
+educativos con integración de características de realidad aumentada. ........................................... 44 
+Figura 3.2 Diagrama de casos de uso de la aplicación generadora. ................................................. 47 
+Figura 3.3 Proceso de integración de realidad aumentada a video juegos ...................................... 54 
+Figura 3.4 Etapa de análisis del proceso de integración de realidad aumentada a video juegos. ........  
+Figura 3.5 Etapa de configuración del proceso de integración de realidad aumentada a video 
+juegos. ...................................................................................................................................................  
+Figura 3..6 Etapa de generación del proceso de integración de realidad aumentada a video juegos.  
+Figura 3..7 Interfaz número uno del prototipo generador de aplicaciones educativas.................... 60 
+Figura 3.8 Interfaz número dos del prototipo generador de aplicaciones educativas. .................... 60 
+Figura 3.9 Interfaz número tres del prototipo generador de aplicaciones educativas. .................... 61 
+Figura 3.10 Interfaz número cuatro del prototipo generador de aplicaciones educativas. ...... ¡Error! 
+Marcador no definido. 
+Figura 3.11 Interfaz número cinco del prototipo generador de aplicaciones educativas. ........ ¡Error! 
+Marcador no definido. 
+Figura 3.12 Interfaz número seis del prototipo generador de aplicaciones educativas. ........... ¡Error! 
+Marcador no definido. 
+Figura 3.13 Arquitectura en capas del generador de aplicaciones. .................................................. 64 
+Figura 3.14 Paso uno de la herramienta generadora donde se configura el proyecto base. ........... 69 
+Figura 3.15  Paso dos de la herramienta generadora para la configuración de las acciones 
+aplicables. .......................................................................................................................................... 70 
+Figura 3.16 Paso número de tres de la herramienta generadora para la incorporación de contenido 
+aumentado. ....................................................................................................................................... 71 
+Figura 3.17 Paso número cuatro de la herramienta generadora para la selección de biblioteca con 
+soporte de contenido aumentado. ................................................................................................... 73 
+Figura 3.18 Paso número cinco de la herramienta generadora que muestra un resumen de las 
+elecciones del usuario. ...................................................................................................................... 74 
+Figura 3.19 Paso número seis de la herramienta generadora para la confirmación e inicio de la 
+generación del nuevo proyecto con características de realidad aumentada. .................................. 75 
+Figura 3.20 Paso número siete de la herramienta generadora para la descarga del proyecto 
+resultante de la integración. ............................................................................................................. 76 
+Figura 4.1Tablero inicial para el tipo de juego memorama. ............................................................. 77 
+Figura 4..2 Tablero parcialmente completo ..........................................................................................  
+Figura 4.3 Inicio del juego visto desde dispositivo lector de características de realidad aumentada.
+ ........................................................................................................................................................... 81 
+Figura 4.4 Tablero inicial para el juego serpientes y escaleras ......................................................... 83 
+Figura 4.5 Representación de juego y resultado de tiro ................................................................... 84 
+ 
+4 
+ 
+ 
+Índice de tablas 
+ 
+Tabla 1.1 Categorías de juegos e identificación de sus atributos de aprendizaje. ........................... 19 
+Tabla 2.1 Muestra la información del análisis comparativo realizado a los artículos que tienen 
+relación con el proyecto que se presenta. ........................................................................................ 38 
+Tabla 2.2 Análisis comparativo de los lenguajes de programación considerados. ........................... 41 
+Tabla 2.3 Análisis comparativo las metodologías de desarrollo propuestas. ...... ¡Error! Marcador no 
+definido. 
+Tabla 2.4 Elección de las variantes analizadas .................................................................................. 43 
+Tabla 3.1 Marcos de trabajo en HTML5 con soporte de realidad aumentada. ................................ 48 
+Tabla 3.2 Identificación de acciones en video juegos. ...................................................................... 54 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+Resumen 
+ 
+La realidad aumentada es una tecnología desarrollada con el fin de propiciar la 
+interacción del mundo real con un entorno virtual, la realidad aumentada permite al 
+usuario agregar elementos del mundo virtual a su entorno real. 
+La aplicación de características de realidad aumentada en juegos digitales conlleva 
+a mejor experiencia de usuario dentro de estas aplicaciones, fomenta una mejor 
+participación dentro de ellas gracias a la experiencia de realidad que brinda esta 
+tecnología, actualmente el número de aplicaciones que utilizan esta tecnológica 
+está en incremento por lo que muchas aplicaciones de juegos digitales desean 
+integrar esta tecnología.  
+Por lo tanto, el objetivo del presente trabajo de investigación es desarrollar un 
+componente de software con base en un  proceso de generación de código fuente 
+para aplicaciones de juegos serios que requieran integrar características de realidad 
+aumentada, esto a través de la incorporación de video juego serio con 
+características definidad este trabajo de investigación . Como caso de estudio se 
+integraron dentro de la herramienta de software generada la cual es vía web y 
+permite a los usuarios cargar y e integrar características de realidad aumentada 
+como prueba de concepto de  la funcionalidad del proceso. Para el presente 
+desarrollo se utilizó como marco de desarrollo para la integración de realidad 
+aumentada Ar.js  ya que permite la incorporación de características de realidad 
+aumentada integrando solo etiquetas HTML5 y como lenguaje de programación 
+para el desarrollo de la herramienta integradora se utilizó PHP, el desarrollo se llevó 
+bajo la metodología de scrum por  las bondades que brinda para el desarrollo ágil. 
+ 
+ 
+ 
+ 
+ 
+ 
+6 
+ 
+ 
+Abstract 
+ 
+Augmented reality is an information technology that promotes the interaction of the 
+real world with a virtual environment. AR allows the user to add elements of the 
+virtual world to their environment. 
+ 
+Augmented reality features use in digital games to lead  better user experience, 
+encourages better participation within them thanks to the reality experience that this 
+technology provides, actually the number of applications that use this technology is 
+increased so many applications of digital games want to integrate this technology. 
+ 
+Therefore, objective of this research, is to develop a source code generation process 
+for digital games applications that require the integration of augmented reality 
+features through the incorporation of game attributes and learning activities. As a 
+case study, a web software tool was developed that allows users to upload the 
+project that they wish to be integrated to test the functionality of the process and 
+result a project with augmented reality features integrated. This tool use to integrate 
+the features  a framework for the integration of augmented reality called Ar.js 
+because it allows us to incorporate augmented reality features by coding only 
+HTML5 tags and as a programming language for the development of the component 
+used PHP, the development is going to be carried out under the scrum methodology 
+due to the kindness it provides for agile development. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 
+ 
+ 
+Introducción 
+ 
+Los juegos motivan el aprendizaje de conductas y actitudes para el correcto y 
+eficiente desempeño de una actividad particular, en la actualidad los video juegos 
+logran esa labor, por lo que su uso se aprovecha para diversos procesos de 
+educación, formación, capacitación, enteramiento, entre otros. Después de varios 
+trabajos de investigación nace el concepto de juegos serios, los cuales se usan para 
+entrenar al personal que ofrece servicios en instituciones públicas y privadas, en el 
+área de salud, de emergencia, de educación, la industria comercial e instituciones 
+de desarrollos científicos.  
+Para mejorar la interacción con los usuarios se necesita optar por tecnologías 
+modernas como la realidad aumentada la cual complementa la percepción e 
+interacción con el mundo real y permite al usuario estar en un entorno real 
+aumentado con información adicional generada por la computadora o algún 
+dispositivo móvil. Esta interactividad confiere un potencial para el aprendizaje y la 
+evaluación; con ella, los estudiantes construyen una nueva comprensión basada en 
+las interacciones con objetos virtuales.  Sin embargo, el conocimiento y la aplicación 
+de esta tecnología en la docencia es mínima; entre otros motivos por  la propia 
+naturaleza y estado de desarrollo de dicha tecnología, así como también a su 
+escasa presencia en los ámbitos cotidianos de la sociedad en el país, por lo cual la 
+problemática de esta investigación es resolver esa falta de aplicación en el ámbito 
+educativo , mediante una herramienta generadora de juegos multidispositivo y 
+aprovechar al máximo las ventajas tecnológicas existentes en la actualidad en el 
+área de la educación. 
+Este documento está estructurado de la siguiente forma:   
+o El Capítulo 1 presenta la información referente al proyecto, el problema a 
+resolver, los objetivos y las razones que justifican este proyecto de 
+innovación.  
+8 
+ 
+o En el Capítulo 2 se presenta un análisis comparativo de los trabajos 
+existentes, relacionados con este proyecto, así también se tiene la propuesta 
+de solución al problema planteado.   
+o En el Capítulo 3 se encuentra la metodología empleada para el desarrollo de 
+la herramienta con la cual se presenta en tres fases, la fase de análisis en la 
+cual se identifican los requerimientos necesarios, la fase de diseño en la cual 
+se propone un proceso el cual se traduce en la funcionalidad de la 
+herramienta y la fase de desarrollo en la que se describe la funcionalidad y 
+desarrollo de la herramienta. 
+o El Capítulo 4 presenta como resultados dos casos de estudio, el cual consiste 
+en la aplicación de la herramienta para dos juegos, el primero para la 
+enseñanza de figuras geométricas mediante un memorama y el segundo 
+para la enseñanza de operaciones aritméticas básicas mediante el juego de 
+serpientes y escaleras mostrando los resultados de la incorporación de 
+características de realidad aumentada sobre ellos.   
+o En el Capítulo 5 se presentan las conclusiones finales, las lecciones 
+aprendidas y las recomendaciones pertinentes sobre el presente trabajo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+9 
+ 
+Capítulo 1. Antecedentes 
+ 
+En este primer capítulo se explican los conceptos más relevantes relacionados con 
+el trabajo presentado. Se da lugar a la problemática a resolver, los objetivos a 
+alcanzar y la justificación. 
+1.1 Marco Teórico  
+En esta sección se presentan los conceptos relacionados con el tema de 
+investigación. 
+1.1.1 Juegos Serios 
+Se consideran más como un movimiento que como un tipo diferente de juegos 
+digitales. No existe una definición universalmente aceptada para describir estos 
+juegos. Son juegos en los que el objetivo principal es la educación (en sus diversas 
+formas) y no el entretenimiento [1]. 
+Por otra parte, es un término que evolucionó para describir el uso de juegos en 
+educación, entrenamiento, salud y política pública. Los juegos serios hacen más 
+que agregar escaparates o diversión a una tarea de aprendizaje que de otro modo 
+sería grave (y potencialmente aburrida) [2]. 
+Se refiere a juegos digitales utilizados para fines distintos al entretenimiento, como 
+lo son la capacitación, publicidad, simulación o incluso educación. Sin embargo, 
+muchos autores los definen como algo más que meros juegos utilizados para fines 
+no relacionados con el entretenimiento. Se los conoce como juegos que involucran 
+al usuario y al mismo tiempo contribuyen al logro de un objetivo determinado que 
+no sea solo entretenimiento, ya sea que el usuario sea consciente de ello o no [3]. 
+Se define como el uso de las tecnologías digitales interactivas para capacitar o 
+educar en sectores privados, públicos, gubernamentales y militar [4]. 
+ 
+ 
+10 
+ 
+1.1.2 Clasificación de juegos serios 
+Con base en la clasificación que se propone en [5] la cual agrupa a los juegos serios 
+por su ámbito de aplicación. 
+• Edutaintmets: Tipo de juegos que solo se emplean para un fin educativo. 
+• Advergames: Se emplean para fines comerciales. 
+• Traingames: Se destinan para el entrenamiento de diferentes habilidades. 
+• Subergames: Se ocupan para transmitir o denunciar un mensaje social y 
+político. 
+ 
+1.1.3 Realidad aumentada 
+La realidad aumentada es el término que se usa para definir una visión directa o 
+indirecta de un entorno físico del mundo real combinada con elementos virtuales 
+para la creación de una realidad mixta a tiempo real [6]. No reemplaza el mundo 
+real por uno virtual, sino al contrario, mantiene el mundo real que ve el usuario 
+complementándolo con información virtual superpuesta al mismo. El usuario nunca 
+pierde el contacto con el mundo real que tiene al alcance de su vista y al mismo 
+tiempo interactúa con la información virtual superpuesta. 
+La definición formal de realidad aumentada es que son sistemas informáticos que 
+mezclan información virtual de cualquier tipo sean imágenes en 2D, 3D, texto o 
+figuras con un escenario físico real [7]. 
+Dispositivos video-through: dentro de este grupo se encuentran aquellos 
+dispositivos que realizan la captura de imágenes o video y que están aislados de 
+los dispositivos de visualización. En este conjunto se encontrarían las cámaras de 
+video o los terminales móviles (siempre y cuando tengan una cámara). 
+Dispositivos see-through: son los dispositivos que realizan tanto la tarea de 
+capturar la escena real como de mostrarla con información aumentada al usuario. 
+11 
+ 
+Estos dispositivos acostumbran a trabajar en tiempo real. Dentro de este grupo se 
+encuentran aquellos dispositivos conocidos como headmounted. 
+Un marcador es un objeto cuya imagen se conoce por el sistema. Las maneras en 
+que el sistema conoce el marcador se agrupan en tres conjuntos, mediante su 
+geometría, su color o mediante ambas características. Es posible identificar la 
+escena mediante reconocimiento de imágenes o mediante la estimación de la 
+posición. También es posible encontrar sistemas que realicen una combinación de 
+ambas en función de la situación. A este tipo de identificación se le denomina 
+híbrida. Dentro de cada uno de estos dos conjuntos de técnicas se encuentran 
+diversas variaciones que dependerán en gran medida de las prestaciones que deba 
+ofrecer el sistema, así como de sus posibilidades técnicas. 
+1.1.4 Reconocimiento por marcadores  
+ 
+Figura 0.1.1 Ejemplo de marcador utilizado en sistemas de reconocimiento. 
+ 
+En un sistema de realidad aumentada, un marcador (Figura1.1) es un objeto 
+identificado por el sistema [7]. El sistema reconoce el marcador mediante su 
+geometría, su color o mediante ambas características. En el proceso de 
+reconocimiento de marcadores se utiliza un primer escaneo sobre la imagen más 
+pesado computacionalmente ya que tiene el objetivo de localizar el marcador 
+deseado. Una vez localizado el marcador, en primer lugar, se establece un rango 
+de variación en el movimiento del marcador para el fotograma posterior. En el 
+procesamiento del fotograma, el rango de búsqueda ya se encuentra acotado a un 
+12 
+ 
+espacio muy inferior al inicial, por lo cual disminuye el tiempo de procesamiento 
+considerablemente. Además de que se utilizan menos técnicas de reconocimiento, 
+empleando así un número menor de cálculos para localizar un marcador. Una vez 
+detectado el marcador el sistema inicia las tareas necesarias para el mezclado y 
+aumento del entorno. Este proceso se efectúa de forma iterativa en tiempo de 
+ejecución. El proceso anteriormente descrito sólo modificará su comportamiento si 
+no se encuentra el marcador en algún fotograma en la región de búsqueda. En esta 
+circunstancia existen diversas posibilidades de actuación: 
+• Realizar un nuevo escaneo en búsqueda del marcador. Este proceso 
+consiste en realizar un nuevo escaneo sobre toda la imagen con el objetivo 
+de encontrar el marcador, este proceso es efectivo si el marcador se 
+encuentra desplazado de su posición deseada.  
+• Buscar de forma recursiva en las regiones vecinas el marcador. Esta 
+solución se optimiza si el marcador desplazado se encuentra cerca de la 
+región de búsqueda inicial.  
+• Utilizar predicción de movimiento. Este proceso se lleva a cabo 
+prediciendo una variación de la posición del marcador a causa de un 
+movimiento o bien mediante el uso de acelerómetros.  
+En un sistema de realidad aumentada el número de marcadores por lo general es 
+ilimitado y dependiente del algoritmo implementado. 
+1.1.5 Reconocimiento sin marcadores  
+El reconocimiento sin marcadores consiste en identificar la escena mediante 
+imágenes, una estimación de la posición o una combinación de ambas técnicas en 
+función de la situación; a este tipo de identificación se le llama híbrida. En cada una 
+de las dos técnicas mencionadas se encuentran diversas variaciones que 
+dependerán en gran medida de las prestaciones que ofrece el sistema, así como de 
+las capacidades y posibilidades técnicas. 
+13 
+ 
+Puesto que las técnicas habituales en este proceso se encuentran centradas en el 
+reconocimiento visual de la escena y procesado de imágenes, se describirá en 
+mayor profundidad ese tipo de técnicas más adelante. 
+No obstante, esto no significa que no se utilice cualquier otro tipo de técnica más 
+apropiada para cada situación, como son el análisis en la intensidad de señales de 
+radiofrecuencia o de señales infrarrojas [7]. 
+1.1.6 Bibliotecas de funciones con soporte a realidad aumentada  
+Para el proceso de aumento es necesario disponer de software adecuado para 
+sobreponer a la imagen real la información aumentada deseada. Para este propósito 
+existen diversas bibliotecas disponibles al público como lo son las siguientes:  
+ARToolKit®: Biblioteca de realidad aumentada que permite la detección de 
+marcadores específicos y realiza las tareas de superposición de imágenes. Se 
+desarrolló en lenguaje C++.  
+Las bibliotecas de seguimiento de video de ARToolKit calculan la posición y la 
+orientación reales de la cámara en relación con los marcadores físicos en tiempo 
+real. Esto permite el fácil desarrollo de una amplia gama de aplicaciones de 
+Realidad Aumentada. Es una herramienta multiplataforma soportada por sistemas 
+(Windows®, Linux, Mac OS X®) y de código abierto que trabaja bajo la licencia GPL 
+(Licencia de público general) por sus siglas en inglés [8]. 
+ 
+ARToolKitPlus®: Versión más especializada de la biblioteca ARToolKit® la cual 
+agrega características, pero rompe la compatibilidad que ocasiona una nueva API 
+(interfaz de programación de aplicaciones) basada en clases [9]. Alguna de las 
+ventajas que presenta sobre la versión estándar: 
+• Un API en C++ más clara para el desarrollador. 
+• Soporte para 4096 marcadores basados en binarios. 
+• Algoritmo robusto que reduce la inestabilidad durante el seguimiento. 
+14 
+ 
+• Usa la calibración moderna de la cámara basada en archivos de texto. 
+• Tiempo de compilación más rápido. 
+• Interfaz para rastrear marcadores individuales múltiples. 
+ 
+JARToolKit: Es la versión de la biblioteca ARToolKit®  desarrollada en lenguaje 
+Java  que busca cubrir las mismas necesidades de ARToolKit para este lenguaje ya 
+que se encuentran escritas en lenguaje nativo C ,  de igual manera tiene un soporte 
+para gráficos  OpenGL y es multiplataforma (Windows®, Linux, Mac OS X®) [9]. 
+Wikitude®:  Es un proveedor de tecnología de realidad aumentada móvil. Fundada 
+en 2008, Wikitude inicialmente se centró en proporcionar experiencias de realidad 
+aumentada basadas en la ubicación a través de la aplicación Wikitude World 
+Browser. La compañía reestructuró su propuesta lanzando el SDK (kit de desarrollo 
+de software) de Wikitude, un marco de desarrollo que utiliza reconocimiento de 
+imágenes y seguimiento, así como tecnologías de geolocalización. El SDK incluye 
+la generación de una imagen a partir de modelos 3D, superposición de video, AR 
+basado en ubicación y tecnología SLAM (localización y mapeo simultáneos) que 
+permite el reconocimiento y seguimiento de objetos, así como el seguimiento 
+instantáneo sin marcadores. El SDK multiplataforma está disponible para sistemas 
+operativos Android® e iOS®, y está optimizado para varios dispositivos de gafas 
+inteligentes. 
+Vuforia®: Es un Kit de Desarrollo de Software de Realidad Aumentada (SDK) para 
+dispositivos móviles que permite la creación de aplicaciones de realidad aumentada.  
+Utiliza la tecnología Computer Vision para reconocer y rastrear imágenes planas y 
+objetos 3D simples, como cuadros, en tiempo real. Esta capacidad de registro de 
+imágenes permite a los desarrolladores ubicar y orientar objetos virtuales, como 
+modelos 3D y otros medios, en relación con imágenes del mundo real cuando se 
+visualizan a través de la cámara de un dispositivo móvil. El objeto virtual luego 
+rastrea la posición y orientación de la imagen en tiempo real para que la perspectiva 
+del espectador sobre el objeto corresponda con su perspectiva en el objetivo de la 
+imagen, de modo que parezca que el objeto virtual es parte de la escena del mundo 
+15 
+ 
+real. El SDK es compatible con una variedad de tipos de objetivos 2D y 3D, incluidos 
+objetivos de imagen sin marcadores, configuraciones 3D Multi-Target y una forma 
+de marcador fiducial direccionable conocida como VuMark. Las características 
+adicionales del SDK incluyen detección de oclusión localizada usando botones 
+virtuales, selección de objetivos de imágenes en tiempo de ejecución y la capacidad 
+de crear y reconfigurar conjuntos de objetivos mediante programación en tiempo de 
+ejecución.  
+Ezar®: Es un kit de desarrollo de software (SDK) para el desarrollo de aplicaciones 
+de realidad aumentada gratuito por lo que es un tanto limitado, no brinda detección 
+de patrones en la cámara, ni detección geográfica, se limita al renderizado de 
+recursos sobre el objetivo, posicionándolo sobre él, pero sin ajustarse a las 
+dimensiones. Sin embargo, tiene la característica de detección facial que no tienen 
+otros SDKs además cuenta con plugins para desarrollo con Cordova tanto 
+para Android® y iOS®. 
+AR.js: Es una biblioteca de código abierto que utiliza los elementos de HTML5 en 
+combinación con JavaScript para proveer la tecnología de realidad aumentada en 
+cualquier dispositivo que cuente con un browser y una cámara Web, sin necesidad 
+de instalar nada en el dispositivo, tiene como características que es muy rápido, 
+apegado a los estándares Web y de código abierto. 
+1.1.7 Gamificación  
+La gamificación es la aplicación de la mecánica del juego a entornos no 
+relacionados con el juego para mejorar el compromiso y la motivación e influir en 
+los comportamientos. Los mecanismos incluyen desafíos alcanzables, 
+recompensas (insignias, puntos) y reconocimiento público (tablas de clasificación). 
+Se considera como un motor esencial para innovar en el tema de los juegos serios 
+[12]. 
+Por otra parte, se define como el uso de elementos de diseño de juegos en un 
+contexto no relacionado con juegos, mediante el cual los usuarios están motivados 
+para lograr ciertos resultados conductuales o psicológicos (por ejemplo, aprender 
+16 
+ 
+más rápido, completar el perfil, usar una plataforma específica a diario). Sin 
+embargo, en la industria, la mayoría de los conceptos de gamificación nunca se 
+implementan después de su conceptualización [12].  
+Otros autores lo definen como la aplicación de la mecánica de juego y técnicas de 
+diseño de juegos para involucrar y motivar a las personas a lograr sus metas [12]. 
+1.1.8 Constructivismo 
+El constructivismo es un enfoque del aprendizaje que considera a los alumnos como 
+participantes activos en su propio aprendizaje, construyendo su propia comprensión 
+de nuevos conceptos y experiencias relacionándolos con sus estructuras de 
+conocimiento existentes [12]. 
+El trabajo de Jean Piaget es central para el pensamiento constructivista y muchas 
+de las teorías de aprendizaje asociadas con el aprendizaje basado en juegos, y sus 
+fundamentos, tienen sus raíces en el constructivismo, como el aprendizaje situado, 
+el aprendizaje experiencial y el aprendizaje basado en problemas. La afirmación de 
+Piaget de que las estructuras cognitivas cambian a través de los procesos de 
+adaptación, asimilación y acomodación de nueva información y experiencias que 
+resultan en un aprendizaje profundo y significativo, refleja lo que está ocurriendo en 
+entornos de aprendizaje basados en juegos. 
+1.1.9 Categorías de juegos serios 
+Los atributos del juego son objeto de estudio de varios trabajos que definieron los 
+atributos del juego como una forma de resumir las reglas del juego, aunque deja en 
+duda si solo abarca las reglas que definen la mecánica o abarca características 
+utilizadas en el diseño [13]. Desde una perspectiva educativa interpreta los atributos 
+de juego dando énfasis a las propiedades de retroalimentación al tiempo que 
+reconoce las relaciones entre las normas y los atributos del jugador. Los atributos 
+del juego tienen que considerarse en el diseño del juego para garantizar un equilibrio 
+entre los desafíos y las habilidades necesarias para alcanzar los objetivos. Con base 
+en los atributos de un juego, en [13] se clasificaron en categorías de juegos 
+17 
+ 
+dependiendo de sus atributos relevantes. Se realizó un intento para asignar 
+categorías de juego generales comprendiendo los atributos en el juego que se 
+utilizan para la creación de instancias de atributos de juego en la práctica educativa; 
+por ejemplo, las reglas se realizan a través de puntuación. El autor hace esta 
+clasificación ya que no hay una taxonomía que clasifique los atributos del juego en 
+categorías específicas, la clasificación la elaboró con el objetivo de ayudar a los 
+diseñadores de juegos y de instrucción.  
+Las categorías que se presentan en [13] se describen la tabla 1, las cuales se basan 
+de acuerdo a la identificación de los atributos de juegos en cada una de ellas:  
+ 
+Tipos de actividades de aprendizaje Actividades de aprendizaje 
+Juegos de reglas •  Niveles de puntuación  
+•  Niveles de movimiento  
+•  Temporizadores  
+•  Barras de progreso 
+•  Instrucciones del juego 
+incluyendo las condiciones de la 
+victoria 
+Juegos de objetivos y opciones • Diario de juego  
+• Misiones  
+• Tarjetas objetivas 
+• Historias  
+• Diálogos anidados  
+• Rompecabezas  
+• Avatares  
+Juegos de tareas y desafíos      • NPC(Personaje no jugador)  
+    • Barras de progreso 
+    • Múltiples opciones para elegir  
+    • Tareas principales  
+18 
+ 
+Tipos de actividades de aprendizaje Actividades de aprendizaje 
+    • Tareas de rama 
+    • Rompecabezas  
+    • Puntos de investigación 
+ • Requisitos 
+Juegos de colaboración y competencia • Juego de roles  
+• Colaboración de la comunidad  
+• Sentido épico  
+• Bonos  
+• Temporizadores  
+• Descubrimiento líder  
+• Concursos  
+• Puntuación 
+• Inventarios 
+• Tablas 
+Juegos de retroalimentación y • Personajes  
+evaluación • Niveles de juego  
+• Obtención y pérdida de vidas  
+• Barras de progreso 
+• Cuadros de mando 
+ 
+ 
+Tabla 1.1 Categorías de juegos e identificación de sus atributos de aprendizaje. 
+1.1.10 Marcos de trabajo para el desarrollo de video juegos 
+Un motor de video juegos (games engines) es un marco de software diseñado para 
+la creación y desarrollo de video juegos para consolas, dispositivos móviles y 
+computadoras personales. Normalmente, un motor de juego incluye programas de 
+soporte, bibliotecas y un lenguaje interpretado para ayudar a desarrollar y unir los 
+diferentes componentes de un proyecto [14]. Los motores de juego se clasifican en 
+19 
+ 
+marcos de trabajo basados en HTML5 (HTML5-based frameworks) y marcos de 
+trabajo propietarios (Proprietary game engines).  Los primeros no necesitan una 
+plataforma en especial para ejecutarse basta con su ejecución en un browser que 
+soporte HTML5, por el contrario, los propietarios necesitan un software en particular 
+para su desarrollo y en algunos casos para su ejecución. 
+1.1.11 Generación automática de software 
+La generación automática de código es una idea sobre la cual se ha venido 
+investigando tiempo atrás, y que estándares como el MDA (Model-Driven 
+Architecture) y el MDD (Model-Driven Development) aportan progresos que 
+contribuyen mejoramiento de esta idea. 
+1.1.12 MDA (Arquitectura Dirigida por Modelos) 
+MDA (Arquitectura Dirigida por Modelos), es un concepto promovido por la OMG 
+(Object Management Group), que propone basar el desarrollo de software en 
+modelos especificados utilizando UML (lenguaje unificado de modelado), para que, 
+a partir de esos modelos, se realicen trasformaciones que generen código u otro 
+modelo, con características de una tecnología particular (o con menor nivel de 
+abstracción). MDA define un framework para procesar y relacionar modelos. Suele 
+escucharse que MDA es la evolución natural de UML, ya que tiende a incrementar 
+la cantidad de código generado, a partir de especificaciones detalladas en UML.
+  
+MDA es un framework para construir sistemas basándose en modelos UML, 
+representa en diferentes capas de abstracción el sistema a implementar. A 
+diferencia del análisis y diseño orientado a objetos (OOAD), el MDA adiciona una 
+capa de abstracción más, que representa las reglas de negocio del sistema.  
+A continuación, se muestran las herramientas MDA más populares en el marcado:  
+• AndroMDA  
+• Enterprise Architect  
+20 
+ 
+• Rational Architect  
+• OptimalJ is a MDA tool for J2EE. 
+• MDA Transf  
+• ArcStyler is a MDA tool for J2EE and .NET.  
+• Entre otras 
+Las herramientas generan un ahorro en la escritura y generación de líneas de 
+código. El problema unánime de estas herramientas MDA es que no suministran la 
+capacidad de transformar modelos de negocios CIMs (Modelo Independiente de la 
+Computación) en aplicaciones listas para ejecutar sin necesidad de intervención 
+técnica (programación).  
+1.1.13 FDD (Enfoque de desarrollo basado en características)  
+El enfoque de desarrollo basado en características o FDD por sus siglas en inglés, 
+es un método ágil y adaptativo para el desarrollo de software creado por Peter Coad 
+y Jeff De Luca a partir de su experiencia en el desarrollo de un sistema bancario en 
+Singapur en el que el dominio del problema era muy complejo [12], [13] y 
+posteriormente formalizado por Steve Palmer [13]. FDD es un método ágil para el 
+desarrollo de software el cual propone una serie de procesos para el desarrollo en 
+los que se enfatizan las iteraciones cortas, la calidad en cada uno de sus pasos, la 
+entrega frecuente de resultados tangibles y un seguimiento preciso y significativo 
+del proyecto. FDD propone cinco procesos secuenciales con criterios de entrada, 
+tareas y criterios de salida bien definidos los cuales guían a los interesados en el 
+proyecto (stakeholders) desde el modelado hasta la liberación del sistema. FDD 
+incluye seis roles principales y otros roles de soporte, artefactos, objetivos y 
+prácticas que necesita el sistema para construirse y liberarse (modelado de objetos 
+de dominio, desarrollo por características, propiedad individual del código por 
+clases, equipos por características, inspecciones, construcciones continuas, 
+administración de la configuración y visibilidad/reporte de resultados) [13]. 
+ 
+ 
+21 
+ 
+1.2 Planteamiento de problema 
+En la actualidad los video juegos aumentaron su popularidad gracias a la 
+incorporación en dispositivos móviles, en [15] se menciona que en México el 57% 
+de la población utiliza un dispositivo inteligente. 
+Los juegos serios incrementaron su uso para promover diversas actividades de 
+enseñanza en diferentes rubros como lo es la publicidad, la medicina, la 
+capacitación industrial, entre otras más, estos también se utilizan en la educación 
+escolar para obtener mayor interés en los alumnos ya que no representa una tarea 
+tediosa dentro del aprendizaje.   
+La incorporación de la tecnología de realidad aumenta en las aplicaciones tiene una 
+gran aceptación ya que representa una realidad alterna para los usuarios a las 
+aplicaciones comunes, y esta se incorpora en ellas para brindar una mayor 
+interacción. 
+Por otra parte, el desarrollo de aplicaciones de software mediante herramientas 
+generadoras de código ofrece una disminución en el costo y tiempo de desarrollo, 
+por lo que en la actualidad se observa un aumento del uso y demanda de estas 
+herramientas. 
+Actualmente existen múltiples herramientas para generar juegos, pero no se tiene 
+una herramienta que ayude a desarrollar juegos serios, esta labor es un proceso 
+difícil de conseguir sin la incorporación de un proceso formal para el desarrollo de 
+video juegos serios, por lo que se propone realizar una herramienta de software con 
+base en un proceso formal para el desarrollo de video juegos serios educativos 
+incorporando características de realidad aumentada ofreciendo como prueba de 
+concepto  proyectos como casos de estudio para la integración de características 
+de realidad aumentada. 
+1.3 Objetivo general y específicos 
+Como parte del desarrollo del tema de tesis se plantean los siguientes objetivos 
+generales y específicos para hacer alcanzados en la investigación. 
+22 
+ 
+ 
+1.3.1. Objetivo general 
+Desarrollar un componente de software que permita la generación de código fuente 
+de juegos serios multi-dispositivo con implementación de características de realidad 
+aumentada a través de la incorporación de atributos del juego y actividades de 
+aprendizaje. 
+ 
+1.3.2. Objetivos específicos 
+• Identificar los marcos de trabajo de realidad aumentada para el desarrollo de 
+video juegos. 
+• Identificar los tipos de video juegos a generar por la herramienta generadora 
+con base en la clasificación propuesta por Lameras. 
+• Identificar los requerimientos funcionales y no funcionales de la herramienta. 
+• Analizar los requerimientos técnicos básicos para implementación de 
+realidad aumenta en los video juegos generados por la herramienta. 
+• Diseñar la arquitectura de la herramienta de generación de video juegos con 
+realidad aumentada. 
+• Definir un proceso de desarrollo de generación de aplicaciones con la 
+característica de realidad aumentada a partir de la identificación de atributos. 
+• Definir las prestaciones de servicio y los componentes de la herramienta. 
+• Verificar la herramienta evaluando los tipos de juegos seleccionados y 
+generados en un ámbito educativo. 
+1.4. Justificación 
+En la actualidad gracias a los avances tecnológicos existen alternativas de 
+enseñanza para lograr un mejor resultado en el aprendizaje como lo es el e-learning, 
+que cambió la forma de transmitir conocimiento generando muy buenos resultados 
+desde su aparición, por otra parte, como una alternativa se tiene el uso de video 
+23 
+ 
+juegos para el aprendizaje, el cual es un tema que ha crecido en los últimos años 
+por  su gran aceptación por los usuarios, ya que no consideran directamente que 
+están realizando actividades de estudio y logran así cotidianamente el aprendizaje 
+con mayor facilidad. 
+El uso de video juegos como parte de la enseñanza alcanza diversos sectores como 
+los es la industria dentro de la capacitación de trabajadores, la educación para la 
+enseñanza en diversos niveles educativos y la medicina para el apoyo en 
+tratamientos como por ejemplo la depresión. 
+Debido al aumento de la demanda, la aplicación a desarrollar propone una creación 
+simplificada de juegos serios para reducir los costos de su implementación y como 
+característica esencial que se plantea en la herramienta es el uso de realidad 
+aumentada para tener una mayor interacción con los usuarios y lograr mejor 
+resultados en el proceso cognitivo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+24 
+ 
+Capítulo 2. Estado de la práctica 
+ 
+En este capítulo se dan a conocer algunos trabajos relacionados directa o 
+indirectamente con el proyecto de tesis. 
+2.1 Trabajos relacionados 
+En [16] se realizó un estudio sistemático para identificar cómo la gamificación y los 
+juegos serios se aplicaron como auxiliar a los tratamientos de depresión, qué 
+tecnologías se ocupan actualmente y cuáles son las brechas que aún no se 
+exploran. La metodología para el desarrollo de este estudio se dividió en tres fases: 
+La elaboración de las preguntas de investigación, en la cual se establecieron 
+preguntas relacionadas con la gamificación y juegos serios en el tratamiento de la 
+depresión, se realizaron tres preguntas generales, dos preguntas enfocadas y dos 
+preguntas estadísticas. El propósito detrás de las preguntas generales fue 
+comprender cómo las tecnologías ayudan a la salud mental, el propósito de las 
+preguntas enfocadas fue identificar cómo tecnologías específicas se usaron en el 
+tratamiento de la depresión y por último las estadísticas para encontrar datos 
+estadísticos del área que se estudió. El proceso de investigación se definió de la 
+siguiente manera especificando la cadena de búsqueda, eligiendo las bases de 
+datos para aplicar la cadena de búsqueda y obteniendo los resultados, todo aplicado 
+en el repositorio de “ScienceDirect”. Se filtraron los resultados en diversos criterios 
+de inclusión y de exclusión. Como resultado se observó que existen en la actualidad 
+trabajos diversos que muestran buenos resultados aplicados con diversos 
+dispositivos (Aplicaciones móviles, wearables, resonancia magnética, aplicación de 
+computadora, aplicaciones Web) con los cuales en cada una de ellas se crearon los 
+juegos serios ayudándose de la tecnología en particular del dispositivo. 
+En [17] se trató de hacer un meta análisis del uso de juegos educativos interactivos, 
+que actualmente se utilizan en el contexto del aula, el cual tuvo como propósito 
+caracterizar y comparar resultados relacionados con juegos educativos serios, 
+juegos serios y simulaciones educativas. Específicamente, los autores tuvieron la 
+25 
+ 
+intención de llenar las lagunas dejadas por estudios previos, incluyendo hallazgos 
+importantes y evaluando el estado actual del campo. A través de una revisión 
+sistemática y un meta análisis de la literatura relacionada los autores intentaron 
+responder las siguientes preguntas de investigación: 1) ¿El uso de juegos 
+educativos serios (SEGs), juegos serios (SG) y simulaciones educativas (ES) 
+aumentan los resultados afectivos, cognitivos o de logro en el ambiente de 
+aprendizaje de preescolar a la universidad ?; 2) ¿Qué tan efectivo fue el uso de 
+SEGs, SG y ES para mejorar el rendimiento de los estudiantes, cognición y logros 
+dentro de los entornos de aprendizaje ?; 3) ¿Qué características de SEGs, SG y ES 
+en educación son más importantes para determinar la efectividad de su uso en la 
+cognición y el rendimiento del estudiante?. Como conclusiones se consideraron que 
+existen varios argumentos que señalan que las posibilidades asociadas con ES, SG 
+y SEG brindan a los instructores y docentes los medios para facilitar el aprendizaje, 
+lo que conduce a un aumento en el rendimiento y la cognición de los alumnos. Al 
+igual que con otras herramientas educativas, es importante considerar cómo se 
+integran los juegos en la experiencia de aprendizaje del estudiante para influir en 
+los resultados relacionados con la cognición, efecto y el comportamiento. 
+En [18] tuvieron como objetivo proponer un marco de trabajo completo para la 
+adaptación de la gamificación en entornos de ingeniería de software (SE, por sus 
+siglas en inglés). Este marco de trabajo estuvo compuesto por una ontología, una 
+metodología que guía el proceso y un motor de gamificación, a la metodología le 
+denominaron GOAL: Gamification focused On Application Lifecycle Management 
+por sus siglas en inglés, el objetivo de este marco de trabajo denominado GOAL fue 
+apoyar la gamificación en las actividades de ingeniería de software proporcionando 
+el soporte conceptual, metodológico y tecnológico requerido. Llevaron a cabo una 
+metodología de casos de estudio para los cuales   el marco de trabajo propuesto se 
+aplicó en una empresa real. La empresa utilizó el marco de trabajo para gamificar 
+las áreas de gestión de proyectos, gestión de requisitos y pruebas. Como resultado 
+los autores señalaron que la metodología permitió claramente a la empresa 
+introducir la gamificación en su entorno de trabajo, logrando una solución de calidad 
+con el esfuerzo de diseño y desarrollo adecuado. 
+26 
+ 
+En [19] se presentó un trabajo que explica cómo los juegos adoptan una visión 
+constructivista del aprendizaje, primero se definió al constructivismo como la visión 
+que involucra al aprendiz construyendo y modificando sus modelos mentales 
+existentes, por lo tanto, el foco está en la construcción del conocimiento en lugar de 
+la transmisión del conocimiento. En el artículo se comentó que las simulaciones y 
+los micromundos son populares entre los constructivistas, ya que proporcionan un 
+contexto realista en el que los alumnos exploran y experimentan, lo que les permite 
+construir su propio modelo mental del entorno, además, la interactividad inherente 
+a los micro mundos y por lo general en las simulaciones proporcionan la inmediatez 
+de la retroalimentación a medida que el alumno crea modelos o prueba sus teorías 
+sobre los conceptos modelados. Por otra parte, se señaló que cómo estos juegos 
+adoptan las técnicas de modelado, reflexión, formación de estrategias, exploración 
+asistida, informe, articulación, determinaría qué tan constructivistas son. Como 
+trabajo futuro en este artículo presentarán una prueba del marco de trabajo 
+constructivista para ver si es apropiado para el aprendizaje de los estudiantes, 
+concluyendo que los investigadores tienen que centrarse más en las deficiencias 
+para lograr que los juegos serios sean más constructivistas. 
+En [20] se presentó el problema que en el uso de Juegos Serios (SG por sus siglas 
+en inglés) dada a su gran variedad existente en el mercado es difícil analizarlos en 
+su totalidad por lo que se realizó un estudio de análisis y con base en esos 
+resultados se obtuvo que frecuentemente sufren fragmentaciones en términos del 
+vocabulario. Como solución a este problema se propuso la creación de taxonomías 
+para establecer un vocabulario compartido para un campo de aplicación dado, al 
+mismo tiempo la taxonomía es además fundamentalmente una herramienta para 
+crear un panorama estructurado de estatus actualizados, de tendencias y brechas 
+para un campo de interés. Varios trabajos proporcionaron taxonomías / 
+categorizaciones en juegos serios con diferentes niveles de detalle y propiedades 
+de caracterización. Se presentaron categorías con un bajo nivel de detalle como 
+Educativo, Corporativo o de Salud y el uso de estos para estructurar una encuesta 
+y proporcionar directrices de desarrollo y diseño.  En cuanto a los resultados 
+generados por las barreras de adopción, se destacó la falta de conocimiento y la 
+27 
+ 
+falta de interés de los clientes, también se identificaron algunos desafíos de SG y 
+posibles soluciones para estos, algunos se abordan fácilmente mediante acciones 
+de integración tales como: una cooperación más estrecha entre las escuelas y los 
+docentes, personalización para la característica del personaje de cada jugador y los 
+enfoques estructurados (elección de un género adecuado, identificación de 
+mecánicas para el juego para su aprendizaje e implementación de software 
+reutilizable). 
+En [21] se realizó el proyecto de investigación SONNA el cual presentó un análisis 
+del impacto de las redes sociales y de la Web 2.0, como herramientas educativas, 
+investigar la factibilidad de los protocolos basados en los entornos sociales virtuales, 
+como ambientes colaborativos 3D basados en la Web, y emplear paradigmas 
+interactivos llamados de estilo narrativo digital y juegos serios como un soporte para 
+el aprendizaje colaborativo. SONNA es una plataforma que identifica la conexión 
+con otras redes sociales para la difusión del contenido, y para la recopilación de 
+datos de usuarios para un análisis posterior de software, además, la plataforma la 
+permite creación y distribución de multimedia y contenido 3D. La arquitectura de 
+SONNA está compuesta por cuatro componentes: datos e información, 
+herramientas para construir aplicaciones educativas, módulo de plataformas de 
+redes sociales y aplicaciones y clientes relacionados. Se decidió usar Facebook® 
+por ser una red social exitosa en el mundo y por la madurez de su API disponible 
+para integrar aplicaciones en la plataforma. La estructura de los juegos reales 
+estaba definida por una configuración en XML manteniendo características 
+generales y enlistando los episodios para cada uno, agregando recursos (Imágenes, 
+sonidos, videos, modelos 3D, texto, narración, entre otros), escenarios (Recursos y 
+sus relaciones) y secuencias (Arboles de acciones). Se requirió evaluar los impactos 
+de las herramientas propuestas y continuar con un análisis de resultados que diera 
+una respuesta cualitativa. 
+En [22] se comentó que en el tema de juegos serios existe un ámbito que en la 
+literatura permanece inexplorado como lo es el diseño, elección, adopción, uso y 
+evaluación, por lo tanto, el objetivo de este artículo fue cubrir el uso de juegos serios 
+28 
+ 
+y gamificación como nuevos desafíos de investigación. Se eligieron siete artículos 
+para su análisis del estado de la práctica en el tema, se concluyó qué los artículos 
+discutieron diferentes aspectos relacionados con la adaptación de juegos serios y 
+el uso de la gamificación como innovación. Cada uno ofreció una contribución única 
+a la comprensión de cómo los juegos serios se utilizaron para apoyar el aprendizaje. 
+Finalmente se recomienda su lectura para inspirar su investigación y práctica en el 
+tema. 
+En [23] se realizó una propuesta de un lenguaje de modelado denominado GaML 
+(Gamification modeling language por sus siglas en inglés) para combatir los 
+problemas de la implementación de la gamificación en los sistemas y reducir 
+problemas de costos, ciclos de desarrollo y gasto de recursos. GaML definió un 
+meta-modelo para el diseño de elementos en un entorno de gamificación con un 
+alto nivel de abstracción. Para esta investigación se presentó un enfoque del meta-
+modelo recalcando la importancia de este enfoque, presentaron una arquitectura 
+para el desarrollo de sistemas hechos con Unity, por último, validaron la arquitectura 
+presentada como caso de estudio. Se desarrolló el caso de estudio para una 
+aplicación desarrollada con Unity denominada “Stop Smoking” app para la cual se 
+concluyó con un desarrolló exitoso, los autores comentaron que para un futuro 
+trabajo realizarán una evaluación cuantitativa para demostrar la efectividad y la 
+potencia de adoptar este enfoque de desarrollo en comparación con un enfoque 
+convencional. 
+Por otra parte, en [24] se desarrolló un prototipo de interfaz de mantenimiento que 
+utilizaba técnicas de gamificación para motivar a los usuarios, y usaba realidad 
+aumentada y HUD (Head-up display por sus siglas en inglés) para mostrar la 
+información en dispositivos HMD (Head mounted display por sus siglas en inglés), 
+la interfaz y la aplicación estaban conectadas a un sistema de mantenimiento 
+electrónico para obtener datos en tiempo real , no se enfocaron en limitaciones 
+técnicas, por lo tanto, ignoraron cualquier limitación actual para proporcionar una 
+interfaz de usuario óptima. La interfaz propuesta tuvo varios objetivos, el primer 
+objetivo fue demostrar cómo la gamificación se usa en un contexto de 
+29 
+ 
+mantenimiento, tanto en los datos de entrada como en los resultados de la 
+presentación. Encontraron varias formas de aplicar la gamificación en un contexto 
+de trabajo, y este prototipo exploró el indicador de rendimiento del usuario, también 
+conocido como KPI (Key Performance Indicator por sus siglas en inglés).  Otro 
+objetivo fue explorar una interfaz tipo HUD para acceder a datos complejos e 
+información de mantenimiento, considerando el sistema de E-Mantenimiento, por lo 
+que se presentaron dos figuras donde la interfaz se controló por voz, por lo tanto, 
+las posibles interacciones tienen que ser claras para los usuarios. El tercer objetivo 
+fue proponer diferentes formas de realidad aumenta en el mantenimiento, 
+considerando tecnologías agregadas por el sistema de E-Mantenimiento, por lo que 
+mostró en diversas figuras como se utilizó la realidad aumenta para visualizar datos 
+del sensor en tiempo real. 
+En [25] se abordó un análisis del concepto y contexto de la tecnología denominada 
+realidad aumentada, la cual la define como una tecnología que complementa la 
+percepción e interacción con el mundo real y permite al usuario estar en un entorno 
+real con información adicional generada por la computadora, por otra parte, la 
+definen como  el término que se usa para definir una visión directa o indirecta de un 
+entorno físico del mundo real combinada con elementos virtuales para la creación 
+de una realidad mixta a tiempo real. Como conclusiones se señalaron las diversas 
+aplicaciones que se le dan a esta tecnología de la cual comentan lo siguiente: los 
+casos mejor documentados son en educación, el arte, entrenamiento industrial, 
+entretenimiento, difusión de la ciencia y la tecnología, museos, presentación de 
+productos, narraciones interactivas, industria militar y medicina, en los cuales ya se 
+realizaron un gran número de proyectos. 
+En [26] se discutió la importancia de los juegos serios y los detalles de la fase de 
+desarrollo para la creación de juegos serios para la Web usando tecnología WebGL. 
+Se elaboró un caso de estudio de creación de un juego serio para enseñar a los 
+estudiantes la funcionalidad básica del sistema circulatorio, con lo que se concluyó 
+que los juegos serios están demostrando ser activos valiosos para la enseñanza y 
+la capacitación en varios puntos de venta, que van desde la asistencia sanitaria 
+30 
+ 
+hasta los militares. Al combinar mecánica de video juegos inherente con 
+experiencias de aprendizaje interesantes, los desarrolladores logran una forma 
+innovadora y más efectiva de enseñanza o capacitación. WebGL ha demostrado ser 
+una tecnología muy competente para el desarrollo de este tipo de juegos, 
+proporcionando gráficos convincentes y todas las características necesarias para 
+crear excelentes video juegos. Además, al desplegar los juegos en la Web, los 
+jugadores acceden a ellos sin esfuerzo dentro de su navegador de Internet y sin 
+instalar ningún software. 
+En [27] los autores comentaron que el entrenamiento corporativo es una tarea que 
+en los últimos años se trató de mejorar, ya que los trabajadores consideran 
+aburridas y tediosas las capacitaciones, por lo tanto, es necesario que produzcan 
+más intereses para el usuario. Esto aumentó el interés en la gamificación de los 
+procesos de negocio para lograr mayor motivación en los trabajadores, ellos 
+definieron a la gamificación como la aplicación de mecanismos de juegos en un 
+ambiente que no es de entretenimiento y estiman que para el 2015 un cuarto de los 
+procesos de negocios en las empresas serán gamificados. Sin embargo, mencionan 
+que una de las barreras más significativas es el costo del desarrollo de juegos serios 
+en las organizaciones para lo cual proponen que los motores de juegos apoyen en 
+la gamificación de las organizaciones, otra barrera que detectaron fue que se 
+malinterpreta en decir que el entrenamiento se lleva a cabo mediante juegos serios 
+por la confusión con los juegos de entretenimiento. Los autores concluyeron que no 
+importa las barreras existentes en la adopción de juegos serios, ya resultan 
+altamente efectivos en el aprendizaje corporativo y tienen que considerarse como 
+parte integral en las estrategias del aprendizaje corporativo. 
+En [28] se realizó un caso de estudio para probar la aplicación de juegos serios en 
+el ámbito educativo, a este juego le denominaron “Food Force”. Se aplicó a 
+estudiantes de nivel primaria con el objetivo de construcción de conocimiento sobre 
+la ayuda humanitaria en áreas del planeta que enfrentan un problema de hambre y 
+el juego ayuda cambiar las actitudes y percepciones de los estudiantes hacia el 
+problema global del hambre, de lo cual se obtuvo que el juego Food Force no ofrece 
+31 
+ 
+resultados significativos en la construcción del conocimiento en comparación con 
+las intervenciones pedagógicas modernas, pero contribuye significativamente a las 
+actitudes y puntos de vista de los estudiantes y el compromiso de los estudiantes 
+durante el aprendizaje. 
+En [29] se analizaron los principales motores de juegos con el objetivo de identificar 
+los atributos de juego y aprendizaje soportados en el desarrollo de juegos serios, 
+como resultados de este análisis se vincularon cada conjunto de atributos 
+contenidos en el motor del juego con una categoría de juego y ofrecieron una guía 
+práctica para identificar los motores que proporcionan el mayor soporte para los 
+atributos del juego, los resultados ayudaron a los desarrolladores en el proceso de 
+desarrollo a identificar qué atributos estarán presentes en el nuevo juego y 
+seleccionar el motor del juego que proporciona el mayor soporte para los atributos, 
+siempre teniendo en cuenta el entorno donde se desplegará el juego. 
+En [30] se presentó un entrenamiento y aprendizaje más efectivo y escalable 
+llamado aprendizaje transmedia. El aprendizaje transmedia aprovecha varias 
+tendencias de nuevos medios, incluidas las comunicaciones de las redes sociales, 
+la escalabilidad de las plataformas de cursos en línea y el diseño de narración 
+transmedia utilizada por las industrias de entretenimiento, publicidad y juegos 
+comerciales para mantener el compromiso de la audiencia. Definieron el 
+aprendizaje trasmedia como el sistema escalable de mensajes que representa una 
+experiencia narrativa o central que se desarrolla a partir del uso de múltiples medios 
+de comunicación, involucrando a los estudiantes emocionalmente en la historia. 
+Como resultados se demostró cómo el marco de trabajo y el método de diseño 
+presentado se aplica tanto a los juegos serios como al diseño de la campaña de 
+aprendizaje transmedia, presentando ejemplos de cómo el ejército de Estados 
+Unidos utiliza la comunicación estratégica transmedia y el aprendizaje transmedia 
+para la capacitación.
+32 
+ 
+2.2 Análisis Comparativo 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS 
+Dias et al. [16] Los juegos serios Realizar un estudio Se evaluaron diversos trabajos Aplicaciones 
+representan una sistemático para realizados con diferentes dispositivos móviles, 
+alternativa de identificar cómo la y diversas tecnologías para los cuales wearables, 
+solución para el gamificación y los mostraron los resultados del análisis resonancia 
+tratamiento de juegos serios se sistemático. magnética, 
+depresión. aplican como aplicación de 
+auxiliar a los computadora, 
+tratamientos de aplicación Web. 
+depresión, qué  
+tecnologías se 
+usan actualmente 
+y cuáles son las 
+brechas que aún 
+se exploran. 
+Lamb et al.[17] Un metaanálisis Caracterizar y Se consideran que existen varios No usa. 
+del uso de juegos comparar argumentos que señalan que las 
+educativos resultados posibilidades asociadas con ES, SG y 
+interactivos, que relacionados con SEG brindan a los instructores y 
+actualmente se juegos educativos docentes los medios para facilitar el 
+utilizan en el serios, juegos aprendizaje, lo que conduce a un 
+contexto del aula. serios y aumento en el rendimiento y la 
+simulaciones cognición de los alumnos. 
+educativas. 
+García et al.[18] ¿Son eficientes Proponer un marco La metodología permitió claramente a No usa. 
+los trabajos de de trabajo la empresa introducir la gamificación 
+gamificación en el completo para la en su entorno de trabajo, logrando una 
+ámbito de adaptación de la 
+33 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS 
+ingeniería de gamificación en solución de calidad con el esfuerzo de 
+software? entornos de diseño y desarrollo adecuado. 
+ingeniería de 
+software. 
+Obikwelu y  Read Análisis del Explicar cómo los Los investigadores tienen que No usa. 
+[19] constructivismo juegos adoptaron centrarse más en las deficiencias para 
+en la elaboración una visión lograr que los juegos serios sean más 
+de juegos serios. constructivista del constructivistas. 
+aprendizaje. 
+Pereira et al.[20] Los juegos serios Proponer la Se capturaron dos perspectivas No usa. 
+sufren creación de diferentes de las partes interesadas 
+fragmentaciones taxonomías para que usan los SG y los que no, para los 
+en términos del establecer un que no estaban registrados, los 
+vocabulario. vocabulario candidatos propuestos ofrecieron 
+compartido para un información de las maneras de 
+campo de explorar la utilización de los SG’s, 
+aplicación dado. además existen barreras que tienen 
+abordarse a través de una dinámica de 
+difusión de SG, ya sea por la falta de 
+conocimiento /experiencia. 
+Carrozzino et ¿Las redes Realizar un Se realizó una plataforma SONNA No usa. 
+al.[21] sociales y la Web análisis del para la difusión del contenido. 
+2.0 impactan en impacto de las 
+el aprendizaje redes sociales y de 
+colaborativo? la Web 2.0 como 
+un soporte para el 
+aprendizaje 
+colaborativo. 
+Boughzala, H. et Existe un ámbito Descubrir el uso de Concluyeron qué los artículos No usa. 
+al. [22] que en la juegos serios y discutieron diferentes aspectos 
+34 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS 
+literatura de los gamificación como relacionados con la adaptación de 
+juegos serios nuevos desafíos juegos serios y el uso de la 
+permanece de investigación. gamificación como innovación. Cada 
+inexplorada como uno ofreció una contribución única a la 
+lo es el diseño, comprensión de cómo los juegos 
+elección, serios se utilizaron para apoyar el 
+adopción y uso. aprendizaje.  
+A. Matallaoui et No existe un Realizar una Para probar la efectividad se No usa. 
+al. [23] lenguaje de propuesta de un desarrolló un caso de estudio para una 
+modelado para el lenguaje de aplicación desarrollada con Unity 
+ámbito de la modelado denominada “Stop Smoking” app para 
+gamificación. denominado GaML la cual se concluyó con un desarrolló 
+para combatir exitoso. 
+006Cos problemas 
+de la 
+implementación de 
+la gamificación en 
+los sistemas y 
+reducir problemas 
+de costos, ciclos 
+de desarrollo y 
+gasto de recursos. 
+35 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS 
+A. Oliveira et al. Se desarrolló un Demostrar cómo la Encontraron varias formas de aplicar No usa. 
+[24] prototipo de gamificación se la gamificación en un contexto de 
+interfaz de usa en un contexto trabajo, y este prototipo exploró el 
+mantenimiento de mantenimiento, indicador de rendimiento del usuario, 
+que utilizaba tanto en los datos también conocido como KPI. 
+técnicas de de entrada como 
+gamificación para en los resultados 
+motivar a los de la presentación. 
+usuarios adémas 
+usaba 
+aumentada. 
+D. Redondo [25] Investigación Definir y Los casos mejor documentados son No usa. 
+sobre la realidad ejemplificar el uso en educación, el arte, entrenamiento 
+aumentada. de la realidad industrial, difusión de la ciencia y la 
+aumentada en tecnología, museos, presentación de 
+diferentes áreas de productos, narraciones interactivas, 
+interés.. industria militar y medicina, dentro de 
+las cuales ya se realizaron un gran  
+número de proyectos. 
+ 
+36 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS 
+A. Barbosa et al La importancia de Discutir la WebGL  demostró ser una tecnología WebGL 
+[26] los juegos serios. importancia de los muy competente para el desarrollo de 
+juegos serios y los este tipo de juegos, proporcionando 
+detalles de la fase gráficos convincentes y todas las 
+de desarrollo para características necesarias para crear 
+la creación de excelentes video juegos. 
+juegos serios para 
+la Web usando 
+tecnología 
+WebGL, así como 
+elaborar  un caso 
+de estudio de 
+creación de un 
+juego serio. 
+L. Donovan et al. El entrenamiento  Motivar el interés No importa las barreras existentes en  
+[27] corporativo es en la gamificación la adopción de juegos serios ya que 
+una tarea que en de los procesos de resultan altamente efectivos en el 
+los últimos años negocio para lograr aprendizaje corporativo y tienen que 
+se está tratando mayor motivación considerarse como parte integral en 
+de mejorar, ya en los las estrategias del aprendizaje 
+que los trabajadores. corporativo. 
+trabajadores  
+consideran 
+aburridas y 
+tediosas las 
+capacitaciones. 
+Petros y Fesakis ¿La aplicación de Probar la El juego aplicado no ofrece resultados No usa 
+[28] juego serios aplicación de significativos en la construcción del 
+mejora el juegos serios en el conocimiento en comparación con las 
+ámbito educativo. intervenciones pedagógicas 
+37 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS 
+aprendizaje modernas, pero contribuye 
+cognitivo? significativamente a las actitudes y 
+puntos de vista de los estudiantes y el 
+compromiso de los estudiantes 
+durante el aprendizaje. 
+H. Marin et. All. [29] Se analizaron los Identificar los Se vincularon cada conjunto de No usa 
+principales atributos de juego atributos contenidos en el motor del 
+motores de y aprendizaje juego con una categoría de juego y 
+juegos. soportados en el ofrecieron una guía práctica para 
+desarrollo de identificar los motores que 
+juegos serios. proporcionan el mayor soporte para 
+los atributos del juego 
+E. Raybourn[30] Investigación de Presentar un Como resultados se demostró cómo el No usa 
+un nuevo nuevo paradigma marco de trabajo y el método de 
+paradigma de para un diseño presentado se aplica tanto a los 
+educación. entrenamiento y juegos serios como al diseño de la 
+educación más campaña de aprendizaje transmedia. 
+efectivos llamado 
+aprendizaje 
+transmedia. 
+ 
+Tabla 2.1 Muestra la información del análisis comparativo realizado a los artículos que tienen relación con el proyecto que se presenta.
+38 
+ 
+ 
+ 
+Después de analizar los artículos citados anteriormente se concluye que el uso de 
+juegos serios y gamificación es un tema de sumo interés y novedoso para muchos 
+sectores como lo es la medicina,  la mercadotecnia, la educación, el turismo o de 
+uso industrial para la capacitación de los trabajadores, aún existen varias barreras 
+tecnológicas y de su implementación no estudiadas y que necesitan mejorar como 
+lo es su combinación con tecnologías como la realidad aumentada para lograr un 
+mejor desempeño cognitivo para los usuarios. Se espera que en los años siguientes 
+sigan creciendo estos temas gracias a la necesidad de mejorar y agilizar el 
+aprendizaje en los diversos sectores. 
+2.3 Propuesta de solución 
+Para el desarrollo de la herramienta generadora propuesta como objetivo de tesis 
+se consideró la siguiente pila de tecnologías después del análisis de varias 
+propuestas. 
+2.3.1 Lenguajes de Programación 
+PHP: Es un lenguaje de programación de propósito general de código del lado del 
+servidor originalmente diseñado para el desarrollo web de contenido dinámico,  es 
+desplegado en la mayoría de los servidores web y en casi todos los sistemas 
+operativos y plataformas sin costo alguno. Permite la programación orientada a 
+objetos [33]. 
+JavaScript: es un lenguaje de programación que permite el script de eventos, 
+clases y acciones para el desarrollo de aplicaciones Internet entre el cliente y el 
+usuario, es un lenguaje de programación interpretado. Se define como orientado a 
+objetos, basado en prototipos, imperativo, débilmente tipado y dinámico. 
+jQuery: es una biblioteca multiplataforma de JavaScript, que permite simplificar la 
+manera de interactuar con los documentos HTML, manipular el árbol DOM, manejar 
+39 
+ 
+eventos, desarrollar animaciones y agregar interacción con la técnica AJAX a 
+páginas web. 
+ 
+ 
+Lenguaje Características Paradigma Sistema Licenciatura 
+Operativo 
+PHP • Utilizado para Multiparadigm Multiplataf Licencia PHP 
+generar páginas a, imperativo, orma. 
+web dinámicas. orientado a 
+ objetos, 
+• Se ejecuta en el procedural, y 
+servidor. efectivo. 
+ 
+• Las páginas que 
+genera son 
+visibles para 
+prácticamente 
+cualquier 
+navegador y 
+computadora o 
+dispositivos 
+móviles que 
+interpretan 
+HTML. 
+ 
+• No se necesita 
+la instalación de 
+PHP en el lado 
+del cliente. 
+ 
+• Versiones 
+recientes 
+permiten la 
+POO. 
+ 
+Lenguaje de alto 
+nivel. 
+JAVASCRIPT Basado en Orientado a Multiplataf Licencia 
+prototipos. objetos. orma. pública 
+ 
+Poco tipado. 
+ 
+Es imperativo. 
+40 
+ 
+Lenguaje Características Paradigma Sistema Licenciatura 
+Operativo 
+Dialecto del 
+estándar 
+ECMAScript. 
+ 
+•  
+. 
+ 
+2.3.2 Metodologías de desarrollo  
+Para el desarrollo de la herramienta se eligió la siguiente metodología que 
+proporciona un aseguramiento de la calidad del producto, a continuación, se 
+describe la metodología elegida. 
+Se desarrolló con base en una metodología propuesta que consta de cuatro etapas: 
+Análisis: Etapa en la cual se analizó los requerimientos funcionales y no funcionales 
+para el desarrollo de la herramienta, además de la factibilidad después del análisis 
+de tecnologías de integración de realidad aumentada para web. 
+Diseño:  En esta etapa se realizó el caso de uso para el desarrollo de la 
+herramienta, así como la definición de un proceso de incorporación de 
+características de realidad aumentada para video juegos web base, con dicho 
+proceso en esta misma etapa se diseñó a manera de bosquejo las interfaces de la 
+herramienta.  
+Desarrollo: Se realizó la definición de tecnologías para el desarrollo de la 
+herramienta, así como su codificación en dichas tecnologías. 
+Pruebas: Se realizaron pruebas de la herramienta con base a dos casos de 
+estudios presentados en el capítulo de resultados.
+2.3.3 Tipos de video juegos a considerar en el proceso de generación. 
+Juegos de reglas:  Las reglas de un juego proporcionan el contexto en términos de 
+desafíos, metas y acciones y cómo se formalizan en relación con el diseño del juego. 
+41 
+ 
+Por lo tanto, las reglas son caracterizadas como restricciones que limitan las 
+acciones del jugador. 
+Juegos de objetivos y opciones: Existe un entendimiento común en la base de 
+evidencia de investigación de que los juegos van dirigidos a objetivos, competitivos 
+y diseñados dentro de un marco de reglas, elecciones y retroalimentación para 
+permitirles a los docentes y estudiantes monitorear el progreso hacia la meta. Estos 
+objetivos se logran a través de elecciones específicas que el jugador toma. Las 
+opciones en los juegos se refieren al número de decisiones que tiene un jugador 
+antes y durante el juego, y un juego es una serie de elecciones interesantes. Una 
+opción interesante es mentalmente desafiante, estratégica en lugar de orientada a 
+las habilidades. 
+Juegos de tareas y desafíos:  La mejora del aprendizaje y la mejora del 
+rendimiento se derivan del aprendizaje que se origina en la finalización de la tarea. 
+Durante un juego serio, el jugador necesita separar la tarea de la tarea de la 
+información redundante de la tarea y determinar la complejidad inherente de las 
+tareas del juego. Una tarea primordial del jugador es familiarizarse con las reglas, 
+los controles y la lógica de cada nivel para ajustar el juego. 
+Con base en los costos, ventajas , desventajas de las tecnologías y metodologías 
+que se analizaron , se obtuvo como solución la siguiente combinación de elementos 
+para desarrollar el generador de aplicaciones con características de realidad 
+aumentada. 
+Herramienta de Metodología  Leguaje de Tipo de video 
+desarrollo de programación juego 
+realidad 
+aumentada. 
+AR.js Metodología PHP Juegos de 
+propuesta de 4 reglas. 
+etapas. 
+42 
+ 
+Juegos de 
+objetivos y 
+opciones. 
+ 
+Tabla 2.2 Elección de las variantes analizadas 
+Se eligió Ar.js como marco de desarrollo para la integración de características de 
+realidad aumentada sobre los proyectos base, ya que permite crear escenarios de 
+realidad aumentada sin marcadores con el solo uso de HTML5 además de permitir 
+colocar imágenes en 2D que representen el contenido aumentado, esto ayuda a 
+brindar un contenido más dinámico en la ejecución del juego, otra característica 
+importante es que permite el desarrollo multiplataforma por lo que no representa 
+una barrera para el desarrollo este marco de desarrollo proporciona un SDK para el 
+lenguaje de programación PHP el cual se propuso como leguaje de desarrollo para 
+la herramienta generadora, este lenguaje entre sus características  es totalmente 
+compatible para desarrollos de aplicaciones Web multiplaforma, por otra parte, se 
+eligió una metodología scrum, ya que se adaptó al desarrollo del proceso y de la 
+herramienta generadora y sus fases ofrecen ventajas para llevar a cabo las pruebas 
+oportunamente. 
+Por último, se eligieron tres tipos de video juegos con base en la clasificación de 
+Lameras los cuales representan los tipos de juegos más populares dentro de los 
+juegos serios. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+43 
+ 
+Capítulo 3. Aplicación de la metodología  
+ 
+En el presente capítulo se realiza la descripción de cada una de las fases de la 
+metodología que integran el desarrollo del proceso y sistema presentado en este 
+trabajo de tesis. Adicional a la descripción de los elementos de la arquitectura del 
+sistema, se menciona su flujo de trabajo con la intención de proporcionar al lector la 
+información necesaria para la compresión de su funcionamiento.  
+3.1 Metodología 
+A continuación, se describe la metodología seguida para la elaboración de este 
+trabajo de tesis dividida en fase de análisis, fase de diseño, fase de desarrollo y fase 
+de pruebas, esta metodología resuelve el desarrollo de la herramienta de 
+incorporación de características de realidad aumenta en video juegos serios 
+educativos, la composición de cada fase se describe detalladamente en las 
+siguientes secciones.  
+Análisis Diseño Desarollo Pruebas
+Definición del 
+Análisis de proceso de genera Desarrollo del 
+requerimientos ción propuesto par prototipo Pruebas al caso de 
+a el desarrollo de estudio
+video juegos 
+serios educativos 
+Análisis de marcos con característica Validación del 
+de trabajo basados de realidad prototipo
+en HTML5 para la aumentada. Resultados
+implementación 
+de realidad 
+Definición de 
+aumentada 
+interfaces de la Desarrollo del caso 
+herramienta de estudio
+generadora.
+Identificación de 
+acciones dentro de Definir la 
+los video juegos arquitectura de 
+desarrollo 
+ 
+Figura 3.1 Metodología de desarrollo para el proceso de generación de video juegos serios 
+educativos con integración de características de realidad aumentada. 
+44 
+ 
+ 
+3.2 Fase de análisis 
+Se describen los requerimiento funcionales y no funcionales para llevar a cabo la 
+elaboración del proceso propuesto. 
+3.2.1 Análisis de requerimientos  
+ 
+Dentro de los requerimientos funcionales se citan los siguientes: 
+Integración de características de realidad aumentada sobre video juegos 
+desarrollados en HTML5, JavaScript y CSS, los cuales cuentan con un archivo de 
+configuración para realizar la integración, estos proyectos se les denomina base. 
+Generación de un nuevo video juego con características de realidad 
+aumentada como proyecto resultante, el cual se permite la descarga al usuario 
+en formato zip. 
+Los requerimientos no funcionales se expresan de manera textual a continuación: 
+La herramienta generadora, se integra de una única vista disponible al usuario, la 
+cual aloja los diversos pasos para llevar a cabo la integración de características de 
+realidad aumentada sobre el proyecto base a través de un elemento de interface de 
+tipo “wizard”, los pasos que se consideran son los siguientes :  
+Selección de proyecto base: En este paso se incorpora el proyecto base dentro 
+de la herramienta, el proyecto base se presenta en un archivo empaquetado ZIP , 
+el cual presenta condiciones en su  estructura las cuales se definen posteriormente 
+en esta tesis, el proyecto base contiene un juego de tipo basado en reglas limitado 
+en el alcance de esta tesis. 
+Acciones aplicables: En este paso se obtienen las acciones aplicables en base al 
+tipo de juego incorporado, estas acciones representan los eventos dentro del juego 
+los cuales detonan la aplicación de características de realidad aumentada, las  
+45 
+ 
+acciones se encuentran predefinidas dentro del proceso de incorporación plasmado 
+en la herramienta. 
+Contenido aumentado:  Para este paso se incorpora el contenido aumentado el 
+cual se especifica su compatibilidad en el siguiente capítulo, forzosamente se elige 
+un archivo para cada acción aplicable que se desea incorporar contenido 
+aumentado. El contenido aumentado representa el contenido que se va a mostrar 
+al escanear el marcador mostrado dentro de la acción aplicable por un dispositivo 
+lector compatible. 
+Bibliotecas: En este paso se muestran las bibliotecas de incorporación las cuales 
+la herramienta permite su uso, para este trabajo de  tesis se encuentra limitado 
+solamente al marco de trabajo ar.js el cual permite la integración de características 
+de realidad aumentada dentro de código HTML5. 
+ 
+Resumen: En este paso se muestra a manera de resumen las elecciones hechas 
+por el usuario, se muestra el nombre del archivo del proyecto base incorporado, sus 
+acciones aplicables elegidas para la incorporación de contenido, el nombre de los 
+archivos incorporados como contenido aumentado y la biblioteca con la cual se 
+realiza la incorporación, esto con función para que el usuario confirme las 
+características que conforma la incorporación. 
+ 
+Descarga: En este paso se realiza el proceso de generación e inyección de código 
+fuente dentro del proyecto para incorporar características de realidad aumentada.  
+Para el proceso de incorporación, se tiene soporte para el marco de trabajo ar.js. 
+Una vez que se realiza el proceso de generación, se dispone de un archivo ZIP que 
+empaqueta el proyecto resultante. 
+  
+Las funcionalidades mencionadas anteriormente se expresan a través de diagramas 
+de casos de uso en la figura 3.2. 
+  
+  
+46 
+ 
+ 
+ 
+Figura 3.2 Diagrama de casos de uso de la aplicación generadora. 
+3.2.2 Análisis de marcos de trabajo basados en HTML5 para la implementación 
+de realidad aumentada  
+Para la generación de proyectos con características de realidad aumentada se 
+trabajó con la integración de diversas herramientas que permiten la incorporación 
+automática de realidad aumenta, aunque para lograr incorporación de imágenes, 
+texto y modelos 3D se encontraron limitantes , a continuación, se presenta una tabla 
+comparativa de los marcos de trabajo en HTML5 con soporte de realidad aumenta 
+con los cuales se probó para la integración dentro de la  herramienta.  
+Nombre Sin Objetos Licenci Etiqueta  Biblioteca
+marcadores a s UI 
+usadas. 
+Ar.js  Posible (LLA 2D / 3D  Libre <canvas> WebGL 
+MARKER) <a-
+escene> 
+<a-box>   
+<a-marker-
+camera> 
+47 
+ 
+Nombre Sin Objetos Licenci Etiqueta  Biblioteca
+marcadores a s UI 
+usadas. 
+Simple ex No se encontró 3D Licencia <canvas> No se 
+encontró 
+<image> 
+Argon.js Posible por 2D / 3D, Libre <div three.js  
+geolocalizació sonidos. id="argon"
+n por gps > 
+Tabla 3.1 Marcos de trabajo en HTML5 con soporte de realidad aumentada. 
+ 
+Finalmente, después de varias pruebas de integración de determinó que solo se 
+usará la biblioteca ar.js la cual se adapta a los requerimientos de tipo de contenido 
+aumentado (texto, imágenes y modelos 3D), así como también la facilidad en la 
+introducción de etiquetas con solo hacer una referencia la biblioteca desarrollada en 
+JavaScript. 
+ 
+3.3.3 Proyecto base 
+El proyecto base consiste en todo juego creado con lenguajes para la web , HTML5, 
+Javascript y/o CSS el cual tiene que estar estructurado de una manera previa para 
+que la herramienta de incorporación de características de realidad aumentada 
+pueda realizar dicha incorporación, este debe estar bajo una cierta estructura de 
+carpetas definida en la siguiente sección, así como crear el archivo de configuración 
+para proporcionar la información necesaria a la herramienta para que esta conozca 
+el tipo de juego e información de los archivos contenidos dentro de él. 
+3.3.3.1 Estructura de archivos del proyecto base 
+Dentro de la definición del proyecto base se plantea la siguiente estructura de 
+carpetas: 
+48 
+ 
+ 
+Figura 3.26 Estructura de carpetas para el proyecto base 
+Carpeta para la definición de las hojas de estilo (CSS): Esta carpeta tiene el nombre 
+de “css” en letras minúsculas (Figura 3.26) y dentro de ella contener los archivos 
+.css que contiene el proyecto, esta no tiene que contener subcarpetas. 
+Carpeta para la definición de los archivos JavaScript (JS): Esta carpeta tiene que 
+ser nombrada como “js” en letras minúsculas (Figura 3.26) y dentro de ella contener 
+los archivos .js que forman parte de la funcionalidad del video juego, de igual 
+manera esta no tiene que contener los archivos dentro de subcarpetas. 
+ 
+• Archivo de configuración  
+Este archivo de tipo texto contiene la configuración necesaria para la identificación 
+del tipo de juego y de los elementos de código específicos para la integración de 
+características de realidad aumentada de acuerdo al tipo de juego. El archivo tiene 
+que nombrarse como “conf” y ser de tipo texto. 
+49 
+ 
+ 
+Figura 3.27 Estructura del archivo de configuración 
+El archivo para el caso de estudio serpientes y escaleras contiene: la definición del 
+tipo, juego, evento inicio, evento fin, evento escalera, evento serpiente conforme la 
+nomenclatura mostrada en la figura 3.27.  
+Tipo:  Indica el tipo de juego de acuerdo a la clasificación propuesta Lameras para 
+el caso del juego serpientes y escaleras es de tipo juego de reglas. 
+Juego: Define el nombre del juego conocido para el caso del juego serpientes y 
+escaleras es de tipo serpientes y escaleras. 
+Evento inicio:  Define el nombre del archivo que contiene el método para integrar el 
+contenido aumentado dentro del evento que da inicio al juego. 
+Evento fin:  Define el nombre del archivo que contiene el método para integrar el 
+contenido aumentado dentro del evento que da fin al juego. 
+Evento escalera:  Define el nombre del archivo que contiene el método para integrar 
+el contenido aumentado dentro del evento para subir una escalera dentro del juego. 
+Evento serpiente:  Define el nombre del archivo que contiene el método para integrar 
+el contenido aumentado dentro del evento que sube una serpiente dentro del juego. 
+ 
+• Archivo principal o index 
+El archivo principal el cual contiene las etiquetas del contenedor principal del juego, 
+este también contiene las referencias a las bibliotecas JavaScript y hojas de estilo 
+50 
+ 
+CSS. Este archivo está contenido dentro de la carpeta raíz del proyecto bajo el 
+nombre de “index.html”.  
+• Proyecto generado 
+Como resultado de la herramienta generadora se obtiene un proyecto empaquetado 
+en un archivo .zip el cual contiene la siguiente estructura de archivos: 
+ 
+Figura 3.28 Estructura de carpetas del proyecto generado 
+3.3.3.3 Estructura de archivos del proyecto generado 
+El proyecto resultante contiene las carpetas base más las generadas por la 
+herramienta después del proceso de integración: 
+arcontent: Carpeta que contiene el contenido aumentado, (imágenes, archivos de 
+texto o modelos) incorporado por el usuario dentro de la herramienta generadora. 
+Markers: Carpeta que contiene los marcadores usados para el tipo de juego 
+incorporado en la herramienta, esta carpeta contiene los archivos. patt usados por 
+la biblioteca de funciones de características de realidad aumentada, así como 
+archivos de imagen para visualizar los marcadores dentro del juego. 
+Reader: Carpeta que contiene la aplicación usada como lectora para el usuario con 
+la cual se visualizará el contenido aumentado, esta contiene el archivo index.html el 
+cual será el ejecutable para el visualizador, así como el código fuente de la biblioteca 
+para hacer uso de ella. 
+3.3.3.4 Inyección de código fuente sobre el proyecto base. 
+51 
+ 
+Para la realizar la inyección del código fuente se utiliza el lenguaje de programación 
+php y se realiza en los siguientes pasos: 
+3.29 Código fuente ejemplo de lectura de archivo, identificación de sección ye inserción de código 
+1) Se lee contenido del archivo indicado en el archivo de configuración el cual 
+contiene el contenido necesario para la incorporación de código fuente. 
+2) Se identifican las secciones donde se tiene que incrustar el código fuente. 
+3) Se inserta la cadena de código dentro del contenido del archivo. 
+4) Se sustituye el archivo generado por el archivo inicial. 
+3.3.3.5 Tipo de contenido aumentado. 
+Dentro contenido aumentado que se muestra dentro de las aplicaciones generadas 
+se describe a continuación. 
+• Imágenes: Se muestran imágenes de las siguientes extensiones (PNG, JPG 
+y JPEG) de una resolución máxima de 1200px x 800px.  
+• Texto: Mediante archivos de texto .txt, se escribe el teste a mostrar como 
+contenido aumentado. 
+• Modelos: Otro tipo de objeto a mostrar son los modelos 3D, con las siguientes 
+extensiones (OBJ, COLLADA, PLY, FBX, gLTF). 
+ 
+3.3.4 Identificación de acciones dentro de los video juegos  
+ 
+Para la incorporación de características de realidad aumenta dentro de diversos 
+tipos de video juegos se presenta un análisis de identificación de acciones que bajo 
+52 
+ 
+un mecanismo de activación muestren un tipo de contenido aumentado, el cual se 
+presenta en la siguiente tabla:  
+Tipo de juego Acción Mecanismo de Tipo de contenido 
+activación aumentado 
+Memorama Inicio de juego Botón de Tablero 
+activación posicionado en 
+superficie plana. 
+ Errar carta Automático Mensaje de error, o 
+imagen relativa a 
+fallo. 
+ Acertar par Automático Mensaje de acierto, 
+o imagen relativa al 
+acierto. 
+ Fin del juego (no Automático Mensaje o imagen 
+terminado) de juego no 
+terminado 
+exitosamente. 
+ Fin del juego Automático Mensaje o imagen 
+(tablero de juego terminado 
+completo) exitosamente. 
+Sudoku Inicio de juego Botón de Tablero 
+activación posicionado en 
+superficie plana. 
+ Fin del juego (no Automático Mensaje o imagen 
+terminado) de juego no 
+terminado 
+exitosamente. 
+ Fin del juego Automático Mensaje o imagen 
+(tablero de juego terminado 
+completo) exitosamente. 
+Serpientes y Inicio de juego Botón de Tablero 
+escaleras activación posicionado en 
+superficie plana. 
+ Subir una Automático  Mensaje o imagen 
+escalera representativa que 
+se subió por una 
+escalera.  
+ Bajar por una Automático Mensaje o imagen 
+escalera representativa que 
+se ha descendido 
+por una escalera. 
+ Tirar dato Automático Mensaje o efecto 
+representativo del 
+lance de dados. 
+53 
+ 
+Tipo de juego Acción Mecanismo de Tipo de contenido 
+activación aumentado 
+ Fin del juego Automático Mensaje o imagen 
+(tablero de juego terminado 
+completo) exitosamente. 
+Tabla 3.2 Identificación de acciones en video juegos. 
+               
+3.5 Fase de diseño 
+ 
+Se realizó un diagrama de proceso para presentar el proceso propuesto como un 
+objetivo específico de la  tesis, además de presentar un prototipo de interfaces para 
+la elaboración de la herramienta generadora para la comprobación del proceso 
+planteado. 
+3.5.1 Definición del proceso de generación propuesto para el desarrollo de 
+video juegos serios educativos con característica de realidad aumentada.   
+ 
+Para dar solución a la problemática planteada en este trabajo de tesis y cumplir con 
+los objetivos establecidos, a continuación, se describe la aplicación del proceso 
+de generación propuesto en incorporación de características de realidad 
+aumentada en video juegos serios educativos.  
+El proceso que se propone para resolver el problema planteado, consta de tres 
+etapas, las cuales se describen a continuación: 
+Etapa de Etapa de Etapa de 
+análisis configuración generación
+ 
+Figura 3.3 Proceso de integración de realidad aumentada a video juegos                    
+ 
+• Etapa de análisis.  
+ 
+En esta etapa se analiza el proyecto base el cual el usuario desea la incorporación 
+de características de realidad aumentada para determinar si es un proyecto factible 
+de acuerdo a la configuración previa citada en este capítulo. 
+54 
+ 
+Como se observa en la primera etapa de la figura 3.3, Se inicia con esta etapa y 
+esta consiste en leer la estructura del proyecto base definida en este capítulo , 
+obtiene el archivo de configuración  y obtiene  las acciones en las cuales se permita 
+la implementación de realidad aumentada. 
+ 
+Figura 3.4 Etapa de análisis del proceso de integración de realidad aumentada a video juegos. 
+ 
+1.- Leer información del proyecto.  El sistema lee el archivo incorporado por el 
+usuario, el cual contiene el  proyecto base del video juego en lenguaje HTML5 
+comprimido en formato zip. 
+2.- Validar archivo correcto y estructura correcta. Se valida que el archivo zip 
+tenga la estructura correcta de carpetas y los archivos necesarios para su 
+configuración dependido al tipo de juego seleccionado. 
+Si tiene una estructura correcta: avanza a la  siguiente actividad dentro de la fase 
+de configuración. 
+Si no: Regresa a la actividad inicial del proceso. 
+• Etapa de configuración. 
+ 
+55 
+ 
+ 
+Figura 3.5 Etapa de configuración del proceso de integración de realidad aumentada a video 
+juegos. 
+En esta etapa se realiza la personalización de las características de realidad 
+aumentada a integrar como lo es el contenido aumentado a mostrar, así como la 
+biblioteca de funciones que se usará para generar la funcionalidad, la cual se 
+conforma de los pasos siguientes: 
+1.- Obtener acciones aplicables.  Obtiene las acciones aplicables para integrar 
+contenido aumentado con base en el tipo de proyecto seleccionado, las cuales ya 
+se encuentran previamente catalogadas dependiendo al tipo de proyecto, estas 
+acciones corresponden como algunos ejemplos al fin de juego, inicio de juego, 
+cuando el usuario obtiene alguna puntuación, entre otras.  
+El sistema como salida lista las acciones aplicables  en la pantalla, las cuales el 
+usuario selecciona que acciones desea integrarles contenido aumentado. 
+2.- Leer acciones elegidas por el usuario. Lee las acciones elegidas por el usuario 
+para integrar contenido aumentado, se tiene que seleccionar mínimo una elección 
+por el usuario para avanzar al siguiente paso.  
+56 
+ 
+3.- Validar elección del usuario. Valida que el conjunto de acciones aplicables 
+elegidas por el usuario sean las propias de acuerdo al tipo de juego, además de 
+validar que se elija como mínimo una acción.  
+4.- Obtener opciones de contenido aumentado disponible para cada una de 
+las acciones . Obtiene y lista las acciones elegidas por el usuario, y por cada una  
+se tiene que integrar el archivo de contenido aumentado a mostrar, este archivo 
+contiene o una imagen en formato (PNG, JPG o JPEG) , un archivo de texto formato 
+.txt o un modelo formato (OBJ,COLLADA,PLY, glTF). 
+5.- Leer contenido aumentado elegido para cada una de las acciones. Lee el 
+contenido aumentado elegido, solo se permiten las siguientes extensiones de 
+imágenes (JPEG, JPG, PNG). 
+6.- Validar contenido elegido. Se valida que el contenido sea el permitido para 
+cada una de las acciones. 
+7.- Obtener biblioteca de funciones de realidad aumentada.  El sistema obtiene 
+las bibliotecas de funciones disponibles en el sistema generador para la integración 
+de características de realidad aumenta, y las lista en pantalla permitiendo al usuario 
+hacer elección de solo una de ellas. 
+8.- Leer selección de biblioteca de funciones. Lee la selección de la biblioteca de 
+función seleccionada por el usuario. 
+9.- Validar selección de biblioteca funciones. Se valida que la selección sea 
+correcta. 
+10.- Obtener información de configuración ingresada. Se obtiene la información 
+de los pasos y anteriores y se muestra a manera de resumen dentro de la pantalla, 
+toda la información que representa el nuevo proyecto a generar con las diferentes 
+características de realidad aumentada. 
+11.- Aceptar la configuración. Se valida si el usuario acepta la configuración 
+ingresada previamente, para proceder a la generación del proyecto resultante. 
+• Etapa de Generación 
+57 
+ 
+ 
+Figura 3.6 Etapa de generación del proceso de integración de realidad aumentada a video juegos. 
+ 
+En esta etapa se genera la nueva estructura del proyecto creado con contenido 
+aumentado, así como el archivo descargable para el usuario, los pasos se describen 
+a continuación.  
+1.- Generar archivos y carpetas dentro del proyecto base. Se generan los 
+archivos y carpetas nuevas como un nuevo proyecto, esta generación se hace en 
+base al tipo de juego y las acciones elegidas previamente.  
+2.- Modificar archivos aplicables. Hace las modificaciones respectivas a los 
+archivos actuales del proyecto base. 
+3.- Generar archivo comprimido. Genera el archivo comprimido en formato zip 
+con el nuevo proyecto generado, el cual tendrá la siguiente nomenclatura: 
+nombre_proyecto_base_inicial_Fecha_hora_creacion.zip y muestra opción para 
+descargar el archivo. Muestra interface para descargar el archivo. 
+ 
+3.5.2 Definición de interfaces de la herramienta generadora. 
+ 
+Como parte del diseño se realizó un conjunto de bosquejos para establecer un 
+prototipo funcional definiendo el comportamiento general de la herramienta y el 
+contenido que conforma cada pantalla. Se utilizó la herramienta para la elaboración 
+58 
+ 
+de bosquejos Balsamiq mockup® en su versión 3.5 ya que permite la integración de 
+eventos para representar el flujo de navegación del usuario. 
+Se definieron seis pasos dentro del proceso lo cuales conforman seis secciones 
+dentro del formulario tipo “wizard”. 
+• Paso 1:  Elección del proyecto base. Ventana cuyo objetivo es la 
+integración del archivo de proyecto para aplicar características de realidad 
+aumentada. 
+• Paso 2: Acciones aplicables. Formulario de selección de acciones 
+aplicables identificadas en base al tipo de juego para aplicación de 
+características de realidad aumentada.  
+• Paso 3: Contenido aumentado. Formulario para elección de archivos que 
+conforman el contenido aumentado para cada acción aplicable. 
+• Paso 4: Bibliotecas. Formulario de elección de bibliotecas de funciones con 
+soporte de realidad aumentada. 
+• Paso 5: Resumen. Ventana cuyo objetivo es mostrar a manera de resumen 
+las diferentes características elegidas para incorporar en el proyecto 
+resultante. 
+• Paso 6: Descarga. Ventana que realiza la creación del empaquetado ZIP del 
+proyecto resultante para ser descargado por el usuario. 
+A continuación, se muestra el conjunto de interfaces que componen el prototipo de 
+la herramienta generadora como prueba de concepto del proceso propuesto como 
+objetivo de tesis. 
+59 
+ 
+ 
+ Figura 3.7 Interfaz número uno del prototipo generador de aplicaciones educativas. 
+En esta pantalla se muestran las diversas etapas que se contempla en el generador 
+de aplicaciones educativas (sección 1, Figura 3.7), el usuario selecciona el proyecto 
+base que necesite incorporar realidad aumentada (sección 2, Figura 3.7), una vez 
+seleccionado se proporciona información adicional del proyecto seleccionando su 
+clasificación del juego (sección 3, Figura 3.7), una vez completada la información 
+se pulsa el botón siguiente (sección 4, Figura 3.7). 
+ 
+Figura 3.8 Interfaz número dos del prototipo generador de aplicaciones educativas. 
+60 
+ 
+En esta pantalla se muestra la información registrada anteriormente (sección 1, 
+figura 3.8), también se muestra un listado de acciones aplicables para integrar 
+realidad aumentada (sección 2, figura 3.8), para cada una de ellas se muestra un 
+listado de botones de selección para que el usuario seleccione dicha acción 
+aplicable (sección 3, figura 3.8), una vez seleccionada la información se procede a 
+pulsar el botón siguiente (sección 4, figura 3.8). 
+ 
+Figura 3.9 Interfaz número tres del prototipo generador de aplicaciones educativas. 
+En la pantalla se muestra el listado de acciones aplicadas elegidas anteriormente 
+(sección 1, figura 3.9), para cada elemento que aparece en el listado el usuario 
+selecciona el archivo de contenido aumentado a integrar (sección 2, 3.9) una vez 
+seleccionado el contenido aumentado el usuario pulsa el botón de siguiente (sección 
+3, figura 3.9). 
+61 
+ 
+ 
+Figura 3.10 Interfaz número cuatro del prototipo generador de aplicaciones educativas. 
+En esta pantalla el usuario selecciona para cada acción aplicable (sección 1, figura 
+3.10) la biblioteca de funciones con la que desea integrar el contenido aumentado 
+(sección 2, figura 3.10), una vez seleccionado la biblioteca de funciones para todas 
+las opciones el usuario pulsa el botón siguiente (sección 3, figura 3.10). 
+ 
+Figura 3.11 Interfaz número cinco del prototipo generador de aplicaciones educativas 
+62 
+ 
+En esta pantalla en las secciones 1-4 del a figura 3.11 se muestra la información 
+elegida anteriormente, una vez cotejada esta información el usuario procede a 
+pulsar el botón siguiente (sección 5, figura 3.11).  
+ 
+Figura 3.12 Interfaz número seis del prototipo generador de aplicaciones educativas. 
+ 
+En esta pantalla se presenta el nombre del archivo generado ya con el contenido 
+aumentado integrado al proyecto base (sección 1, figura 3.12), el usuario procede 
+a descargar el archivo generado pulsando el botón descargar (sección 2, figura 
+3.12). 
+3.5.3 Definir la arquitectura de desarrollo  
+ 
+Se representa la arquitectura de desarrollo de la aplicación. La arquitectura se basa 
+en el modelo cliente – servidor, utilizando como plataforma principal de desarrollo 
+PHP en su versión 7.  
+En la parte correspondiente al servidor se estructura siguiendo el principio 
+fundamental del modelo de diseño arquitectónico MVC o Modelo Vista Controlador 
+para tener una separación en capas. 
+Este diseño en capas permite la escalabilidad y facilidad de mantenimiento para 
+futuras adaptaciones ya que su diseño se encuentra estandarizado y destruido en 
+63 
+ 
+las capas que lo conforman. A continuación, se explica cada una de las capas que 
+contiene la arquitectura representadas por la siguiente figura: 
+ 
+Modelo Controlador Vista
+ 
+ 
+Petición HTTP Respuesta HTTP  
+  
+ 
+Navegador Web 
+ 
+ 
+Figura 3.13 Arquitectura en capas del generador de aplicaciones. 
+ ⎯ Capa de presentación o vista: Esta capa consiste en brindar la interacción con 
+el usuario mediante su visualización en el navegador, la capa está formada de la 
+interfaz de usuario desarrollada en HTML5, JavaScript y CSS. En la capa de 
+presentación el usuario visualiza y configura el proyecto resultando mediante un 
+componente de tipo  Wizard y al finalizar permite la descarga de la aplicación 
+generada en el componente .  
+64 
+ 
+⎯ Capa de control: Esta capa contiene los archivos usados como controladores 
+dentro de esta arquitectura los cuales son los responsables de atender y responder 
+a las peticiones HTTP realizadas por el navegador, esta solicita a la capa de 
+presentación o a la de modelo la información requerida por el cliente y devuelve en 
+el formato solicitado.  
+⎯ Capa de modelo: Esta capa contiene el procesamiento lógico de cada petición la 
+cual contiene la lógica de negocio de la herramienta. 
+ 
+3.6 Fase de Desarrollo 
+Con base en los resultados de la fase de análisis se procede a la codificación de la 
+herramienta generadora de video juegos serios con implementación de 
+características de realidad aumentada, comprendiendo el desarrollo de la 
+funcionalidad de la herramienta, así como en la inyección de código necesario 
+dentro de los video juegos presentados como caso de estudio. 
+Dentro de las tecnologías involucradas se dividen en dos categorías: 
+Tecnologías de presentación (Front-End)
+•HMTL5 , CSS3 , JAVASCRIPT , JQUERY
+•Frameworks de realidad aumantda:
+•Ar.js , Three.js
+Tecnologías de datos y servidor. (Back-End) 
+•PHP 7
+Servidor
+•APACHE 2.4
+Figura 3.14 Pila de tecnologías usadas para el desarrollo de la herramienta. 
+ 
+ 
+• Tecnologías de presentación: se utilizan para el desarrollo del diseño la 
+interfaz de usuario, así como de la funcionalidad lógica comprendida dentro 
+de ella.  
+65 
+ 
+Para el diseño de la interfaz de usuario se utiliza el lenguaje HTML5(Figura 
+3.15) estilizado mediante el uso de CSS3, utilizando bibliotecas de funciones 
+complementarias para la funcionalidad como lo es JQuery 1.10 para el 
+desarrollo del formulario tipo “wizard”. 
+  
+Figura 3.15 Extracto de código para el diseño de la herramienta generadora. 
+ 
+• Tecnologías de datos y servidor: se utilizan para lograr la funcionalidad de 
+integración de código fuente dentro del proyecto base, como también para la 
+generación del proyecto resultante con las características de realidad 
+aumentada integradas. El lenguaje utilizado es PHP en su versión 7. 
+ 
+• Servidor: Se utiliza para el despliegue de la aplicación e interpreta el 
+lenguaje utilizado, el servidor utilizado es Apache en su versión 2.4. 
+ 
+ 
+66 
+ 
+3.6.1 Prototipo 
+Se realiza un prototipo de interfaces funcionales elaboradas con lenguajes de 
+programación HTML5, JavaScript, JQuery y Css3, con la cual se define la 
+funcionalidad general de la herramienta generadora, concretando sus pasos que la 
+conforman, así como el contenido de cado uno de los formularios necesarios para 
+completar el proceso de generación y así obtener el diseño de la presentación final 
+hacia el usuario. 
+ 
+Figura 3.17 Pestañas de contenido de la herramienta generadora. 
+ 
+La funcionalidad de la herramienta se encuentra dividida en siete pestañas (Figura 
+3.17) que conforman los pasos del proceso de integración de características de 
+realidad aumentada. 
+ 
+Para la elaboración de la herramienta se diseñó el siguiente diagrama de clases 
+(Figura 3.18), el cual establece las funciones que conlleva cada vista, así como la 
+relación que representa dentro del formulario tipo “wizard. 
+ 
+67 
+ 
+ 
+Figura 3.18 Diagrama de clases de las vistas de la herramienta 
+ 
+A manera de descripción se presenta a continuación el contenido de cada una de 
+las vistas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+68 
+ 
+ 
+ 
+• Pestaña uno: Configuración del proyecto base 
+ 
+       Figura 3.19 Paso uno de la herramienta generadora donde se configura el proyecto base. 
+ 
+Esta pantalla representa la página de inicio de la herramienta generadora, donde el 
+usuario incorpora el proyecto base a la herramienta para que esta proceda a 
+completar los siguientes pasos. 
+La sección 1 que se muestra en la figura 4.1 representa un menú de ayuda para el 
+usuario como explicación del contenido de la pantalla y del proceso de generación. 
+La sección 2 progreso total muestra el avance sobre el total de paso a completar 
+por el usuario dentro de la herramienta. 
+La sección 3 indica la incorporación de un archivo de tipo zip para que el usuario 
+incorporé el proyecto base, este botón despliega un explorador de archivos para 
+que el usuario seleccione el archivo deseado.  
+ 
+ 
+ 
+69 
+ 
+Validación del proyecto base: 
+ 
+Figura 3.20 Validación del proyecto base 
+Dentro de la funcionalidad de la pantalla descrita anteriormente está la lectura del 
+proyecto base, en la cual el sistema lee el archivo .zip incorporada y realiza una 
+validación (Figura 3.20) para saber si el proyecto base tiene la estructura correcta y 
+el archivo de configuración y así continuar con el siguiente paso del proceso de 
+integración.  
+• Pestaña dos: Acciones aplicables 
+ 
+Figura 3.21 Paso dos de la herramienta generadora para la configuración de las acciones 
+aplicables. 
+70 
+ 
+ 
+En esta pantalla se muestran las acciones aplicables para la incorporación de 
+características de realidad aumentada para el tipo de video juego serio seleccionado 
+para que el usuario haga selección hacia cuales desea la integración, el usuario 
+tiene qu seleccionar mínimo una característica para proceder. 
+En la sección 1 muestra las características aplicables para un juego basado en 
+reglas de tipo memorama, para este caso muestra cuatro acciones el usuario tiene 
+que seleccionar n número de estas, pero como mínimo una acción para continuar. 
+En la sección 2 muestra los botones de navegación atrás y siguiente para regresar 
+o avanzar sobre las secciones de la herramienta. 
+ 
+• Pestaña tres: Contenido aumentado 
+ 
+Figura 3.22 Paso número de tres de la herramienta generadora para la incorporación de contenido 
+aumentado. 
+ 
+En la pantalla mostrada anteriormente se permite al usuario la selección de del tipo 
+de contenido aumentado para cada acción aplicable, como contenido se permite 
+71 
+ 
+una imagen en diversos formatos permitidos, o un archivo de texto en formato .txt o 
+un modelo 3D en diversos formatos. 
+En la sección número 1, se muestran un conjunto de campos de tipo selección para 
+que el usuario elija el tipo de contenido a mostrar. 
+En la sección número 2, se muestra un conjunto de campos para que el usuario 
+incorpore el archivo de acuerdo al tipo de selección que se ha realizado en la 
+sección número 1.  
+ 
+Validación del contenido aumentado: 
+ 
+Figura 3.23 Validación de tipo de archivo incorporado como contenido aumentado 
+Dentro de la funcionalidad integrada en esta pantalla se encuentra la validación del 
+tipo de archivo incorporado, por lo que, si el usuario selecciona un archivo que no 
+conocida con el tipo, el sistema mostrará un mensaje de error y no se podrá 
+continuar con el siguiente paso hasta que no se incorpore el tipo de archivo correcto.  
+ 
+ 
+72 
+ 
+• Pestaña cuatro: Selección de biblioteca de funciones 
+ 
+Figura 3.24 Paso número cuatro de la herramienta generadora para la selección de biblioteca de 
+funciones con soporte de contenido aumentado. 
+ 
+Dentro de este paso, el usuario selecciona la biblioteca de funciones para integrar 
+el contenido aumentado dentro del proyecto base. 
+En la sección número 1, se muestra un campo de selección con las diversas 
+bibliotecas de funciones disponibles para la generación de contenido aumentado 
+dentro de la herramienta. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+73 
+ 
+Pestaña cinco: Resumen del proyecto a generar 
+ 
+ 
+Figura 3.25 Paso número cinco de la herramienta generadora que muestra un resumen de las 
+elecciones del usuario. 
+  
+Dentro de esta pantalla se observa que se muestra a manera de resumen todo lo 
+anteriormente seleccionado por el usuario, nombre del proyecto incorporado, las 
+acciones aplicables dentro del tipo de juego incorporado, así como el contenido que 
+el usuario incorpora para cada acción aplicable. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+74 
+ 
+Pestaña seis: Generar proyecto 
+ 
+ 
+Figura 3.26 Paso número seis de la herramienta generadora para la confirmación e inicio de la 
+generación del nuevo proyecto con características de realidad aumentada. 
+ 
+En esta pantalla el usuario al pulsar el botón generar proyecto, confirma la 
+generación y el generador procede a la realización de la integración sobre los 
+archivos del proyecto base. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+75 
+ 
+ 
+Pestaña siete: Descarga de proyecto generado 
+ 
+ 
+Figura 3.27 Paso número siete de la herramienta generadora para la descarga del proyecto 
+resultante de la integración. 
+ 
+Como última pantalla de la herramienta generadora, se muestra un botón para que 
+el usuario proceda con la descarga del proyecto con características de realidad 
+aumentada generado por la herramienta en formato .zip. 
+3.6.2 Proceso de Generación 
+ 
+Para la incorporación de contenido de realidad aumenta sobre los proyectos base, 
+se realiza una inyección de código fuente sobre los archivos base, esta inyección 
+se encuentra previamente definida para cada una de las acciones identificadas en 
+cada tipo de video juego a ser considerado para la herramienta y esta también varía 
+de acuerdo al tipo contenido aumentado incorporado por el usuario. Para ello es 
+necesario la definición de un proyecto base el cual contiene la estructura de 
+carpetas y nomenclatura necesaria para su lectura y generación de archivos dentro 
+del proceso de incorporación de características de realidad aumentada definido en 
+esta tesis. 
+76 
+ 
+Capítulo 4. Resultados 
+ 
+4.1 Caso de Estudio Enseñanza de figuras geométricas mediante un 
+memorama incorporando características de realidad aumentada. 
+ 
+Como caso de estudio de la herramienta generadora se presenta un juego de tipo 
+reglas según la clasificación hecha por Lameras, llamado memorama, con este caso 
+de estudio se pretende demostrar la fiabilidad del proceso de generación propuesto 
+en esta tesis, mediante el uso de la herramienta de software creada sobre este tipo 
+de juego base. 
+ 
+ 
+Figura 4.1 Tablero inicial para el tipo de juego memorama. 
+4.1.2 Construyendo la aplicación 
+Para la incorporación de características de realidad aumentada se hace uso de la 
+herramienta web creada, la cual se ejecuta dentro de un navegador web y se 
+procede a incorporar la aplicación que contiene el memorama. 
+4.1.2.1 Cargando aplicación base 
+Como aplicación base se incorpora una aplicación de tipo memorama (Figura 4.1) 
+realizada en HTML5 la cual presenta las características de proyecto base señaladas 
+en esta tesis, esta aplicación se encuentra empaquetada en un archivo de tipo zip.  
+77 
+ 
+4.1.2.2 Incorporando de características de realidad aumentada 
+Para la incorporación de características de realidad aumentada se tienen 
+identificadas diversas acciones aplicables dentro de los principales eventos del 
+juego para cada una de ellas es posible la integración de características de realidad 
+aumentada. 
+El primer paso: Se incorpora el proyecto base del juego de tipo memorama en 
+formato zip dentro la pantalla de configuración del proyecto:  
+ 
+Figura 4.2 Ejemplo de incorporación de archivo de proyecto base 
+Segundo paso:  Se listan las acciones para este tipo de juego memorama, se 
+muestran cuatro acciones disponibles, y se seleccionan inicio, fin, acertar y errar 
+carta dentro de la sección 1. 
+ 
+Figura 4.3 Selección de acciones aplicables 
+78 
+ 
+Tercer paso: Se selecciona el contenido aumentado a integrar para cada una de 
+las acciones elegidas por el usuario en el paso anterior, se selecciona una imagen 
+para la acción inicio del juego, un archivo de texto para la acción fin del juego, un 
+modelo para acertar carta y una imagen para errar carta. 
+ 
+Figura 4.4 Ejemplo de incorporación de archivo de tipo imagen 
+Cuarto paso: Se selecciona la biblioteca de funciones que va integrar el contenido 
+aumentado para este caso seleccionamos ar.js 
+ 
+Figura 4.5 Ejemplo de selección de biblioteca de funciones 
+Quinto paso: Se muestra un resumen de las elecciones que se realizaron: 
+79 
+ 
+ 
+Figura 4.6 Ejemplo de pantalla de resumen de las selecciones del usuario 
+Sexto paso: Se confirma y se genera el proyecto. 
+ 
+Figura 4.7 Ejemplo de confirmación y generación del proyecto resultante 
+Séptimo paso: Se despliega la pantalla de descargar proyecto generado y se 
+procede a descargar el proyecto en formato zip. 
+ 
+Figura 4.8 Ejemplo de descarga de archivos 
+ 
+ 
+80 
+ 
+4.1.3 Probando la aplicación 
+Después de descargar el proyecto integrado se procede a probar la integración de 
+características de realidad aumentada  
+Al inicio del Juego: Como primera actividad de la cual se presenta cuando el 
+usuario inicia el juego, este muestra una ventana para la selección de nivel y 
+procede a darle aceptar. 
+• Comportamiento sin características de realidad aumentada. 
+El juego inicia inmediatamente y muestra el tablero. 
+• Comportamiento con características de realidad aumentada. 
+Antes de iniciar el juego se muestra un mensaje el cual contiene el texto de 
+“cargando…” este mensaje al ser escaneado por un dispositivo lector mediante la 
+cámara, este muestra el contenido aumentado integrado en la herramienta 
+generadora, esto con el propósito de proporcionar una mayor animación para el 
+video juego. 
+ 
+Figura 4.9 Inicio del juego visto desde dispositivo lector de características de realidad aumentada. 
+Al errar par: Otra de las actividades identificadas dentro del comportamiento del 
+juego, se encuentra cuando un jugador no acierta un par de cartas iguales, esto se 
+81 
+ 
+concibe como un error dentro del juego por lo que se procede a señalarlo mediante 
+características de realidad aumentada para que este desacierto sea mayormente 
+recalcado para el jugador. 
+Al acertar par: Cada vez que un jugador tiene una jugada exitosa la cual se da 
+cuando el usuario gira dos cartas continuamente y estas contienen una figura 
+geométrica idéntica, el juego muestra un mensaje con características de realidad 
+aumentada, el cual se incorporó dentro del generador alusivo a esta acción, este 
+mensaje que se genera proporciona mayor impacto y reconocimiento del acierto del 
+jugador. 
+Al finalizar el juego (tablero incompleto): Existen dos formas para dar finalización 
+al juego, este cuenta con un temporizador y dependiendo al nivel de dificultad 
+elegido por el usuario al inicio del juego el tiempo es mayor o menor según 
+corresponda, si el temporizador llega a cero y el tablero aún no se encuentra 
+completo (todas las figuras giradas) se considera como una derrota para el jugador 
+para la cual obtiene su puntaje correspondiente. Al finalizar de esta manera, el juego 
+muestra un mensaje alusivo a este tipo de finalización con características de 
+realidad aumentada para destacar este final con resolución incompleta para el 
+usuario.  
+Al finalizar el juego (tablero completo): La segunda forma para dar finalización al 
+juego se da cuando el usuario descubre todas las cartas, esto es, que todas las 
+cartas se encuentren giradas mostrando la figura geométrica, esto representa un 
+final exitoso para el usuario por lo que el juego muestra un mensaje con contenido 
+aumentado anexado previamente en la herramienta como en el resto de las 
+acciones anteriores para dar un mayor énfasis a la finalización exitosa para el 
+usuario y este acierto sea mayormente destacado.  
+4.2 Caso de Estudio: Enseñanza de sumas y restas en un juego basado en 
+reglas con realidad aumentada. 
+ 
+Otro caso de estudio que se considera como prueba de concepto para la 
+herramienta generadora se presenta para un juego de tipo basado en reglas 
+82 
+ 
+denominado “serpientes y escaleras”, es cual consta de un juego en el que el 
+usuario inicia en una posición inicial dentro de un tablero de tipo matriz (Figura 4.4) 
+teniendo que llegar la posición final que se encuentra en el extremo opuesto del 
+tablero, para avanzar el usuario necesita tirar de los dados para que el número 
+resultante sea la cantidad de casillas dentro del tablero que este avance, así hasta 
+llegar a la posición final, existen dos objetos dentro del tablero denominados 
+serpientes y escalera respectivamente, una objeto de tipo serpiente hace que el 
+usuario descienda posiciones dentro del tablero y un objeto de tipo escalera 
+ocasiona que el usuario suba dentro del tablero para así llegar de una manera más 
+rápida a la posición final.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   Figura 4.10 Tablero inicial para el juego serpientes y escaleras 
+ 
+4.2.1 Aplicación base 
+Como aplicación base se incorpora una aplicación de tipo serpientes y escaleras 
+(Figura 4.3) realizada en HTML5 la cual presenta las características de proyecto 
+base señaladas en esta tesis, esta aplicación se encuentra empaquetada en un 
+archivo de tipo zip.  
+ 
+83 
+ 
+4.2.1 Probando la aplicación 
+Después del procesamiento de igual forma que en el caso anterior mediante la 
+herramienta generadora, se procese a probar cada una de las acciones donde se 
+incorpora el nuevo contenido con características de realidad aumentada dentro del 
+juego. 
+Inicio del Juego 
+Como primera actividad generada dentro por la herramienta se presenta cuando el 
+usuario inicia el juego, mostrando un marcador con un mensaje de inicio. 
+• Comportamiento sin características de realidad aumentada. 
+El juego inicia inmediatamente y muestra el tablero del juego. 
+• Comportamiento con características de realidad aumentada. 
+Se muestra un marcador al iniciar el juego para que esta sea escaneado por el 
+dispositivo lector y se presente el contenido introducido en la herramienta. 
+Subir escalera 
+ 
+Figura 4.11 Representación de juego y resultado de tiro 
+ 
+Cade vez que el usuario se coloca en una posición que corresponde al inicio de una 
+escalera este asciende hasta el final de escalera y el juego muestra el resultado de 
+84 
+ 
+la suma de la posición lograda Figura (4.5) y un mensaje que al ser escaneado por 
+un dispositivo lector de realidad aumenta muestra su contenido. 
+Bajar una escalera 
+Otra acción considerada para la incorporación de características de realidad 
+aumentada se da con la acción de bajar una escalera, esta acción representa una 
+falla del usuario y para denotarla el juego muestra un mensaje relativo a esta acción 
+el cual muestra el contenido aumentado incorporado en la herramienta. 
+Fin del juego 
+Una vez que el jugador ha llegado a la posición final dentro del tablero, se considera 
+el fin de este y el juego procede a mostrar un mensaje con características de 
+realidad aumentada, esto para recalcar el fin exitoso del juego para el jugador. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+85 
+ 
+Capítulo 5 Conclusiones y recomendaciones 
+Para finalizar la escritura de este trabajo de tesis se presentan a continuación las 
+conclusiones obtenidas en la realización de este documento y las recomendaciones 
+a futuro para mejorar y expandir este trabajo. 
+5.1 Conclusiones  
+En este trabajo de tesis se logró desarrollar una herramienta de software que 
+cumple con los objetivos planteados al iniciar el proyecto, donde a partir de un 
+proceso de incorporación de características de realidad aumenta se logra obtener 
+dos proyectos generados con implementación de características de realidad 
+aumentada después de ser procesados por la herramienta creada. 
+Durante la elaboración del trabajo presentado se aprendió que gracias a la definición 
+formal de un proceso se realiza fácilmente una herramienta de software. Por otra 
+parte, se implementaron nuevas tecnologías para la incorporación de realidad 
+aumentada que son innovadoras ya que simplifican su utilización dentro de 
+cualquier navegador web.  
+Este trabajo ofrece tres aportes en el área de generación de software automático de 
+aplicaciones: 
+1) Establecer un proceso de desarrollo de video juegos educativos con 
+características de realidad aumentada; 2) Generar una herramienta a partir del 
+proceso para la incorporación de características de realidad aumentada de forma 
+automática; 3) Implementar técnicas inyección de código para el uso de bibliotecas 
+de realidad aumenta dentro de proyectos basados en HTML5. 
+5.2 Recomendaciones 
+Con base en los resultados establecidos en esta tesis se recomienda agregar 
+nuevos tipos de video juegos educativos no contemplados como lo son juegos de 
+retroalimentación y evaluación, juegos de colaboración y competencia, entre otros. 
+Así mismo agregar a la herramienta desarrollada los nuevos tipos de juego para 
+abarcar más aplicaciones de video juego serios que adquieran características de 
+realidad aumentada con la herramienta. 
+86 
+ 
+Otra recomendación acerca del proceso de generación es que fácilmente se 
+traslada a diferentes dominios como lo son:  aplicaciones de publicidad, de 
+entretenimiento, informativas, entre otros. 
+Por lo tanto, se requiere realizar un análisis del proceso existente y establecer una 
+relación con los diferentes dominios que existen para incorporarlos al proceso 
+desarrollado en esta tesis. 
+Ya que la tecnología va aumentando constantemente provoca que aparezcan 
+nuevas plataformas en los diferentes dispositivos, o en caso contrario dejen de tener 
+soporte para las ya existentes. Consecuentemente a esto es necesario realizar un 
+nuevo análisis de las tecnologías vigentes para seguir actualizando los proyectos y 
+evitar que la herramienta generadora de código se vuelva obsoleta en poco tiempo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+87 
+ 
+Anexo 1 Terminología involucrada 
+HTML. (Hypertext Markup Language, Lenguaje de Marcas de Hipertexto), es el 
+lenguaje de marcado predominante para la construcción de páginas Web. 
+Web. Sistema de documentos de hipertexto y/o hipermedios enlazados y accesibles 
+a través de Internet. 
+JPEG. Extensión de archivo que se usa formato para el almacenamiento y la 
+transmisión de imágenes. 
+PNG. es un formato gráfico basado en un algoritmo de compresión sin 
+pérdida para bitmaps no sujeto a patentes. 
+XML. (eXtensible Markup Language, Lenguaje de Marcado Extensible), es un meta-
+lenguaje que permite definir lenguajes de marcas, utilizado para almacenar datos 
+en forma legible. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+88 
+ 
+Productos Académicos  
+ 
+Artículos en Congresos Internacionales: 
+José Gregorio García-Ramírez, Giner Alor-Hernández 
+Humberto Marín-Vega, Beatriz Olivares-Zepahua, 
+Ignacio López-Martínez: “Proceso de desarrollo de 
+juegos serios    educativos con implementación de 
+realidad aumentada”, en V Congreso Internacional de 
+Investigación Tijuana (2019), Tijuana, B.C., 2019. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+89 
+ 
+Referencias 
+ 
+[1] F. García, O. Pedreira, M. Piattini, A. Cerdeira-Pena and M. Penabad, "A 
+framework for gamification in software engineering", Journal of Systems and 
+Software, vol. 132, pp. 21-40, 2017. 
+[2] F. García, O. Pedreira, M. Piattini, A. Cerdeira-Pena and M. Penabad, "A 
+framework for gamification in software engineering", Journal of Systems and 
+Software, vol. 132, pp. 21-40, 2017. 
+[3]   A. Barbosa and F. Silva, "Serious Games", Proceedings of the 8th International 
+Conference on Advances in Computer Entertainment Technology - ACE '11, 
+2011. 
+[4]   E. Raybourn, "A new paradigm for serious games: Transmedia learning for more 
+effective training and education.", Journal of Computational Science, vol. 5, no. 
+3, pp. 471-481, 2014. 
+[5]   C. Rodríguez, and J. Gomes, “Video juegos y educación: una visión panorámica 
+de las investigaciones desarrolladas a nivel internacional.", Profesorado, vol. 
+17, no. 2, 2013. 
+[6]   D. Redondo, "Realidad Aumentada", Revista digital universitaria, vol. 5, no. 7, 
+2014. 
+[7]    Cawood and M. Fiala, Augmented reality. Raleigh: Pragmatic Bookshelf, 2008. 
+[8] ARTookKit, 2017. [En línea]. Disponible en: https://www.hitl.washington.          
+edu/artoolkit/.  [ Consultado: 13-03-2018]. 
+[9] “Computer Vision Winter Workshop" ARToolKitPlus for Pose Tracking on Mobile    
+Devices, St. Lambrecht, Austria, 2007. 
+[10] L. Hunter, "978-1-491-96804-8[LSI]", Thingworks, no., pp. 1-16, 2017. 
+[12] L. Donovan, "The use of serious games in the corporate sector", Report, 
+Learnovate Centre, 2012. 
+[13] Gardner, H. (1983). Frames of mind: The theory of multiple intelligences. New 
+York: Basic Books. 
+[14] Nagle, D. (2014). HTML5 Game Engines: App Development and Distribution. 
+41-43. 
+[15] “En México, 57% de la población usa smartphones”. [En línea]. Disponible en: 
+http://www.milenio.com/negocios/Smartphones_en_mexico-uso_de_telefonos-
+_inteligentes-smartphones_en_America_Latina_0_664133774.html [Consultado: 1-
+abr-2018]. 
+90 
+ 
+[16] L. Dias, J. Barbosa and H. Vianna, "Gamification and serious games in 
+depression care: A systematic mapping study", Telematics and Informatics, vol. 
+35, no. 1, pp. 213-224, 2018. 
+[17] R. Lamb, L. Annetta, J. Firestone and E. Etopio, "A meta-analysis with 
+examination of moderators of student cognition, affect, and learning outcomes 
+while using serious educational games, serious games, and 
+simulations", Computers in Human Behavior, vol. 80, pp. 158-167, 2018. 
+[18] F. García, O. Pedreira, M. Piattini, A. Cerdeira-Pena and M. Penabad, "A 
+framework for gamification in software engineering", Journal of Systems and 
+Software, vol. 132, pp. 21-40, 2017. 
+[19] C. Obikwelu and J. Read, "The Serious Game Constructivist Framework for 
+Children's Learning", Procedia Computer Science, vol. 15, pp. 32-37, 2012. 
+[20] G. Pereira, A. Brisson, R. Prada, A. Paiva, F. Bellotti, M. Kravcik and R. Klamma, 
+"Serious Games for Personal and Social Learning & Ethics: Status and 
+Trends", Procedia Computer Science, vol. 15, pp. 53-65, 2012. 
+[21] M. Carrozzino, C. Evangelista, R. Brondi, C. Lorenzini and M. Bergamasco, 
+"Social Networks and Web-based Serious Games as Novel Educational 
+Tools", Procedia Computer Science, vol. 15, pp. 303-306, 2012. 
+[22] I. Boughzala, H. Michel and S. Freitas, "Introduction to the Serious Games, 
+Gamification, and Innovation Minitrack", 2015 48th Hawaii International 
+Conference on System Sciences, pp. 817-817, 2015. 
+[23] A. Matallaoui, P. Herzig and R. Zarnekow, "Model-Driven Serious Game 
+Development Integration of the Gamification Modeling Language GaML with 
+Unity", 2015 48th Hawaii International Conference on System Sciences, pp. 
+643-651, 2015. 
+[24] A. Oliveira, N. Caetano, L. Botega and R. de Araújo, "A Head-up Display with 
+Augmented Reality and Gamification for an E-Maintenance System: Using 
+Interfaces and Gamification to Motivate Workers in Procedural Tasks", Lecture 
+Notes in Computer Science, pp. 499-510, 2015. 
+[25] D. Redondo, "Realidad Aumentada", Revista digital universitaria, vol. 5, no. 7, 
+2014. 
+[26] A. Barbosa and F. Silva, "Serious Games", Proceedings of the 8th International 
+Conference on Advances in Computer Entertainment Technology - ACE '11, 
+2011. 
+[27] L. Donovan, "The use of serious games in the corporate sector", Report, 
+Learnovate Centre, 2012. 
+[28] P. PETROS and G. Fesakis, "Educational applications of serious games: the 
+case of the game food force in primary education students.", 7th European 
+Conference on Management Leadership and Governance: Ecgbl, 2011. 
+91 
+ 
+[29] H. Marin-Vega, G. Alor-Hernández, R. Zatarain-Cabada, M. Barron-Estrada and 
+J. García-Alcaraz, "A Brief Review of Game Engines for Educational and 
+Serious Games Development", Journal of Information Technology Research, 
+vol. 10, no. 4, pp. 1-22, 2017. 
+[30] E. Raybourn, "A new paradigm for serious games: Transmedia learning for more 
+effective training and education.", Journal of Computational Science, vol. 5, no. 
+3, pp. 471-481, 2014. 
+[31] “Vuforia: SDK overview”. [En línea]. Disponible en:        
+https://docs.unity3d.com/Manual/vuforia-sdk-overview.html [Consultado: 10-abr-
+2018]. 
+[32] “What is Java technology”. [En línea]. Disponible en:   
+https://www.java.com/en/download/faq/whatis_java.xml   [Consultado: 05-abr-
+2018]. 
+[33] “What is PHP?”. [En línea]. Disponible en: http://php.net/manual/en/intro-
+whatis.php [Consultado: 05-abr-2018]. 
+[34] “Definition Python“ [En línea]. Disponible en: 
+https://techterms.com/definition/python Consultado: 05-abr-2018]. 
+ 
+92 
+ 

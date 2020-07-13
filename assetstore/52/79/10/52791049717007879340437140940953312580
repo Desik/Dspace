@@ -1,0 +1,3266 @@
+           
+ 
+ 
+                                                             
+DIVISIÓN DE ESTUDIOS DE POSGRADO E INVESTIGACIÓN 
+ 
+OPCION I.- TESIS 
+ 
+TRABAJO PROFESIONAL 
+ 
+“SISTEMA PARA LA INTEGRACIÓN DE GRUPOS DE TRABAJO PARA  
+E-LEARNING BASADO EN ACTIVIDAD DE LOS USUARIOS 
+ EN LA RED SOCIAL TWITTER” 
+ 
+ 
+QUE PARA OBTENER EL GRADO DE:  
+ 
+MAESTRO EN 
+SISTEMAS COMPUTACIONALES  
+ 
+ 
+PRESENTA:  
+I.I MARILUZ PALACIOS HERNÁNDEZ 
+ 
+ 
+DIRECTOR DE TESIS: 
+M. S. C LUIS ÁNGEL REYES HERNÁNDEZ 
+ 
+ 
+ 
+CODIRECTOR DE TESIS: 
+DR. ASDRÚBAL LÓPEZ CHAU 
+ 
+ 
+       ORIZABA, VER. MÉXICO                                                   ENERO 2019 
+  
+ 
+Avenida Oriente 9 Núm. 852, Colonia Emiliano Zapata. C.P. 94320 Orizaba, Veracruz, México. 
+Teléfonos: 01 (272) 7 24 40 96    Fax: 01 (272) 7 25 17 28 
+E- mail: orizaba@itorizaba.edu.mx    www.itorizaba.edu.mx 
+ 
+AGRADECIMIENTOS  
+Es un gran gusto haber tenido la oportunidad de pertenecer a este prodigioso posgrado. 
+Agradezco a Dios, por darme la oportunidad de vivir y haberme dado salud para lograr mis 
+objetivos, además de su infinita bondad y amor.  
+Una meta más realizada gracias al apoyo incondicional de mi mamá Maricruz quien siempre ha 
+sido el motor que me impulsa a realizar cualquier sueño, a superar cualquier dificultad que se 
+me presente, a no darme por vencida ¡Gracias Mamá! 
+A mi papá Benito por apoyarme con sus consejos y platicas, por guiarme en cada momento.  
+A mi hermano Israel por ayudarme a percibir los problemas de diferente manera y acompañarme 
+durante esta meta.   
+Agradezco especialmente al profesor Camarena por darme la oportunidad de formar parte de 
+este posgrado, por apoyarme y creer en mí.  
+Quiero agradecer a todos mis profesores en el ITO por su apoyo, por compartir sus 
+conocimientos y motivación para hacer un buen trabajo. 
+A mi director el maestro Luis Ángel por apoyarme constantemente en el desarrollo de este 
+proyecto, pero sobre todo por confiar en mi para su realización.  
+Agradezco al Dr. Asdrúbal por brindarme su apoyo durante el periodo de estancias, por 
+compartir sus conocimientos y consejos para la realización de la investigación.  
+A mi familia adoptiva (como la nombre) Desales Escobar por acogerme en Zumpango durante 
+mi periodo de estancias y considerarme como un integrante más de su familia.  
+Finalizo agradeciéndole a mis compañeros de generación que siempre me apoyaron y 
+compartieron sus conocimientos y los momentos que compartimos juntos. 
+ 
+<<Si tú no construyes tu sueño, alguien va a contratarte para que le ayudes a construir el suyo.>>  
+Dhirubhai Ambani 
+pág. 2 
+ 
+Índice  
+ 
+Índice de Tablas ........................................................................................................................... 6 
+Índice de Figuras ......................................................................................................................... 8 
+Resumen .................................................................................................................................... 10 
+Abstract ...................................................................................................................................... 11 
+Introducción ............................................................................................................................... 12 
+Capítulo 1 . Antecedentes .......................................................................................................... 13 
+1.1 Marco teórico .......................................................................................................... 13 
+1.1.1 Ítem ...................................................................................................................... 13 
+1.1.2 E-learning ............................................................................................................ 13 
+1.1.3 Sistemas de recomendación ................................................................................. 14 
+1.1.4 Sistemas de filtrado ............................................................................................. 14 
+1.1.4.1 Filtrado basado en el usuario ........................................................................... 15 
+1.1.4.2 Filtrado basado en los ítems ............................................................................. 15 
+1.1.5 Framework .......................................................................................................... 16 
+1.1.6 PhoneGap ............................................................................................................ 17 
+1.1.7 Red social ............................................................................................................ 18 
+1.1.8 Facebook ............................................................................................................. 19 
+1.1.9 Twitter .................................................................................................................. 20 
+1.1.10 Aplicación móvil ................................................................................................. 20 
+1.1.11 oAuth ................................................................................................................... 20 
+1.2 Planteamiento del problema .................................................................................... 21 
+1.3 Objetivo general y específicos ................................................................................ 22 
+pág. 3 
+ 
+1.3.1   Objetivo general ..................................................................................................... 22 
+1.3.2   Objetivos específicos .............................................................................................. 22 
+1.4 Justificación ............................................................................................................. 23 
+Capítulo 2 . Estado de la práctica .............................................................................................. 24 
+2.1 Trabajos relacionados .............................................................................................. 24 
+2.2 Análisis comparativo ............................................................................................... 35 
+2.3 Propuesta de solución .............................................................................................. 45 
+2.3.1 Alternativas de solución ...................................................................................... 45 
+2.3.2 Solución propuesta .............................................................................................. 46 
+2.3.3 Justificación de la solución propuesta ................................................................. 46 
+Capítulo 3 . Aplicación de la metodología ................................................................................ 48 
+3.1 Justificación de la red social ........................................................................................ 48 
+3.2 Metodología Mobile-D ................................................................................................ 50 
+3.2.1 Exploración ............................................................................................................... 50 
+3.2.2 Inicialización ............................................................................................................ 51 
+3.2.3 Producción ................................................................................................................ 51 
+3.2.5 Pruebas ..................................................................................................................... 52 
+3.3 Análisis de requerimientos .......................................................................................... 52 
+3.4 Arquitectura ................................................................................................................. 86 
+3.5 Diseño conceptual de la aplicación ............................................................................. 89 
+3.6 Definición de los servicios Web y servicios REST ..................................................... 93 
+3.7 Modelado de la Base de Datos .................................................................................... 93 
+3.8 Preprocesamiento de datos .......................................................................................... 94 
+3.9 Implementación de las técnicas de agrupamiento ....................................................... 97 
+pág. 4 
+ 
+Capítulo 4 . Resultados .............................................................................................................. 99 
+4.1 Funcionamiento del usuario alumno............................................................................ 99 
+4.1.1 Funcionamiento del inicio de sesión con Twitter ................................................... 100 
+4.1.2 Funcionamiento del inicio de sesión con Twitter en la aplicación móvil ............... 103 
+4.2 Creación de grupos de trabajo ................................................................................... 104 
+4.2.1 Gestión cursos ........................................................................................................ 104 
+4.3 Gestión evaluación .................................................................................................... 106 
+4.4 Resolver evaluación ................................................................................................... 109 
+Capítulo 5 . Conclusiones y recomendaciones ........................................................................ 118 
+5.1 Conclusiones .............................................................................................................. 118 
+5.2 Recomendaciones ...................................................................................................... 119 
+Anexos ..................................................................................................................................... 120 
+Productos académicos.............................................................................................................. 121 
+Referencias .............................................................................................................................. 122 
+ 
+ 
+  
+pág. 5 
+ 
+Índice de Tablas 
+ 
+Tabla 1 Análisis comparativo de los artículos relacionados. ..................................................... 35 
+Tabla 2  Alternativa de solución. ............................................................................................... 46 
+Tabla 3 Descripción de caso de uso Registrar administrador. ................................................... 53 
+Tabla 4  Descripción de caso de uso Modificar administrador. ................................................ 54 
+Tabla 5  Descripción de caso de uso Eliminar administrador. .................................................. 55 
+Tabla 6 Descripción de caso de uso Registrar profesor. ........................................................... 56 
+Tabla 7 Descripción de caso de uso Modificar profesor. .......................................................... 57 
+Tabla 8 Descripción de caso de uso Eliminar profesor. ............................................................ 58 
+Tabla 9  Descripción de caso de uso Registrar alumno. ............................................................ 59 
+Tabla 10  Descripción de caso de uso Modificar alumno.......................................................... 60 
+Tabla 11  Descripción de caso de uso Eliminar alumno............................................................ 61 
+Tabla 12  Descripción de caso de uso Modificar Perfil. ............................................................ 62 
+Tabla 13  Descripción de caso de uso Iniciar sesión. ................................................................ 64 
+Tabla 14 Descripción de caso de uso Actualizar Perfil. ............................................................ 65 
+Tabla 15 Descripción de caso de uso Registrarse...................................................................... 66 
+Tabla 16  Descripción de caso de uso Revisar Cursos. ............................................................. 67 
+Tabla 17 Descripción de caso de uso Revisar calificaciones. ................................................... 68 
+Tabla 18 Descripción de caso de uso Revisar Gráficos............................................................. 69 
+Tabla 19 Descripción de caso de uso Iniciar sesión con Twitter............................................... 70 
+Tabla 20  Descripción de caso de uso Inicia sesión. ................................................................. 72 
+Tabla 21 Descripción de caso de uso Registrar pregunta. ......................................................... 73 
+Tabla 22 Descripción de caso de uso Modificar pregunta......................................................... 73 
+Tabla 23 Descripción de caso de uso Eliminar pregunta........................................................... 74 
+Tabla 24 Descripción de caso de uso Registrar Curso. ............................................................. 75 
+Tabla 25 Descripción de caso de uso Modificar Curso. ............................................................ 76 
+Tabla 26  Descripción de caso de uso Eliminar Curso. ............................................................. 77 
+Tabla 27 Descripción de caso de uso Agregar alumno curso. ................................................... 78 
+pág. 6 
+ 
+Tabla 28  Descripción de caso de uso Eliminar alumno curso. ................................................. 79 
+Tabla 29 Descripción de caso de uso Registrar evaluación. ...................................................... 80 
+Tabla 30 Descripción de caso de uso Modificar evaluación. .................................................... 81 
+Tabla 31  Descripción de caso de uso Eliminar evaluación. ..................................................... 82 
+Tabla 32  Descripción de caso de uso Agregar pregunta evaluación. ....................................... 83 
+Tabla 33 Descripción de caso de uso Eliminar pregunta evaluación. ....................................... 83 
+Tabla 34 Descripción de caso de uso Actualizar perfil. ............................................................ 84 
+Tabla 36 Descripción de caso de uso Formar grupos. ............................................................... 85 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pág. 7 
+ 
+Índice de Figuras 
+ 
+Figura 3.1 Noticia del sitio Milenio........................................................................................... 48 
+Figura 3.2 Noticia del sitio elmundo. ........................................................................................ 49 
+Figura 3.3 Pantalla de Facebook Developers. ........................................................................... 49 
+Figura 3.4 Fases de la metodología Mobile-D. ......................................................................... 50 
+Figura 3.5  Diagrama de casos de uso de Administrador. ......................................................... 53 
+Figura 3.6  Diagrama de casos de uso de Discente. .................................................................. 64 
+Figura 3.7  Diagrama de casos de uso de Docente. ................................................................... 71 
+Figura 3.8 Arquitectura.............................................................................................................. 87 
+Figura 3.9 Diagrama de clases del servicio Web....................................................................... 90 
+Figura 3.10 Diagrama de clases de la aplicación web. .............................................................. 91 
+Figura 3.11 Diagrama de actividades de la aplicación Web ..................................................... 92 
+Figura 3.12 Diagrama Entidad Relación de la Base de Datos. .................................................. 94 
+Figura 3.13 RStudio. .................................................................................................................. 96 
+Figura 3.14 Matriz de Término de Documento. ........................................................................ 96 
+Figura 3.15 Implementación del algoritmo K-means. ............................................................... 97 
+Figura 3.16 Especificación  de algoritmo Creación Grupos ...................................................... 98 
+Figura 4.1 Inicio de sesión con twitter. ................................................................................... 100 
+Figura 4.2 Autorización de la aplicación. ................................................................................ 101 
+Figura 4.3 Pin de acceso. ......................................................................................................... 101 
+Figura 4.4 Ingreso de pin para acceder a datos........................................................................ 102 
+Figura 4.5 Perfil de alumno. .................................................................................................... 102 
+Figura 4.6 Perfil actualizado. ................................................................................................... 103 
+Figura 4.7 Inicio de sesión con twitter en aplicación móvil. ................................................... 103 
+Figura 4.8 Opciones disponibles para cada usuario. ............................................................... 104 
+Figura 4.9 Menú para Gestionar grupos. ................................................................................. 105 
+Figura 4.10 Gestión Grupos .................................................................................................... 105 
+Figura 4.11 Resultado de los grupos formados. ...................................................................... 106 
+pág. 8 
+ 
+Figura 4.12 Resultado del algoritmo Creación Grupos ........................................................... 106 
+Figura 4.13 Menú para seleccionar evaluaciones. ................................................................... 107 
+Figura 4.14 Control de evaluaciones. ...................................................................................... 107 
+Figura 4.15 Registro Evaluación. ............................................................................................ 108 
+Figura 4.16 Gestionar Preguntas. ............................................................................................ 108 
+Figura 4.17 Gestión preguntas agregadas. ............................................................................... 109 
+Figura 4.18 Opciones disponibles. .......................................................................................... 110 
+Figura 4.19 Actualización de Perfil. ........................................................................................ 111 
+Figura 4.20 Cursos actuales. .................................................................................................... 112 
+Figura 4.21 Evaluaciones. ....................................................................................................... 113 
+Figura 4.22 Información de la materia. ................................................................................... 114 
+Figura 4.23 Pregunta 1. ........................................................................................................... 115 
+Figura 4.24 Pregunta 2. ........................................................................................................... 116 
+Figura 4.25 Calificación por grupo. ........................................................................................ 117 
+Figura A.0.1 Registro en Google Play Console. ..................................................................... 120 
+ 
+  
+pág. 9 
+ 
+ 
+Resumen 
+ 
+El desarrollo de aplicaciones móviles tiene un gran impacto actualmente en la sociedad ya que 
+pasó de una manera rápida de ser un conocimiento a ser una necesidad debido al avance 
+tecnológico.  
+El objetivo del presente trabajo de investigación es desarrollar un módulo de recomendación 
+para formar grupos de trabajo por características obtenidas de la red social Twitter, que será el 
+medio de autenticación para el ingreso a la aplicación E-learning de la tesis base “Desarrollo de 
+una aplicación e-learning para nivel superior para la recolección de datos y retroalimentación a 
+discentes basada en técnicas de estadística tradicional”. 
+Las tecnologías a utilizar son como lenguaje: HTML5 (“Hyper Text Markup Language”, 
+Lenguaje de Marcado de Hipertexto), JavaScript y CSS (“Cascading Style Sheets”, Hojas de 
+Estilo en Cascada); como marco de trabajo PhoneGap; como gestor de base de datos 
+PostgreSQL; como IDE NetBeans; así como la metodología a emplear es Mobile-D.  
+ 
+ 
+  
+pág. 10 
+ 
+Abstract 
+ 
+The development of mobile applications has great impact  on society today since it went from 
+rapid way of being a knowledge to being a necessity due to technological progress. 
+The objetive of this research work is to develop a recommendation module to form work groups 
+by characteristics obtained from the social network Twitter, which will be the means of 
+authentication for the entry into the E-learning applicayion of the base thesis “Development of 
+an e-learning application for higher level  for data collection and feedback to students base on 
+traditional  statistical techniques”. 
+The technologies to be used are as a language: HTML5 ("Hyper Text Markup Language"), 
+JavaScript and CSS ("Cascading Style Sheets"); as a PhoneGap framework; as a PostgreSQL 
+database manager; as IDE NetBeans; as well as the methodology to be used is Mobile-D. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+pág. 11 
+ 
+Introducción  
+ 
+Las aplicaciones móviles son esenciales desde sus inicios, ya que personas de cualquier edad 
+cuentan con un dispositivo móvil con varias aplicaciones, usadas para diversión tanto como 
+herramientas de ayuda.  
+Asimismo, las Tecnologías de la Información y Comunicaciones (TIC) ejercen un rol importante 
+en la sociedad actual no solo en la diversión sino también en los procesos educativos, generando 
+el surgimiento del E-learning que facilita el aprendizaje a través de Internet y la comunicación 
+de diferentes individuos.  
+La problemática que estudia esta investigación es que las plataformas E-learning tienen la 
+limitante de que los usuarios están físicamente distantes geográficamente, dando como 
+propuesta de solución el desarrollo de un módulo de recomendación que sugerirá a los usuarios 
+formar grupos de trabajo de acuerdo con características obtenidas de la red social Twitter, la 
+cuál será el medio de autenticación para acceder a la plataforma E-learning.  
+El presente trabajo de investigación se encuentra estructurado en tres capítulos principales: en 
+el capítulo 1 antecedentes se detalla el marco teórico, planteamiento del problema, objetivo 
+general y objetivos específicos, así como la justificación; el capítulo 2 estado de la práctica 
+contiene los trabajos relacionados y un análisis comparativo; el capítulo 3 propuesta de solución 
+especifica la descripción de la solución incluyendo un análisis sobre los lenguajes de 
+programación, gestores de base de datos, IDES (Integrated Development Environment, Entorno 
+de Desarrollo Interactivo), metodologías, así como las actividades a realizar para su desarrollo 
+y su cronograma de actividades.  
+ 
+ 
+  
+pág. 12 
+ 
+Capítulo 1 . Antecedentes 
+ 
+En este capítulo se presentan algunos aspectos primordiales de la investigación como lo son: el 
+problema a resolver, los objetivos generales y específicos, así como la justificación de lo que se 
+realizará.  
+1.1 Marco teórico 
+A continuación, se definen algunos términos más relevantes con el trabajo de investigación.  
+1.1.1 Ítem 
+Un ítem es cada una de las partes individuales que conforman un conjunto de elementos. En este 
+sentido, en un documento escrito, el ítem se refiere a cada uno de los artículos o capítulos en 
+que este se subdivide. Por extensión, como ítem también se conoce cada una de las unidades en 
+que se dividen listas, formularios, pruebas o tests [1].  
+  
+1.1.2 E-learning 
+El E-learning consiste en la educación y capacitación a través de Internet. Este tipo de enseñanza 
+online permite la interacción del usuario con el material mediante la utilización de diversas 
+herramientas informáticas. 
+Este nuevo concepto educativo es una revolucionaria modalidad de capacitación que posibilitó 
+Internet, y que se posicionará como la forma de capacitación predominante en el futuro. Este 
+sistema ha transformado la educación, abriendo puertas al aprendizaje individual y 
+organizacional. Es por ello que hoy en día está ocupando un lugar cada vez más destacado y 
+reconocido dentro de las organizaciones empresariales y educativas.  
+El término E-learning es la simplificación de Electronic Learning. El mismo reúne a las 
+diferentes tecnologías y a los aspectos pedagógicos de la enseñanza y el aprendizaje [2]. 
+pág. 13 
+ 
+1.1.3 Sistemas de recomendación  
+Los sistemas de recomendación tratan de ser un paso adelante en el contexto de la recuperación 
+de información tradicional, que se da por palabra claves del tópico que se desea encontrar a 
+través de los bien conocidos motores de búsqueda (Google, Lycos, Altavista, entre otros). Como 
+su nombre lo indica los sistemas de recomendación se encargan de recomendar o sugerir a los 
+usuarios ítems o productos concretos basándose en sus preferencias, son usados por sitios web 
+de comercio electrónico como herramientas de mercadeo para incrementar ventas al presentar 
+al usuario aquellos productos que desea (o desearía) comprar, es así como se construye una base 
+de entendimiento de necesidades concretas respecto a  lo que gusta o no a los clientes, lo cual 
+se ve reflejado en un incremento de la lealtad de los clientes. La gran mayoría de los sistemas 
+de recomendación trabajan con enfoques de FC (Collaborative Filtering, Filtrado 
+Colaborativo), en términos simples, por filtrado colaborativo se entiende al método de hacer 
+predicciones automáticas (filtrado) acerca de los intereses de un usuario, colectando 
+información sobre los gustos de varios usuarios (colaboración). Por ejemplo, un filtrado 
+colaborativo o sistema de recomendaciones para gustos musicales hace predicciones acerca de 
+qué música desea un usuario, dada una lista parcial de gustos de otros usuarios [3]. 
+1.1.4 Sistemas de filtrado 
+Existen distintas formas de realizar el filtrado de la información, por ejemplo, dependiendo en 
+si del algoritmo de aprendizaje usado, el cual se encarga de hacer un mapeo desde las 
+características de los ítems a un número que indica la utilidad de dicho ítem para un usuario, 
+basándose en la información previa que se tiene de ese usuario respecto a otros ítems. La otra 
+alternativa es usar las calificaciones previas que han hecho usuarios similares (vecinos) sobre 
+ciertos ítems, que el usuario activo aún no ha calificado, para predecir cuál sería la preferencia 
+del usuario sobre dichos ítems [3]. 
+ 
+ 
+ 
+pág. 14 
+ 
+1.1.4.1 Filtrado basado en el usuario 
+Esta tecnología es la más frecuentemente usada dentro de los sistemas de recomendación 
+comerciales. Hay un problema de escalabilidad subyacente en este tipo de tecnología, ya que el 
+costo computacional crece con el número de clientes, como alternativa se tiene el enfoque de 
+filtrado basado en los ítems (descrito más adelante). 
+•   Filtrado Colaborativo: En este enfoque se compara lo que gusta o no a otra gente para 
+predecir las preferencias de un usuario dado.  
+•    Filtrado Social: A menudo se usa como sinónimo del anterior, ya que en un nivel básico 
+ofrece lo mismo que el FC, aunque frecuentemente se compara también con el filtrado basado 
+en ítems. Aquí las recomendaciones se basan más en la calidad en sí de los productos que en 
+propiedades concretas de estos mismos.  
+•   Filtrado Adaptativo: Es una combinación de los filtrados basados en usuario con los 
+filtrados basados en ítems. La idea es que el sistema va “aprendiendo” a medida que pide al 
+usuario ir valorando las cosas y controlando los clics del mismo, observando así lo que hace.  
+•   Otros: Es posible hacer mención adicional del filtrado psicográfico y del diagnóstico de 
+personalidad. El primero es similar al FC, excepto que la predicción se basa en un perfil 
+psicográfico que se deriva de un cuestionario, en el diagnóstico de personalidad, una vez se 
+tienen preferencias de un usuario para cierto ítem, se calcula la probabilidad que dicho usuario 
+tenga el mismo tipo de personalidad que otros [3]. 
+ 
+1.1.4.2  Filtrado basado en los ítems 
+ 
+En esta otra perspectiva se usan técnicas que analizan una matriz de relaciones usuario-ítem, 
+con lo que se identifican relaciones entre los distintos ítems y se usan estas para computar una 
+lista de recomendaciones, inicialmente se buscan similitudes (o diferencias) entre los ítems, 
+pág. 15 
+ 
+dicha evaluación se conjunta con los usuarios o grupos de estos. A continuación, se presentan 
+los diferentes tipos de filtrado basado en ítems: 
+ 
+•   Filtrado basado en características: Se basa en la idea de que es posible capturar qué 
+características le gustan (o no) a un usuario con respecto a cierto ítem y entonces es posible 
+proceder a realimentar al usuario con información de diversos ítems.  
+ 
+•   Filtrado basado en el contenido: En esta técnica, también denominada filtrado cognitivo, 
+se recomiendan ítems basados en la correlación entre el contenido de los ítems y las preferencias 
+de los usuarios, por ejemplo, el sistema correlaciona la presencia de ciertas palabras claves en 
+un artículo, con las preferencias del usuario, una versión más simple de este método es el filtrado 
+basado en palabras claves. 
+ 
+ •    Filtrado basado en perfiles: Es el enfoque más directo, ya que el usuario describe su interés 
+escogiendo en una lista de palabras claves y el sistema rechaza cualquier ítem que no coincide 
+con estas [3]. 
+1.1.5 Framework 
+En general, un marco de trabajo, o framework, es una estructura real o conceptual destinada a 
+servir de soporte o guía para la construcción de algo que expande la estructura en algo útil. 
+En los sistemas informáticos, un framework es a menudo una estructura en capas que indica qué 
+tipo de programas se construyen y cómo se interrelacionan. Algunos marcos de trabajo de 
+sistemas informáticos también incluyen programas reales, especifican interfaces de 
+programación u ofrecen herramientas de programación para usar los marcos. Un framework 
+sirve para representar un conjunto de funciones dentro de un sistema y cómo se interrelacionan 
+las capas de un sistema operativo. Un marco de trabajo es generalmente más completo que un 
+protocolo y más prescriptivo que una estructura [4]. 
+ 
+ 
+ 
+pág. 16 
+ 
+1.1.6  PhoneGap 
+PhoneGap es un framework de código abierto para el desarrollo de aplicaciones para móviles. 
+Su principal característica es ser multiplataforma, es decir, con un solo código de aplicación se 
+utiliza en multitud de plataformas móviles, como Android, iOS o Windows Phone.  
+Inicialmente PhoneGap fue desarrollado por Nitobi bajo licencia de software libre, pero en 
+octubre de 2011 Adobe anunció oficialmente la adquisición de Nitobi, pasando así PhoneGap 
+al control del gigante del software. Esto generó una gran incertidumbre entre los desarrolladores, 
+pues el framework podía pasar a ser una tecnología propietaria, pero en una genial estrategia, 
+Adobe donó PhoneGap a la fundación Apache, conservando de esta forma la integridad libre de 
+PhoneGap. 
+En la actualidad, el proyecto en el sitio web de la fundación Apache está nombrado como: 
+"Apache Cordova", pero PhoneGap sigue siendo una especie de marca comercial, por lo que 
+aún se sigue usando ese nombre para identificar al popular framework. 
+El núcleo de las aplicaciones PhoneGap se crea utilizando lenguajes de programación Web, 
+como JavaScript, HTML5 (“HyperText Markup Language”, lenguaje de marcas de hipertexto), 
+CSS3 (“Cascading Style Sheets”, Hojas de Estilo en Cascada), y con la ayuda de otros 
+frameworks de desarrollo y de la propia API (“Application Programming Interface”, Interfaz 
+de Programación de Aplicaciones) de PhoneGap. Esta API permite acceder mediante código 
+JavaScript a características nativas del dispositivo móvil, como, por ejemplo: acelerómetro, 
+cámara, contactos, eventos, geolocalización, redes o almacenamiento. Posteriormente, y para 
+cada una de los dispositivos móviles para las que se requiera generar una aplicación, se tendrá 
+que incluir este núcleo Web como parte de la aplicación nativa. De esta forma se generará una 
+aplicación "nativa" para cada dispositivo móvil aprovechando para todas ellas el mismo núcleo 
+de la aplicación. 
+Las aplicaciones desarrolladas con PhoneGap se consideran aplicaciones híbridas porque son 
+aplicaciones nativas con una capa intermedia de herramientas que hacen uso de otros lenguajes 
+de programación. Por el contrario, una aplicación se considera nativa cuando se desarrolla 
+íntegramente utilizando la API y lenguaje de programación que proporciona la compañía que 
+vende el producto. Esta técnica de programación tiene varias ventajas: el usuario sentirá que la 
+pág. 17 
+ 
+aplicación es parte del sistema operativo, permitirá distribuir la aplicación como una aplicación 
+nativa, y además ahorrará muchísimo trabajo [5]. 
+1.1.7 Red social 
+Una Red Social es una estructura social integrada por personas, organizaciones o entidades que 
+se encuentran conectadas entre sí por una o varios tipos de relaciones como son: relaciones de 
+amistad, parentesco, económicas, relaciones sexuales, intereses comunes, experimentación de 
+las mismas creencias, entre otras posibilidades. 
+ 
+Desde la década pasada las redes sociales rigen el mundo y han cambiado la forma en la que se 
+comunican las personas. Sin duda alguna, la principal ventaja es que brindan un nuevo canal de 
+comunicación y la posibilidad de estar en contacto con personas que están en cualquier lugar y 
+zona horaria, a muy bajo costo. Esto permite compartir noticias interesantes sobre la vida a 
+través de estados, imágenes y vídeos que muestren detalles acerca del día a día, dándoles la 
+oportunidad a familiares y amigos que viven lejos de sentir que son parte importante de la vida, 
+sin necesidad de un boleto de avión o de llamadas telefónicas de larga distancia. 
+ 
+Pero las relaciones personales no son lo único, las redes sociales también ayudan a las personas 
+a mantenerse informadas en tiempo real sobre lo que acontece a alrededor. Hoy todos son 
+capaces de desempeñarse como reporteros callejeros ya que a través de las plataformas digitales 
+es posible expresar, manifestar, movilizar gente o transmitir desacuerdo ante las problemáticas 
+actuales. 
+ 
+El efecto dominó de este medio hace que los contenidos que se publiquen se difundan al poco 
+tiempo de ser lanzados. Todo mensaje que se transmite en la red se reproduce miles de veces y 
+esto ha permitido desde masivas convocatorias a marchas, hasta sacar a la luz información 
+restringida. Las redes sociales se han convertido sin duda en un fenómeno social que revoluciona 
+la manera de comunicación y la interacción que hasta ese momento tenían los seres humanos.  
+ 
+Básicamente, una red social es una comunidad virtual en la cual los usuarios ingresan para 
+pág. 18 
+ 
+interactuar con personas de todo el mundo que poseen gustos e intereses en común, siendo sus 
+funciones principales las de conectar a los usuarios que se conocen o no, pero que desean 
+hacerlo, permitir la centralización de información y de recursos (fotos, videos, pensamientos y 
+más) en un único lugar de fácil acceso e intercambio con otros, en el cual son los propios 
+usuarios quienes generan y administran sus propios contenidos. 
+ 
+Respecto de los usuarios de las redes sociales no existe un prototipo estandarizado, ni mucho 
+menos, sino que cualquier persona que quiera participar y ser parte de ellas lo hará, ya que el 
+acceso a las mismas es totalmente libre y gratuito. De todas maneras y por una cuestión de afán 
+por explorar nuevos rumbos y fenómenos, que se da justamente en esa etapa, son los 
+adolescentes quienes resultan los usuarios más característicos de las mismas. 
+ 
+Las redes sociales son un lugar magnífico para aprender y encontrar soluciones a ciertos 
+problemas cotidianos. Es bien sabido que hoy en día, la mayoría de las personas hacen consultas 
+en la Web antes de hacer una compra o acudir a un profesional. Ya sea que busquen orientación 
+médica, recetas de cocina, consejos para viajes, entre otras, la opinión de sus contactos en redes 
+sociales siempre les preocupa y será tomada en cuenta [6]. 
+ 
+1.1.8 Facebook  
+ 
+La palabra Facebook está formado por dos palabras inglesas que son “Face” que proviene del 
+latín “Facies” que significa “cara”, además de la expresión “Book” que quiere decir “libro” y 
+deriva del germánico “boka” que es “letra”. El Facebook es un sitio Web o red social, que fue 
+creado por tres personas: Mark Zuckerberg que es un programador y empresario estadounidense, 
+junto con Eduardo Saverin, que es un empresario brasileño y Chris Hughes es un empresario 
+estadounidense que junto a sus amigos idearon e impulsaron la creación de esta popular red 
+social; pero fue en el 2010 que se realizó su inauguración y se convirtió en un gran éxito [7]. 
+ 
+ 
+pág. 19 
+ 
+1.1.9 Twitter 
+Twitter es una aplicación web gratuita de microblogging que reúne las ventajas de los blogs, las 
+redes sociales y la mensajería instantánea. Esta nueva forma de comunicación, permite a sus 
+usuarios estar en contacto en tiempo real con personas de su interés a través de mensajes breves 
+de texto a los que se denominan Updates (actualizaciones) o Tweets, por medio de una sencilla 
+pregunta: ¿Qué estás haciendo? 
+Los usuarios envían y reciben updates de otros usuarios a través de breves mensajes que no 
+deben superar los 140 caracteres, vía web, teléfono móvil, mensajería instantánea o a través del 
+correo electrónico; e incluso desde aplicaciones de terceros, como son Twitterrific, Facebook, 
+Twitterlicious, Twinkle, y muchas otras. 
+En la sección de tu perfil se logra estar al día tanto de tus seguimientos (following_profile) como 
+de tus seguidores (followers_profile). Además de buscar amigos, familiares, compañeros u otras 
+personas de tu interés, Twitter también ofrece otras opciones, como buscar en otras redes, invitar 
+a amigos por email o seleccionar a usuarios recomendados [8]. 
+1.1.10 Aplicación móvil  
+Es aquella desarrollada especialmente para ejecutarse en dispositivos móviles como un teléfono 
+celular, tabletas y similares. Estas aplicaciones tienen características especiales para funcionar 
+en estos dispositivos móviles que, por lo general, tienen menos capacidad de procesamiento y 
+almacenamiento que computadoras de escritorio o notebooks. En general estas aplicaciones son 
+conocidas como “apps” [9]. 
+ 
+1.1.11  oAuth 
+ 
+oAuth es un estándar abierto y simple para la autenticación segura de APIs. Permite al usuario 
+final otorgar acceso a sus recursos privados en un sitio (llamado Proveedor de Servicio) a otro 
+sitio (llamado Consumidor, no confundir con el Usuario). Una analogía con el mundo real es el 
+escenario de la llave de auto especial para valet parking la cual se deja al chofer del valet. A 
+pág. 20 
+ 
+diferencia de la llave normal, con la llave de valet solo es posible manejar el auto una cierta 
+distancia e inclusive tampoco es posible abrir la cajuela o guantera. oAuth no es un concepto 
+nuevo, únicamente reúne los conocimientos y mejores prácticas de protocolos existentes en la 
+industria dentro de una única especificación bien definida y abierta. oAuth es similar a otros 
+protocolos usados en la actualidad tales como: Flickr API, Amazon Web Services API, Google 
+AuthSub y Yahoo BBAuth, entre otros. Actualmente existen ya varios servicios que utilizan 
+oAuth, siendo los más populares Digg, Jaiku, Flickr, Plaxo, y Twitter, entre otros. La lista 
+aumenta continuamente, y rápidamente oAuth se está convirtiendo en el mecanismo estándar 
+para que dos servicios en Internet compartan información o recursos sobre un usuario [10]. 
+ 
+1.2 Planteamiento del problema 
+Las Tecnologías de la Información y las Comunicaciones (TIC´s) desempeñan un rol esencial 
+en la sociedad actual sobre todo en los procesos educativos, estas generaron el surgimiento del 
+E-Learning que facilita el aprendizaje a través de Internet y la comunicación de diferentes 
+individuos que físicamente se encuentran en lugares distintos. Muchas de las plataformas E-
+Learning emplean tecnologías de la Web 2.0 como lo son: blogs, fórums, chats, entornos para 
+compartir recursos, plataformas colaborativas, entre otras. Esto permite la construcción de 
+conocimiento en forma colectiva mediante aportaciones colaborativas entre individuos, grupos 
+e instituciones con temáticas afines, con la Web 2.0 se involucra directamente al usuario en 
+situaciones donde se articula el conocimiento en torno a la conexión de nodos humanos. Estos 
+servicios permiten a los usuarios interactuar en espacios colaborativos y propician a que 
+docentes y alumnos emprendan la colaboración de compartir materiales y creación de productos 
+digitales. El uso de las plataformas E-learning tiene la limitante de que los usuarios están 
+físicamente distantes, dando como propuesta de solución un sistema de recomendación que 
+sugerirá a los usuarios de algún grupo en particular la colaboración con características afines, 
+dichas características se tomarán de la red social Twitter, la cual será el medio de autenticación 
+para acceder a la plataforma E-learning. Los sistemas de recomendación son utilizados para 
+indicar información, productos, y otros ítems a los usuarios que los visitan, tratan de automatizar 
+pág. 21 
+ 
+aspectos de un modelo de búsqueda de información completamente distinto al tradicional donde, 
+por ejemplo, los usuarios reciben información a partir de las elecciones realizadas por otras 
+personas con gustos similares.  Un sistema de recomendación ayuda a un usuario a elegir sin 
+tener suficiente experiencia con las opciones ofrecidas, impulsándolo a la adquisición de la 
+mejor opción de la definición que proporcionó a los sistemas de recomendación. Cabe 
+mencionar que los datos a analizar serán tomados de la autenticación al sistema E-Learning base 
+“Desarrollo de una aplicación e-learning para nivel superior para la recolección de datos y 
+retroalimentación a discentes basada en técnicas de estadística tradicional”  y como caso de 
+estudio se tomarán los twitts del usuario de la cuenta Twitter para analizarlos y determinar el 
+perfil del usuario con algunas características de referencia de los ítems (estas características 
+toman como base la relación de similitud del usuario con el ítem, utilizando información de 
+otros usuarios con preferencias o intereses similares a él) y busca predecir el "ranking" o 
+valoración que el usuario dará a un atributo. 
+1.3  Objetivo general y específicos 
+A continuación, se muestra el objetivo general y los objetivos específicos.  
+1.3.1   Objetivo general 
+ 
+Desarrollar el módulo de recomendación para formar grupos de trabajo por características 
+obtenidas de la red social Twitter, que será el medio de autenticación para el ingreso a la 
+aplicación E-learning de la tesis base “Desarrollo de una aplicación e-learning para nivel 
+superior para la recolección de datos y retroalimentación a discentes basada en técnicas de 
+estadística tradicional”. 
+ 1.3.2   Objetivos específicos  
+ 
+➢ Analizar los atributos proporcionados por la red social Twitter para determinar los datos 
+sensibles y no sensibles. 
+➢ Extraer los datos de la red social Twitter. 
+➢ Realizar el estudio de los métodos para realizar recomendaciones.  
+pág. 22 
+ 
+➢ Analizar los datos para clasificar los perfiles de usuario.  
+➢ Analizar y aplicar algoritmos para la recomendación de grupos de trabajo por medio de 
+filtros (filtrado colaborativo, por contenido, demográfico e híbrido para formar grupos 
+de trabajo). 
+➢ Desarrollar el módulo a la aplicación E-learning.  
+➢ Divulgar los resultados obtenidos de la colaboración grupal. 
+1.4 Justificación  
+Continuando con la investigación de los trabajos previos desarrollados por alumnos de la 
+Maestría en Sistemas Computacionales, en los que se estudia la actividad en redes sociales 
+de los usuarios y los tiempos de respuesta para contestar exámenes, respectivamente, en este 
+proyecto se propone usar datos de la actividad en Twitter para realizar la integración de 
+grupos de trabajo, para explorar si con actividad similar crean equipos con mejor desempeño 
+académico. 
+  
+pág. 23 
+ 
+Capítulo 2 . Estado de la práctica  
+ 
+Antes de introducirse al tema por completo, se revisaron artículos de los cuales se tomó la 
+información más relevante y se revisó meticulosamente las investigaciones relacionadas con el 
+tema propuesto. El análisis de los artículos dio como resultado la importancia que actualmente 
+tienen las redes sociales y cómo sacarles un gran provecho, dejando de lado el mito de que son 
+una distracción. De alguna manera, cada artículo consultado hizo su contribución en esta 
+investigación.  
+A continuación, se presenta un breve resumen de los más importantes. 
+ 
+2.1 Trabajos relacionados 
+Actualmente las redes sociales tienen un gran impacto en las personas sin importar la edad, 
+provocando su incorporación en el aprendizaje. Es por ello que en [11] se requirió evaluar la 
+posibilidad de implementar una aplicación Facebook para la gestión de objetos de aprendizaje 
+a través de las redes sociales. Debido a que Facebook permite compartir archivos, formar grupos 
+de trabajo e intercambiar opiniones con relación a determinado tema, también se tiene en cuenta 
+que quizá perjudique convirtiéndose en un distractor del proceso de aprendizaje. Sin embargo, 
+ciertamente no existe un consenso con relación a si Facebook se utilizaría o no en el ámbito 
+académico. Se implementó una aplicación que permite la gestión de objetos de aprendizaje 
+dentro del “canvas” de la plataforma, se llevó a cabo una evaluación cualitativa y experimental 
+de las capacidades de la aplicación, permitiendo evaluar satisfactoriamente la flexibilidad y 
+extensibilidad de la plataforma Facebook. 
+En [12] se describieron los resultados de un experimento de usuario en línea con un sistema de 
+recomendación de música de Facebook en el que manipulan de forma independiente el nivel en 
+que los usuarios inspeccionan y controlan cómo sus relaciones sociales influyen en las 
+recomendaciones que reciben. Los resultados muestran que las versiones del sistema que 
+pág. 24 
+ 
+proporcionan una mejor experiencia a los usuarios, por lo que se concluye que la inspección y 
+el control son cualidades importantes de los sistemas de recomendación social. 
+Los sistemas automatizados de recomendación revolucionaron la comercialización y la 
+distribución de comercio y contenido al proporcionar recomendaciones y predicciones 
+personalizadas sobre una gran variedad de ofertas de productos complejas y grandes.  En [13] 
+se revisaron los avances clave en sistemas de recomendación de filtrado colaborativo, 
+enfocándose en la evolución de la investigación concentrada puramente en algoritmos hasta la 
+que se basa en un conjunto de preguntas sobre la experiencia del usuario con el sistema de 
+recomendación. Se sostuvo que la evaluación de la experiencia del usuario de un sistema de 
+recomendación requiere un conjunto más amplio de medidas de las que se utilizan comúnmente, 
+y sugirieron medidas adicionales que demostraron ser efectivas. 
+La web social se ha convertido en la modalidad dominante para la distribución de los medios de 
+comunicación y la recopilación de contenido proporcionado por el usuario, por ejemplo, como 
+artículos de texto, comentarios y sus calificaciones. Sin embargo, las API (“Application 
+Programming Interface”, Interfaz de Programación de Aplicaciones) de la web social   están 
+evolucionando constantemente, y las técnicas tradicionales de los sistemas de recomendación 
+tales como el filtrado colaborativo automatizado necesitan adaptarse al entorno de datos 
+cambiante en la web social. En [14] se presentó TasteWeights, un sistema interactivo de 
+recomendaciones híbridas. El sistema emplea nuevos modelos para obtener recomendaciones 
+de un rango de APIs web y presenta estrategias de hibridación para combinar esas 
+recomendaciones. La interfaz explicativa TasteWeights educa a los usuarios sobre los sistemas 
+de recomendación híbridos y les permite ajustar los algoritmos subyacentes en tiempo real. Se 
+realizó un estudio de usuario supervisado utilizando el sistema para explorar preguntas de 
+investigación relacionadas con sistemas de recomendación visuales interactivos. 
+Las redes sociales se utilizan cada vez más para comunicarse e intercambiar opiniones sobre 
+celebridades, políticos, productos, empresas, acciones y eventos. Es fácil acumular grandes 
+cantidades de datos no etiquetados, pero es muy costoso obtener etiquetas de sentimiento. Es un 
+gran problema para los métodos tradicionales no supervisados basados en el léxico debido al 
+hecho de que las expresiones en las redes sociales no están estructuradas, son informales y 
+pág. 25 
+ 
+evolucionan rápido, por ejemplo, emoticones y calificaciones de productos son ejemplos de 
+señales emocionales que se asocian con sentimientos expresados en mensajes o palabras. En 
+[15] investigaron un nuevo problema de la interpretación de las señales emocionales para el 
+análisis de sentimientos no supervisado, realizando un estudio exploratorio en dos conjuntos de 
+datos de Twitter para verificar la existencia de señales emocionales.  
+Hoy en día la red social más popular es Facebook, debido al gran número de usuarios con los 
+que cuenta, esta red social permite, a través del uso de su biblioteca Graph API, acceder a datos 
+de los usuarios a través de una aplicación, la cual extrae sus datos, previa autorización, a cambio 
+de obtener algún servicio.  De acuerdo a las políticas de la plataforma se extraen todos los datos 
+que el usuario autorice. Algunos de los datos que se extraen son los siguientes: dirección de 
+correo electrónico, edad, “Likes”, ciudad de origen, ente otros. Los “Likes” representan las 
+páginas de Facebook a las cuales un usuario indica que son de su agrado o interés.  El problema 
+que se presentaba en [16] era descubrir las posibles relaciones entre usuarios y programas de 
+posgrado del Instituto Tecnológico de Orizaba (ITO), los cuales son Maestría en Sistemas 
+Computacionales, Maestría en Ingeniería Administrativa, Maestría en Ingeniería Electrónica, 
+Maestría en Ingeniera Industrial y Maestría en Ciencias en Ingeniería Química, para 
+proporcionar al usuario una recomendación del programa de posgrado más adecuado de acuerdo 
+a sus “Likes”. Por lo tanto, en [16] se presentó el desarrollo de un método para la identificación 
+de relaciones entre los “Likes” de usuarios de Facebook, y una serie de conceptos, se analizaron 
+los datos usando el concepto de proximidad o similitud entre cadenas para comparar “Likes” 
+extraídos de Facebook con distintos conceptos asociados a los programas de posgrado ofertados 
+dentro del ITO. Este método se implementó en una aplicación web y se encuentra en validación 
+por parte de la red social.  
+Las TICs (“Information technology and communication”, Tecnologías de la Información y 
+Comunicación) en la actualidad desempeñan un rol esencial en la sociedad actual, sobre todo en 
+los procesos educativos, ayudando al surgimiento de E-learning, lo que facilita el aprendizaje y 
+comunicación a través de Internet. El problema que se presentó en [17] es con los nuevos 
+usuarios, debido a que no saben con exactitud quién es la persona correcta para comenzar una 
+conversación sobre algún tema de interés, estas conversaciones suelen ser inadecuadas debido 
+pág. 26 
+ 
+a que la persona con quien conversó no es la idónea. Por tal motivo, en [17] se desarrolló un 
+sistema de recomendación que tiene como función, como su nombre lo indica, recomendar a 
+una persona un usuario apropiado para conversar con base en el perfil y en la reputación, 
+teniendo como resultado una conversación más exitosa.  
+El surgimiento de las redes sociales y la gran cantidad de datos que manejan acerca de sus 
+usuarios hacen que sea una valiosa fuente de información personal para los sistemas de 
+recomendacion. Por tal motivo, Shapira et al. [18] investigaron la factibilidad y la eficacia de 
+utilizar los datos disponibles existentes de las redes sociales para el proceso de recomendación 
+desde la red social Facebook, ya que los datos reemplazan o enriquecen las calificaciones 
+explicitas de los usuarios. Para esto, en [18] realizaron una extracción del contenido de 
+Facebook publicado por los usuarios en sus páginas personales acerca de sus artículos favoritos 
+y preferencias en el dominio de recomendación, y datos sobre las preferencias relacionadas con 
+otros dominios para permitir la recomendación entre dominios. Se estudiaron varios métodos 
+para integrar los datos extraídos con el proceso de recomendación y se comparó el rendimiento 
+de estos métodos con el de filtrado colaborativo tradicional que utiliza las calificaciones de los 
+usuarios. Los resultados demostraron el potencial de la explotación de los datos disponibles en 
+Facebook para la mejora de los servicios personalizados que requieren datos sobre los usuarios 
+con el fin de proporcionar resultados efectivos. 
+La Web 2.0  trajo consigo la expansión de numerosos tipos de redes sociales o comunidades 
+virtuales, provocando cada vez más utilizarlas de forma continua para informarse sobre noticias, 
+participar en la compra y venta de diversos productos, recibir información, establecer contactos, 
+jugar y  desarrollar actividades de colaboración profesional, así como chatear y compartir  
+aficiones diversas; es por ello que el entorno en que las personas se desarrollan cambia  
+radicalmente en la forma de comunicarse y la educación no escapa de ello. El problema que se 
+presenta es la inquietud del uso de las redes sociales en el ámbito universitario, si estas se 
+lograrían considerar como una técnica de aprendizaje. Por lo tanto, en [19] se llevó a cabo un 
+estudio con una muestra representativa de estudiantes del Centro Universitario de los Altos de 
+la Universidad de Guadalajara, de las catorce carreras que se ofertan en esa institución, con la 
+finalidad de conocer el uso que dan a las redes sociales y si estas serían consideradas como una 
+pág. 27 
+ 
+técnica de aprendizaje. Se obtuvo como resultado que las redes sociales se están convirtiendo 
+en una herramienta que permite el desarrollo de las habilidades comunicativas y que se utiliza 
+como técnica de aprendizaje por parte de los estudiantes, pues la mayoría de ellos las usan casi 
+siempre, pero consideran que lo hacen sin ningún beneficio específico, aun cuando manifiestan 
+que sí las incluyen como parte de sus actividades académicas.  
+Con el impacto social actual se da pie a que a las instituciones educativas arriben estudiantes 
+con una gran habilidad para el uso del Internet. Sin embargo, el problema que se buscó resolver 
+en [20] es es el bajo rendimiento de estudiantes en un programa de estudio de maestría 
+profesionalizante. Para esto, en [20] se creó y analizó un grupo de trabajo en Facebook puesto 
+a análisis, el cual cursó la materia Métricas, y se conformó por catorce participantes (trece 
+alumnos y un profesor). Dado que en “Facebook” todo queda registrado, como es el caso de las 
+interacciones, accesos y “Likes”; estos datos son extraídos mediante herramientas para su 
+análisis y diagnóstico del grupo a fin de conocer posibles casos de futuro mal desempeño de 
+forma oportuna. Social Learning Analytics usado correctamente dentro del aula ayuda a 
+construir sociogramas de interacciones para descubrir alumnos en riesgo de deserción o causar 
+baja académica y este tipo de hallazgos en tiempo aporta a las instituciones educativas mejorar 
+sus resultados de egreso. 
+Actualmente las redes sociales despiertan un gran interés social y profesional, debido a que las 
+TIC proporcionan herramientas para el desarrollo de actividades de colaboración y cooperación 
+en la enseñanza, facilitando la comunicación entre los estudiantes. El problema que se presentó 
+en [21] es la carencia y necesidad de estudios e investigaciones que ofrezcan resultados a la 
+relación entre el uso de las redes sociales y su vinculación con el trabajo colaborativo y otras 
+variables como lo son: género, edad, país donde se cursan los estudios universitarios, entre otras. 
+Además, conocer qué herramientas sociales prefieren los discentes en su educación. Para 
+enfrentar este problema en [21] se llevó a cabo una investigación donde se formularon dos 
+hipótesis: 
+H0 (hipótesis nula): no hay diferencias significativas entre el género y las cuatro grandes 
+dimensiones que constituían el cuestionario: “preferencia de aprendizaje”, “habilidades 
+pág. 28 
+ 
+técnicas-tecnológicas”, “experiencia software social” y “software social para el aprendizaje”, 
+con un riesgo alfa de equivocación del 0,05 o inferior.  
+H1 (hipótesis alternativa): sí hay diferencias significativas entre el género y las cuatro grandes 
+dimensiones que constituían el cuestionario: “preferencia de aprendizaje”, “habilidades 
+técnicas-tecnológicas”, “experiencia software social” y “software social para el aprendizaje”, 
+con un riesgo alfa de equivocación del 0,05 o inferior.  
+El estadístico que se empleó para ello fue la prueba de Kruskal-Wallis, con el cual se obtuvo 
+como resultado el rechazo de la hipótesis nula. 
+El aprendizaje colaborativo se afronta desde diferentes estrategias, por lo que la universidad del 
+futuro tiene la responsabilidad de ser una institución que distribuya formación a una gran parte 
+de la población a lo largo de toda su vida y que genere conocimiento al servicio de las 
+necesidades de formación en torno al concepto de Entornos Personales de Aprendizaje (PLEs) 
+y entornos de aprendizaje abiertos. En [22] se realizó un cuestionario inicial, respondido por 
+179 alumnos, donde se extrajo que la mayoría son mujeres (71%), tienen menos de 24 años (un 
+70%) y son usuarios frecuentes de redes sociales (principalmente Facebook), buscadores 
+genéricos (Google) y páginas de visualización de vídeos (Youtube). Esto genera un perfil de 
+usuario de Internet básicamente de tipo consumidor: consumen información y se comunican con 
+sus amigos, pero apenas producen      contenidos. 
+Como resultado se obtuvo que el EVEA (“virtual institutional learning environments”, 
+entornos virtuales institucionales de aprendizaje) es un puente entre el PLE del alumno y la 
+institución educativa, permitiendo desarrollar y valorar procesos de construcción social del 
+conocimiento, promoviendo que el alumno:  
+a) Busque información, identifique problemas, adquiera criterios para filtrar, interconectar y 
+localizar datos relevantes y distribuya información útil;  
+b) Reconozca y exprese su visión personal (ideas y avances), y  
+c) La comparta con el grupo y sea capaz de diferenciar su mirada, adoptar nuevas perspectivas, 
+clarificar puntos de desacuerdo, argumentar, negociar acuerdos y en última instancia formular 
+y representar conocimientos.  
+pág. 29 
+ 
+ 
+Las redes sociales son importantes hoy en día ya que presentan su uso como un recurso 
+educativo, teniendo la posibilidad de implementar nuevos recursos de aprendizaje sobre todo 
+para los alumnos con una baja formación tecnológica o excesiva confianza en los medios. De 
+ahí la necesidad de establecer planes de formación para su incorporación, para eliminar falsas 
+creencias, como por ejemplo que su simple utilización es apoyar una enseñanza constructivista, 
+cuando en realidad ello va a depender de la estrategia metodológica que el docente aplique sobre 
+las mismas. En [23] se presentó la importancia que las redes sociales poseen para su uso como 
+recurso educativo, teniendo en cuenta que el empleo educativo de las redes sociales no es una 
+simple extensión o traslación del uso para fines lúdicos que generalmente le dan los alumnos, 
+sino que implica un importante cambio en los roles desempeñados tanto por docentes como 
+discentes. 
+Como resultado se obtuvo que las redes sociales Facebook – Ttwitter son muy utilizadas por los 
+estudiantes en la universidad y son una excelente herramienta para integrar en los recursos de 
+aprendizaje de los cursos universitarios, además facilitan y potencian la comunicación e 
+interacción, contribuyendo a la construcción colectiva del conocimiento, a través de procesos 
+de aprendizaje activos y colaborativos. 
+La incorporación de la Web 2.0 a la educación supone que los procesos de aprendizaje que los 
+estudiantes desarrollan tienen un carácter más social, dinámico y personal, donde el 
+conocimiento producido sea explícito e interactúe con otros dentro de un proceso continuo, y 
+que la educación sea más creativa, participativa y sociable, no consiste en un cambio tecnológico 
+aislado, sino en un modelo que concibe el aprendizaje como el resultado de la interacción y 
+colaboración de las personas y que sitúa al estudiante en el centro del proceso, por lo que es un 
+instrumento facilitador del cambio de modelo en los procesos de aprendizaje. En [24] se realizó 
+una investigación sobre la realidad de los procesos de aprendizaje universitario con TIC y las 
+preferencias para trabajar dentro y fuera del aula de los estudiantes de las universidades de 
+Córdoba, Huelva, Sevilla y País Vasco. 
+pág. 30 
+ 
+Se obtuvo como resultado que los alumnos, independientemente de su universidad de 
+procedencia, muestran altas percepciones para trabajar en grupo y de manera colaborativa. A su 
+vez aporta en la traducción y fiabilidad de un instrumento útil para el diagnóstico de las 
+percepciones que los alumnos muestran hacia el trabajo en grupo y colaborativo, y el dominio 
+para ser incorporadas a la enseñanza de las herramientas de la Web 2.0. 
+Actualmente Internet se ha confirmado como la gran biblioteca global que permite acceder a 
+infinidad de contenidos de cualquier tipo. Dentro del mundo académico, la filosofía del acceso 
+abierto ha comenzado a democratizar el conocimiento y en la que se tiene acceso a millones de 
+recursos pedagógicos para todas las áreas de conocimiento, vídeos y tutoriales con explicaciones 
+para en general cualquier asignatura universitaria, monografías y artículos científicos del más 
+alto nivel. Los dispositivos móviles como los teléfonos inteligentes y las tabletas, utilizan el 
+acceso a Internet para las redes sociales como Facebook, Twitter o Whatsapp que se convirtieron 
+en la vía de acceso principal a los contenidos para muchos usuarios. 
+A pesar de su importancia, las universidades todavía están en un proceso de adaptación inicial 
+y se desperdician muchas de sus posibilidades de aprendizaje. Sus dinámicas es un requisito en 
+primera instancia, que afecta a todos los cuerpos de la universidad desde el personal docente e 
+investigador, al personal de administración y servicios, hasta el alumnado de cualquier titulación 
+y área de conocimiento. Las redes sociales de lectura como un nuevo reto para la educación, un 
+espacio natural para la Lectura Social con espacios para todos los perfiles como el profesional 
+y académico, se encuentran todavía en los primeros pasos en la integración de los servicios de 
+redes sociales en su dinámica general de funcionamiento como centros de creación y difusión 
+del conocimiento. En [25] se realizó una comparación entre algunas de las herramientas que 
+permiten establecer redes sociales para la universidad. Partiendo de espacios profesionales como 
+Linkedin o Google Plus para continuar con las redes sociales académicas como ResearchGate  
+o Academia.Edu. 
+Todas estas redes ofrecen resultados sobre el análisis de los macrodatos (Big Data) del uso que 
+realizan los miles de usuarios. Este tipo de análisis tendrá gran importancia también en el ámbito 
+de la lectura. Desde los múltiples ámbitos de investigación de la lectura (centros escolares, 
+pág. 31 
+ 
+bibliotecas, universidades, proyectos de promoción lectora, entre otros) son espacios que se 
+explotan para conocer mejor las nuevas formas de interacción en la red. 
+En los últimos años con el rápido desarrollo de la tecnología de comunicación móvil, se tiene 
+un gran crecimiento    en los usuarios con un iPhone, teléfono basado en Android, Smartphone 
+y tabletas. Las plataformas móviles incluyen aplicaciones que utilizan servicios web de sitios 
+web populares. En las instituciones de educación superior, el uso del teléfono móvil es mayor 
+que el de las computadoras. Con los dispositivos móviles, se tiene información en cualquier 
+lugar en cualquier momento, para que los usuarios tengan una mejor experiencia para acceder a 
+la información y disfrutar de muchas aplicaciones. 
+ 
+El problema que se presentó en [26] es que existen sistemas de información basados en 
+computadora donde no se tiene acceso a la información en cualquier momento, así desde 
+cualquier ubicación. Los resultados, la asistencia, el calendario, los anuncios son recolectados 
+de los departamentos respectivos de manera manual, necesitando mucho tiempo y mano de obra. 
+Por lo tanto, en [26] se desarrolló una aplicación móvil multi plataforma para el Sistema de 
+Información Estudiantil (SIS) utilizando el marco de trabajo PhoneGap, ayudando a los 
+estudiantes a comprobar sus resultados, la asistencia, ver los datos personales, comprobar los 
+anuncios, entre otros. La aplicación permite a los miembros del personal y los estudiantes ver 
+su calendario de clases y también, proporcionar más servicios de valor añadido que son fáciles 
+de usar directamente desde teléfonos móviles.  
+ 
+Se tuvo como resultado que el sistema es fácil de desplegar, seguro y cómodo de usar. El valor 
+práctico de la movilidad en la enseñanza será mayor en el futuro porque los dispositivos móviles 
+son flexibles y fáciles de usar en tiempo real. PhoneGap se utiliza para el desarrollo de 
+aplicaciones móviles para múltiples plataformas mediante el uso de tecnologías estándar de 
+desarrollo web. 
+En [27] se describió el uso de la API de geolocalización de PhoneGap para determinar la 
+mayoría de las plataformas de telefonía móvil inteligente en el mercado actual. Hoy en día los 
+desarrolladores utilizan PhoneGap para crear aplicaciones móviles, ya que cuenta con las 
+pág. 32 
+ 
+ventajas de facilidad al utilizar bastando sólo con unas pocas líneas de código JavaScript para 
+acceder y administrar la API de geolocalización nativa del dispositivo móvil.  
+ 
+Se concluye que la API de geolocalización de PhoneGap es compatible con múltiples sistemas 
+operativos móviles conocidos como iOS, Android, Black Berry, Symbian, WebOS y Windows 
+7 Phone; utiliza JavaScript, HTML y CSS para determinar la ubicación de dispositivos móviles 
+devolviendo diferentes propiedades de ubicación, como Longitud, Altitud, Precisión, Precisión 
+de altitud, Dirección, Velocidad y Timestamp cuando se consultan y proporciona información 
+de ubicación del dispositivo host, como longitud y latitud. Los orígenes frecuentes de la 
+información de localización abarcan el Sistema de Posicionamiento Global (GPS) y la ubicación 
+deducida de las señales de red, como la dirección IP (Internet Protocol, Protocolo de Internet), 
+RFID (Radio Frequency Identification, Identificacion por Radiofrecuencia), WiFi y direcciones 
+MAC (Media Access Control, Control de Acceso al Medio) Bluetooth, y las ID de celdas GSM 
+(Global System for Mobile Communications, Sistema Global para las Comunicaciones Móviles) 
+/ CDMA (Code Division Multiple Access, Acceso Múltiple por División de Código). Aunque 
+no hay ninguna promesa de que la API proporcione la ubicación efectiva del dispositivo. 
+ 
+En [28] propusieron la utilización de teléfonos inteligentes con fines académicos. 
+Específicamente, se diseñó la arquitectura de una aplicación E-learning para retroalimentar a 
+usuarios, tanto docentes como discentes.   
+ 
+Como resultado se propuso la arquitectura escalable, la cual  se basa en el concepto de sistemas 
+E-learning que hacen uso de las redes y las tecnologías multimedia, permitiendo el acceso al 
+conocimiento y a los recursos remotos para el desarrollo de toda la sociedad, por lo que se centra 
+en la importancia de la utilización de aplicaciones móviles en el ámbito de la educación a nivel 
+licenciatura, y en la necesidad de desarrollar nuevas herramientas que permitan la transmisión 
+de conocimientos de manera diferente, así como también sirvan de apoyo a los métodos de 
+enseñanza que se utilizan actualmente. 
+ 
+pág. 33 
+ 
+Para demostrar la viabilidad del enfoque, se desarrolló un prototipo de aplicación que permite 
+identificar posibles dificultades académicas y emitir recomendaciones a discentes de nivel 
+licenciatura usando técnicas estadísticas. 
+ 
+Folcsonomía [29] es una indexación social, la clasificación colaborativa por medio de etiquetas 
+simples en un espacio de nombres llano, sin jerarquías ni relaciones de parentesco 
+predeterminadas. Se trata de una práctica que se produce en entornos de software social cuyos 
+exponentes son los sitios más compartidos. Surgen cuando varios usuarios colaboran en la 
+descripción de un mismo material informativo. En [30], Astrain et al.  presentan un método de 
+clasificación utilizando una medida de similaridad fuzzy y la medida de similaridad del coseno. 
+La medida de similaridad fuzzy descubre variaciones sintácticas de etiquetas y permite la 
+agrupación de éstas. La medida del coseno permite mejorar la clasificación de aquellas etiquetas 
+de corta longitud. Reduciendo los problemas derivados de la existencia de variaciones 
+sintácticas de etiquetas sin que se produzca pérdida alguna de la semanticidad de la folcsonomía. 
+Los sistemas de Aprendizaje Colaborativo Soportado por Computadora (ACSC) permiten el 
+aprendizaje grupal con independencia del tiempo y espacio donde estén localizados los 
+estudiantes y los docentes. Para tener una colaboración grupal deseable los estudiantes necesitan 
+de un e-tutor (docente) que organice la interrelación grupal. La problemática que se presenta es 
+que para reconocer el desempeño de los docentes se requiere de mucho tiempo y esfuerzo.  Para 
+ello Santana Mansilla et al. [31] describen un trabajo de investigación en el cual se aplican 
+técnicas de minería de textos para crear clasificadores que permitan identificar automáticamente 
+las habilidades manifestadas por e-tutores. Los resultados son obtenidos mediante diferentes 
+algoritmos de clasificación. 
+Uno de los principales problemas que presenta la educación a distancia (E-learning) reside en 
+que muchos de los estudiantes que inician un curso, se frustran, se sienten desmotivados, no 
+logran asimilar los conocimientos y como resultante lo abandonan. Una de las principales 
+razones es que la mayoría de los cursos se diseñan sin tener en cuenta que los estudiantes 
+aprenden de diferente manera, ya que cada uno posee un estilo de aprendizaje que lo caracteriza. 
+Por ello, Farías et al. [32] proponen un método basado en técnicas de Análisis de Clúster para 
+detectar el estilo de aprendizaje dominante del estudiante. Este método considera las 
+pág. 34 
+ 
+interacciones del alumno con el sistema para poder reconocer, no sólo su estilo de aprendizaje 
+dominante, sino también los cambios en este estilo a lo largo del curso de E-learning. El método 
+fue evaluado, con resultado favorable, en el marco de un curso a distancia para alumnos de 
+Informática.    
+2.2 Análisis comparativo  
+La Tabla 1 se presenta un análisis comparativo sobre los artículos relacionados con este 
+proyecto, así como una pequeña descripción sobre su problemática, objetivo, resultado, 
+tecnologías usadas y estado.   
+ 
+Tabla 1 Análisis comparativo de los artículos relacionados. 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+León et al. Debido a que Se requiere evaluar la Se implementó una JavaScript, Finalizado 
+[11] Facebook permite posibilidad de aplicación que permite Facebook Graph, 
+compartir archivos, implementar una la gestión de objetos JSON, MySql,  
+formar grupos de aplicación Facebook de aprendizaje dentro  
+trabajo e para la gestión de del “canvas” de la 
+intercambiar objetos de aprendizaje plataforma, se llevó a 
+opiniones con a través de las redes cabo una evaluación 
+relación a sociales. cualitativa y 
+determinado tema, experimental de las 
+también se tiene en capacidades de la 
+cuenta que quizá aplicación, 
+perjudique permitiendo evaluar 
+convirtiéndose en satisfactoriamente la 
+un distractor del flexibilidad y 
+proceso de extensibilidad de la 
+aprendizaje. Sin plataforma Facebook. 
+embargo, 
+ciertamente no 
+existe un consenso 
+con relación a si 
+Facebook se 
+pág. 35 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+utilizaría o no en el 
+ámbito académico. 
+Knijnenburg Los sistemas de Realizar un Se describieron los Sistemas de Finalizado 
+et al. [12] recomendación experimento de resultados de un recomendación  
+comparan las usuario en línea con un experimento de 
+preferencias de los sistema de usuario en línea con un 
+usuarios con las de recomendación sistema de 
+los demás y musical de Facebook recomendación de 
+recomiendan que proporciona a los música de Facebook 
+artículos que les usuarios el control en el que se manipula 
+gustan a los sobre las de forma 
+usuarios que tienen recomendaciones y independiente el nivel 
+preferencias explica cómo de inspección y 
+similares, aunque surgieron. control. Los resultados 
+socialmente no mostraron que las 
+están satisfechos versiones  del sistema 
+con solo una lista proporcionan una 
+estática de mejor experiencia a 
+recomendaciones, los usuarios, por lo 
+ya que requieren que se concluye que la 
+inspeccionar y inspección y el control 
+controlar la forma son cualidades 
+en que el sistema importantes de los 
+utiliza su red social sistemas de 
+para seleccionar recomendación social. 
+esta lista de 
+recomendaciones. 
+Konstan y  Los sistemas Identificar los Se sostuvo que la Algoritmos de Finalizado 
+Riedl [13] automatizados de problemas que frenan evaluación de la predicción k-mas, 
+recomendación el avance del estado de experiencia de usuario el sistema 
+revolucionaron la la técnica y, en de un recomendador GroupLens y 
+comercialización y algunos casos, limitan requiere un conjunto sistema Ringo.  
+la distribución de la relevancia de la más amplio de  
+comercio y investigación para las medidas de las que se  
+contenido al aplicaciones del utilizan comúnmente, 
+proporcionar mundo real. y se sugirieron 
+recomendaciones y  medidas adicionales 
+predicciones 
+pág. 36 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+personalizadas que  demuestran ser 
+sobre una gran eficaces. 
+variedad de ofertas 
+de productos 
+complejas y 
+grandes. 
+Bostandjiev La web social se Explorar preguntas de Se presentó El sistema Finalizado 
+et al. [14] convirtió en la investigación TasteWeights, un TasteWeights 
+modalidad relacionadas con sistema interactivo de 
+dominante para la sistemas de recomendaciones 
+distribución de los recomendación híbridas. El sistema 
+medios de visuales interactivos. emplea nuevos 
+comunicación y la modelos para obtener 
+recopilación de recomendaciones de 
+contenido un rango de APIs  web 
+proporcionado por y presenta estrategias 
+el usuario, sin de hibridación para 
+embargo, las API  combinar esas 
+de la web social   recomendaciones. 
+están 
+evolucionando 
+constantemente, y 
+las técnicas 
+tradicionales del 
+sistema de 
+recomendación 
+tales como el 
+filtrado 
+colaborativo 
+automatizado 
+necesitan adaptarse 
+al entorno de datos 
+cambiante en la 
+web social. 
+Hu et al. [15] Es un gran reto el La interpretación de Se realizó un estudio No usa Finalizado 
+análisis de las señales exploratorio en dos 
+sentimientos para emocionales para el conjuntos de datos de 
+los métodos análisis de Twitter para verificar 
+pág. 37 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+tradicionales sin sentimientos no la existencia de 
+supervisión supervisado. señales emocionales.  
+basados en el  
+léxico debido al 
+hecho de que las 
+expresiones en las 
+redes sociales no 
+están 
+estructuradas. 
+Morales et Era descubrir las Proporcionar al Se mostró el Graph API de Validación  
+al. [16] posibles relaciones usuario una desarrollo de un Facebook 
+entre usuarios y recomendación del método para la 
+programas de programa de posgrado identificación de 
+posgrado del más adecuado de relaciones entre los 
+Instituto acuerdo a sus “Likes”. “Likes” de usuarios de 
+Tecnológico de Facebook,  y una serie 
+Orizaba (ITO).  de conceptos, se 
+analizaron los datos 
+usando el concepto de 
+proximidad o 
+similitud entre 
+cadenas para comparar 
+“Likes” extraídos de 
+Facebook, este 
+método se implementó 
+en una aplicación web. 
+Aciar y Se presenta con los Lograr una Se presentó un sistema Sistema de Finalizado. 
+Aciar [17] nuevos usuarios conversación entre de recomendación que recomendación. 
+debido a que no usuarios exitosa. tiene como función, 
+saben con exactitud como su nombre lo 
+quién es la persona indica, recomendar a 
+correcta para una persona un 
+comenzar una usuario apropiado para 
+conversación sobre conversar con base en 
+algún tema de el  perfil y reputación, 
+interés, estas teniendo como 
+conversaciones resultado una 
+suelen ser 
+pág. 38 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+inadecuadas conversación más 
+debido a que la exitosa. 
+persona con quien 
+conversó no es la 
+idónea. 
+Shapira et La factibilidad y la Levar a cabo una Se demostró el No usa Finalizado  
+al. [18] eficacia de la recomendación potencial de la 
+utilización de los adecuada utilizando la explotación de los 
+datos disponibles red social Facebook.  datos disponibles en 
+existentes de las Facebook para la 
+redes sociales para mejora de los servicios 
+el proceso de personalizados que 
+recomendación requieren datos sobre 
+desde la red social los usuarios con el fin 
+Facebook. de proporcionar 
+resultados efectivos. 
+ 
+Islas Torres La inquietud del Demostrar si las redes Se obtuvo como No usa  Finalizado  
+et al. [19] uso de las redes sociales son una resultado  que las 
+sociales en el técnica de  redes sociales se están 
+ámbito aprendizaje. convirtiendo en una 
+universitario, si herramienta que 
+estas se lograrían permite el desarrollo 
+considerar como de las habilidades 
+una técnica de comunicativas y que 
+aprendizaje. se  utiliza como 
+técnica de aprendizaje 
+por parte de los 
+estudiantes. 
+ León et al. Se presenta un bajo Identificar alumnos Se creó y analizó un Social Learning Finalizado 
+[20] rendimiento de con bajo desempeño y grupo de trabajo en Analytics 
+estudiantes en un posibles casos futuros. Facebook   el cual 
+programa de cursó la materia 
+estudio de maestría Métricas, conformado 
+profesionalizante. por catorce 
+participantes (trece 
+alumnos y un 
+profesor). Dado que en 
+pág. 39 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+“Facebook” todo 
+queda registrado, 
+como es el caso de las 
+interacciones, accesos 
+y “Likes”; estos datos 
+son extraídos 
+mediante herramientas 
+para su análisis y 
+diagnóstico del grupo 
+a fin de conocer 
+posibles casos de 
+futuro mal desempeño 
+de forma oportuna. 
+Cabero La carencia y Conocer si habían El estadístico que se No usa. Finalizado 
+Almenara et necesidad de diferencias empleó para ello fue la 
+al. [21] estudios e significativas entre el prueba de Kruskal-
+investigaciones género y las cuatro Wallis, con la cual se 
+que ofrezcan dimensiones que obtuvo como 
+resultados a la conformaban el resultado el rechazo de 
+relación entre el cuestionario: la hipótesis nula. 
+uso de las redes “preferencia de  
+sociales y su aprendizaje”, 
+vinculación con el “habilidades técnicas-
+trabajo tecnológicas”, 
+colaborativo y “experiencia software 
+otras variables social” y “software 
+como lo son: social para el 
+género, edad, país aprendizaje”. 
+donde se cursan los 
+estudios 
+universitarios, 
+entre otras. 
+Además, conocer 
+qué herramientas 
+sociales prefieren 
+los discentes en su 
+educación. 
+pág. 40 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+Marín et al. La creación y Experimentar con El EVEA es un puente No usa. Finalizado 
+[22] mantenimiento de metodologías entre el PLE del 
+entornos y redes didácticas de alumno y la institución 
+personales de integración del EVEA educativa, ha 
+aprendizaje (PLEs y los PLEs, y analizar permitido desarrollar y 
+y PLNs) y su la construcción del valorar procesos de 
+integración en PLE por parte de los construcción social del 
+entornos virtuales alumnos conocimiento. 
+institucionales de universitarios, 
+aprendizaje haciendo especial 
+(EVEA) como énfasis en la 
+estrategias que construcción de la red 
+facilitan y personal de 
+promueven el aprendizaje. 
+aprendizaje 
+colaborativo. 
+Vazquez- La necesidad de La importancia que las Las redes sociales No usa Finalizado 
+Martinez y  establecer planes redes sociales Facebook – Ttwitter 
+Cabrero- de formación para presentan para su uso son muy utilizadas por 
+Almenara la incorporación de como recurso los estudiantes en la 
+[23] las redes sociales, educativo. universidad y son una 
+para eliminar falsas excelente herramienta 
+creencias, como para integrar en los 
+por ejemplo, que su recursos de 
+simple utilización aprendizaje de los 
+apoya una cursos universitarios, 
+enseñanza facilitan y potencian la 
+constructivista, comunicación e 
+cuando en realidad interacción, 
+ello va a depender contribuyendo a la 
+de la estrategia construcción colectiva 
+metodológica que del conocimiento, a 
+el docente aplique través de procesos de 
+sobre las mismas. aprendizaje activos y 
+colaborativos. 
+ 
+Cabero y  La realidad de los Conocer las Se obtuvo que los No usa Finalizado 
+Marín [24] procesos de percepciones que los alumnos, 
+pág. 41 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+aprendizaje alumnos tienen sobre independientemente 
+universitario con el software social y el de su universidad de 
+TIC y las trabajo en grupo y procedencia, muestran 
+preferencias para colaborativo, cuáles altas percepciones 
+trabajar dentro y son las herramientas para trabajar en grupo 
+fuera del aula de de software social que y de manera 
+los estudiantes de emplean y si hay colaborativa. A su vez 
+las universidades. diferencias en función aporta en la traducción 
+de la universidad de y fiabilidad de un 
+procedencia. instrumento útil para 
+el diagnóstico de las 
+percepciones que los 
+alumnos muestran 
+hacia el trabajo en 
+grupo y colaborativo, 
+y el dominio para ser 
+incorporadas a la 
+enseñanza de las 
+herramientas de la 
+Web 2.0. 
+ 
+Rovira Las universidades Hacer una Todas estas redes No usa Finalizado 
+Collado [25] están en un proceso comparación entre ofrecen resultados 
+de adaptación algunas de las sobre el análisis de los 
+inicial sobre las herramientas que  macrodatos (Big 
+redes sociales y se permiten establecer Data) del uso que 
+desperdician redes sociales para la realizan los miles de 
+muchas de sus universidad. usuarios. Este tipo de 
+posibilidades de análisis tiene una gran 
+aprendizaje. importancia también 
+en el ámbito de la 
+lectura. 
+ Shrivas y  Existen sistemas de Desarrollar una El sistema es fácil de PhoneGap, Finalizado 
+jQuery, jQuery 
+Pardeshi información aplicación móvil multi desplegar, seguro y 
+Mobile, HTML, 
+[26] basados en plataforma para el cómodo de usar. El JavaScript, 
+ColdFusion y 
+computadora Sistema de valor práctico de la 
+solicitudes HTTP. 
+donde no se tiene Información movilidad en la  
+acceso a la Estudiantil (SIS). enseñanza será mayor 
+pág. 42 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+información en en el futuro porque los 
+cualquier dispositivos móviles 
+momento, así como son flexibles y fáciles 
+cualquier de usar en tiempo real. 
+ubicación. 
+ Niyigena et El gran desafío Describir el uso de la Se demostró que la La API de Finalizado 
+al. [27] para la creación de API de API de geolocalización de 
+aplicaciones geolocalización de geolocalización de PhoneGap, 
+móviles debido PhoneGap para PhoneGap es JavaScript, HTML 
+principalmente a determinar la mayoría compatible con y CSS. 
+los diferentes de las plataformas de múltiples sistemas 
+lenguajes de telefonía móvil operativos móviles 
+programación que inteligente en el conocidos como iOS, 
+se tienen que mercado actual. Android, Black Berry, 
+dominar para su Symbian, WebOS y 
+desarrollo. Windows 7 Phone y 
+ proporciona 
+información de 
+ubicación del 
+dispositivo host, como 
+longitud y latitud. 
+Montiel Mejorar el Proponer la utilización Se desarrolló un Java Server Faces, En 
+el patrón 
+Santos  et al. desempeño de teléfonos prototipo de desarrollo 
+arquitectónico de 
+[28]. académico de inteligentes con fines aplicación que permite software Modelo-
+Vista-
+discentes y académicos. identificar posibles 
+Controlador, 
+docentes utilizando Específicamente, se dificultades PhoneGap, 
+HTML5, 
+técnicas propone la académicas y emitir 
+JavaScript y CSS. 
+estadísticas, arquitectura de una recomendaciones a  
+aprendizaje aplicación E-learning discentes de nivel 
+automático y para retroalimentar a licenciatura usando 
+minería de datos. usuarios, tanto técnicas estadísticas. 
+docentes como 
+discentes. 
+Astrain et al, Reducir los Proporcionar una Se creó el  método  que Folksonomías Finalizado 
+[30].   problemas clasificación adecuada permite la similitud difusa 
+derivados de la de las etiquetas clasificación adecuada redes sociales 
+existencia de incluso con longitudes del 95% de las 
+variaciones variaciones sintácticas 
+pág. 43 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+sintácticas de de etiquetas más de las etiquetas 
+etiquetas sin que se pequeñas. analizadas en los 
+produzca pérdida experimentos. 
+alguna de la 
+semanticidad de la 
+folcsonomía. 
+Santana Los sistemas de Describir  un trabajo Se comprobó que las Sistemas de Finalizado 
+Mansilla et Aprendizaje de investigación que técnicas de Aprendizaje 
+al, [31]. Colaborativo aplique técnicas de clasificación de Colaborativo 
+Soportado por minería de textos para minería de textos, Soportado por 
+Computadora crear clasificadores aplicadas sobre los Computadora 
+(ACSC) permiten que permitan mensajes publicados (ACSC) 
+el aprendizaje identificar por los e-tutores en Algoritmos de 
+grupal con automáticamente las entornos de ACSC con  clasificación  
+independencia del habilidades interfaces no 
+tiempo y espacio manifestadas por e- estructuras, permiten 
+donde estén tutores. reconocer las 
+localizados los habilidades 
+estudiantes y los manifestadas por los 
+docentes. Sin mismos. 
+embargo, las 
+interacciones que 
+conducen a la 
+creación 
+colaborativa de 
+conocimiento no 
+surgen de manera 
+espontánea y la 
+tecnología quizás 
+las obstaculice. 
+Farías et al, La educación a Proponer un método Se obtuvo el método Sistemas E- Finalizado 
+[32]. distancia soportada basado en técnicas de propuesto constituye learning 
+por computadora Análisis de Cluster una herramienta muy Análisis de 
+(e-learning) para detectar el estilo efectiva para cluster 
+presenta la de aprendizaje determinar el estilo de 
+problemática en dominante del aprendizaje de los 
+que muchos de los estudiante. estudiantes en las 
+estudiantes que dimensiones de 
+pág. 44 
+ 
+ARTÍCULO PROBLEMA OBJETIVO RESULTADO TECNOLOGÍAS ESTADO 
+inician un curso, se entrada, percepción y 
+frustran, se sienten comprensión. 
+desmotivados, no 
+logran asimilar los 
+conocimientos y en 
+consecuencia lo 
+abandonan. 
+ 
+Conclusión del análisis   
+Cada día crece más la magnitud que tienen las redes sociales con las personas, en especial con 
+los jóvenes quienes la mayoría cuentan con un teléfono inteligente, lo que provoca que se tenga 
+la necesidad de desarrollar aplicaciones móviles eficaces y óptimas a las que se tenga acceso 
+desde cualquier punto.   
+Los trabajos revisados se basan en sistemas de recomendación para la integración de grupos de 
+trabajo, la diferencia del trabajo a desarrollar es que se propone utilizar los datos de la actividad 
+en la red social Twitter para realizar la integración de grupos de trabajo y con ello analizar si 
+con actividad similar se crean equipos con mejor desempeño académico. 
+2.3    Propuesta de solución  
+ 
+En esta sección se presenta la descripción de la solución, las diversas tecnologías y herramientas 
+para dar solución a la problemática planteada, así mismo se muestra una propuesta de solución 
+y las razones que justifican su elección. 
+ 
+2.3.1 Alternativas de solución  
+ 
+A continuación, se presenta la Tabla 2 con la comparación de las alternativas para la solución 
+del anteproyecto de tesis.  
+ 
+pág. 45 
+ 
+Tabla 2  Alternativa de solución. 
+Alternativa Metodología Lenguaje de Framework Gestor de Sistema IDE 
+programación base de Operativo 
+datos 
+1 Mobile- D HTML5, PhoneGap PostgreSQL Android  NetBeans 
+JavaScript y 
+CSS. 
+2 MASAM HTML5, PhoneGap PostgreSQL Android  Eclipse 
+JavaScript y 
+CSS. 
+ 
+ 
+2.3.2 Solución propuesta  
+ 
+La alternativa seleccionada con base en la tabla 2 es la 1, ya que es la más adecuada para el 
+desarrollo de la tesis.  
+ 
+2.3.3 Justificación de la solución propuesta 
+ 
+La metodología que se seleccionó es Mobile-D en vez de MASAM, puesto que posee bajos 
+costos al realizar un cambio en el proyecto, entrega rápidos resultados y asegura el software 
+adecuado en el momento adecuado. 
+El framework seleccionado es PhoneGap debido a que fue usado en la tesis anterior y este 
+proyecto es una continuación de la misma. 
+Como lenguajes de programación se usarán HTML5, JavaScript y CSS, puesto que son los que 
+utiliza PhoneGap por defecto para el desarrollo de aplicaciones móviles. 
+pág. 46 
+ 
+El gestor de base de datos seleccionado es PostgreSQL, ya que al igual que el framework 
+PhoneGap fue utilizado en la tesis anterior. 
+En el caso de sistema operativo se seleccionó Android, puesto que es uno de los sistemas 
+operativos que actualmente lidera el mercado. 
+Por último, en lo que se refiere a IDE se seleccionó NetBeans, ya que con base en sus ventajas 
+permite desarrollar fácil y rápidamente aplicaciones de escritorio, móviles y Web, así como 
+aplicaciones HTML5, JavaScript y CSS. Es de código abierto y tiene una gran comunidad de 
+usuarios y desarrolladores de todo el mundo. 
+ 
+ 
+ 
+ 
+  
+pág. 47 
+ 
+Capítulo 3 . Aplicación de la metodología  
+ 
+En el presente capítulo se describe el desarrollo del módulo de recomendación usando la 
+metodología seleccionada de acuerdo a la solución propuesta. Así como la justificación sobre el 
+cambio de red social.  
+3.1 Justificación de la red social  
+ 
+Debido al problema que presentó Facebook, en donde se hizo uso indebido de datos de más de 
+50 millones de usuarios que llegaron a manos de Cambridge Analytics, una consultora que 
+ofrecía servicios para la campaña de Donald Trump [33].   Facebook suspendió 200 aplicaciones 
+tras dicho problema, por ello no se obtuvo una respuesta satisfactoria de parte de los 
+administradores de Facebook durante la revisión para autorizar la aplicación creada en 
+Facebook Developers. 
+En las siguientes figuras se muestra las noticias publicadas durante dicho problema:  
+ 
+Figura 3.1 Noticia del sitio Milenio. 
+ 
+pág. 48 
+ 
+ 
+Figura 3.2 Noticia del sitio elmundo. 
+Por tal motivo aparecía una leyenda en la aplicación creada en Facebook Developers, en la cual 
+se explicaba que no estaban revisando aplicaciones debido a cambios que estaban 
+implementando en la plataforma: 
+ 
+Figura 3.3 Pantalla de Facebook Developers. 
+pág. 49 
+ 
+Por tal motivo se optó por cambiar la red social a Twitter, empleando la misma funcionalidad 
+creando una cuenta en Twitter Developers al igual que una aplicación para implementar el inicio 
+de sesión. 
+3.2 Metodología Mobile-D  
+ 
+Para solucionar el problema determinado en este trabajo de tesis, se detalla la aplicación de las 
+fases de la metodología Mobile-D para el desarrollo del módulo.  La realización de cada una de 
+las fases posibilitó concluir en tiempo y forma la solución del problema presentado.  
+En la figura 3.1 se presenta las fases de las que consta la metodología Mobile-D. 
+ 
+Figura 3.4 Fases de la metodología Mobile-D. 
+ 
+3.2.1 Exploración  
+ 
+Esta fase se encarga de la planificación y educción de requisitos del proyecto, donde tendremos 
+la visión completa del alcance del proyecto y también todas las funcionalidades del producto.  
+Esto se realiza en tres etapas: establecimiento de actores, definición del alcance y el 
+establecimiento de proyectos. Las tareas asociadas a esta fase incluyen el establecimiento del 
+cliente (los clientes que toman parte activa en el proceso de desarrollo), la planificación inicial 
+del proyecto y los requisitos de recogida, y el establecimiento de procesos. 
+3.2.1.1 Establecimiento de actores 
+Es una etapa donde se define las partes interesadas, excluyendo el equipo del proyecto en sí, 
+necesarios en el establecimiento, así como en las tareas del proyecto incipiente son definidos 
+roles y recursos relevantes [34].  
+La aplicación Mochuelo Learning cuenta con tres principales actores los cuales son: 
+Administrador, Docente y Discente.  
+pág. 50 
+ 
+3.2.2 Inicialización  
+ 
+En esta fase se preparó el proyecto base para evitar los posibles problemas que surgieran durante 
+el desarrollo del módulo de recomendación, se arreglaron los recursos físicos tecnológicos 
+necesarios para la producción de actividades. Las actividades realizadas fueron las siguientes: 
+➢ Configurar el marco de trabajo para el desarrollo de la aplicación móvil.  
+➢ Instruirse a cerca de las herramientas tecnológicas que se utilizarán. 
+➢ Construir un plan inicial para el proyecto. 
+3.2.3 Producción  
+ 
+En la producción se llevó a cabo el desarrollo de la solución informática empleando la 
+metodología Mobile-D para preparar el funcionamiento requerido del módulo, por ello se 
+realizaron las siguientes actividades: 
+1. Funcionamiento de la aplicación base. 
+2. Funcionamiento de los servicios Web y REST 
+3. Puesta en marcha de la aplicación base. 
+4. Creación de diagramas (casos de uso, entidad relación, diagrama de clases y de 
+actividades). 
+5. Informarse acerca de Twitter como desarrollador. 
+6. Registrarse en Twitter como desarrollador.  
+7. Desarrollar Módulo de Agrupamiento de Perfiles. 
+ 
+3.2.4 Estabilización  
+ 
+Se considera esta fase para realizar la integración completa del sistema en caso de que el 
+desarrollo del proyecto se encuentre dividido en áreas geográficas distintas. El desarrollo del 
+módulo de recomendación no sigue esta pauta. 
+pág. 51 
+ 
+3.2.5 Pruebas 
+ 
+Esta fase implica la realización de pruebas una vez que se haya terminado el desarrollo del 
+módulo, en la cual se realizan varias iteraciones hasta que se tenga una versión estable del 
+módulo según lo establecido. Una vez terminando todas las fases se obtendrá como resultado 
+una aplicación estable.  
+ 
+3.3 Análisis de requerimientos 
+ 
+Durante esta etapa se determinaron las operaciones que cada uno de los usuarios de la aplicación 
+realizaran, por ello se crearon diagramas de caso de uso los cuales escenifican las acciones de 
+los usuarios. 
+A continuación, se muestran los diagramas de casos de uso especificando las actividades con 
+las que cuenta la aplicación y las que se agregarán para la creación del Módulo de Agrupamiento 
+de Perfiles. 
+pág. 52 
+ 
+ 
+Figura 3.5  Diagrama de casos de uso de Administrador. 
+En la tabla 3 se presenta la descripción del caso de uso Registrar administrador: 
+Tabla 3 Descripción de caso de uso Registrar administrador. 
+Caso de uso: Registrar Administrador 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador registrar un nuevo administrador. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 53 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona el botón “Registrar  
+nuevo administrador” 
+2  Muestra el formulario para ingresar los 
+datos del administrador a registrar. 
+3 Ingresa los datos del nuevo  
+administrador y selecciona el botón 
+“Registrar”. 
+4  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se crea un nuevo registro del 
+administrador en la base de datos. 
+6  Se muestra el mensaje de registro 
+exitoso y redirecciona a la vista de los 
+usuarios tipo administrador.  
+ 
+Poscondiciones: El nuevo administrador está listo para ser consultado, modificado y eliminado 
+posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 4 se muestra la descripción del caso de uso Modificar administrador: 
+Tabla 4  Descripción de caso de uso Modificar administrador. 
+Caso de uso: Modificar Administrador 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador modificar los datos de los administradores registrados. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 54 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona dentro del botón de  
+opciones “Modificar”. 
+2  Muestra el formulario para modificar los 
+datos del administrador a modificar. 
+3 Modifica los datos del administrador  
+y selecciona el botón “Modificar”. 
+4  Validar los campos del formulario 
+activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los usuarios tipo administrador. 
+6  Se modifica el registro del administrador 
+en la base de datos. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: El administrador está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje de “Valor 
+Requerido” en el formulario para indicar 
+que los campos requeridos deben estar 
+llenos o escritos correctamente. 
+ 
+ 
+En la tabla 5 se muestra la descripción del caso de uso Eliminar administrador: 
+Tabla 5  Descripción de caso de uso Eliminar administrador. 
+Caso de uso: Eliminar Administrador 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador eliminar administradores registrados. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 55 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona dentro del botón de  
+opciones “Eliminar”. 
+2  Muestra el formulario con los datos 
+inhabilitados del administrador a 
+eliminar. 
+3 Elimina los datos del administrador  
+y selecciona el botón “Eliminar”. 
+4  Se muestra el mensaje de “Registro 
+eliminado correctamente” y redirecciona 
+a la vista de los usuarios tipo 
+administrador. 
+5  Se elimina el registro del administrador 
+en la base de datos. 
+6  Termina caso de uso. 
+ 
+Poscondiciones: Los administradores eliminados no estarán disponibles para consultas. 
+ 
+En la tabla 6 se presenta la descripción del caso de uso Registrar docente: 
+Tabla 6 Descripción de caso de uso Registrar docente. 
+Caso de uso: Registrar Docente 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador registrar docentes. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 56 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona el botón “Registrar  
+nuevo profesor” 
+2  Muestra el formulario para ingresar los 
+datos del profesor a registrar. 
+3 Ingresa los datos del nuevo profesor  
+y selecciona el botón “Registrar”. 
+4  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se crea un nuevo registro del profesor  
+en la base de datos. 
+6  Se muestra el mensaje de ingreso 
+realizado correctamente y redirecciona a 
+la vista de los usuarios tipo profesor.  
+ 
+Poscondiciones: El nuevo profesor está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 7 se muestra la descripción del caso de uso Modificar docente: 
+Tabla 7 Descripción de caso de uso Modificar docente. 
+Caso de uso: Modificar docente 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador modificar los datos de un docente. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 57 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona dentro del botón de  
+opciones “Modificar”. 
+2  Muestra el formulario para modificar los 
+datos del profesor a modificar. 
+3 Modifica los datos del profesor y  
+selecciona el botón “Modificar”. 
+4  Validar los campos del formulario 
+activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los usuarios tipo profesor. 
+6  Se modifica el registro del profesor en la 
+base de datos. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: El profesor está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje de “Valor 
+Requerido” en el formulario para indicar 
+que los campos requeridos deben estar 
+llenos o escritos correctamente. 
+ 
+ 
+En la tabla 8 se muestra la descripción del caso de uso Eliminar docente: 
+Tabla 8 Descripción de caso de uso Eliminar docente. 
+Caso de uso: Eliminar docente 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador eliminar un docente. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 58 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona dentro del botón de  
+opciones “Eliminar”. 
+2  Muestra el formulario con los datos 
+inhabilitados del profesor a eliminar. 
+3 Elimina los datos del profesor y  
+selecciona el botón “Eliminar”. 
+4  Se muestra el mensaje de “Registro 
+eliminado correctamente” y redirecciona 
+a la vista de los usuarios tipo profesor. 
+5  Se elimina el registro del profesor en la 
+base de datos. 
+6  Termina caso de uso. 
+ 
+Poscondiciones: Los profesores eliminados no estarán disponibles para consultas. 
+ 
+En la tabla 9 se muestra la descripción del caso de uso Registrar discente: 
+Tabla 9  Descripción de caso de uso Registrar discente. 
+Caso de uso: Registrar Discente 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador registrar un Discente. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 59 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona el botón “Registrar  
+nuevo alumno” 
+2  Muestra el formulario para ingresar los 
+datos del alumno a registrar. 
+3 Ingresa los datos del nuevo alumno  
+y selecciona el botón “Registrar”. 
+4  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se crea un nuevo registro del alumno  en 
+la base de datos. 
+6  Se muestra el mensaje de ingreso 
+realizado correctamente y redirecciona a 
+la vista de los usuarios tipo alumno.  
+ 
+Poscondiciones: El nuevo alumno está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 10 se muestra la descripción del caso de uso Modificar discente: 
+Tabla 10  Descripción de caso de uso Modificar discente. 
+Caso de uso: Modificar Discente 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador modificar un Discente. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 60 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona dentro del botón de  
+opciones “Modificar”. 
+2  Muestra el formulario para modificar los 
+datos del alumno a modificar. 
+3 Modifica los datos del alumno y  
+selecciona el botón “Modificar”. 
+4  Validar los campos del formulario 
+activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los usuarios tipo alumno. 
+6  Se modifica el registro del alumno en la 
+base de datos. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: El alumno está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje de “Valor 
+Requerido” en el formulario para indicar 
+que los campos requeridos deben estar 
+llenos o escritos correctamente. 
+ 
+ 
+En la tabla 11 se muestra la descripción del caso de uso Eliminar discente: 
+Tabla 11  Descripción de caso de uso Eliminar discente. 
+Caso de uso: Eliminar Discente 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador eliminar un Discente. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 61 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona dentro del botón de  
+opciones “Eliminar”. 
+2  Muestra el formulario con los datos 
+inhabilitados del alumno a eliminar. 
+3 Elimina los datos del alumno y  
+selecciona el botón “Eliminar”. 
+4  Se muestra el mensaje de “Registro 
+eliminado correctamente” y redirecciona 
+a la vista de los usuarios tipo alumno. 
+5  Se elimina el registro del alumno en la 
+base de datos. 
+6  Termina caso de uso. 
+ 
+Poscondiciones: Los alumnos eliminados no estarán disponibles para consultas. 
+ 
+En la tabla 12 se muestra la descripción del caso de uso Modificar perfil: 
+Tabla 12  Descripción de caso de uso Modificar Perfil. 
+Caso de uso: Modificar perfil 
+Actor Principal: Administrador 
+Descripción:  Permite al administrador modificar sus datos. 
+Precondición:  El usuario tiene que registrarse como administrador. 
+pág. 62 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona la opción “Mi Perfil”.  
+2  Muestra el formulario para modificar sus 
+datos. 
+3 Modifica los datos y selecciona el  
+botón “Modificar”. 
+4  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los usuarios tipo administradores. 
+6  Se modifica el registro del administrador 
+en la base de datos. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: El administrador está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje de “Valor 
+Requerido” en el formulario para indicar 
+que los campos requeridos deben estar 
+llenos o escritos correctamente. 
+ 
+ 
+pág. 63 
+ 
+ 
+Figura 3.6  Diagrama de casos de uso de Discente. 
+Como se aprecia en la figura 2 se agregará el caso de uso de Iniciar sesión con Twitter para así 
+extraer los datos de los alumnos y formar grupos.   
+En la tabla 13 se muestra la descripción del caso de uso Iniciar sesión: 
+Tabla 13  Descripción de caso de uso Iniciar sesión. 
+Caso de uso: Iniciar sesión 
+Actor Principal: Discente 
+Descripción:  Permite al alumno iniciar sesión en el sistema. 
+Precondición:  El usuario tiene que existir en el sistema. 
+pág. 64 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el formulario para ingresar el 
+usuario y contraseña correspondiente. 
+2 Ingresa su usuario y contraseña  
+correspondientes. 
+3  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+4  Se valida a través de una consulta a la 
+base de datos si el usuario y la 
+contraseña insertados corresponden a 
+algún registro previo, si no se encuentra 
+alguna coincidencia ver flujo alterno A2. 
+5  Redirecciona al alumno a su perfil. 
+6  Termina caso de uso. 
+ 
+Poscondiciones: Alumno logueado. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+Flujo alterno A2 Actor  Sistema 
+ Mostrará un mensaje en el formulario 
+indicando que el usuario y/o  contraseña 
+son incorrectos. 
+ 
+ 
+En la tabla 14 se muestra la descripción del caso de uso Actualizar perfil: 
+Tabla 14 Descripción de caso de uso Actualizar Perfil. 
+Caso de uso: Actualizar perfil 
+Actor Principal: Discente 
+Descripción:  Permite al discente actualizar sus datos en el sistema. 
+Precondición:  El usuario tiene que estar logueado en el sistema. 
+pág. 65 
+ 
+Flujo de eventos:  Actor Sistema 
+1 El usuario selecciona la opción “Mi  
+Perfil” 
+2  Muestra un formulario con los datos 
+habilitados. 
+3 El usuario modifica sus datos y  
+selecciona el botón “Modificar”. 
+4  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los Mi Perfil. 
+6  Actualiza los datos del alumno en la base 
+de datos.  
+  Termina caso de uso. 
+ 
+Poscondiciones: Alumno con datos actualizados. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 15 se muestra la descripción del caso de uso Registrarse: 
+Tabla 15 Descripción de caso de uso Registrarse. 
+Caso de uso: Registrarse 
+Actor Principal: Discente 
+Descripción:  Permite a un usuario registrarse como discente. 
+Precondición:  El usuario no tiene que existir en el sistema. 
+pág. 66 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona la sección  “Alumno”  
+2  Muestra el formulario para ingresar 
+usuario y contraseña, así como un botón 
+para registrarse. 
+3 El usuario selecciona el botón  
+“Regístrate aquí”. 
+4  Muestra el formulario para ingresar los 
+datos del alumno a registrar. 
+5 Ingresa los datos y selecciona el  
+botón “Registrar”. 
+6  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+7  Se crea un nuevo registro del alumno  en 
+la base de datos. 
+8  Se muestra el mensaje de ingreso 
+realizado correctamente y redirecciona a 
+la vista de inicio de sesión del alumno.  
+ 
+Poscondiciones: El nuevo alumno está listo para ser consultado, modificado y eliminado posteriormente. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 16 se muestra la descripción del caso de uso Revisar cursos: 
+Tabla 16  Descripción de caso de uso Revisar Cursos. 
+Caso de uso: Revisar cursos 
+Actor Principal: Discente 
+Descripción:  Permite a un discente revisar los cursos en los cuales está inscrito, así como las 
+evaluaciones de cada curso. 
+Precondición:  El usuario tiene que existir en el sistema. 
+pág. 67 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona la sección  “Tus Cursos”  
+2  Muestra los cursos actuales en los cuales 
+está inscrito. 
+3 El usuario selecciona algún curso.  
+4  Muestra las evaluaciones para realizar 
+de ese curso. 
+5 Selecciona la evaluación.  
+6  Muestra un botón “Iniciar evaluación” 
+7  Muestra las preguntas de la evaluación. 
+8 El alumno contesta cada pregunta y  
+al terminar de contestarla selecciona 
+el botón “Siguiente”. 
+9  Muestra cada pregunta. 
+10 Al terminar de contestar las  
+preguntas selecciona el botón 
+“Finalizar” 
+11  Presenta el resultado de la evaluación y 
+un botón para “Salir”.  
+12 El alumno selecciona el botón  
+“Salir”. 
+13  Redirecciona a la vista principal. 
+ 
+Poscondiciones: El alumno Realizará sus evaluaciones de cada curso. 
+ 
+En la tabla 17 se muestra la descripción del caso de uso Revisar Calificaciones: 
+Tabla 17 Descripción de caso de uso Revisar calificaciones. 
+Caso de uso: Revisar calificaciones 
+Actor Principal: Discente 
+Descripción:  Permite a un discente revisar las calificaciones de las evaluaciones realizadas. 
+Precondición:  El usuario tiene que existir en el sistema. 
+pág. 68 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona la sección   
+“Calificaciones” 
+2  Muestra las materias en las que está 
+inscrito. 
+3 El alumno selecciona una materia.  
+4  Muestra las evaluaciones de ese materia. 
+5 Selecciona la evaluación.  
+6  Muestra un informe general de la 
+evaluación realizada (Pregunta, 
+respuesta correcta, respuesta realizada y 
+calificación). 
+7  Muestra un botón de “Regresar”. 
+8 El alumno selecciona el botón de  
+“Regresar”. 
+9  Redirecciona a la vista de las 
+evaluaciones.  
+ 
+Poscondiciones: El alumno Revisará sus calificaciones de cada curso. 
+ 
+En la tabla 18 se muestra la descripción del caso de uso Revisar Gráficos: 
+Tabla 18 Descripción de caso de uso Revisar Gráficos. 
+Caso de uso: Revisar Gráficos 
+Actor Principal: Discente 
+Descripción:  Permite a un discente revisar los gráficos de manera general o por materia. 
+Precondición:  El usuario tiene que existir en el sistema. 
+pág. 69 
+ 
+Flujo de eventos:  Actor Sistema 
+1 Selecciona la sección  “Gráficos”  
+2  Muestra las opciones General y Por 
+Materia. 
+3 El alumno selecciona una General.  
+4  Muestra una gráfica con los datos de las 
+calificaciones de las materias y 
+promedio general. 
+5  Muestra un botón de “Regresar” 
+6 El alumno selecciona el botón de  
+“Regresar”. 
+7  Redirecciona a la vista de Gráficos. 
+ 
+Poscondiciones: El alumno Revisará sus Gráficos de cada curso. 
+ 
+En la tabla 19 se muestra la descripción del caso de uso Iniciar sesión Twitter: 
+Tabla 19 Descripción de caso de uso Iniciar sesión con Twitter. 
+Caso de uso: Iniciar sesión con Twitter 
+Actor Principal: Discente 
+Descripción:  Permite al discente iniciar sesión en el sistema con Twitter. 
+Precondición:   
+Flujo de eventos:  Actor Sistema 
+1  Muestra el botón para iniciar sesión con 
+Twitter. 
+2 Selecciona el botón de Iniciar sesión  
+con Twitter. 
+3  Pregunta si quiere seguir con el usuario 
+que esta logueado con Twitter. 
+4  En caso de que ningún usuario este 
+logueado muestra un formulario con los 
+campos para iniciar sesión. 
+5 Ingresa el usuario y contraseña de la  
+cuenta de Twitter para autorizar la 
+aplicación. 
+6  Genera un pin de acceso. 
+7 El usuario ingresa el pin generado en  
+el campo del formulario. 
+pág. 70 
+ 
+8  Vaida que el pin de acceso sea correcto 
+6  Redirecciona al alumno a su perfil. 
+ 
+Poscondiciones: Alumno logueado con Twitter. 
+ 
+Figura 3.7  Diagrama de casos de uso de Docente. 
+pág. 71 
+ 
+ 
+En la tabla 20 se muestra la descripción del caso de uso Inicia sesión: 
+Tabla 20  Descripción de caso de uso Inicia sesión. 
+Caso de uso: Inicia sesión 
+Actor Principal: Docente 
+Descripción:  Permite al docente iniciar sesión en el sistema. 
+Precondición:  El usuario tiene que existir en el sistema. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el formulario para ingresar el 
+usuario y contraseña correspondiente. 
+2 Ingresa su usuario y contraseña  
+correspondientes. 
+3  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+4  Se valida a través de una consulta a la 
+base de datos si el usuario y la 
+contraseña insertados corresponden a 
+algún registro previo, si no se encuentra 
+alguna coincidencia ver flujo alterno A2. 
+5  Redirecciona al profesor a su perfil. 
+  Termina caso de uso. 
+ 
+Poscondiciones: Profesor logueado. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+Flujo alterno A2 Actor  Sistema 
+ Mostrará un mensaje en el formulario 
+indicando que el usuario y/o  contraseña 
+son incorrectos. 
+ 
+ 
+En la tabla 21 se muestra la descripción del caso de uso Registrar pregunta: 
+pág. 72 
+ 
+Tabla 21 Descripción de caso de uso Registrar pregunta. 
+Caso de uso: Registrar Pregunta 
+Actor Principal: Docente 
+Descripción:  Permite al docente registrar una pregunta en el banco de preguntas. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Banco de preguntas así como 
+un botón de “Registrar Nueva 
+Pregunta”. 
+2 Selecciona el botón “Registrar  
+Nueva Pregunta”. 
+3  Muestra un formulario con los campos a 
+llenar sobre la información de la 
+pregunta. 
+4 Llena los campos y selecciona el  
+botón “Guardar”. 
+5  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+6  Se guarda el registro de la pregunta en la 
+base de datos. 
+7  Redirecciona al profesor a la vista de 
+Banco de preguntas mostrando el 
+mensaje de Registro guardado. 
+8  Termina caso de uso. 
+ 
+Poscondiciones: Pregunta registrada. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 22 se muestra la descripción del caso de uso Modificar pregunta: 
+Tabla 22 Descripción de caso de uso Modificar pregunta. 
+Caso de uso: Modificar pregunta 
+Actor Principal: Docente 
+pág. 73 
+ 
+Descripción:  Permite al docente modificar una pregunta ya registrada. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Banco de preguntas así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Modificar”. 
+3  Muestra un formulario con los campos a 
+modificar sobre la información de la 
+pregunta. 
+4 El usuario modifica los datos de la  
+pregunta y selecciona el botón 
+“Modificar”. 
+5  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+6  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los Banco de preguntas. 
+7  Actualiza los datos de la pregunta en la 
+base de datos.  
+8  Termina caso de uso. 
+ 
+Poscondiciones: Pregunta modificada 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+ 
+En la tabla 23 se muestra la descripción del caso de uso Eliminar pregunta: 
+Tabla 23 Descripción de caso de uso Eliminar pregunta. 
+Caso de uso: Eliminar pregunta 
+Actor Principal: Docente 
+Descripción:  Permite al docente eliminar una pregunta ya registrada. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 74 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Banco de preguntas así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Eliminar”. 
+3  Muestra un formulario con los campos 
+deshabilitados sobre la información de la 
+pregunta. 
+4 El usuario selecciona el botón  
+“Eliminar”. 
+5  Se muestra el mensaje de “Datos 
+eliminados” y redirecciona a la vista de 
+los Banco de preguntas. 
+6  Elimina el registro de la pregunta en la 
+base de datos.  
+7  Termina caso de uso. 
+ 
+Poscondiciones: Pregunta eliminada 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 24 se muestra la descripción del caso de uso Registrar Curso: 
+Tabla 24 Descripción de caso de uso Registrar Curso. 
+Caso de uso: Registrar Curso 
+Actor Principal: Docente 
+Descripción:  Permite al docente registrar un curso. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 75 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra un menú con las opciones de 
+Gestión, Mi Perfil, Gráficos y Cerrar 
+Sesión.  
+2 Selecciona “Gestión Cursos”.  
+3  Muestra los cursos que imparte el 
+profesor. 
+4 Selecciona el botón “Registrar  
+nuevo curso”. 
+5  Muestra un formulario con los campos a 
+llenar sobre la información del  curso. 
+6 Llena los campos y selecciona el  
+botón “Guardar”. 
+7  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+8  Se guarda el registro del curso en la base 
+de datos. 
+9  Redirecciona al profesor a la vista de 
+Control de cursos mostrando el mensaje 
+de Registro guardado. 
+10  Termina caso de uso. 
+ 
+Poscondiciones: Curso Registrado. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 25 se muestra la descripción del caso de uso Modificar Curso: 
+Tabla 25 Descripción de caso de uso Modificar Curso. 
+Caso de uso: Modificar curso 
+Actor Principal: Docente 
+Descripción:  Permite al docente modificar un curso ya registrado. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 76 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de cursos así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Modificar”. 
+3  Muestra un formulario con los campos a 
+modificar sobre la información del 
+curso. 
+4 El usuario modifica los datos del  
+curso y selecciona el botón 
+“Modificar”. 
+5  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+6  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los Control cursos. 
+7  Actualiza los datos del curso en la base 
+de datos.  
+8  Termina caso de uso. 
+ 
+Poscondiciones: Curso modificado. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 26 se muestra la descripción del caso de uso Eliminar Curso: 
+Tabla 26  Descripción de caso de uso Eliminar Curso. 
+Caso de uso: Eliminar curso 
+Actor Principal: Docente 
+Descripción:  Permite al docente eliminar un curso ya registrado. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 77 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de Cursos así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Eliminar”. 
+3  Muestra un formulario con los campos 
+deshabilitados sobre la información del 
+curso. 
+4 El usuario selecciona el botón  
+“Eliminar”. 
+5  Se muestra el mensaje de “Datos 
+eliminados” y redirecciona a la vista de 
+Control cursos. 
+6  Elimina el registro del curso en la base 
+de datos.  
+7  Termina caso de uso. 
+ 
+Poscondiciones: Curso eliminado. 
+ 
+En la tabla 27 se muestra la descripción del caso de uso Agregar alumno Curso: 
+Tabla 27 Descripción de caso de uso Agregar alumno curso. 
+Caso de uso: Agregar alumno curso 
+Actor Principal: Docente 
+Descripción:  Permite al docente agregar alumnos a  un curso ya registrado. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 78 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de Cursos así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Gestionar alumnos”. 
+3  Muestra una tabla con los alumnos así 
+como una tabla con los alumnos 
+registrados en ese curso. 
+4 El usuario selecciona a los alumnos  
+y después el botón “Agregar 
+alumno”. 
+5  Si el alumno seleccionado ya estaba 
+inscrito en ese curso, se enviará al flujo 
+alterno A1. 
+6  Se muestra el mensaje de “Alumno 
+agregado” y se agrega a la tabla de 
+alumnos registrados en ese curso. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: Alumno agregado al curso. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje “Alumno inscrito en 
+el curso, verifica nuevamente”. 
+ 
+ 
+En la tabla 28 se muestra la descripción del caso de uso Eliminar alumno Curso: 
+Tabla 28  Descripción de caso de uso Eliminar alumno curso. 
+Caso de uso: Eliminar alumno curso 
+Actor Principal: Docente 
+Descripción:  Permite al docente eliminar alumnos de un curso ya registrado. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 79 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de Cursos así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Gestionar alumnos”. 
+3  Muestra una tabla con los alumnos, así 
+como una tabla con los alumnos 
+registrados en ese curso y un botón de 
+Opciones. 
+4 El usuario selecciona en el botón de  
+Opciones “Eliminar alumno”. 
+6  Se muestra el mensaje de “Alumno 
+eliminado”. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: Alumno eliminado del curso. 
+ 
+En la tabla 29 se muestra la descripción del caso de uso Registrar evaluación: 
+Tabla 29 Descripción de caso de uso Registrar evaluación. 
+Caso de uso: Registrar Evaluación  
+Actor Principal: Docente  
+Descripción:  Permite al docente registrar una evaluación. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra un menú con las opciones de 
+Gestión, Mi Perfil, Gráficos y Cerrar 
+Sesión.  
+2 Selecciona “Gestión Evaluaciones”.  
+3  Muestra las evaluaciones de los cursos 
+que imparte el profesor. 
+4 Selecciona el botón “Registrar  
+nueva evaluación”. 
+5  Muestra un formulario con los campos a 
+llenar sobre la información de la 
+evaluación. 
+6 Llena los campos y selecciona el  
+botón “Guardar”. 
+pág. 80 
+ 
+7  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+8  Se guarda el registro de la evaluación en 
+la base de datos. 
+9  Redirecciona al profesor a la vista de 
+Control de evaluaciones mostrando el 
+mensaje de Registro guardado. 
+10  Termina caso de uso. 
+ 
+Poscondiciones: Evaluación Registrada. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 30 se muestra la descripción del caso de uso Modificar evaluación: 
+Tabla 30 Descripción de caso de uso Modificar evaluación. 
+Caso de uso: Modificar evaluación 
+Actor Principal: Docente 
+Descripción:  Permite al docente modificar una evaluación ya registrada. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de Evaluaciones así 
+como un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Modificar”. 
+3  Muestra un formulario con los campos a 
+modificar sobre la información de la 
+evaluación. 
+4 El usuario modifica los datos del  
+curso y selecciona el botón 
+“Modificar”. 
+5  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+pág. 81 
+ 
+6  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+Control de evaluaciones. 
+7  Actualiza los datos de la evaluación en 
+la base de datos.  
+8  Termina caso de uso. 
+ 
+Poscondiciones: Evaluación  modificada. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 31 se muestra la descripción del caso de uso Eliminar evaluación: 
+Tabla 31  Descripción de caso de uso Eliminar evaluación. 
+Caso de uso: Eliminar evaluación  
+Actor Principal: Docente 
+Descripción:  Permite al docente eliminar una evaluación ya registrada. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de Evaluaciones así 
+como un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Eliminar”. 
+3  Muestra un formulario con los campos 
+deshabilitados sobre la información del 
+curso. 
+4 El usuario selecciona el botón  
+“Eliminar”. 
+5  Se muestra el mensaje de “Datos 
+eliminados” y redirecciona a la vista de 
+Control cursos. 
+6  Elimina el registro del curso en la base 
+de datos.  
+7  Termina caso de uso. 
+ 
+Poscondiciones: Curso eliminado. 
+ 
+pág. 82 
+ 
+En la tabla 32 se muestra la descripción del caso de uso Agregar pregunta evaluación: 
+Tabla 32  Descripción de caso de uso Agregar pregunta evaluación. 
+Caso de uso: Agregar pregunta evaluación 
+Actor Principal: Docente 
+Descripción:  Permite al docente agregar preguntas a  una evaluación ya registrada. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de Cursos así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Gestionar preguntas”. 
+3  Muestra una tabla con las preguntas así 
+como una tabla con los preguntas 
+registradas en esa evaluación. 
+4 El usuario selecciona las preguntas y  
+después el botón “Agregar 
+Pregunta”. 
+5  Si la pregunta seleccionada ya estaba 
+agregada en esa evaluación, se enviará al 
+flujo alterno A1. 
+6  Se muestra el mensaje de “Pregunta 
+agregada correctamente” y se agrega a la 
+tabla de preguntas agregadas a esa 
+evaluación. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: Pregunta agregada a la evaluación. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje “Ya existe esa 
+pregunta, verifique nuevamente”. 
+ 
+ 
+En la tabla 33 se muestra la descripción del caso de uso Eliminar pregunta evaluación: 
+Tabla 33 Descripción de caso de uso Eliminar pregunta evaluación. 
+Caso de uso: Eliminar pregunta evaluación  
+Actor Principal: Docente 
+Descripción:  Permite al docente eliminar preguntas de las evaluaciones. 
+pág. 83 
+ 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Gestión de evaluaciones así 
+como un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Gestionar preguntas”. 
+3  Muestra una tabla con las pregungtas, así 
+como una tabla con los preguntas 
+registradas en esa evaluación y un botón 
+de Opciones. 
+4 El usuario selecciona en el botón de  
+Opciones “Eliminar pregunta”. 
+6  Se muestra el mensaje de “Pregunta 
+eliminada correctamente”. 
+7  Termina caso de uso. 
+ 
+Poscondiciones: Pregunta eliminada de la evaluación. 
+ 
+En la tabla 34 se muestra la descripción del caso de uso Actualizar Perfil: 
+Tabla 34 Descripción de caso de uso Actualizar perfil. 
+Caso de uso: Actualizar perfil 
+Actor Principal: Docente 
+Descripción:  Permite al docente actualizar sus datos en el sistema. 
+Precondición:  El usuario tiene que estar logueado en el sistema. 
+pág. 84 
+ 
+Flujo de eventos:  Actor Sistema 
+1 El profesor selecciona la opción “Mi  
+Perfil” 
+2  Muestra un formulario con los datos 
+habilitados. 
+3 El profesor modifica sus datos y  
+selecciona el botón “Modificar”. 
+4  Valida los campos del formulario activo.  
+Si todo o algunos de los campos 
+requeridos están vacíos, se enviará al 
+flujo alterno A1. 
+5  Se muestra el mensaje de “Datos 
+actualizados” y redirecciona a la vista de 
+los Mi Perfil. 
+6  Actualiza los datos del profesor en la 
+base de datos.  
+  Termina caso de uso. 
+ 
+Poscondiciones: Profesor  con datos actualizados. 
+Flujo alterno A1 Actor  Sistema 
+ Mostrará un mensaje en el formulario para 
+indicar que los campos requeridos deben 
+estar llenos o escritos correctamente. 
+ 
+ 
+En la tabla 36 se muestra la descripción del caso de uso Formar grupos: 
+Tabla 35 Descripción de caso de uso Formar grupos. 
+Caso de uso: Formar grupos 
+Actor Principal: Docente 
+Descripción:  Permite al docente formar grupos de trabajo. 
+Precondición:  El usuario tiene que estar logueado en el sistema como profesor. 
+pág. 85 
+ 
+Flujo de eventos:  Actor Sistema 
+1  Muestra el Control de cursos así como 
+un botón de “Opciones”. 
+2 Selecciona del botón de opciones  
+“Formar grupos”. 
+3  Muestra una tabla con el total de 
+alumnos registrados en ese curso., 
+muestra un botón de Opciones por las 
+cuales se realiza la agrupación de los 
+alumnos. 
+4 El Profesor selecciona alguna  
+Opción y el botón “Aceptar”. 
+5  Muestra una tabla con los grupos 
+formados. 
+6  Se muestra el mensaje de “Grupos 
+formados” y redirecciona a la vista de 
+los Control cursos. 
+7  Actualiza los datos de los grupos 
+formados en la base de datos.  
+8  Termina caso de uso. 
+ 
+Poscondiciones: Grupos formados. 
+ 
+3.4 Arquitectura 
+ 
+Para el desarrollo del Módulo de Agrupamiento de Perfiles se tomó como cimiento la arquitectura 
+de la Aplicación Móvil tipo E-Learning MochueloLearning incorporando el módulo antes 
+mencionado. Dicha arquitectura se basa en el en el patrón de diseño Modelo-Vista-Controlador 
+(MVC).  Este patrón [37] separa la aplicación en tres partes: la vista es la representación visual 
+de los datos, todo lo que tenga que ver con la interfaz gráfica; el controlador es el encargado de 
+recibir las órdenes del usuario y solicitar los datos al modelo y comunicárselos a la vista; el 
+modelo administra la conducta y los datos de la aplicación y responde a las instrucciones 
+(usualmente del controlador) para cambiar el estado.  
+En la figura 3.8 se muestra la arquitectura a utilizar para el desarrollo del Módulo de 
+Agrupamiento de Perfiles. 
+pág. 86 
+ 
+ 
+Figura 3.8 Arquitectura. 
+3.4.1 Apartado Web 
+El apartado Web se encuentra desarrollado e implementado, dividiéndose de la siguiente 
+manera:  
+Cliente: es el usuario que solicita el servicio a través de un navegador Web, haciendo la petición 
+al Controlador requiriendo la información que necesita.   
+Controlador: es el componente Faces Servlet el cual recibe las peticiones del Cliente, así 
+mismo encargándose de ser el intermediario entre el modelo y la vista.  
+pág. 87 
+ 
+Modelo: unen la lógica de la aplicación representada en los beans administrados, los cuales 
+pasan información a los beans de modelo. Estos realizan solicitudes a los Servicios Web basados 
+en SOAP.  
+Vista: incluye todas las páginas mostradas al cliente, entre las que destacan formularios, 
+solicitudes de información, enlaces, por mencionar algunas. En este caso se utilizan archivos 
+con terminación xhtml utilizando etiquetas del marco de trabajo JSF (Java Server Faces) así 
+como componentes de la biblioteca de PrimeFaces.  
+El servicio Web SOAP se almacena en un servidor de aplicaciones Tomcat esperando las 
+peticiones del bean de modelo. El servicio web contiene diferentes métodos para atender las 
+solicitudes que se realicen. Los datos se almacenan en el gestor de base de datos PostgreSQL.  
+3.4.2 Apartado Móvil  
+La sección móvil se divide de la siguiente manera:  
+Cliente: es la aplicación, en este caso Aplicación Android o iOS, que realiza las peticiones por 
+medio del protocolo HTTP (Hypertext Transfer Protocol, Protocolo de Transferencia de 
+Hipertextos), solicitando la información que necesite.   
+Vista: está compuesta por todas aquellas páginas HTML (HiperText Markup Language, 
+Lenguaje de Marcación de Hipertexto) con JavaScript y CSS (Cascading Style Sheets, u Hojas 
+de Estilo en Cascada) que se despliegan hacia el cliente, como lo son solicitudes de información, 
+direccionamiento hacia otras páginas, errores, por mencionar algunas.  
+ Controlador: es el que recibe las peticiones del cliente apoyándose de JQuery y JavaScript. Se 
+encarga de solicitar los datos al modelo y de comunicárselos a la vista.   
+Modelo: se tiene el proveedor de servicios RESTful, el cual se encarga de acceder a la 
+información sin que el controlador se entere, con la ayuda de la API de Twitter recuperará y 
+analizará los datos, sin ningún problema, ya que para acceder a la aplicación E-learning se 
+utiliza Twitter como medio de autenticación, obteniendo el permiso del usuario. 
+El proveedor de servicios RESTFul se aloja en el servidor de aplicaciones Tomcat esperando 
+las peticiones por parte del controlador desarrollado en JavaSript utilizando HTTP (Hypertext 
+pág. 88 
+ 
+Transfer Protocol, Protocolo de Transferencia de Hipertexto) para producir operaciones. Este 
+servicio contiene los métodos para atender todas las solicitudes que se requieran. Los datos se 
+almacenan en el gestor de base de datos PostgreSQL, la información se retorna en formato 
+JSON.  
+3.5 Diseño conceptual de la aplicación  
+ 
+A continuación, se muestran las figuras que corresponden al modelo orientado a objetos a través 
+de diagramas UML. 
+La figura 3.9 presenta un diagrama de clases del servicio Web el cual será utilizado para 
+escuchar las peticiones. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+pág. 89 
+ 
+ 
+Figura 3.9 Diagrama de clases del servicio Web 
+La figura 3.10 presenta un diagrama de clases de la aplicación web mediante la cual el usuario 
+accederá por medio de un browser Web.  
+ 
+ 
+ 
+pág. 90 
+ 
+Figura 3.10 Diagrama de clases de la aplicación web. 
+ 
+En la figura 3.11 se presenta el diagrama de actividades de la aplicación Web: 
+pág. 91 
+ 
+ 
+Figura 3.11 Diagrama de actividades de la aplicación Web 
+pág. 92 
+ 
+3.6 Definición de los servicios Web y servicios REST 
+ 
+El servicio web MochueloWS es un servicio basado en SOAP y contiene las operaciones 
+necesarias para que la aplicación Web funcione adecuadamente, a continuación, se detalla una 
+breve descripción de cada una de las operaciones que contiene el servicio:  
+1. validaUsuarioT:  Verifica que el usuario que ingrese al sistema sea válido. 
+2. insertaUsuarioT: Inserta el usuario registrado con Twitter a la base de datos. 
+3. modificarUsuarioT: Modifica el perfil del usuario.  
+4. insertarTwitts: Inserta los Twitts del usuario a la base de datos.  
+5. obtenerUsuarioTwitter: Obtiene los datos del usuario.  
+6. obtenerTwittsByIdCurso: Obtiene los Twitts de los usuarios pertenecientes al curso 
+seleccionado.  
+7. obtenerGruposByIdCurso: Obtiene los grupos formados pertenecientes al curso 
+seleccionado.  
+Así mismo se tiene el servicio basado en REST llamado RSMochuelo para llevar a cabo las 
+operaciones necesarias de la información, a continuación, se presenta una breve descripción 
+de cada una de las operaciones del servicio mencionado: 
+1. validaUsuarioT: Verifica que el usuario que ingresa al sistema sea válido. 
+2. ingresaUsuarioT: Inserta el usuario registrado con Twitter a la base de datos. 
+3. actualizaDatosUsuarioT: actualiza la información del usuario.  
+ 
+3.7 Modelado de la Base de Datos 
+ 
+La figura 3.12 muestra el modelado de la base de datos, cabe mencionar que las entidades de 
+color naranja son las que se crearon para dar continuidad a la aplicación base.  
+pág. 93 
+ 
+ 
+Figura 3.12 Diagrama Entidad Relación de la Base de Datos. 
+ 
+3.8 Preprocesamiento de datos 
+ 
+Para el preprocesamiento de los Twitts de los usuarios se utilizó el lenguaje de programación R 
+el cual es un lenguaje de programación especialmente orientado al análisis estadístico y a 
+la representación gráfica de los resultados obtenidos. Es un proyecto GNU. Por lo tanto, los 
+usuarios son libres de modificarlo y extenderlo. Se trata de un lenguaje basado en comandos o 
+instrucciones que son ejecutados, que implementan un flujo de trabajo para realizar una tarea 
+denominado script R [38].  
+ 
+ 
+pág. 94 
+ 
+Características 
+ 
+➢ El lenguaje de programación R es un proyecto colaborativo y abierto, los desarrolladores 
+descargan el código de forma gratuita y modificarlo para incluir mejoras. 
+➢ Es un lenguaje interpretado, funciona mediante comandos. 
+➢ R proporciona una amplia gama de herramientas estadísticas que incluyen análisis de 
+datos y generación de gráficos. Este lenguaje tiene capacidad de generar gráficos de alta 
+calidad. Estas características lo convierten en una potente herramienta de cálculo. 
+➢ Gracias a este lenguaje de programación los Data Scientists maneja grandes volúmenes 
+de datos. 
+➢ Se integra con distintas bases de datos. Una de las ventajas más importantes de R es que 
+funciona con diferentes tipos de hardware y software (Windows, Unix, Linux…) 
+➢ El lenguaje R ofrece la posibilidad de cargar bibliotecas y paquetes con diversas 
+funcionalidades lo que permite a los usuarios extender su configuración básica. 
+➢ La comunidad en torno a R es muy activa por lo que es sencillo encontrar soluciones 
+rápidamente a los problemas que los usuarios se puedan encontrar [39]. 
+ 
+Para la programación de los scripts de R se utilizó el IDE (Integrated Development Environment, 
+Entorno de Desarrollo Integrado) RStudio para depurar los Twitts extraídos de los usuarios, la 
+depuración de estos consiste en eliminar emoticones, signos de puntuación y stopwords o 
+palabras vacías, para formar una matriz de término de documento, con los términos de los 
+usuarios más frecuentes. La figura 3.13 presenta el IDE para trabajar con el lenguaje R.  
+pág. 95 
+ 
+ 
+Figura 3.13 RStudio. 
+En la figura 3.14 se presenta la matriz generada a partir de los Twitts de los usuarios y de haber 
+aplicado el preprocesamiento.  
+ 
+Figura 3.14 Matriz de Término de Documento. 
+ 
+pág. 96 
+ 
+3.9 Implementación de las técnicas de agrupamiento  
+ 
+Debido a que los Twitts de los usuarios no cuentan con una etiqueta se seleccionó el algoritmo 
+K-means ya que pertenece a los algoritmos de aprendizaje no supervisado y para su 
+implementación se eligió la biblioteca de Weka ya que contiene una colección de algoritmos de 
+aprendizaje automático para tareas de minería de datos. La figura 3.15 muestra la implementación 
+del algoritmo.  
+ 
+Figura 3.15 Implementación del algoritmo K-means. 
+ 
+En las pruebas que realizamos al implementar el algoritmo K-means tuvimos como resultado 
+que los grupos no estaban nivelados, ya que había unos grupos que tenían más integrantes de 
+alumnos, por lo que se optó en crear un algoritmo para nivelarlos, en la figura 3.16 se presenta 
+la mecánica del funcionamiento del algoritmo: 
+pág. 97 
+ 
+ 
+Figura 3.16 Especificación  de algoritmo Creación Grupos 
+Este algoritmo consiste: 
+1. Ordenar los clústers obtenidos una vez aplicado el algoritmo K-means de mayor a 
+menor número de elementos. 
+2. Calcular la distancia del clúster origen (el clúster con mayor número de elementos) al 
+resto de los clústers. 
+3. Determinar el clúster más cercano al clúster origen. 
+4. Preguntar si el clúster origen es mayor al número de elementos requeridos y si el 
+clúster destino es menor al número de elementos requeridos, si es así donara elementos 
+a los demás clústers que necesiten elementos.   
+pág. 98 
+ 
+Capítulo 4 . Resultados 
+ 
+En el presente capitulo se describen los resultados obtenidos durante el desarrollo de esta 
+investigación.  
+Como resultados se obtuvo el desarrollo e incorporación del módulo de recomendación para la 
+formación de grupos de trabajo por características obtenidas de la red social Twitter, sirviendo 
+como medio de autenticación para el ingreso a la aplicación base antes mencionada. 
+Planteamiento del caso de estudio 
+El caso de estudio fue desarrollado con la finalidad de analizar los datos de los usuarios y 
+determinar el grupo al que pertenece de acuerdo a sus publicaciones realizadas en la red social 
+Twitter. 
+Para ello el caso de estudio consistió en las siguientes actividades:  
+• Análisis de datos funcionales y no funcionales de los usuarios. 
+• Análisis de las técnicas de agrupamiento. 
+• Selección de técnicas de agrupamiento.  
+• Implementación de las técnicas de agrupamiento. 
+• Implementación de inicio de sesión con Twitter en la aplicación Mochuelo Learning.  
+• Extracción de los datos de los usuarios.  
+• Preprocesamiento de los twitts extraídos de los usuarios. 
+• Generación de grupos de trabajo. 
+• Aplicación de evaluaciones a los alumnos.  
+ 
+4.1 Funcionamiento del usuario alumno 
+ 
+Las funciones agregadas a la gestión del usuario alumno comprende varias operaciones las 
+cuales se detallan a continuación:  
+pág. 99 
+ 
+4.1.1 Funcionamiento del inicio de sesión con Twitter 
+ 
+El inicio de sesión con Twitter comprende que el usuario de tipo alumno iniciara sesión con su 
+cuenta de Twitter. En la figura 4.1 se muestra la pantalla para el inicio de sesión.  
+ 
+Figura 4.1 Inicio de sesión con twitter.  
+Al presionar el botón de inicio de sesión con Twitter se abrirá una ventana en el explorador, en 
+la cual el usuario ingresará su usuario y contraseña para autorizar la aplicación y en la cual se 
+muestra a los datos a los cuales se tendrá acceso. La figura 4.2 muestra la pantalla para autorizar 
+la aplicación.  
+pág. 100 
+ 
+ 
+Figura 4.2 Autorización de la aplicación. 
+ Al autorizar la aplicación se generará un pin aleatorio. En la figura 4.3 se muestra la generación 
+del pin. En la figura 4.3 se presenta la vista del pin generado por Twitter.  
+ 
+Figura 4.3 Pin de acceso. 
+Este pin es importante ya que se ingresará en la aplicación de Mochuelo para acceder a los datos 
+del usuario registrado. La figura 4.4 muestra la pantalla donde se ingresa el pin de acceso 
+generado.   
+pág. 101 
+ 
+ 
+Figura 4.4 Ingreso de pin para acceder a datos. 
+Una vez ingresado el pin de acceso mostrará el perfil del usuario con un formulario el cual tendrá 
+que completar con sus datos. La figura 4.5 muestra el formulario de perfil a completar por el 
+alumno.  
+ 
+Figura 4.5 Perfil de alumno. 
+Una vez que el alumno complete los campos actualizará el formulario como se muestra en la 
+figura 4.6.  
+pág. 102 
+ 
+ 
+Figura 4.6 Perfil actualizado. 
+ 4.1.2 Funcionamiento del inicio de sesión con Twitter en la aplicación móvil  
+ 
+La figura 4.7 presenta la pantalla principal de la aplicación móvil para iniciar sesión con twitter. 
+Figura 4.7 Inicio de sesión con twitter en aplicación móvil.  
+ 
+pág. 103 
+ 
+Una vez iniciado sesión con twitter nos mostrará la pantalla 4.8 con las opciones disponibles de 
+cada usuario.  
+Figura 4.8 Opciones disponibles para cada usuario. 
+ 
+4.2 Creación de grupos de trabajo 
+ 
+La creación de grupos de trabajo se llevará a cabo por parte de los profesores, la cual consiste 
+de varios pasos para la obtención de un resultado: 
+4.2.1 Gestión cursos 
+ 
+Esta opción permite al docente formar los grupos como muestra la figura 4.9 un menú 
+desplegable para seleccionar la opción de Gestionar grupos.  
+pág. 104 
+ 
+ 
+Figura 4.9 Menú para Gestionar grupos. 
+ 
+ Al seleccionar la opción de Gestionar grupos mostrará la pantalla 4.10 en la cual se presenta la 
+lista de los discentes que pertenecen al curso seleccionado y las opciones para formar grupos.  
+ 
+Figura 4.10 Gestión Grupos 
+La figura 4.11 presenta el resultado obtenido con los grupos formados. 
+pág. 105 
+ 
+ 
+Figura 4.11 Resultado de los grupos formados. 
+ 
+Debido a que no se obtenía el resultado esperado como se aprecia en la figura 4.11 los grupos 
+formados implementado el algoritmo K-means se formaban de manera desnivelada, por lo cual 
+se implementado el algoritmo Creación Grupos antes mencionado. La figura 4.12 muestra el 
+resultado obtenido aplicando el algoritmo Creación Grupos.  
+ 
+Figura 4.12 Resultado del algoritmo Creación Grupos 
+ 
+4.3 Gestión evaluación  
+ 
+Para generar una nueva evaluación el docente accederá a la aplicación Web para crear una nueva 
+evaluación como muestra la figura 4.13. 
+pág. 106 
+ 
+ 
+Figura 4.13 Menú para seleccionar evaluaciones. 
+ 
+Al seleccionar evaluaciones presentará la siguiente figura donde el docente seleccionará 
+Registrar nueva evaluación. La figura 4.14 muestra la vista para registrar nueva evaluación: 
+ 
+Figura 4.14 Control de evaluaciones. 
+ 
+pág. 107 
+ 
+ Para llevar a cabo el registro de la evaluación, el docente deberá llenar un formulario con los 
+datos de la evaluación como se presenta n la figura 4.15. 
+ 
+Figura 4.15 Registro Evaluación. 
+Una vez que se haya registrado la evaluación, el docente agregará las preguntas requeridas para 
+ello seleccionará gestionar preguntas como se muestra en la figura 4.16. 
+ 
+Figura 4.16 Gestionar Preguntas. 
+ 
+pág. 108 
+ 
+Para agregar las preguntas se presentará una pantalla como la figura 4.17. 
+ 
+Figura 4.17 Gestión preguntas agregadas. 
+ 
+4.4 Resolver evaluación  
+ 
+Para resolver la evaluación el discente debe acceder a su cuenta en la aplicación móvil, cabe 
+mencionar que el docente ya debió tener agregado al discente en un curso. La figura 4.18 
+muestra la pantalla de opciones disponibles:  
+ 
+ 
+ 
+  
+ 
+pág. 109 
+ 
+Figura 4.18 Opciones disponibles. 
+ 
+En la opción Mi Perfil el discente actualizará sus datos como muestra la figura 4.19. 
+ 
+ 
+pág. 110 
+ 
+Figura 4.19 Actualización de Perfil. 
+ 
+El discente necesita seleccionar la opción Tus cursos, en la cual se encontrarán todos los cursos 
+en los que se encuentra inscrito como lo muestra la figura 4.20. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pág. 111 
+ 
+Figura 4.20 Cursos actuales. 
+ 
+El discente al seleccionar el curso le mostrará una pantalla como la 4.21 en la cual aparecerán 
+las evaluaciones disponibles. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pág. 112 
+ 
+ 
+Figura 4.21 Evaluaciones. 
+ 
+ 
+Al seleccionar una evaluación se muestra previamente información de la materia como en la 
+figura 4.22. 
+ 
+ 
+pág. 113 
+ 
+Figura 4.22 Información de la materia. 
+ 
+En la figura 4.23 se aprecia las respuestas hechas por el discente. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pág. 114 
+ 
+Figura 4.23 Pregunta 1. 
+ 
+Cuando el discente llega a la pregunta final muestra dos botones con los cuales regresará a la 
+pregunta anterior o dará por terminada la evaluación como se presenta en la figura 4.24. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pág. 115 
+ 
+Figura 4.24 Pregunta 2. 
+ 
+En las opciones disponibles el discente seleccionará Calificación por grupo para saber que 
+calificación obtuvo su grupo, como se muestra en la figura 4.25. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pág. 116 
+ 
+Figura 4.25 Calificación por grupo. 
+ 
+  
+pág. 117 
+ 
+Capítulo 5 . Conclusiones y recomendaciones 
+ 
+5.1 Conclusiones 
+ 
+Actualmente el desarrollo de aplicaciones móviles ha tenido un gran crecimiento en varios 
+ámbitos, y esto se debe a que la mayoría de las personas cuentan con un dispositivo móvil y en 
+el aprendizaje no es una excepción ya que existen aplicaciones que ayudan a los usuarios a 
+fortalecer sus conocimientos.   
+En este trabajo de tesis se logró desarrollar e incorporar el módulo para la creación de grupos 
+de trabajo y el inicio de sesión con Twitter a la aplicación base Mochuelo Learning, en la cual 
+el usuario de tipo alumno logrará iniciar sesión con su cuenta de twitter para extraer sus datos y 
+analizarlos. 
+El usuario de tipo profesor realizará la formación de grupos de trabajo de acuerdo a 
+características obtenidas de los alumnos, para aplicar evaluaciones y obtener una calificación 
+grupal.  
+Cabe mencionar que el módulo fue desarrollado con las tecnologías de JavaServer Faces, 
+PrimeFaces y con la ayuda de servicios web basados en SOAP, mientras que para la aplicación 
+móvil se utilizó el marco de trabajo PhoneGap, el cual se basa en HTML5, JavaScript y CSS, y 
+de servicios REST.  
+Y para la depuración de los Twitts de los usuarios se utilizó el lenguaje de programación R junto 
+con el IDE RStudio para la programación de los scripts, la depuración de los Twitts consiste en 
+eliminar signos de puntuación, emoticones y stopwords o palabras vacías para generar una 
+matriz de término de documento que contiene los términos más comunes de los usuarios.  
+ 
+ 
+ 
+pág. 118 
+ 
+5.2 Recomendaciones 
+ 
+Tomando en cuenta los inconvenientes presentados durante el desarrollo de la aplicación se 
+recomienda para futuras versiones tener en cuenta lo siguiente: 
+En caso de integrar otra red social como autenticación para acceder a la aplicación, considerar 
+los problemas de políticas de privacidad que se presentan, así como se debe tener en cuenta las 
+redes sociales no son 100% seguras. 
+Verificar si existe la posibilidad de colocar la aplicación Mochuelo Learning en la AppStore de 
+la empresa Apple debido a que sólo se desarrolló para dispositivos Android.  
+De igual forma se espera que se le dé continuidad desarrollando nuevos módulos, con nuevas 
+funcionalidades para hacer crecer más la aplicación, creando una plataforma robusta educativa.   
+ 
+  
+pág. 119 
+ 
+Anexos  
+ 
+Lanzamiento de aplicación móvil a Google Play Store  
+Ya que se incorporó el modulo para la creación de grupos y siguiendo los pasos de la aplicación 
+base, se optó por dar seguimiento al lanzamiento de la aplicación móvil en la Google Play Store 
+y así facilitar la instalación de la aplicación móvil en cada dispositivo. Para ello se realizó un 
+registro en Google Play Console.  
+ 
+Figura A.0.1 Registro en Google Play Console. 
+  
+pág. 120 
+ 
+Productos académicos   
+  
+Mariluz Palacios Hernández, Luis Ángel Reyes Hernández, Asdrúbal 
+López Chau, Ignacio López Martínez y Ulises Juárez Martínez.  
+Diseño de Aplicación Móvil tipo E-Learning para la creación de 
+grupos de trabajo con perfiles afines. San Luis Potosí, México. 
+Estatus: Aceptado.  
+ 
+Mariluz Palacios Hernández, Luis Ángel Reyes Hernández, Asdrúbal 
+López Chau, Ignacio López Martínez y Ulises Juárez Martínez.  
+Creación de grupos de trabajo con afinidad de perfiles para una 
+Aplicación Móvil tipo E-Learning. Orizaba, Veracruz, México. 
+Estatus: Aceptado.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+pág. 121 
+ 
+Referencias 
+ 
+[1]. “Significado de Ítem”, [En línea]. Available: https://www.significados.com/item/. 
+[Último acceso: 16 septiembre 2017]. 
+[2]. “Definición de e-learning”, [En línea]. Available: http://www.e-
+learning.com/definicione-learning. [Último acceso: 16 septiembre 2017]. 
+[3]. O. Velez-Langs and  C. Santos, “Sistemas Recomendadores: Un enfoque desde los 
+algoritmos genéticos”, Industrial data, vol. 9, nº 1, pp. 23-31, 2006.  
+[4]. “Definición de framework”, [En línea]. Available: 
+http://searchdatacenter.techtarget.com/es/definicion/Framework. [Último acceso: 21 
+septiembre 2017]. 
+[5]. “Acerca de PhoneGap”, [En línea]. Available: https://www.phonegap.com/. [Último 
+acceso: 16 septiembre 2017]. 
+[6]. “Definición de red social”, [En línea]. Available: 
+https://www.definicionabc.com/social/red-social.php. [Último acceso: 21 septiembre 
+2017]. 
+[7]. “Definición de facebook”, [En línea]. Available: 
+http://conceptodefinicion.de/facebook/. [Último acceso: 16 septiembre 2017]. 
+[8]. “Qué es Twitter y cómo funciona.” [Online]. Available: 
+http://www.masadelante.com/faqs/twitter. [Accessed: 09-Dec-2018]. 
+[9]. “Definición de aplicación móvil”, [En línea]. Available: 
+http://www.alegsa.com.ar/Dic/aplicacion_movil.php. [Último acceso: 16 septiembre 
+2017]. 
+pág. 122 
+ 
+[10]. “Introducción a oAuth”, [En línea]. Available: https://sg.com.mx/content/view/912. 
+[Último acceso: 16 septiembre 2017]. 
+[11]. D. León, F. Fernández and P. Urrutia, “Aplicacion Facebook para la gestión de objetos 
+de aprendizaje en redes sociales”, Maskana, p. 1, 2017.  
+[12]. B.P Knijnenburg, S. Bostandjiev, J. O'Donovan, A. Kobsa, "Inspectability and Control 
+in Social Recommenders", in RecSys '12 Proceedings of the sixt ACM Conference on 
+Recommender Systems, pp. 43-50, 2012.  
+[13]. J. A. Konstan and  J. Riedl, "Recommender systems: from algorithms to user 
+experience",  in User Modeling and User-Adapted Interaction, vol. 22, nº 1-2, pp. 101-
+123, 2012.  
+[14]. S. Bostandjiev, J. O'Donovan and T. Hollerer, "TasteWeights: A Visual Interactive 
+Hybrid Recommender System", in RecSys '12 Proceedings of the sixth ACM 
+Conference on Recommender Systems , pp. 35-42, 2012.  
+[15]. X. Hu, J. Tang, H. Gao and H. Liu, "Unsupervised Sentiment Analysis with Emotional 
+Signals",  in the International Word Wide Web Conference Committee (IW3C2), pp. 
+607-617, 2013.  
+[16]. A. Morales, A. López Chau and L. Reyes, "Sistema Recomendador Orientado a la 
+Educación Basado en la Distancia entre Likes de Facebook y Conceptos",  publicado 
+en Revista Tecnología e Innovación , vol. 2, nº 5, pp. 921-928, 2015.  
+[17]. G. Aciar and S. Aciar "Recomendador de usuarios en una plataforma colaborativa en 
+base a su perfil y reputación", In 14th Argentine Symposium on Artificial Intelligence, 
+ASAI , pp. 1-11, 2013.  
+pág. 123 
+ 
+[18]. B.Shapira, L. Rokach and S. Freilichman, “Facebook single and cross domain data for 
+recommendation systems”, in User Modeling and User- Adapted Interaction, vol. 23, 
+nº 2-3, pp. 211-247, 2013.  
+[19]. C. Islas Torres, M. R. Carranza Alcántar y E.G. Baltazar Díaz "Las redes sociales y su 
+uso como técnica de aprendizaje", 1° Congreso Virtual sobre Tecnología, Educación 
+y Sociedad, vol. 1, nº 5, pp. 1-15, 2012.  
+[20]. A. C. León, A. Corona, R. J. Yedra, E. Cruces, J. L. Gomez, "Social Learning 
+Analytics en grupos de trabajo de Facebook, para la identificación de estudiantes de 
+bajo desempeño", Anais dos Workshops do IV Congresso Brasileiro de Informática na 
+Educação (CBIE 2015), vol. 4, nº 1, pp. 1000-1006, 2015.  
+[21]. J. Cabero Almenara, J. Barroso Osuna, M.C. Llorente Cejudo, C. Yanes Cabrera, 
+“Redes sociales y Tecnologías de la Información y la Comunicación en Educación: 
+aprendizaje colaborativo, diferencias de género, edad y preferencias",  publicado en 
+RED. Revista de Educación a Distancia, nº 51, pp. 1-23, 2016.  
+[22]. V. Marin, F. Negre and A. Pérez "Entornos y redes personales de aprendizaje (PLE-
+PLN) para el aprendizaje colaborativo",  publicado en la revista Comunicar, vol. 21, 
+nº 42, pp. 35-43, 2014.  
+ 
+[23]. A. I. Vazquez-Martinez and J. Cabrero-Almenara "Las redes sociales aplicadas a la 
+formación", Revista Complutense de Educación, vol. 26, pp. 253-272, 2015.  
+[24]. J. Cabero and V. Marin, "Posibilidades educativas de las redes sociales y el trabajo en 
+grupo. Percepciones de los alumnos universitarios",  publicado en revista Comunicar, 
+vol. 21, nº 42, pp. 165-172, 2014.  
+[25]. J. Rovira Collado, "Redes sociales en la universidad: profesionales, académicas y de 
+lectura", publicado en álabe, nº 13, 2016.  
+pág. 124 
+ 
+[26]. A. Shrivas and A. Pardeshi, "To Study and Design a Cross-Platform Mobile 
+Application for Student Information System using PhoneGap Framework", in 
+International Journal of Emerging Tecnology and Advanced Engineering , vol. 3, nº 9, 
+pp. 390-395, 2013.  
+[27]. J. P. Niyigena, F. Xiumei, D. Gakwaya ans J.C. Gombaniro, "Cross-Platform Mobile 
+Geolocation Applications Based on PhoneGap", in Lecture Notes of Software 
+Engineering, vol. 3, nº 2, pp. 78-82, 2015.  
+[28]. S. Montiel  Santos, L. A. Reyes Hernández,  "Aplicación Web e-learning 
+multiplataforma para recolección de datos de usuarios y retroalimentación automática 
+basada en técnicas estadísticas", Comia 2017, (in press), 2017.  
+[29]. “Folcsonomía”, 2013. [En línea]. Disponible en:            
+http://diccionario.sensagent.com/FOLCSONOMIA/es-es/. [Accedido: 14-febrero-
+2018]. 
+[30]. J. J. Astrain, F. Echarte, A. Cordoba, and J. Villadangos, “Clustering method for social 
+network annotations”, IEEE Latin America Transactions, vol. 8, No. 1, 2010, pp. 88-93.  
+[31]. P. Santana Mansilla, R. Costaguta, and D. Missio,” Aplicación de Algoritmos de 
+Clasificación de Minería de Textos para el Reconocimiento de Habilidades de E-tutores 
+Colaborativos”, Inteligencia Artificial. Revista Iberoamericana de Inteligencia 
+Artificial, vol. 17, No. 53, 2014, pp. 57-67.  
+[32]. R. Farías, E. B. Durán, and S. G.  Figueroa, “Las Técnicas de Clustering en la 
+Personalización de Sistemas de e-Learning”, In XIV Congreso Argentino de Ciencias 
+de la Computación, 2008. 
+[33]. A. Tonet, “La crisis de Facebook: los tres problemas que más perjudican a la red social 
+- TN.com.ar.” [Online]. Available: https://tn.com.ar/tecno/recomendados/la-crisis-de-
+facebook-los-tres-problemas-que-mas-afectan-la-red-social_858566. [Accessed: 13-
+Dec-2018]. 
+pág. 125 
+ 
+[34]. “MOBILE-D” [En línea]. Disponible en:  http://agile.vtt.fi/mobiled.html. [Accedido: 
+27-marzo-2018]. 
+[35]. “Mobile-D” [En línea]. Disponible en: http://www.academia.edu/23746235/Mobile-D. 
+[Accedido: 5-mayo-2018]. 
+[36]. “MOBILE-D” [En línea]. Disponible en: 
+https://es.slideshare.net/pipehernandez1020/mobile-d-programacion-dispositivos-
+moviles. [Accedido: 11-mayo-2018]. 
+[37]. “Patrón de diseño Modelo-Vista-Controlador”. [En línea]. Available: 
+https://www.ibm.com/support/knowledgecent 
+er/es/SSZLC2_8.0.0/com.ibm.commerce.dev eloper.doc/concepts/csdmvcdespat.html. 
+[Accedido: 05/octubre/2017]. 
+[38]. “Introducción al lenguaje de programación R — Un Caso Práctico en Biología 
+Molecular de Sistemas: Análisis de Redes de Co-expresión Génica 0 documentation.” 
+[Online]. Available: https://www.cs.us.es/~fran/curso_unia/introduccion_R.html. 
+[Accessed: 14-Oct-2018]. 
+[39]. “¿Qué es R? Ventajas de la programación en R.” [Online]. Available: 
+https://blog.datatons.com/2016/04/08/que-es-lenguaje-programacion-r/. [Accessed: 14-
+Oct-2018]. 
+[40]. “Explorador de API Graph” [En línea]. Disponible en: 
+https://developers.facebook.com/tools/explorer/145634995501895/. [Accedido: 17-
+mayo-2018]. 
+ 
+pág. 126 
+ 

@@ -1,0 +1,916 @@
+2020-07-05 01:19:48,865 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:19:48,866 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 01:19:48,867 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 01:19:48,898 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 01:19:49,004 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:19:49,004 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 01:19:49,004 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 01:19:49,004 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 01:19:49,004 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 01:19:49,005 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 01:19:49,006 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:19:49,068 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,070 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,072 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,073 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,075 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,076 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,078 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,079 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,081 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,082 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,084 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,085 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,087 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,088 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,090 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,091 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,093 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,094 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,096 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,098 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,099 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,101 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,102 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,103 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,104 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,106 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,107 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,108 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,109 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,110 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,112 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 01:19:49,154 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:19:49,157 INFO  cocoon.access  - '' Processed by Apache Cocoon in 307 milliseconds.
+2020-07-05 01:19:49,243 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 01:19:49,270 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 3 milliseconds.
+2020-07-05 01:19:49,322 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 01:19:49,324 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 01:19:49,714 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 5 milliseconds.
+2020-07-05 01:19:49,937 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 01:19:50,034 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:19:50,035 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 01:19:50,036 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 01:19:50,060 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 01:19:50,153 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:19:50,153 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 01:19:50,154 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 01:19:50,154 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 01:19:50,154 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 01:19:50,154 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 01:19:50,155 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:19:50,228 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:19:50,231 INFO  cocoon.access  - '' Processed by Apache Cocoon in 208 milliseconds.
+2020-07-05 01:19:53,253 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:19:53,254 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/143?pipelinehash=-9165904008518544344_T-Navigation--5223339389591364125_T-ItemViewer-6381934231967007697
+2020-07-05 01:19:53,264 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/143?pipelinehash=-2288472790709964329_T-Navigation-5991871685550585762
+2020-07-05 01:19:53,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/143?pipelinehash=8228083209654478211_T-Navigation-5991871685550585762
+2020-07-05 01:19:53,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/143_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:19:53,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/143_T-Navigation-2150233476609607495
+2020-07-05 01:19:53,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/143
+2020-07-05 01:19:53,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/143
+2020-07-05 01:19:53,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/143
+2020-07-05 01:19:53,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/143
+2020-07-05 01:19:53,268 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/143_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:19:53,356 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:19:53,358 INFO  cocoon.access  - 'handle/123456789/143' Processed by Apache Cocoon in 155 milliseconds.
+2020-07-05 01:19:53,629 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:19:53,630 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/143?pipelinehash=-9165904008518544344_T-Navigation--5223339389591364125_T-ItemViewer-6381934231967007697
+2020-07-05 01:19:53,639 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/143?pipelinehash=-2288472790709964329_T-Navigation-5991871685550585762
+2020-07-05 01:19:53,640 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/143?pipelinehash=8228083209654478211_T-Navigation-5991871685550585762
+2020-07-05 01:19:53,640 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/143_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:19:53,641 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/143_T-Navigation-2150233476609607495
+2020-07-05 01:19:53,641 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/143
+2020-07-05 01:19:53,641 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/143
+2020-07-05 01:19:53,641 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/143
+2020-07-05 01:19:53,641 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/143
+2020-07-05 01:19:53,642 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/143_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:19:53,742 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:19:53,744 INFO  cocoon.access  - 'handle/123456789/143' Processed by Apache Cocoon in 164 milliseconds.
+2020-07-05 01:19:55,945 INFO  cocoon.access  - 'bitstream/handle/123456789/143/energies-13-01097-v2.pdf' Processed by Apache Cocoon in 621 milliseconds.
+2020-07-05 01:19:58,456 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:19:58,457 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/143?pipelinehash=-9165904008518544344_T-Navigation--5223339389591364125_T-ItemViewer-6381934231967007697
+2020-07-05 01:19:58,466 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/143?pipelinehash=-2288472790709964329_T-Navigation-5991871685550585762
+2020-07-05 01:19:58,466 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/143?pipelinehash=8228083209654478211_T-Navigation-5991871685550585762
+2020-07-05 01:19:58,467 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/143_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:19:58,467 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/143_T-Navigation-2150233476609607495
+2020-07-05 01:19:58,467 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/143
+2020-07-05 01:19:58,467 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/143
+2020-07-05 01:19:58,467 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/143
+2020-07-05 01:19:58,467 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/143
+2020-07-05 01:19:58,469 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/143_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:19:58,560 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:19:58,562 INFO  cocoon.access  - 'handle/123456789/143' Processed by Apache Cocoon in 155 milliseconds.
+2020-07-05 01:20:13,978 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:20:13,979 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/login?pipelinehash=-9165904008518544344_T-Navigation--8223928479681621930
+2020-07-05 01:20:13,980 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/login?pipelinehash=3884116263804315269_T-Navigation--834028974291093996
+2020-07-05 01:20:13,981 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/login?pipelinehash=1581426351827148734_T-Navigation--834028974291093996
+2020-07-05 01:20:13,982 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/login?pipelinehash=-1717249056497318094_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:20:13,983 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/login?pipelinehash=-6248429801084465509_T-Navigation-2150233476609607495
+2020-07-05 01:20:13,984 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/4/login?pipelinehash=-1676978221016955829
+2020-07-05 01:20:13,984 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/3/login?pipelinehash=-3828867713817668119
+2020-07-05 01:20:13,985 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/2/login?pipelinehash=-7964955692834863501
+2020-07-05 01:20:13,985 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/1/login?pipelinehash=-3962573044503205788
+2020-07-05 01:20:13,986 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/login_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:20:14,018 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:20:14,023 INFO  cocoon.access  - 'login' Processed by Apache Cocoon in 59 milliseconds.
+2020-07-05 01:20:14,110 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:20:14,112 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/password-login?pipelinehash=-9165904008518544344_T-Navigation-4342374305536551005
+2020-07-05 01:20:14,113 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/password-login?pipelinehash=-547845631467263887_T-Navigation--9052413031230945003
+2020-07-05 01:20:14,113 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/password-login?pipelinehash=-8628670996059744503_T-Navigation--9052413031230945003
+2020-07-05 01:20:14,114 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/password-login?pipelinehash=2621040433727041112_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:20:14,117 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/password-login?pipelinehash=-3756099018950618591_T-Navigation-2150233476609607495_T-PasswordLogin-1
+2020-07-05 01:20:14,117 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/4/password-login?pipelinehash=3422209955624488484
+2020-07-05 01:20:14,118 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/3/password-login?pipelinehash=9122012913593286265
+2020-07-05 01:20:14,118 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/2/password-login?pipelinehash=-7833834873361473030
+2020-07-05 01:20:14,119 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/1/password-login?pipelinehash=-5018991893437898725
+2020-07-05 01:20:14,120 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/password-login_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:20:14,140 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:20:14,143 INFO  cocoon.access  - 'password-login' Processed by Apache Cocoon in 40 milliseconds.
+2020-07-05 01:20:14,335 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 01:20:14,335 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/password-login?pipelinehash=-9165904008518544344_T-Navigation-4342374305536551005
+2020-07-05 01:20:14,335 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/password-login?pipelinehash=-547845631467263887_T-Navigation--9052413031230945003
+2020-07-05 01:20:14,335 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/password-login?pipelinehash=-8628670996059744503_T-Navigation--9052413031230945003
+2020-07-05 01:20:14,336 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/password-login?pipelinehash=2621040433727041112_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 01:20:14,336 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/password-login?pipelinehash=-3756099018950618591_T-Navigation-2150233476609607495_T-PasswordLogin-1
+2020-07-05 01:20:14,336 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/4/password-login?pipelinehash=3422209955624488484
+2020-07-05 01:20:14,336 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/3/password-login?pipelinehash=9122012913593286265
+2020-07-05 01:20:14,336 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/2/password-login?pipelinehash=-7833834873361473030
+2020-07-05 01:20:14,337 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/1/password-login?pipelinehash=-5018991893437898725
+2020-07-05 01:20:14,337 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/password-login_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 01:20:14,355 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 01:20:14,357 INFO  cocoon.access  - 'password-login' Processed by Apache Cocoon in 30 milliseconds.
+2020-07-05 05:49:56,715 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ConcatenationReader-styles/main.css?minify
+2020-07-05 05:49:56,738 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ConcatenationReader-scripts/theme.js?minify
+2020-07-05 05:49:56,932 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 219 milliseconds.
+2020-07-05 05:49:57,383 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 647 milliseconds.
+2020-07-05 07:09:50,495 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 07:09:50,510 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 07:09:50,883 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 07:09:51,255 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 07:09:51,403 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 07:09:51,689 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 07:09:56,701 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 07:09:56,702 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation--1694221195509606454_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 07:09:56,704 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-3217913151081785953_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 07:09:56,719 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-2709862176649831682_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 07:09:56,753 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Removing cached response for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-2709862176649831682_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 07:09:56,767 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-2709862176649831682_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1
+2020-07-05 07:09:56,819 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=6550578395678009655_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 07:09:56,820 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Removing cached response for PK_G-aspect-cocoon://DRI/6/?pipelinehash=6550578395678009655_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 07:09:56,820 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=-5466875548059273973
+2020-07-05 07:09:56,821 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Removing cached response for PK_G-aspect-cocoon://DRI/5/?pipelinehash=-5466875548059273973
+2020-07-05 07:09:56,821 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 07:09:56,821 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 07:09:56,821 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 07:09:56,821 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 07:09:56,822 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?en___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 07:09:56,961 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,963 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,965 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,967 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,968 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,970 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,972 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,974 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,975 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,977 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,979 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,981 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,983 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,984 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,986 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,988 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,990 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,992 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,993 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,995 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,996 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,998 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:56,999 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,001 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,003 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,005 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,006 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,008 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,009 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,011 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,012 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,014 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 07:09:57,045 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 07:09:57,046 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-2709862176649831682_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 07:09:57,049 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/6/?pipelinehash=6550578395678009655_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 07:09:57,049 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/5/?pipelinehash=-5466875548059273973
+2020-07-05 07:09:57,050 INFO  cocoon.access  - '' Processed by Apache Cocoon in 362 milliseconds.
+2020-07-05 17:39:00,637 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:00,638 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 17:39:00,638 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 17:39:00,652 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 17:39:00,735 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:00,736 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 17:39:00,736 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 17:39:00,736 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 17:39:00,736 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 17:39:00,736 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 17:39:00,737 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:00,795 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,797 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,798 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,799 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,800 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,802 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,803 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,804 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,805 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,807 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,808 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,809 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,810 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,811 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,812 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,814 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,815 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,816 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,817 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,819 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,820 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,821 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,822 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,823 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,824 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,826 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,827 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,828 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,830 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,831 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,832 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 17:39:00,862 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:00,864 INFO  cocoon.access  - '' Processed by Apache Cocoon in 242 milliseconds.
+2020-07-05 17:39:01,024 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 17:39:01,024 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 17:39:01,083 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 17:39:01,090 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 17:39:01,142 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 0 milliseconds.
+2020-07-05 17:39:01,237 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 17:39:01,314 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/images/favicon.ico
+2020-07-05 17:39:01,317 INFO  cocoon.access  - 'themes/Mirage2/images/favicon.ico' Processed by Apache Cocoon in 4 milliseconds.
+2020-07-05 17:39:03,361 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:03,361 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 17:39:03,362 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 17:39:03,379 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 17:39:03,456 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:03,457 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 17:39:03,457 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 17:39:03,457 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 17:39:03,457 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 17:39:03,457 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 17:39:03,459 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:03,516 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:03,518 INFO  cocoon.access  - '' Processed by Apache Cocoon in 166 milliseconds.
+2020-07-05 17:39:03,543 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:03,544 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 17:39:03,544 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 17:39:03,558 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 17:39:03,634 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:03,634 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 17:39:03,634 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 17:39:03,634 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 17:39:03,634 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 17:39:03,635 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 17:39:03,636 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:03,688 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:03,688 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 17:39:03,689 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 17:39:03,691 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:03,693 INFO  cocoon.access  - '' Processed by Apache Cocoon in 156 milliseconds.
+2020-07-05 17:39:03,723 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 17:39:03,848 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:03,849 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 17:39:03,849 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 17:39:03,849 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 17:39:03,849 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 17:39:03,849 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 17:39:03,850 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:03,903 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:03,905 INFO  cocoon.access  - '' Processed by Apache Cocoon in 228 milliseconds.
+2020-07-05 17:39:04,140 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/images/favicon.ico
+2020-07-05 17:39:04,182 INFO  cocoon.access  - 'themes/Mirage2/images/favicon.ico' Processed by Apache Cocoon in 44 milliseconds.
+2020-07-05 17:39:09,339 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:09,339 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/discover?pipelinehash=-9165904008518544344_T-Navigation--3424052632319520844
+2020-07-05 17:39:09,339 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/discover?pipelinehash=-4868931721333398678_T-Navigation--4622853987962528280
+2020-07-05 17:39:09,340 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/discover?pipelinehash=-2837901179335576628_T-Navigation--4622853987962528280_T-CSVExportDiscoveryNavigation--4622853987962528280_T-SidebarFacetsTransformer-0_T-SimpleSearch-8680282230693974292_T-IncludePageMeta--5972035726063729699
+2020-07-05 17:39:09,464 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/discover?pipelinehash=7991063913771012536_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:09,464 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/discover?pipelinehash=-1899838581676485411_T-Navigation-4191586231624621051
+2020-07-05 17:39:09,464 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/4/discover?pipelinehash=-8743730110410790900
+2020-07-05 17:39:09,464 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/3/discover?pipelinehash=-8808780045522862556_T-IncludePageMeta-2521571550378461069
+2020-07-05 17:39:09,464 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/2/discover?pipelinehash=6227482542346595842
+2020-07-05 17:39:09,465 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/1/discover?pipelinehash=-4749302093626079620
+2020-07-05 17:39:09,466 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/discover_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:09,582 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:09,584 INFO  cocoon.access  - 'discover' Processed by Apache Cocoon in 363 milliseconds.
+2020-07-05 17:39:09,737 INFO  cocoon.access  - 'static/js/discovery/discovery-results.js' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 17:39:11,406 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:11,407 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/127?pipelinehash=-9165904008518544344_T-Navigation--4242518937338745305_T-ItemViewer--1612129525503908562
+2020-07-05 17:39:11,413 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/127?pipelinehash=4267596601058740169_T-Navigation--2489142648995823142
+2020-07-05 17:39:11,414 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/127?pipelinehash=-7704239746432644977_T-Navigation--2489142648995823142
+2020-07-05 17:39:11,414 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/127_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:11,415 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/127_T-Navigation-4191586231624621051
+2020-07-05 17:39:11,415 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/127
+2020-07-05 17:39:11,415 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/127
+2020-07-05 17:39:11,415 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/127
+2020-07-05 17:39:11,415 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/127
+2020-07-05 17:39:11,416 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/127_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:11,516 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:11,518 INFO  cocoon.access  - 'handle/123456789/127' Processed by Apache Cocoon in 264 milliseconds.
+2020-07-05 17:39:13,712 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 17:39:13,713 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 17:39:13,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 17:39:13,730 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 17:39:13,801 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 17:39:13,801 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 17:39:13,801 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 17:39:13,801 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 17:39:13,801 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 17:39:13,801 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 17:39:13,803 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 17:39:13,854 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 17:39:13,856 INFO  cocoon.access  - '' Processed by Apache Cocoon in 152 milliseconds.
+2020-07-05 19:47:54,419 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:47:54,476 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:47:54,481 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:47:54,595 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:47:55,017 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:47:59,029 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:10,611 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 19:48:10,611 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 19:48:10,612 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 19:48:10,625 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 19:48:10,697 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 19:48:10,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 19:48:10,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 19:48:10,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 19:48:10,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 19:48:10,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 19:48:10,699 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 19:48:10,789 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,791 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,792 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,793 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,794 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,796 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,797 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,798 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,799 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,801 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,802 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,803 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,805 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,806 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,807 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,809 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,810 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,811 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,812 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,814 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,815 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,816 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,817 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,819 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,820 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,821 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,822 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,824 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,825 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,826 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,827 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:48:10,854 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 19:48:10,856 INFO  cocoon.access  - '' Processed by Apache Cocoon in 258 milliseconds.
+2020-07-05 19:48:10,995 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:11,003 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:11,045 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:11,059 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:11,115 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:11,191 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 19:48:11,255 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/images/favicon.ico
+2020-07-05 19:48:11,295 INFO  cocoon.access  - 'themes/Mirage2/images/favicon.ico' Processed by Apache Cocoon in 41 milliseconds.
+2020-07-05 19:55:41,446 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 19:55:41,446 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation--1694221195509606454_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 19:55:41,447 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-3217913151081785953_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 19:55:41,461 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-2709862176649831682_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 19:55:41,529 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=6550578395678009655_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 19:55:41,530 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=-5466875548059273973
+2020-07-05 19:55:41,530 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 19:55:41,530 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 19:55:41,530 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 19:55:41,530 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 19:55:41,531 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?en___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 19:55:41,578 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,579 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,581 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,582 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,584 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,585 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,587 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,589 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,591 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,592 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,593 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,595 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,596 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,597 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,599 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,600 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,601 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_en.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,602 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,604 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,605 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,606 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,607 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,609 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,610 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,611 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,612 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,614 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,615 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,616 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,618 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,619 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,620 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 19:55:41,641 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 19:55:41,643 INFO  cocoon.access  - '' Processed by Apache Cocoon in 209 milliseconds.
+2020-07-05 19:55:48,700 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 19:55:48,702 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation--8298114893964821267_T-CommunityViewer-3723505135238960434
+2020-07-05 19:55:48,712 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=-4575584318398001010_T-Navigation--3816593613736916059
+2020-07-05 19:55:48,713 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 19:55:48,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 19:55:48,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation--676325207875079840
+2020-07-05 19:55:48,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 19:55:48,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 19:55:48,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 19:55:48,714 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 19:55:48,715 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?en___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 19:55:48,993 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 19:55:48,996 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 336 milliseconds.
+2020-07-05 19:55:53,802 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 19:55:53,803 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/9/handle/123456789/1?pipelinehash=-9165904008518544344_T-Navigation-8887539748182231820_T-CommunityViewer--3943385071165298396
+2020-07-05 19:55:53,810 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/8/handle/123456789/1?pipelinehash=2040894603405592191_T-Navigation--722680880884691623
+2020-07-05 19:55:53,811 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/1_T-Navigation--722680880884691623_T-SidebarFacetsTransformer--3943385071165298396_T-CommunitySearch--3943385071165298396_T-CommunityRecentSubmissions--3943385071165298396
+2020-07-05 19:55:53,811 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/1_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 19:55:53,811 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/1_T-Navigation--676325207875079840
+2020-07-05 19:55:53,811 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/1
+2020-07-05 19:55:53,812 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/1
+2020-07-05 19:55:53,812 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/1
+2020-07-05 19:55:53,812 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/1
+2020-07-05 19:55:53,813 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/1_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?en___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 19:55:53,878 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 19:55:53,879 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/9/handle/123456789/1?pipelinehash=-9165904008518544344_T-Navigation-8887539748182231820_T-CommunityViewer--3943385071165298396
+2020-07-05 19:55:53,879 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/8/handle/123456789/1?pipelinehash=2040894603405592191_T-Navigation--722680880884691623
+2020-07-05 19:55:53,880 INFO  cocoon.access  - 'handle/123456789/1' Processed by Apache Cocoon in 115 milliseconds.
+2020-07-05 19:55:56,242 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 19:55:56,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/9/handle/123456789/99?pipelinehash=-9165904008518544344_T-Navigation-5997577641249381262_T-CommunityViewer-4226123058292979439
+2020-07-05 19:55:56,266 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/8/handle/123456789/99?pipelinehash=303872551785277729_T-Navigation--5695597253243486391
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/99_T-Navigation--5695597253243486391_T-SidebarFacetsTransformer-4226123058292979439_T-CommunitySearch-4226123058292979439_T-CommunityRecentSubmissions-4226123058292979439
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/99_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/99_T-Navigation--676325207875079840
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/99
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/99
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/99
+2020-07-05 19:55:56,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/99
+2020-07-05 19:55:56,269 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/99_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?en___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 19:55:56,349 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 19:55:56,350 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/9/handle/123456789/99?pipelinehash=-9165904008518544344_T-Navigation-5997577641249381262_T-CommunityViewer-4226123058292979439
+2020-07-05 19:55:56,350 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Caching new response for PK_G-aspect-cocoon://DRI/8/handle/123456789/99?pipelinehash=303872551785277729_T-Navigation--5695597253243486391
+2020-07-05 19:55:56,351 INFO  cocoon.access  - 'handle/123456789/99' Processed by Apache Cocoon in 144 milliseconds.
+2020-07-05 19:55:58,238 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 19:55:58,239 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/community-list?pipelinehash=-9165904008518544344_T-Navigation--6595681644260776822
+2020-07-05 19:55:58,240 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/community-list?pipelinehash=-2214781572224215815_T-Navigation-3322728627230759081_T-CommunityBrowser--4036021495249905445
+2020-07-05 19:55:58,493 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/community-list?pipelinehash=-8543133929564244014_T-Navigation-3322728627230759081
+2020-07-05 19:55:58,494 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/community-list?pipelinehash=2185658440421571250_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 19:55:58,494 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/community-list?pipelinehash=3322558639359022804_T-Navigation--676325207875079840
+2020-07-05 19:55:58,495 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/4/community-list?pipelinehash=7239467206869599904
+2020-07-05 19:55:58,495 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/3/community-list?pipelinehash=3159917807650704241
+2020-07-05 19:55:58,496 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/2/community-list?pipelinehash=-66355266974580716
+2020-07-05 19:55:58,497 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/1/community-list?pipelinehash=-4193665653654036369
+2020-07-05 19:55:58,498 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/community-list_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?en___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 19:55:58,914 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 19:55:58,918 INFO  cocoon.access  - 'community-list' Processed by Apache Cocoon in 687 milliseconds.
+2020-07-05 20:02:42,775 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:02:42,776 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 20:02:42,777 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 20:02:42,788 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 20:02:42,854 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:02:42,855 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 20:02:42,855 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 20:02:42,855 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 20:02:42,855 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 20:02:42,855 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 20:02:42,857 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:02:42,910 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,912 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,913 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,914 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,916 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,917 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,918 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,920 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,921 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,922 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,923 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,925 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,926 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,927 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,928 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,930 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,931 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,932 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,933 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,935 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,936 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,937 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,938 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,940 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,941 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,942 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,943 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,945 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,946 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,947 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,949 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:02:42,972 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:02:42,974 INFO  cocoon.access  - '' Processed by Apache Cocoon in 211 milliseconds.
+2020-07-05 20:02:43,248 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/images/favicon.ico
+2020-07-05 20:02:43,288 INFO  cocoon.access  - 'themes/Mirage2/images/favicon.ico' Processed by Apache Cocoon in 41 milliseconds.
+2020-07-05 20:14:55,057 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:14:55,057 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 20:14:55,058 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 20:14:55,069 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 20:14:55,133 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:14:55,134 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 20:14:55,134 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 20:14:55,134 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 20:14:55,134 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 20:14:55,134 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 20:14:55,135 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:14:55,185 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,187 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,188 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,189 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,190 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,192 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,193 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,194 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,195 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,197 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,198 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,199 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,200 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,202 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,203 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,204 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,205 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,207 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,208 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,209 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,210 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,212 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,213 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,214 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,215 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,217 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,218 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,219 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,221 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,222 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,223 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 20:14:55,246 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:14:55,248 INFO  cocoon.access  - '' Processed by Apache Cocoon in 203 milliseconds.
+2020-07-05 20:14:55,392 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 20:14:55,415 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 2 milliseconds.
+2020-07-05 20:14:55,458 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 20:14:55,471 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 20:14:55,582 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 20:14:55,621 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 20:14:55,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:14:55,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 20:14:55,699 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 20:14:55,711 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 20:14:55,771 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:14:55,771 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 20:14:55,771 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 20:14:55,771 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 20:14:55,771 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 20:14:55,772 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 20:14:55,773 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:14:55,814 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:14:55,816 INFO  cocoon.access  - '' Processed by Apache Cocoon in 125 milliseconds.
+2020-07-05 20:15:00,267 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:00,268 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation-8573770348511772127_T-CommunityViewer-3723505135238960434
+2020-07-05 20:15:00,274 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=3022144746734155590_T-Navigation--3816593613736916059
+2020-07-05 20:15:00,274 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 20:15:00,275 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:00,275 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation-2150233476609607495
+2020-07-05 20:15:00,275 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 20:15:00,275 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 20:15:00,275 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 20:15:00,275 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 20:15:00,276 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:00,488 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:00,491 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 262 milliseconds.
+2020-07-05 20:15:00,751 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:00,752 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation-8573770348511772127_T-CommunityViewer-3723505135238960434
+2020-07-05 20:15:00,757 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=3022144746734155590_T-Navigation--3816593613736916059
+2020-07-05 20:15:00,758 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 20:15:00,758 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:00,759 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation-2150233476609607495
+2020-07-05 20:15:00,759 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 20:15:00,759 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 20:15:00,759 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 20:15:00,759 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 20:15:00,760 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:00,934 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:00,936 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 217 milliseconds.
+2020-07-05 20:15:03,299 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:03,299 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 20:15:03,300 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 20:15:03,312 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 20:15:03,371 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:03,371 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 20:15:03,372 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 20:15:03,372 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 20:15:03,372 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 20:15:03,372 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 20:15:03,373 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:03,416 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:03,418 INFO  cocoon.access  - '' Processed by Apache Cocoon in 125 milliseconds.
+2020-07-05 20:15:04,573 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:04,574 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation-8573770348511772127_T-CommunityViewer-3723505135238960434
+2020-07-05 20:15:04,579 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=3022144746734155590_T-Navigation--3816593613736916059
+2020-07-05 20:15:04,579 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 20:15:04,580 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:04,580 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation-2150233476609607495
+2020-07-05 20:15:04,580 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 20:15:04,580 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 20:15:04,580 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 20:15:04,580 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 20:15:04,581 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:04,750 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:04,752 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 210 milliseconds.
+2020-07-05 20:15:05,046 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:05,047 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation-8573770348511772127_T-CommunityViewer-3723505135238960434
+2020-07-05 20:15:05,053 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=3022144746734155590_T-Navigation--3816593613736916059
+2020-07-05 20:15:05,053 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 20:15:05,054 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:05,054 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation-2150233476609607495
+2020-07-05 20:15:05,054 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 20:15:05,054 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 20:15:05,054 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 20:15:05,054 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 20:15:05,055 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:05,221 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:05,223 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 208 milliseconds.
+2020-07-05 20:15:06,681 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:06,682 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/27?pipelinehash=-9165904008518544344_T-Navigation-6375613990150572249_T-CommunityViewer-5033428095507909211
+2020-07-05 20:15:06,697 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/27?pipelinehash=-9193362175430138534_T-Navigation-1069727946749017349
+2020-07-05 20:15:06,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/27_T-Navigation-1069727946749017349_T-SidebarFacetsTransformer-5033428095507909211_T-CommunitySearch-5033428095507909211_T-CommunityRecentSubmissions-5033428095507909211
+2020-07-05 20:15:06,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/27_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:06,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/27_T-Navigation-2150233476609607495
+2020-07-05 20:15:06,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/27
+2020-07-05 20:15:06,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/27
+2020-07-05 20:15:06,698 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/27
+2020-07-05 20:15:06,699 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/27
+2020-07-05 20:15:06,700 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/27_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:06,881 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:06,884 INFO  cocoon.access  - 'handle/123456789/27' Processed by Apache Cocoon in 238 milliseconds.
+2020-07-05 20:15:07,081 INFO  cocoon.access  - 'bitstream/id/8acfaed1-c47e-493c-a3dd-2f3e090d90b4/' Processed by Apache Cocoon in 13 milliseconds.
+2020-07-05 20:15:07,268 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:07,268 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/27?pipelinehash=-9165904008518544344_T-Navigation-6375613990150572249_T-CommunityViewer-5033428095507909211
+2020-07-05 20:15:07,283 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/27?pipelinehash=-9193362175430138534_T-Navigation-1069727946749017349
+2020-07-05 20:15:07,283 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/27_T-Navigation-1069727946749017349_T-SidebarFacetsTransformer-5033428095507909211_T-CommunitySearch-5033428095507909211_T-CommunityRecentSubmissions-5033428095507909211
+2020-07-05 20:15:07,284 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/27_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:07,284 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/27_T-Navigation-2150233476609607495
+2020-07-05 20:15:07,284 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/27
+2020-07-05 20:15:07,284 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/27
+2020-07-05 20:15:07,284 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/27
+2020-07-05 20:15:07,284 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/27
+2020-07-05 20:15:07,285 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/27_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:07,448 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:07,450 INFO  cocoon.access  - 'handle/123456789/27' Processed by Apache Cocoon in 215 milliseconds.
+2020-07-05 20:15:08,614 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:08,615 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/142?pipelinehash=-9165904008518544344_T-Navigation--8247102744981224479_T-ItemViewer--4327316758323925183
+2020-07-05 20:15:08,621 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/142?pipelinehash=6130933436111071684_T-Navigation-1470060743848252514
+2020-07-05 20:15:08,622 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/142?pipelinehash=-885668830064361877_T-Navigation-1470060743848252514
+2020-07-05 20:15:08,623 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/142_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:08,623 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/142_T-Navigation-2150233476609607495
+2020-07-05 20:15:08,623 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/142
+2020-07-05 20:15:08,623 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/142
+2020-07-05 20:15:08,623 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/142
+2020-07-05 20:15:08,623 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/142
+2020-07-05 20:15:08,624 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/142_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:08,701 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:08,703 INFO  cocoon.access  - 'handle/123456789/142' Processed by Apache Cocoon in 118 milliseconds.
+2020-07-05 20:15:08,916 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 20:15:08,916 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/142?pipelinehash=-9165904008518544344_T-Navigation--8247102744981224479_T-ItemViewer--4327316758323925183
+2020-07-05 20:15:08,922 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/142?pipelinehash=6130933436111071684_T-Navigation-1470060743848252514
+2020-07-05 20:15:08,922 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/142?pipelinehash=-885668830064361877_T-Navigation-1470060743848252514
+2020-07-05 20:15:08,923 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/142_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 20:15:08,923 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/142_T-Navigation-2150233476609607495
+2020-07-05 20:15:08,923 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/142
+2020-07-05 20:15:08,923 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/142
+2020-07-05 20:15:08,923 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/142
+2020-07-05 20:15:08,923 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/142
+2020-07-05 20:15:08,924 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/142_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 20:15:08,981 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 20:15:08,982 INFO  cocoon.access  - 'handle/123456789/142' Processed by Apache Cocoon in 93 milliseconds.
+2020-07-05 23:55:31,742 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:55:31,742 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 23:55:31,743 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 23:55:31,753 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 23:55:31,814 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:55:31,814 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 23:55:31,814 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 23:55:31,814 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 23:55:31,815 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 23:55:31,815 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 23:55:31,816 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:55:31,865 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,867 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,868 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,869 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,870 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,872 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,873 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,874 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,876 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,877 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,878 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,880 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,881 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,882 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,883 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,885 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,886 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,887 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,888 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,890 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,891 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,892 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,893 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,895 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,896 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,897 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,898 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,900 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,901 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,902 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,904 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:55:31,924 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:55:31,925 INFO  cocoon.access  - '' Processed by Apache Cocoon in 194 milliseconds.
+2020-07-05 23:55:32,348 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:55:32,355 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:55:32,449 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:55:32,464 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:55:32,563 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:55:32,646 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:55:32,764 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/images/favicon.ico
+2020-07-05 23:55:32,767 INFO  cocoon.access  - 'themes/Mirage2/images/favicon.ico' Processed by Apache Cocoon in 4 milliseconds.
+2020-07-05 23:57:58,840 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:57:58,840 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 23:57:58,841 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 23:57:58,852 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 23:57:58,911 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:57:58,911 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 23:57:58,911 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 23:57:58,911 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 23:57:58,911 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 23:57:58,911 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 23:57:58,912 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:57:58,954 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,956 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,957 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,958 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,959 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,961 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,962 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,963 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,964 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,966 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,967 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,968 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Discovery/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,969 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,971 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,972 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,973 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages_es.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,974 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Workflow/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,976 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Workflow/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,977 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Statistics/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,978 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Statistics/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,979 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Submission/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,981 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Submission/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,982 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/EPerson/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,983 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/EPerson/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,984 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Administrative/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,986 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/Administrative/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,987 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/Discovery/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,988 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/BrowseArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,990 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/BrowseArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,991 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <file:///opt/apache-tomcat-8.0.37/webapps/xmlui/i18n/aspects/ViewArtifacts/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:58,992 INFO  org.apache.cocoon.i18n.XMLResourceBundle  - Bundle <resource://aspects/ViewArtifacts/i18n/messages.xml> not loaded: Source URI not found
+2020-07-05 23:57:59,008 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:57:59,010 INFO  cocoon.access  - '' Processed by Apache Cocoon in 180 milliseconds.
+2020-07-05 23:57:59,118 INFO  cocoon.access  - 'themes/Mirage2/styles/main.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:57:59,131 INFO  cocoon.access  - 'themes/Mirage2/vendor/modernizr/modernizr.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:57:59,181 INFO  cocoon.access  - 'themes/Mirage2/vendor/jquery-ui/themes/base/jquery-ui.css' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:57:59,194 INFO  cocoon.access  - 'themes/Mirage2/scripts/theme.js' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:57:59,289 INFO  cocoon.access  - 'static/icons/feed.png' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:57:59,289 INFO  cocoon.access  - 'themes/Mirage2/vendor/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' Processed by Apache Cocoon in 1 milliseconds.
+2020-07-05 23:57:59,381 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:57:59,381 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 23:57:59,382 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 23:57:59,394 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 23:57:59,454 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:57:59,454 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 23:57:59,454 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 23:57:59,454 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 23:57:59,454 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 23:57:59,454 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 23:57:59,455 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:57:59,495 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:57:59,496 INFO  cocoon.access  - '' Processed by Apache Cocoon in 121 milliseconds.
+2020-07-05 23:58:01,895 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:58:01,895 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation-8573770348511772127_T-CommunityViewer-3723505135238960434
+2020-07-05 23:58:01,901 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=3022144746734155590_T-Navigation--3816593613736916059
+2020-07-05 23:58:01,901 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 23:58:01,902 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:58:01,902 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation-2150233476609607495
+2020-07-05 23:58:01,902 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 23:58:01,902 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 23:58:01,902 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 23:58:01,902 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 23:58:01,903 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:58:02,097 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:58:02,100 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 226 milliseconds.
+2020-07-05 23:58:02,383 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:58:02,383 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/2?pipelinehash=-9165904008518544344_T-Navigation-8573770348511772127_T-CommunityViewer-3723505135238960434
+2020-07-05 23:58:02,388 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/2?pipelinehash=3022144746734155590_T-Navigation--3816593613736916059
+2020-07-05 23:58:02,389 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/7/handle/123456789/2_T-Navigation--3816593613736916059_T-SidebarFacetsTransformer-3723505135238960434_T-CommunitySearch-3723505135238960434_T-CommunityRecentSubmissions-3723505135238960434
+2020-07-05 23:58:02,389 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/2_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:58:02,389 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/2_T-Navigation-2150233476609607495
+2020-07-05 23:58:02,390 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/2
+2020-07-05 23:58:02,390 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/2
+2020-07-05 23:58:02,390 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/2
+2020-07-05 23:58:02,390 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/2
+2020-07-05 23:58:02,391 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/2_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:58:02,546 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:58:02,549 INFO  cocoon.access  - 'handle/123456789/2' Processed by Apache Cocoon in 186 milliseconds.
+2020-07-05 23:58:12,941 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:58:12,942 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/142?pipelinehash=-9165904008518544344_T-Navigation--8247102744981224479_T-ItemViewer--4327316758323925183
+2020-07-05 23:58:12,947 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/142?pipelinehash=6130933436111071684_T-Navigation-1470060743848252514
+2020-07-05 23:58:12,948 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/142?pipelinehash=-885668830064361877_T-Navigation-1470060743848252514
+2020-07-05 23:58:12,948 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/142_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:58:12,948 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/142_T-Navigation-2150233476609607495
+2020-07-05 23:58:12,948 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/142
+2020-07-05 23:58:12,948 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/142
+2020-07-05 23:58:12,948 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/142
+2020-07-05 23:58:12,949 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/142
+2020-07-05 23:58:12,950 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/142_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:58:13,023 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:58:13,024 INFO  cocoon.access  - 'handle/123456789/142' Processed by Apache Cocoon in 113 milliseconds.
+2020-07-05 23:58:13,236 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:58:13,237 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/handle/123456789/142?pipelinehash=-9165904008518544344_T-Navigation--8247102744981224479_T-ItemViewer--4327316758323925183
+2020-07-05 23:58:13,242 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/handle/123456789/142?pipelinehash=6130933436111071684_T-Navigation-1470060743848252514
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/handle/123456789/142?pipelinehash=-885668830064361877_T-Navigation-1470060743848252514
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/6/handle/123456789/142_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/5/handle/123456789/142_T-Navigation-2150233476609607495
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/handle/123456789/142
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/handle/123456789/142
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/handle/123456789/142
+2020-07-05 23:58:13,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/handle/123456789/142
+2020-07-05 23:58:13,245 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/handle/123456789/142_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:58:13,298 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:58:13,300 INFO  cocoon.access  - 'handle/123456789/142' Processed by Apache Cocoon in 90 milliseconds.
+2020-07-05 23:58:18,847 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:58:18,847 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 23:58:18,848 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 23:58:18,858 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 23:58:18,913 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:58:18,913 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 23:58:18,913 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 23:58:18,913 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 23:58:18,914 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 23:58:18,914 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 23:58:18,915 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:58:18,954 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:58:18,955 INFO  cocoon.access  - '' Processed by Apache Cocoon in 117 milliseconds.
+2020-07-05 23:58:19,136 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-file-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/aspects/protodocument.xml
+2020-07-05 23:58:19,137 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/9/?pipelinehash=-9165904008518544344_T-Navigation-1321771307766732536_T-Include-resource://aspects/ViewArtifacts/dspace-home.xml_T-Include-file:///dspace/config/news-xmlui.xml
+2020-07-05 23:58:19,138 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/8/?pipelinehash=-7503502498176682897_T-Navigation-2854653804853470913_T-CommunityBrowser-578614924677317992
+2020-07-05 23:58:19,149 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/7/?pipelinehash=-4212953789864192264_T-Navigation-2854653804853470913_T-SidebarFacetsTransformer-0_T-FrontPageFeeds-1_T-SiteRecentSubmissions-0
+2020-07-05 23:58:19,204 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/6/?pipelinehash=-578291750326208294_T-SystemwideAlerts-1_T-Navigation--5367372201529954577
+2020-07-05 23:58:19,204 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_G-aspect-cocoon://DRI/5/?pipelinehash=7819458840794621347
+2020-07-05 23:58:19,204 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/4/
+2020-07-05 23:58:19,204 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/3/
+2020-07-05 23:58:19,204 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/2/
+2020-07-05 23:58:19,204 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-aspect-cocoon://DRI/1/
+2020-07-05 23:58:19,205 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache MISS for PK_G-file-cocoon://DRI/_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/preprocess.xsl_T-IncludePageMeta--2183294294163301955_T-xslt-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/xsl/theme.xsl_T-i18n-context://i18n/?es___T-strip-namespaces-1_S-html-no-doctype-;encoding=UTF-8;indent=yes
+2020-07-05 23:58:19,243 INFO  org.apache.cocoon.caching.impl.CacheImpl  - Cache HIT for PK_R-ThemeResourceReader-file:///opt/apache-tomcat-8.0.37/webapps/xmlui/themes/Mirage2/scripts-dist.xml
+2020-07-05 23:58:19,244 INFO  cocoon.access  - '' Processed by Apache Cocoon in 112 milliseconds.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
+<body>
+<div id="file.news.div.news" n="news" rend="primary">
+<figure source="http://repositorios.orizaba.tecnm.mx:8080/xmlui/themes/Mirage2/images/repo.png" />
+<p><hi rend="bold">Bienvenidos al Repositorio Digital del  Instituto Tecnológico de Orizaba, en donde podrás encontrar tesis en texto completo de los alumnos graduados en Licenciatura y Posgrado de esta institución así como de algunas otras publicaciones para descargar o leer en línea.</hi></p>
+</div>
+</body>
+<options/>
+<meta>
+<userMeta/>
+<pageMeta/>
+<repositoryMeta/>
+</meta>
+</document>

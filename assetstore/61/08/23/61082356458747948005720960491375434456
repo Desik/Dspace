@@ -1,0 +1,1281 @@
+energies
+Article
+HEMS-IoT: A Big Data and Machine Learning-Based
+Smart Home System for Energy Saving
+Isaac Machorro-Cano 1 , Giner Alor-Hernández 1,* , Mario Andrés Paredes-Valverde 1 ,
+Lisbeth Rodríguez-Mazahua 1, José Luis Sánchez-Cervantes 2 and José Oscar Olmedo-Aguirre 3
+1 Tecnológico Nacional de México (I. T. Orizaba), Av. Oriente 9, 852. Col. Emiliano Zapata, Orizaba 94320,
+Veracruz, Mexico; imachorro@gmail.com (I.M.-C.); mparedesv@ito-depi.edu.mx (M.A.P.-V.);
+lrodriguezm@ito-depi.edu.mx (L.R.-M.)
+2 CONACYT-Tecnológico Nacional de México (I. T. Orizaba), Av. Oriente 9,852. Col. Emiliano Zapata,
+Orizaba 94320, Veracruz, Mexico; jlsanchez@conacyt.mx
+3 Department of Electrical Engineering, CINVESTAV-IPN, Av. Instituto Politécnico Nacional 2,508,
+Col. San Pedro Zacatenco, Delegación Gustavo A. Madero, Mexico City 07360, Mexico;
+oolmedo@cinvestav.mx
+* Correspondence: galor@ito-depi.edu.mx; Tel.: +52-272-725-7056; Fax: +52-272-725-7056
+
+Received: 1 February 2020; Accepted: 27 February 2020; Published: 2 March 2020 
+Abstract: Energy efficiency has aroused great interest in research worldwide, because energy
+consumption has increased in recent years, especially in the residential sector. The advances in energy
+conversion, along with new forms of communication, and information technologies have paved the
+way for what is now known as smart homes. The Internet of Things (IoT) is the convergence of various
+heterogeneous technologies from different application domains that are used to interconnect things
+through the Internet, thus allowing for the detection, monitoring, and remote control of multiple
+devices. Home automation systems (HAS) combined with IoT, big data technologies, and machine
+learning are alternatives that promise to contribute to greater energy efficiency. This work presents
+HEMS-IoT, a big data and machine learning-based smart home energy management system for
+home comfort, safety, and energy saving. We used the J48 machine learning algorithm and Weka
+API to learn user behaviors and energy consumption patterns and classify houses with respect to
+energy consumption. Likewise, we relied on RuleML and Apache Mahout to generate energy-saving
+recommendations based on user preferences to preserve smart home comfort and safety. To validate
+our system, we present a case study where we monitor a smart home to ensure comfort and safety
+and reduce energy consumption.
+Keywords: domotic; energy saving; IoT; machine learning; monitoring
+1. Introduction
+Nowadays, increasing energy efficiency is used to face the great world challenges, such as
+energy security, air pollution, climate change and economic crises, among others. Energy efficiency
+alternatives have the power to optimize energy consumption and reduce greenhouse gas emissions,
+thus contributing positively to the preservation of natural ecosystems and human health. Additionally,
+energy efficiency alternatives help mitigate the economic effects in the workplace [1]. Energy efficiency
+has aroused great interest in research worldwide, because energy consumption has increased in recent
+years, especially in the residential sector. For this reason, organizations and governments worldwide are
+proposing actions for energy conservation with the purpose of reducing energy-related inconveniences.
+The residential sector is attributed a high energy consumption; however, home automation systems
+(HAS), combined with IoT, are alternatives that promise to contribute to greater energy efficiency [2].
+Energies 2020, 13, 1097; doi:10.3390/en13051097 www.mdpi.com/journal/energies
+Energies 2020, 13, 1097 2 of 24
+Likewise, advances in energy conversion, communication, and information technologies have
+paved the way for a new generation of homes—smart homes—thus allowing people to improve aspects
+of their houses, such as comfort, convenience, safety, and entertainment, while simultaneously helping
+them to cut energy waste. Additionally, Home Energy Management Systems (HEMS) are important in
+achieving the goals of smart energy homes in many countries. Likewise, the smart home market is
+growing rapidly. In particular, it is improving in areas such as fire detection, lighting, entertainment,
+and energy efficiency systems, among others [3]. In addition, in recent years, energy conservation
+action plans for the residential sector have gained prominence, since they contemplate indoor comfort
+and energy efficiency. In this sense, it is worth mentioning that user behavior patterns in terms of
+energy consumption change according to user needs and lifestyles, yet there is always an inclination to
+maintain indoor comfort at the expense of power saving. Therefore, to design and implement effective
+energy saving action plans, it is important to know not only the link between indoor comfort and
+energy consumption, but also home characteristics and home resident needs [4].
+On the other hand, in recent years, the Internet has impacted people’s daily lives through a new
+paradigm called IoT, which is present in smart homes, retail, education, government services, smart
+grids, agriculture, communication and business, among others. The IoT is the combination of various
+technologies belonging to application domains that interconnect objects or things through the Internet;
+by doing so, IoT-based things or objects acquire detection, monitoring, and remote-control capabilities.
+Some of the most common IoT technologies include cloud computing, Wireless Sensor Networks
+(WSN), Radio Frequency Identification (RFID), networks and communication, machine-to-machine
+(M2M) interaction, Real-Time Systems (RTS) and mobility support, among others [5,6]. The IoT can
+collect, distribute, and analyze data to convert it into knowledge and information [7]. Therefore, it
+is important to further research and develop energy optimization mechanisms across different IoT
+application domains. Moreover, appropriate energy saving and collection proposals and programming
+algorithms should continue to be sought, since renewable energy sources are becoming more important
+every day. Additionally, researchers estimate that the adoption of the IoT is based on the success of
+these energy optimization proposals [8].
+IoT devices for smart homes have restricted capabilities; hence, it is important to incorporate more
+data handling options to successfully collect, manage, and analyze large volumes of data. Some of
+these alternatives include machine learning and big data technologies. To collect and analyze large
+volumes of information, big data analytics technologies are used [9]. Moreover, they allow large
+volumes of sensor data to be effectively analyzed and used [10]. On the other hand, machine learning
+is part of artificial intelligence, because it is responsible for studying algorithms and statistical models
+based on patterns and inferences that systems use to meet their goals [11]. Likewise, machine learning
+is broadly used in real-time applications due to its viability and robustness. In addition, machine
+learning provides solution alternatives to learning-based problems and identifies the background and
+characteristics of such problems to learn from them and thus increase system functioning. Finally,
+machine learning executes actions requiring previously obtained knowledge, which is classified as
+reinforcement learning, unsupervised, and supervised [12].
+Current challenges in smart homes are areas of opportunity for the IoT paradigm, machine
+learning, and big data technologies. In this work, we propose HEMS-IoT, a big data and machine
+learning-based smart home energy management system for home comfort, safety, and energy saving.
+Machine learning techniques and big data technologies are important in this work because they help
+our system analyze and classify energy consumption efficiency, identify user behavior patterns, and
+offer them increased comfort at home. HEMS-IoT relies on the machine learning algorithm J48 and
+Weka API to know energy consumption patterns and user behavior patterns. Likewise, we relied on
+RuleML and Apache Mahout to generate energy-saving recommendations based on user preferences
+to preserve smart home comfort and safety. Finally, to validate HEMS-IoT, we introduce a case study
+in which we monitor a smart home to ensure comfort and safety and reduce energy consumption.
+HEMS-IoT is an extension of the works presented in [13] and [14].
+Energies 2020, 13, 1097 3 of 24
+The remainder of this paper is structured as follows. Section 2 discusses works on IoT, big data
+technologies, energy efficiency strategies for smart homes, intelligent agents, and machine learning.
+Next, in Section 3, we introduce the architecture of HEMS-IoT and discuss a case study in which we
+monitor a smart home to ensure comfort and safety and reduce energy consumption. In Section 4,
+we present the results from the case study discussed in the before section. Finally, in Section 5,
+we present the conclusions and the future work.
+2. Related Work
+The IoT is modifying citizens’ living environments by moving from a traditional home to a smart
+home [15]. In smart homes, people can control, monitor, and manage energy consumption according
+to their lifestyle [3]. In this section, we present a review of related works with IoT initiatives for energy
+efficiency in smart home. We pay close attention to those initiatives using machine learning and big
+data. For instance, in their work, Kang et al. [16] proposed an IoT-based system that uses a three-level
+context creation model for environment-sensitive services in the domotic space. IMS was designed
+with open source software and hardware in order to extend in the IoT context. The system was tested
+as IMS-based smart home services in two scenarios: a smart home health care service and a disaster
+management service. Also, Adiono et al. [17] introduced an optimization protocol for WSN through an
+architecture for a smart home. This architecture is divided into two environments, exterior and interior,
+which communicate through an access point. The user´s home can be controlled from anywhere and
+anytime by a smart phone. SQLite database system was used for the implementation and different tests
+for the validation. Lee et al. [18] proposed a web services architecture for home service environments.
+Three layers shape the architecture: (1) information layer, (2) management layer, and (3) presentation
+layer. The service overlay network was used in this work to generate new service composition in
+the IoT context. By contrast, Montesdeoca-Contreras et al. [19] implemented an IoT application for
+controlling and monitoring smart homes. Namely, the application allows users to monitor and control
+domotic devices through tactile functions or voice commands, including a safety net. The application
+was developed with App Inventor and Android Studio.
+Chilipirea et al. [20] proposed a method for creating models for IoT applications that facilitates the
+generation of robust, energy-efficient systems in a home security system. The model used the overlap
+between device characteristics to preserve energy and temporarily disable part of them. Elkhorchani
+and Grayaa [21] proposed a shedding algorithm for home energy usage and an architecture of a smart
+home energy management system. This work was based on domestic renewable energy sources,
+wireless communication among domotic devices, a control system and a home management system,
+and on grid management. Likewise, Salman et al. [22] proposed a smart system for energy efficient
+IoT-based homes with a cooling system was demonstrated the heat distribution in the kitchen area and
+virtual model of flow. The system remotely controls heating/cooling and lighting when an occupant
+leaves or enters the kitchen. In their work, Al-Ali et al. [9] introduced an Energy Management System
+(EMS) for smart homes. The EMS relies on MQTT (Message Queue Telemetry Transport), is empowered
+with Business Intelligence (BI) and analytics and uses big data. The system was validated using HVAC
+(Heating, Ventilation and Air Conditioning) to simulate the small residential area systems.
+Baker et al. [23] introduced and tested the algorithm E2C2, an energy-aware multi-cloud IoT service
+composition which can generate energy efficient composition proposals by adding services from service
+providers that are scattered globally. By contrast, Matsui [24] proposed an data provision system for
+both maintaining indoor comfort and decreasing electricity consumption with data provision to modify
+home resident behaviors. Fensel et al. [25] presented the OpenFridge platform and approach for energy
+saving in electrical appliances, particularly refrigerators. The approach demonstrated the feasibility
+of users eventually using it up for data economy and interacting with semantic energy information.
+Additionally, Hossain et al. [26] proposed an energy-efficient cyber–physical smart home system. Using
+cloud big data and computing, the system monitors the elderly to assist them in maintaining energy
+efficiency at home. In addition, in this work was proposed a smart multimedia-enabled middleware
+Energies 2020, 13, 1097 4 of 24
+assistant to receive notifications relating to the status of domotic devices, visualize energy-efficient
+processes, share multimedia messages and control smart domotic devices through gestures.
+Golam et al. [27] proposed an architecture that uses web objects for offering energy efficient
+comfortable living services for smart home IoT services. In addition, a conceptual semantic ontology
+model was designed using the tool Protégé for use in the smart home scenario. Additionally, Chauhan
+and Babar [28] presented a Web-of-Things (WoT) system to manage appliances. The system tries to
+meet some of the standard business needs and the quality of smart homes. The use of a Reference
+Architecture (RA)-centered approach for the evolution of the WoT and IoT systems was proposed in this
+work. In addition, Lanfur and Pérez [29] implemented a real-time video streaming and transmission
+security system in a residential scale model. The system allows lights to be turned off and on, and
+doors to be closed and opened as occupants enter/leave a room. Also, the system relies on motion
+sensors to obtain information that can be visualized through a web interface. Iqbal et al. [30] presented
+architecture that uses the ZigBee technologies to minimize unnecessary electrical energy usage in
+smart homes, based in the context of IoT. The architecture is powered by GRAPHX, Bit Data, SPARK,
+and Hadoop for data analysis.
+Marinakis et al. [31] proposed an architecture of a big data platform that can create, develop,
+maintain, and exploit smart energy services using cross-domain data. A web-based Decision Support
+System (DSS) according to the proposed architecture was developed to use multi-sourced information
+to generate management activity strategies in the domotic space. Jo and Ik-Yoon [32] presented three
+intelligent models as IoT platform application services for a smart home: (1) intelligence energy
+efficiency as a service (IE2S) to perform the role of a server and process the information collected by IAT
+using the Mobius platform and an artificial TensorFlow engine for data learning, (2) intelligence service
+TAS (IST) to manage, and provide control the service stage, and (3) intelligence awareness target as
+a service (IAT) to manage the “things” stage. Filho et al. [33] proposed STORm, a decision-making
+solution for residential environments that combines computational intelligence and fog computing.
+STORm retrieves, processes, disseminates, detects, and controls the information sent by sensors installed
+in a residential scenario to apply the decision-making process. Additionally, Tao et al. [34] developed a
+multilayered architecture based on the cloud and a home automation anthology supported by the IoT.
+The anthology was used to address application heterogeneity, data representation, and knowledge.
+Iqbal et al. [35] developed an interoperable IoT-based platform for domestic environments using
+web-based objects and the cloud. The platform facilitates the control of domotic devices from different
+locations, provides important household information to analyze applications and various services,
+and tries to improve resource utilization. Yassine et al. [36] proposed a platform for smart homes that
+combines big data analytics technology and IoT with cloud computing and fog. This platform is a fast
+and efficient solution that supports large volumes of smart home information. In addition, Matsui [37]
+presented a HEMS to obtain information from a smart home, with the purpose of maintaining interior
+comfort and reducing energy consumption according to resident comfort preferences, which were
+previously provided and set through a web page. On the other hand, Terroso-Saenz et al. [38] presented
+IoTEO, an IoT energy platform that attempts to be the first holistic solution for the management of IoT
+energy information. IoTEO relies on FIWARE to deal with energy quality and support data analytics.
+Likewise, Park et al. [39] proposed a thermal comfort-based controller (TCC-V1) to decrease the energy
+consumed by cooling residential buildings. To energy optimal control, the controller uses the predicted
+mean vote (PMV).
+Bouaziz et al. [40] proposed EMA-RPL, a new energy efficient and mobility aware routing protocol
+which is based on Lossy Networks (the RPL standard) and the Routing Protocol for Low power.
+EMA-RPL enables the better sustaining of connectivity of conserving energy and mobile nodes. By
+contrast, Mancini et al. [41] presented the characterization of three control systems based on user energy
+consumptions habits. The authors used a demand/response (DR) program and procedure to evaluate
+energy consumption and economic savings. Similarly, they conducted a financial analysis of the
+investment needed to implement the program. Sun et al. [42] proposed an energy-efficient mechanism
+Energies 2020, 13, 1097 5 of 24
+that optimizes IoT service compositions to support concurrent requests. The mechanism reduces energy
+consumption in the network and improves the exchange of IoT services among concurrent requests. In
+addition, Meena et al. [43] presented a framework for optimal planning of hybrid energy conversion
+systems (battery energy storage system, photovoltaic cells, and wind turbine) in smart homes. The
+model aims at generating less costly and more reliable alternatives for smart homes for middle-class
+families. Alarif and Tolba [12] proposed AQL (Adaptive Q-Learning), a reinforcement-based learning
+technique to increase network performance with reduced energy–overhead tradeoff in a smart device
+(sensor) cloud-assisted internet of things (CIoT).
+Matsui et al. [4] presented a study on energy usage patterns to then propose an energy conservation
+action plan. To this end, the researchers gathered real-time data on energy consumption and indoor
+temperature in a Tokyo residential area using IoT devices and sensors. Then, the data were analyzed
+using three types of method: a clustering algorithm, a correlation analysis, and a classification of
+indoor temperature for detached houses with different building structure and ages, and condominium
+apartments. From a similar perspective, Le and Benjapolakul [44] conducted a study to test the energy
+yield of the rooftop photovoltaics (PV) systems based on machine learning techniques (i.e., multiple
+linear regression and bootstrap). The authors identified an association between technical configuration
+details of PV (number of inverters, number of panels, rated solar panel power, and rated inverter
+power) and the energy yield. In addition, Castro-Antonio et al. [45] presented a Robotics Operation
+System (ROS) that integrates various types of services in a single smart home service system. The
+ROS provides services to smart homes without fully recognizing them through a collection of sensors,
+cameras, and by incorporating autonomous service robots that can move inside the home and interact
+with the residents.
+Huh et al. [46] introduced the design of a Smart Metering Control System and a series of tests
+based on power line communication (PLC) using smart agents (i.e., program in charge of collecting data
+or performing certain actions without user intervention). For the tests, the authors used a smartphone
+and an Android mobile application. On the other hand, the protocols in the system were developed
+with languages C++ and C. In addition, the system was developed and integrated in Java with the
+purpose of being a basic element for the Smart Grid. Likewise, Jung and Huh [47] proposed a model
+to predict atypical data of a linear transmission point using the A-Deep Q-Learning algorithm in
+combination with the altered K-means algorithm. The goals were to identify atypical information of
+the same linear transmission point in big data, and to know the objective of its elements. Additionally,
+the model makes it easy to automatically select values from cluster k, which is based on unlabeled
+sensors and big data. In addition, Yassine et al. [48] proposed a model to identify patterns of human
+activity to support the health care of people from their homes. The model makes use of big data to
+analyze the activities of the inhabitants at home. Additionally, pattern mining is proposed to analyze
+energy consumption variation in domotic devices, which depends on the behavior of the inhabitants.
+Also, in the model, FP-growth was used to identify patterns, whereas the k-means algorithm was used
+to know the relationship among devices influencing energy consumption.
+Zhao et al. [49] proposed a neutral blockchain-based data trading protocol within the big
+data market to increase the availability, fairness, and privacy of data trading. The blockchain
+infrastructure has the main advantage of debugging failures in any of the big data market points.
+Additionally, similarity learning was used to increase the quality and availability of information
+from data providers, and an extension of the double authentication preventing signature (DAPS)
+was carried out. Additionally, Risteska Stojkoska and Trivodaliev [50] proposed a framework that
+integrates different components from IoT architectures/frameworks proposed in other works in order
+to efficiently integrate smart home objects in a cloud-centric IoT solution. Likewise, the authors
+identified a smart home management model for their architecture, along with the tasks to be performed
+at each architectural level. Finally, the authors discussed current challenges in smart home design,
+emphasizing such aspects as interoperability, information processing, and communication protocols.
+Rathore et al. [51] proposed an IoT-based system that relies on different types of sensors installed in a
+Energies 2020, 13, 1097 6 of 24
+home to contribute to smart city development and urban planning through big data. The system uses
+a four-tier architecture: (1) bottom tier-1, (2) intermediate tier-1, (3) intermediate tier-2, and (4) top tier.
+In addition, the system is implemented using Hadoop with Spark, voltDB, Storm or S4 for real-time
+information processing and data collection.
+As the previous paragraphs show, a great range of applications and IoT tools seek to contribute
+to energy-saving efforts in smart houses. Likewise, note that many of the analyzed works
+established models, communication protocols, technologies, and security paradigms to guarantee
+the interoperability and integrity of domotic systems. However, it seems that only a few initiatives
+can automatically, and without much user intervention, handle and operate decisions of smart home
+devices connected to a domotic control system. From this perspective, HEMS-IoT is a solution that
+integrates and provides access to information from different IoT providers, domotic devices, and
+sensors. Likewise, our system analyzes the information collected from big data technologies and
+machine learning algorithms and offers knowledge on efficient energy consumption and home comfort
+through recommendations, rules, and alerts. Overall, HEMS-IoT monitors domotic devices and sensors
+in real time, provides energy-saving recommendations, and facilitates communication and interaction
+between devices and with users. The following section describes the architecture and functionality of
+HEMS-IoT and discusses our case study.
+3. Materials and Methods
+Home automation is part of the application domain IoT personal and social and thus offers
+many opportunities for developing new useful applications [52]. Home automation refers to a set of
+techniques aimed at automating a home, which integrate technology into security, energy management,
+and welfare. Comfort is essential in a home automation system and comprises all the actions performed
+to improve the way home residents feel in their houses [37]. However, home automation applied in
+the IoT faces a major challenge—few communication systems ensure device interconnectivity [50].
+This problem arises from the lack of unified protocols and the many different lifestyles of users
+coexisting in smart cities [53]. In the following subsections, we present and describe the architecture
+and functionality of HEMS-IoT and discuss a case study where our system is implemented.
+3.1. Architecture Description
+HEMS-IoT is a home energy management system that seeks to contribute to the comfort and
+security of smart homes, while simultaneously helping residents save energy. To this end, HEMS-IoT
+uses IoT devices, big data technologies, and machine learning to manage energy consumption.
+Also, HEMS-IoT allows for the real-time monitoring of domotic devices and home sensors. All the
+information obtained is analyzed and processed using machine learning algorithms to learn energy
+consumption patterns and user behavior patterns and make relevant recommendations for cutting
+energy waste.
+3.2. HEMS-IoT: Architecture and Functionality
+HEMS-IoT has a seven-layered architecture, which facilitates the system’s maintenance and
+allows for high scalability. The architecture of HEMS-IoT is presented in Figure 1, and integrates the
+presentation layer, the IoT services layer, the security layer, the management layer, the communication
+layer, the data layer, and the device layer. Every layer has a clearly defined function and includes
+multiple components having a specific functionality within their corresponding layer.
+• Presentation layer. This layer ensures bonding between the user and the system through either a
+mobile application or a web application. At the presentation layer, users can visualize energy
+consumption data, available IoT services, power consumption history, and recommendations. As
+a web application, HEMS-IoT receives information and allows users to manipulate and control
+domotic devices through various devices. As a mobile application, HEMS-IoT works on the
+Energies 2020, 13, 1097 7 of 24
+Android operating system for users to manage and control domotic devices. In addition, with the
+mobile application, users monitor home domotic devices, incorporate new rooms, remove or add
+domotic devices from a particular room in the house, and obtain energy-saving recommendations.
+The application also displays charts to consult energy consumption patterns on a daily, weekly,
+and monthly basis and offers users energy-saving recommendations for their smart homes.
+• Security layer. This layer guarantees information security and hence guarantees the confidentiality
+and secure collection of data from the device layer. Communication between the device layer and
+the security layer is not direct, since they communicate through the communication layer and the
+management layer.
+• IoT services layer. This layer serves as a link between the application layer and the management
+layer. Additionally, this layer provides various REST services, allowing users to fully exploit the
+functionalities of HEMS-IoT.
+• Management layer. This layer performs and manages the actions to meet user requirements
+requested at the application layer. To this end, the IoT layer uses the REST API to ensure
+communication between the presentation layer and the management layer.
+• Data layer. This layer saves the data generated in the device layer. Namely, the data layer relies
+on modules to manage five types of information: recommendations, service profiles, sensed data,
+device profiles, and user profiles. The recommendations module is responsible for managing
+comfort and energy-saving recommendations. In turn, the service profile manages data on the
+provision of system services. The sensed data module saves and manages all the information
+collected by the device layer from the smart home, such as gas/water/energy consumption and
+room temperature, among others. The device profile module handles data on domotic devices,
+such as their status and location, among others. Finally, the user profile module manages user
+information, such as full address, name, and gender, among others.
+• Communication layer. This layer considers elements such as a set of sensors, HTTP and TCP/IP,
+and 4G communication to establish the communication protocols for each domotic device. Other
+layers in the architecture communicate with each other through the communication layer.
+•EnergiDese 2v0i2c0e, 1l3a,y 1e0r9.7 This layer facilitates data linkage and reception from various domotic devices.7A olfs 2o4, 
+the device layer controls actuators and home automation devices.
+• and obtain energy-saving recommendations. The application also displays charts to consult The following subsections describe the most important aspects of HEMS-IoT.
+energy consumption patterns on a daily, weekly, and monthly basis and offers users energy-
+saving recommendations for their smart homes. 
+ 
+Figure 1.. Architecture of HEMS-IoT.. 
+• Security layer. This layer guarantees information security and hence guarantees the 
+confidentiality and secure collection of data from the device layer. Communication between the 
+device layer and the security layer is not direct, since they communicate through the 
+communication layer and the management layer. 
+• IoT services layer. This layer serves as a link between the application layer and the management 
+layer. Additionally, this layer provides various REST services, allowing users to fully exploit the 
+functionalities of HEMS-IoT. 
+• Management layer. This layer performs and manages the actions to meet user requirements 
+requested at the application layer. To this end, the IoT layer uses the REST API to ensure 
+communication between the presentation layer and the management layer. 
+• Data layer. This layer saves the data generated in the device layer. Namely, the data layer relies 
+on modules to manage five types of information: recommendations, service profiles, sensed 
+data, device profiles, and user profiles. The recommendations module is responsible for 
+managing comfort and energy-saving recommendations. In turn, the service profile manages 
+data on the provision of system services. The sensed data module saves and manages all the 
+information collected by the device layer from the smart home, such as gas/water/energy 
+consumption and room temperature, among others. The device profile module handles data on 
+domotic devices, such as their status and location, among others. Finally, the user profile module 
+manages user information, such as full address, name, and gender, among others. 
+• Communication layer. This layer considers elements such as a set of sensors, HTTP and TCP/IP, 
+and 4G communication to establish the communication protocols for each domotic device. Other 
+layers in the architecture communicate with each other through the communication layer.  
+• Device layer. This layer facilitates data linkage and reception from various domotic devices. 
+Also, the device layer controls actuators and home automation devices. 
+The following subsections describe the most important aspects of HEMS-IoT. 
+3.2.1. Device Layer 
+An efficient home energy-saving system must take into account resident preferences in order to 
+successfully control how domotic devices operate in the house. However, home energy consumption 
+also depends on other factors, such as external environment, natural ventilation, temperature 
+ 
+Energies 2020, 13, 1097 8 of 24
+3.2.1. Device Layer
+An efficient home energy-saving system must take into account resident preferences in order to
+successfully control how domotic devices operate in the house. However, home energy consumption
+also depends on other factors, such as external environment, natural ventilation, temperature variations
+through seasons, and the age of residents, to name but a few. Some examples of the devices considered
+in the device layer of HEMS-IoT are listed as follows:
+• Gateways. These objects allow smart home automation devices to remain interconnected. Likewise,
+gateways are the link between external networks and domotic devices installed in the smart home
+and make it easier to control domotic devices both remotely and locally. The gateways used in
+smart homes are border devices that allow access between external and local networks within
+a house. Because the different home automation devices linked to the smart home connect to
+other networks or even the Internet, gateways handle the main communication access between
+those networks.
+• Sensors. They collect data on different parameters of the smart home, such as risk of burglary, gas
+or water leaks, and room temperature, among others.
+• Actuators. They are usually of various types and are installed throughout the house. Actuators are
+used to change the status of domotic devices and some home facilities. For instance, actuators can
+interrupt the water and gas supply, issue failure or risk warnings, increase or decrease temperature
+from air conditioners, or adjust light intensity from smart bulbs.
+• Controllers. These devices allow users to control domotic devices with respect to the chosen
+parameters. HEMS-IoT retrieves data from the various sensors installed in a house and processes
+the data by means of an algorithm. Then, the system prepares the rules necessary to invoke
+the actuators. Likewise, HEMS-IoT allows users to monitor the status of the operating domotic
+devices, thus making home residents completely involved in the process. Users can also control
+and program the actuators and sensors installed in the smart house through a centralized control
+system and using a touch screen, a keyboard, or a voice interface, among others.
+3.2.2. Communication Layer
+Home needs vary across smart homes, yet the most common include indoor cooling or heating,
+hot water, and lighting. HEMS-IoT needs to draw upon on reliable communication networks to
+successfully retrieve energy consumption data and user behavior data. Some of the protocols used in
+the communication layer of HEMS-IoT are listed below:
+• ZigBee. The ZigBee Alliance developed the ZigBee protocol following the IEEE802.15.4,
+a low-power wireless network standard. ZigBee is a low-cost and high-level protocol used
+to establish personal networks through reduced, low-power digital radios that send information
+wirelessly to larger areas. In addition, ZigBee is used in low information rate applications that
+require secure networking and long battery life. Finally, ZigBee considers various kinds of network
+topologies, including the tree, star, and mesh topologies.
+• TCP/IP. The US Department of Defense developed the Transfer Control Protocol/Internet Protocol
+(TCP/IP) with the purpose of intercommunicating computers with various operating systems
+(minicomputers, PCs, and central computers), which work in local area networks (LAN) or
+wide area networks (WAN). The TCP/IP protocol is a group of protocols that determine various
+premises and rules for machines from different providers to exchange data through public
+telephone networks, such as WAN and LAN networks. The Internet design is based on the
+TCP/IP protocol.
+• HTTP/IP. The World Wide Web Consortium (W3C) and the Internet Engineering Task Force (IETF)
+developed the Hypertext Transfer Protocol (HTTP), which is used in any type of transaction
+made over the Internet. HTTP helps to define the semantics and syntax used by various agents
+(servers, clients and proxy) to communicate among them. HTTP is a request-response-client-server
+Energies 2020, 13, 1097 9 of 24
+protocol, where the HTTP user sends a request to an HTTP server; then, the server returns the
+message with a response. User requirements include programs, translations, files, and database
+queries, among others. All the data executed on the Web through HTTP are identified with either
+an HTTP address or a uniform resource locator (URL).
+Energies 2020, 13, 1097 9 of 24 
+The communication layer helps home residents control smart home devices, both intelligently and
+eroffiocmie nttelmy. pTehreatguorael, inmtohtisonla, yaenr dis thoec oalilre cctoinfdoirtmioanteiro’ns ftreomptehreatduirffee, reton tnIoaTm-be abseudt dae vfeiwce.s Finigstuarlele d2 
+inlluasstrmataerst thhoem ge.nTerhael swe odraktfalopwro ovfi dHeEiMnfSo-rImoTa tiino nthoen cothmemhuomnieca, tsiuocnh layseern. ergy consumption, room
+temp erature, motion, and the air conditioner’s temperature, to name but a few. Figure 2 illustrates the
+gener al workflow of HEMS-IoT in the communication layer.
+ 
+ 
+Figure 2.. Workflflow of HEMS-IoT.. 
+AAss sseeeenn iinn FFiigguurree 22,, sseennssoorrss aarree aa kkeeyy eelleemmeenntt iinn ssmmaarrtt hhoommee mmoonniittoorriinngg.. BByy ccoolllleeccttiinngg rreeaall--ttiimmee 
+iinnffoorrmmaattiioonn,, sesnensosrosrsa llaolwlowH EHMESM-IoST-ItooTa ntoal yazneaalynzdei daenndti fyidheonwtifmy uhcohwp omwuerchsm paortwheorm semaaprpt lihanocmees 
+aanpdpldiaenvciceess aanrde cdoenvsiucems ianrge. cUosnesrusmcainngv.i sUusaelrizse caannd vmisuoanliitzoer athnids  imnfoonrmitoart itohniso innfaodrmailaytiboans iosnt oa mdaaiklye 
+tbhaesinse tcoe mssaakrye ethnee rngeyc-essasvairnyg eanderjugsyt-msaevnitnsg.  Aadlsjuos,ttmhaennktss. tAolsseon, tshoarns,kHs EtoM seSn-IsooTrsc, aHnEisMsuSe-IoapTp craonp irsisautee 
+eanpeprrgoyp-rsiaavtien genreercgoym-smaevnindga trioencosmanmdeinndvaotkioenbso tahndba isnicvsoekrev ibcoesth( eb.ga.s, ipcl usemrvbiicnegs a(ned.ge.,l epclturimcablirnegp aainrsd) 
+aenledctermicaelr greepnacyirss)e ravnidce esm(ee.rgg.,epnocyli csee,rfivirceefisg (het.egr.,s )pwolhiceen, frierqefuigirhetde.rs) when required. 
+33..22..33.. MMaannaaggeemmeenntt LLaayyeerr 
+TThhiiss llaayyeerr uusseess mmaacchhiinnee lleeaarrnniinngg aanndd bbiigg ddaattaa ssttoorraaggee tteecchhnnoollooggiieess ttoo eeaassiillyy mmaannaaggee aanndd aannaallyyzzee 
+tthhee ininfofromrmataiotinonco lcleocllteecdteind thine  dtehveic edleavyiecre.  Sliamyielar.r lyS, iimnfiolarmrlya,t ioinnfaocrcmesasticoonm macacnedsss acroemenmcaapnsdusl ataerde 
+benyctahpesmulaanteadg ebmy etnhte lmayaenratgoeemnesnutr elaiynefor rtmo aetniosunrsee icnufroirtym. aTthioenm saecnuargietym. eTnhtel amyaernaaglseomidenent tliafiyeesr uaslseor 
+bideehnatvifiioers puasettre brnehsaavnidorc plaasttseifirness ahnodm celassasicfcieosr dhionmgetso atchceoirrdeinnge rtgoy thceoinr seunmerpgyti ocnonpsautmteprntisonu spiantgtetrhnes 
+AusPiIngo fthWe eAkPaI3 o.8f ,Wwehkiac h3.8is, wthheicshta ibsl ethve esrtsaibolne voef rtshioeno opfe nth-eso ouprecne-ssoouftrwcea rseofatnwdarseu acnceds ssfuuclclyesshfeullplys 
+HheElpMsS H-IoETMcSo-ImoTp lycowmipthlyt hweitrhe qtuhier erdeqfuuinrcetdio fnuanlcittiieosn.aTliotiecsl.a sTsoif ycldasastiafya nddatga eannedra tgeenenereartgey e-snaevrignyg-
+rseacvoinmgm reencodmatmioennsd, HatEioMnsS,- IHoTEMusSe-sIoaTn uospeesn asno uorpceenJ asvoaurimcep Jlaevmae inmtaptlieomn eonftaaltgioonri tohfm alCgo4.r5it,hwmh iCch4.i5s, 
+twhheiJc4h8 ims tahceh iJn4e8 lmeaarcnhiinnge alelgaornriitnhgm a.lgCo4r.i5thamnd. CJ448.5 aarnedu sJ4e8d atoreg uesneedr attoe gdeenceisriaotne tdreeceiss,ioann dtrteheesy, aanrde 
+cthlaesys iafircea ctiloanssaifligcoatriiothnm alsg. oCriltahsmsifis.c Catliaosnsiafilcgaotrioitnh malsgoarriethwmids ealrye uwseiddeilny hueseadlt hinca hreeaalnthdcahraev aenpdr ohvaevde 
+tporoyvieeldd toou ytsitealdnd oiuntgstraensudlitnsgi nretshueltds iiang nthoes ids ioafghneopsiast iotifs h[5ep4]a,tcitains c[e5r4][,5 5ca–n58ce],r h[e5a5r–t5d8]i,s ehaesaert[ 5d9i]s,eeaysee 
+d[5is9e],a seeyse[ 6d0i]s,eaansdest u[m60o]r, saonndd tiguimtaolrms aomnm doiggritaaml sm[6a1m].mInogardadmitsio [n6,1J]4.8 Ihna sadadbiettitoenr, pJe4r8fo hrmasa nac ebtehttaenr 
+optehreforramlgaonrciteh tmhas,ns outchhera salrgaonrditohmmfso, rseuscth, C aAs rRaTnd[6o2m],  rfaonredsot,m CtAreReT,  f[u6z2z],y rCan-mdoeman tsr,eaen, dfuRzEzyP TCr-eme e[6a3n]s., 
+and RHEEPMTSre-Ieo [T63w]a. s developed and implemented in a modular and generic way, with better application
+extenHsiEbMilitSy-,IoeaTs ewoafsi mdpevleemloepnetdat iaonnd,  animdpwleimtheanvteidew into ah igmhopdeurlfaorr manadn ceg.enTehreict awskasyp, ewrfoitrhm beedttbeyr 
+tahpepmlicaantaiogne mexetnetnlsaiybeilritcya,n eabseed oivf iidmedplienmtoenfotautriognro, uanpds: with a view to high performance. The tasks 
+1p.erfoUrmseerd mbya nthaeg emmaennatg.emCeonmt plaryiseers cacnt iboen dsivsuidcehda isntdoe floeutirn groanudpse: diting user profiles and user
+1. Uresgeirs trmaatinoang, eameontg. oCtohmerps.rises actions such as deleting and editing user profiles and user 
+2. rHegoimsteramtioan,a agmemoneng to. tEhnercso. mpasses actions of data deletion, data editing, and management of
+2. Hdomoe timc adneavgiceems,enatm. oEngcoomthpearsss.esIn atchtiiosnssu obf- mdoatdau dlee,lewtieond,e vdealtoap eeditainga, natnhdo lmogaynaogfedmoemnot toicf 
+dreosmouortcice sd, aevs irceecso,m ameondge dotihnemrsu. lItnip tlheirse seuabr-cmh owdourlkes, [w64e– 6d9e]v. eTloptheids eannd a, wntehuolsoegdya osuf bdvoemrsoiotinc 
+resources, as recommended in multiple research works [64–69]. To this end, we used a 
+subversion of the web ontology language (OWL), the OWL-DL, which is based on the SHI2 
+description logic. Likewise, OWL-DL has a broad vocabulary and greater expressiveness than 
+RDFS. Figure 3 depicts a fragment of the developed ontology, which present the main domotic 
+concepts, such as home activity, environment, entity and stay, among others. 
+ 
+Energies 2020, 13, 1097 10 of 24
+of the web ontology language (OWL), the OWL-DL, which is based on the SHI2 description
+logic. Likewise, OWL-DL has a broad vocabulary and greater expressiveness than RDFS. Figure 3
+depicts a fragment of the developed ontology, which present the main domotic concepts, such as
+home activity, environment, entity and stay, among others. We also followed the Methontology
+method to develop the home automation ontology [70]. That is, we conducted different operations,
+each based on particular aspects of the conceptual model of knowledge: relationships, terms,
+axioms, taxonomy, rules, and mathematical approximations of elements.
+3. Recommender system. This system issues recommendations for energy saving and home comfort
+based on home residents’ behavioral patterns. To this end, the system takes into account both
+daily and average energy consumption values from each domotic device, which allows the system
+to generate the rules in the algorithm. Therefore, smart homes are classified on a daily basis
+with respect to four energy consumption categories: normal, low, medium, and high. Once the
+classification is performed with the J48 algorithm, the rules are established according to energy
+consumption categories. In this sense, energy consumption is calculated with respect to the
+number domotic devices connected in a home, the average number of home residents, and the
+season (spring, summer, autumn, and winter). The algorithm rules identify and indicate how the
+energy-saving recommendation process works. We also used Apache Mahout and RuleML to
+generate energy-saving recommendations. Apache Mahout is a free software library that supports
+the scalable implementation of machine learning algorithms. On the other hand, RuleML is
+based on XML (Extensible Markup Language), which is used for the immediate exchange of
+rules. Finally, the recommender system of HEMS-IoT not only issues recommendations, but it
+also suggests IoT services to solve safety problems.
+4. Dashboard. This displays graphical representations (charts) of the main smart home indicators
+(electricity, gas, or water consumption) and resident habits.
+Energies 2020, 13, 1097 10 of 24 
+  
+(a) (b) 
+FigureFi3g.uDreo m3. oDtiocmoonttiocl ognyto: l(oag)yF:r (aag)m Freangtm1,e(nbt) 1F,r (abg)m Freangtm2.ent 2. 
+The tWeche naolsloog foielslouwseedd itnheth Me estyhsotenmtoaloregyv emryetihmopdo trot adnetv, ebleocpa uthsee hthoemyea laluowtomHaEtMioSn- IoonTtotlooagnya [l7y0z]e. That 
+and displaisy, wvies ucoanl dreupcrteesde ndtifafteiorennst oofpeenraetrigoynsc,o enascuhm bpastieodn o. nT pharortuicguhlatrh eassepecchtas rotsf ,thues ecrosnccaenptmuaalk me odel 
+sound eneorfg kyn-soawvilnedggdee: criesliaotniosnasnhdiptsh,u tserompsti,m axizioemens,e tragxyocnoonmsuym, rputlieosn, ainndth meiarthheomaetsi.cal approximations 
+of elements. 
+3. Recommender system. This system issues recommendations for energy saving and home 
+comfort based on home residents’ behavioral patterns. To this end, the system takes into account 
+both daily and average energy consumption values from each domotic device, which allows the 
+system to generate the rules in the algorithm. Therefore, smart homes are classified on a daily 
+basis with respect to four energy consumption categories: normal, low, medium, and high. Once 
+the classification is performed with the J48 algorithm, the rules are established according to 
+energy consumption categories. In this sense, energy consumption is calculated with respect to 
+the number domotic devices connected in a home, the average number of home residents, and 
+the season (spring, summer, autumn, and winter). The algorithm rules identify and indicate how 
+the energy-saving recommendation process works. We also used Apache Mahout and RuleML 
+to generate energy-saving recommendations. Apache Mahout is a free software library that 
+supports the scalable implementation of machine learning algorithms. On the other hand, 
+RuleML is based on XML (Extensible Markup Language), which is used for the immediate 
+exchange of rules. Finally, the recommender system of HEMS-IoT not only issues 
+recommendations, but it also suggests IoT services to solve safety problems. 
+4. Dashboard. This displays graphical representations (charts) of the main smart home indicators 
+(electricity, gas, or water consumption) and resident habits. 
+The technologies used in the system are very important, because they allow HEMS-IoT to 
+analyze and display visual representations of energy consumption. Through these charts, users can 
+make sound energy-saving decisions and thus optimize energy consumption in their homes. 
+3.2.4. IoT Services Layer 
+This layer provides various REST-based web services to communicate with both the application 
+layer and the management layer. Consequently, HEMS-IoT users can easily interact with the system's 
+functionalities. The main components in this layer are described below: 
+• REST API. REST collects information or performs operations on such information in all possible 
+formats, such as JSON and XML, using HTTP. REST is a good option if compared to other 
+protocols for information exchange, such as the Simple Object Access Protocol (SOAP), which 
+has a high capacity but is complicated. 
+ 
+Energies 2020, 13, 1097 11 of 24
+3.2.4. IoT Services Layer
+This layer provides various REST-based web services to communicate with both the application
+layer and the management layer. Consequently, HEMS-IoT users can easily interact with the system’s
+functionalities. The main components in this layer are described below:
+• REST API. REST collects information or performs operations on such information in all possible
+formats, such as JSON and XML, using HTTP. REST is a good option if compared to other protocols
+for information exchange, such as the Simple Object Access Protocol (SOAP), which has a high
+capacity but is complicated.
+• Service selector. This module validates the parameters passed on by the presentation layer and
+choosing the required services. Likewise, the service selector has the power to either give or deny
+services, according to the authentication data and received parameters.
+3.2.5. Security Layer
+This layer guarantees data confidentiality and can retrieve data protected by both the device layer
+and the end users. The communication layer and the administration layer facilitate communication
+between the security layer and the device layer. This layer considers two security components,
+authorization and authentication, described below:
+• Authentication. This refers to the act of validating with evidence that something/someone is
+what/who they claim to be. Object/device authentication involves ensure its origin, whereas
+confirming user identity usually implies user authentication. In HEMS-IoT, user authentication
+requires ensuring that the user who wishes to interact with the system is truly who he/she claims
+to be. When this is the case, HEMS-IoT authorizes said user to access the system.
+• Authorization. This occurs after user identity is authenticated by the system. The goal of
+authorization mechanisms is to protect user information and prevent unauthorized or unidentified
+users from accessing data or performing particular tasks. Authorization and authentication
+are different, since authorization involves the tasks that users are allowed to perform or the
+information that can access once their identity is confirmed. User authorization is applied either
+to individual elements or to a set of them. In smart home management systems, each element
+relates to an activity to be run.
+3.2.6. Presentation Layer
+As a mobile application, HEMS-IoT works on the Android operating system. Figure 4a illustrates
+the application’s menu list on the presentation layer. The main menu options include home (i.e.,
+return to the initial screen), favorites (rapidly access preferred rooms), statistics (visualize energy
+consumption patterns), rooms (view home rooms), and devices (visualize domotic devices and sensors
+connected to the smart home). Additionally, the application’s menu allows users to add and remove
+devices or rooms, view existing user profiles, consult and change application settings, and exit the
+application. Figure 4b illustrates examples of comfort, safety, and energy-saving recommendations
+issued by HEMS-IoT.
+Energies 2020, 13, 1097 11 of 24 
+• Service selector. This module validates the parameters passed on by the presentation layer and 
+choosing the required services. Likewise, the service selector has the power to either give or 
+deny services, according to the authentication data and received parameters. 
+3.2.5. Security Layer 
+This layer guarantees data confidentiality and can retrieve data protected by both the device 
+layer and the end users. The communication layer and the administration layer facilitate 
+communication between the security layer and the device layer. This layer considers two security 
+components, authorization and authentication, described below: 
+• Authentication. This refers to the act of validating with evidence that something/someone is 
+what/who they claim to be. Object/device authentication involves ensure its origin, whereas 
+confirming user identity usually implies user authentication. In HEMS-IoT, user authentication 
+requires ensuring that the user who wishes to interact with the system is truly who he/she claims 
+to be. When this is the case, HEMS-IoT authorizes said user to access the system. 
+• Authorization. This occurs after user identity is authenticated by the system. The goal of 
+authorization mechanisms is to protect user information and prevent unauthorized or 
+unidentified users from accessing data or performing particular tasks. Authorization and 
+authentication are different, since authorization involves the tasks that users are allowed to 
+perform or the information that can access once their identity is confirmed. User authorization 
+is applied either to individual elements or to a set of them. In smart home management systems, 
+each element relates to an activity to be run. 
+3.2.6. Presentation Layer 
+As a mobile application, HEMS-IoT works on the Android operating system. Figure 4a illustrates 
+the application’s menu list on the presentation layer. The main menu options include home (i.e., 
+return to the initial screen), favorites (rapidly access preferred rooms), statistics (visualize energy 
+consumption patterns), rooms (view home rooms), and devices (visualize domotic devices and 
+sensors connected to the smart home). Additionally, the application’s menu allows users to add and 
+Erneemrgioesv2e0 2d0e, v13i,c1e0s9 7or rooms, view existing user profiles, consult and change application setting1s2, oafn2d4  
+exit the application. Figure 4b illustrates examples of comfort, safety, and energy-saving 
+recommendations issued by HEMS-IoT. 
+Energies 2020, 13, 1097  12 of 25  
+(a) (b) 
+Figure 5a shows a yearly graph and a weekly graph generated by HEMS-IoT. Graphs allow 
+application users tFFoiig guuvrrieesu 44.a. IlIninztteer rffaeaccneeessr oogffy H EEcoMnSSs--IuIoomTT::p ((atai))o Mn eennduua,,t (a(bb )) dRRaeeciclooym, mweeneneddkaatltiyioo,n nssm.. onthly, or yearly. 
+Additionally, as Figure 5b illustrates, the HEMS-IoT mobile app provides a set of user interfaces for 
+homeF iirgeusrirdee 55naats ss thoo vwisesw aa  yayneeadar rlrleyq ggurreaaspt hb aaasnicd s aae rwvieeceeekksl layv ggariralaapbhle g giene nteehrrea tItoedT  (bey.g H., EpMluSm--IIboinT.g.  Garnraadp ehlsse caatllrlliocwal  
+araeppppalliiicrcasat)ti.io oTnnhu asuneskressr tstoo  vttohis eu vauilssizuee aoleifnz Ieo rTge ynteeccorhgnnysou lmcoogpnitesious nmandpdatti oamnda acdihlyain,tawe  eldeeaakrillnyy,i,nm gwo tneetechkhllyny,i,qo rumeysoe,an HrtlhyEl.yMA, Sdo-dIroi tTiyo ehnaearlllpys,.  
+ar sesFiidgeunrtes 5btoi llmusotnraittoesr , tthheeiHr EsMmSa-rIto Thommoebsil eeaapsiplyp raonvdid eisn arseeatl-otfimusee rainndte rpfarcoevsidfoers heonmeergryes-sidavenintsg 
+troecvoiemwmaennddraetqiouness tabcacsoircdsienrgvliyc.e s available in the IoT (e.g., plumbing and electrical repairs). Thanks to
+the us e of IoT technologies and machine learning techniques, HEMS-IoT helps residents to monitor
+their  smart homes easily and in real-time and provides energy-saving recommendations accordingly.
+ 
+  
+(a) (b) 
+FFiigguurree 55.. IInntteerrffaacceess ooff HHEEMMSS--IIooTT:: ((aa)) SSttaattiissttiiccss,, ((bb)) IIooTT sseerrvviicceess.. 
+IInn tthhee lliigghhtt ooff aa fifirree oorr ssaaffeettyy pprroobblelemmss,, tthhee ssyysstteemm inintteelllliiggeennttllyy rreeqquueessttss eemmeerrggeennccyy sseerrvviicceess 
+((ppoolliiccee oorr fifirree sseerrvviicceess)),,n noottiiffyyiinnggh hoommeer reessidideenntstso offt htheep poossssibibleler risiskk. . 
+3.3. Case Study: Monitoring a Smart Home to Ensure Indoor Comfort and Safety and Reduce Energy 
+Consumption 
+In this section, we introduce a case study to validate HEMS-IoT in the smart home’s comfort, 
+safety, and energy saving. The case study depicts how a home resident can monitor user energy 
+patterns and total energy consumption in their smart home and how HEMS-IoT can generate energy-
+saving recommendations accordingly. Overall, the case study scenario can be described as follows: 
+• A smart house equipped with six sensors—a water flow sensor, an energy control sensor, a gas 
+sensor, a motion sensor, a sound sensor, and a temperature sensor—needs to be monitored to 
+ensure it provides its residents with appropriate comfort and safety while simultaneously 
+reducing energy consumption. 
+Figure 6 introduces a visual representation of the scenario. As can be observed, home data and/or 
+events are monitored through the six sensors, which send the data and/or events to a synchronized 
+gateway. This mechanism ensures that the appropriate information is sent to each sensor supplier. 
+Subsequently, HEMS-IoT requests home data from each sensor supplier to ensure indoor comfort 
+and issue energy-saving recommendations according to the resident’s preferences. HEMS-IoT 
+receives and analyzes the data to identify 1) energy consumption patterns, 2) possible problems 
+within the normal operation of the house, such as water or gas leaks and electrical failures (which 
+may increase energy consumption), and 3) possible emergencies compromising home security and 
+integrity (e.g., flood, fire, burglary attempt). If a problem requires requesting a basic service, HEMS-
+ 
+Energies 2020, 13, 1097 13 of 24
+3.3. Case Study: Monitoring a Smart Home to Ensure Indoor Comfort and Safety and Reduce
+Energy Consumption
+In this section, we introduce a case study to validate HEMS-IoT in the smart home’s comfort, safety,
+and energy saving. The case study depicts how a home resident can monitor user energy patterns
+and total energy consumption in their smart home and how HEMS-IoT can generate energy-saving
+recommendations accordingly. Overall, the case study scenario can be described as follows:
+• A smart house equipped with six sensors—a water flow sensor, an energy control sensor, a gas
+sensor, a motion sensor, a sound sensor, and a temperature sensor—needs to be monitored to
+ensure it provides its residents with appropriate comfort and safety while simultaneously reducing
+energy consumption.
+Figure 6 introduces a visual representation of the scenario. As can be observed, home data and/or
+events are monitored through the six sensors, which send the data and/or events to a synchronized
+gateway. This mechanism ensures that the appropriate information is sent to each sensor supplier.
+Subsequently, HEMS-IoT requests home data from each sensor supplier to ensure indoor comfort and
+issue energy-saving recommendations according to the resident’s preferences. HEMS-IoT receives
+and analyzes the data to identify (1) energy consumption patterns, (2) possible problems within the
+normal operation of the house, such as water or gas leaks and electrical failures (which may increase
+energy consumption), and (3) possible emergencies compromising home security and integrity (e.g.,
+flood, fire, burglary attempt). If a problem requires requesting a basic service, HEMS-IoT locates
+available basic service providers to handle the request. Then, the system notifies the user of the
+problem and displays basic information of each provider (i.e., name, address, telephone number, open
+hours, costs, and references, among others). The user can then choose their preferred provider and
+sEennerdgisest 2h0e20s,e 1r3v, 1ic0e97c onfirmation to the system to notify the corresponding provider, so that the s1e3r ovfi c2e4 
+request is answered. Conversely, if HEMS-IoT identifies a safety emergency, it automatically invokes
+aanuteomeartgiceanlcly isnevrvoikceesp arno veimdeerrg(penocliyc esesrevrivciec ep,rfiorveidseerrv (ipcoe)libcey sseernvdicine,g fbiraes iscerdvaitcae)o nbyt hseenhdoiunsge b(ea.sgic., 
+addadtar eosns, tthyep ehoouf seem (eer.g.e, nacdyd, trheessd, atytapea nodf /eomr eevrgenentsceym, tihttee dabtya tahneds/eonr seovresn, otsw enmerit)t.ed by the sensors, 
+owner). 
+ 
+FFiiggurree 66.. SScceennaarriioo:: Moonniittoorriinngg aa ssmaarrtt hhooussee.. 
+TThhee ssyysstteemm ssiimmuullttaanneeoouussllyy nnoottiiffiieess tthhee hhoommee rreessiiddeenntt ooff tthhee eemmeerrggeennccyy ttoo hheellpp tthheemm ttaakkee tthhee 
+nneecceessssaarryy mmeeaassuurreess,, ddeeppeennddiinngg oonn wwhheetthheerr tthheeyy aarree iinn tthhee hhoouussee oorr nnoott.. 
+Methodology
+3.3.1. Methodology 
+The main goal of the case study is to calculate energy consumption in smart homes and classify
+The main goal of the case study is to calculate energy consumption in smart homes and classify 
+consumption rates with respect to what HEMS-IoT sets as a normal energy consumption level. The
+consumption rates with respect to what HEMS-IoT sets as a normal energy consumption level. The 
+case study was conducted among ten houses from a Mexican residential complex. The houses were 
+of two types, as listed in Table 1. As can be observed, the first home design is smaller than the second 
+one, and this difference lies in the number of bedrooms: the houses with the first design had two 
+bedrooms, whereas those with the second design had three bedrooms. The first house design is 
+suitable for three residents, while the second house design is appropriate for four people. All the 
+houses had at last two smart plugs. The ten houses were equipped with sensors to visualize and 
+document data such as motion and room location, lighting, and temperature. The sensors collected 
+and sent the data to the data layer every 30 seconds, thus generating more than 2500 data per day. 
+Table 1. House design and characteristics. 
+ Smart Home 1 Smart Home 2 
+Two lamps, one light, one TV, and Two lamps, one light, one TV, and one air 
+Room 1 
+one air conditioner conditioner 
+One computer, one TV, one iron, One computer, one TV, one ceiling fan, and 
+Room 2 
+and one light one light 
+Room 3 Not applicable Two lights and one iron 
+Living One ceiling fan, two lights, and one One ceiling fan, one video game console, one 
+room TV television, and two lights  
+Dinner 
+Two lights and one ceiling fan One ceiling fan and two lights 
+room 
+One electric stove, one refrigerator, One electric stove, one refrigerator, one 
+Kitchen 
+one blender, and two lights microwave, one blender, and two lights 
+Since it was important to determine energy consumption in the smart homes both before and 
+after using HEMS-IoT, we applied the following methodology: 
+ 
+Energies 2020, 13, 1097 14 of 24
+case study was conducted among ten houses from a Mexican residential complex. The houses were of
+two types, as listed in Table 1. As can be observed, the first home design is smaller than the second one,
+and this difference lies in the number of bedrooms: the houses with the first design had two bedrooms,
+whereas those with the second design had three bedrooms. The first house design is suitable for three
+residents, while the second house design is appropriate for four people. All the houses had at last
+two smart plugs. The ten houses were equipped with sensors to visualize and document data such as
+motion and room location, lighting, and temperature. The sensors collected and sent the data to the
+data layer every 30 seconds, thus generating more than 2500 data per day.
+Table 1. House design and characteristics.
+Smart Home 1 Smart Home 2
+Room 1 Two lamps, one light, one TV, and one Two lamps, one light, one TV, and oneair conditioner air conditioner
+Room 2 One computer, one TV, one iron, and One computer, one TV, one ceiling fan,one light and one light
+Room 3 Not applicable Two lights and one iron
+Living room One ceiling fan, two lights, and one TV One ceiling fan, one video game console,one television, and two lights
+Dinner room Two lights and one ceiling fan One ceiling fan and two lights
+Kitchen One electric stove, one refrigerator, one One electric stove, one refrigerator, oneblender, and two lights microwave, one blender, and two lights
+Since it was important to determine energy consumption in the smart homes both before and
+after using HEMS-IoT, we applied the following methodology:
+• The first monitoring period (before using HEMS-IoT) lasted eight months, from mid-January to
+mid-September 2018. All the residents were asked to interact with their domotic devices normally
+without paying particular attention to energy consumption or using HEMS-IoT. At this stage,
+energy consumption in each home was noted as stated in the electricity bills, which are issued by
+Mexican electricity company CFE, by its Spanish acronym.
+• The smart home residents were given the HEMS-IoT manual to learn how to use the application.
+The manual is a written guide of the HEMS-IoT application, as it describes all the system’s
+functionalities that help control domotic devices and visualize energy consumption patterns.
+• The second monitoring period (while using HEMS-IoT) also lasted eight months, from mid-January
+to mid-September 2019. During this period, the smart home residents used their domotic devices
+normally but were also asked to follow the system’s recommendations for energy saving, which
+took into account their own indoor comfort preferences. Note that every time a recommendation
+is accepted in HEMS-IoT, the system executes the necessary operations to control and program
+the domotic devices accordingly.
+• During the second monitoring period, data on energy consumption was collected thanks to
+HEMS-IoT’s device layer, but also through the CFE bills. The data collected in this second
+period helped us identify energy consumption patterns following the use of HEMS-IoT and
+its recommendations.
+• The data were analyzed through big data analysis technologies to recognize usage patterns
+across domotic devices, home comfort preferences, and house problems or security risks. Then,
+thanks to the J48 machine learning algorithm, home residents, domotic devices, and smart
+homes were classified with respect to energy consumption levels. HEMS-IoT relies on the
+J48 machine learning algorithm that uses the 10-fold cross-validation technique to achieve a
+predictive model. This validation technique is widely recommended for accurate estimates due
+to its low variance and low risk of bias [71]. Additionally, the J48 machine learning algorithm
+has demonstrated better performance than other algorithms [72–74]. Finally, to generate the
+energy-saving recommendations, HEMS-IoT uses both Apache Mahout and RuleML. Note that
+Energies 2020, 13, 1097 15 of 24
+some system recommendations are in the form of requests for IoT services (either basic or
+emergency services).
+• To determine whether HEMS-IoT actually managed to reduce energy consumption in the
+ten smart homes, we compared the data collected during the first monitoring period
+(mid-January to mid-September 2018) with those collected in the second period (mid-January to
+mid-September 2019).
+4. Results and Discussion
+HEMS-IoT gives home residents a more significant expectation of energy consumption in smart
+homes, because it collects deeper data through its service layer using machine learning and big data
+technologies. In this section, we analyze the data collected by HEMS-IoT during the case study to
+identify energy consumption patterns and understand the circumstances encouraging such patterns.
+Additionally, we propose a series of energy-saving actions and we present a user-centered evaluation.
+4.1. Data Analysis
+We conducted daily, weekly, and monthly data analyses to identify trends in energy consumption.
+Due to missing data, we used the average aggregation technique to calculate the average of the original
+valuation and transfer this value to a lower frequency. According to experts, this technique has
+yielded remarkable results when applied in sensor networks [75–77]. Next, we analyzed the HEMS-IoT
+recommendations. Likewise, we organized energy consumption data by establishing a continuous
+order, and we assigned 0 as the daily energy consumption value to domotic devices not used on a
+daily basis, such as irons.
+Regarding room lighting and temperature, we found that 12.5% to 22.5% of the total energy is
+consumed by air conditioning systems. Also, our results reveal that during the first months of the
+second monitoring period, home residents still seemed to pay little attention to how much power
+they were using; that is, we found evidence of excessive use of the air conditioners and lights on in
+empty rooms. We also identified smart homes where energy consumption levels were higher when
+the residents were absent. This phenomenon was particularly visible in households with children. In
+the end, these homes were classified into the low/poor energy consumption efficiency category as a
+result of the cluster analysis. We also identified two smart homes where energy consumption was
+disproportionate with respect to the number of inhabitants. This phenomenon might be explained by
+the use of the air conditioners.
+To identify energy consumption patterns, we conducted a daily analysis by paying close attention
+to the time of the year: spring, summer, fall, and winter. Overall, we found that daily energy
+consumption was higher at night and in the afternoon than in the morning. Likewise, we found that
+some hours can be important indicators of daily energy consumption in smart homes. Our results
+also indicate that energy use levels vary significantly across seasons. Undoubtedly, the demand for
+electric energy increased during the winter (use of heaters) and decreased during the summer (use of
+air conditioners). Finally, our results confirm that during the school summer break (July - August),
+energy consumption in smart homes with the second design significantly increased due to video
+game consoles.
+Our analysis of smart home energy consumption also led us to propose a series of energy-saving
+recommendations that can help residents cut energy waste and lower energy bills. Overall, it is very
+important to pay close careful to the use of both room lights and air conditioning systems. According
+to Mexico’s Energy Ministry (SENER, by its Spanish acronym), both cause a great deal of electricity
+waste. We also conducted a simulation of IoT service requests, since this system functionality was
+not exploited during the case study. The results obtained from the simulation were satisfactory, thus
+confirming that HEMS-IoT is well prepared to invoke IoT services as soon as the suppliers adopt this
+new paradigm.
+Energies 2020, 13, 1097 15 of 24 
+second monitoring period, home residents still seemed to pay little attention to how much power 
+they were using; that is, we found evidence of excessive use of the air conditioners and lights on in 
+empty rooms. We also identified smart homes where energy consumption levels were higher when 
+the residents were absent. This phenomenon was particularly visible in households with children. In 
+the end, these homes were classified into the low/poor energy consumption efficiency category as a 
+result of the cluster analysis. We also identified two smart homes where energy consumption was 
+disproportionate with respect to the number of inhabitants. This phenomenon might be explained by 
+the use of the air conditioners. 
+EnergiTeso2 02id0,e1n3t, i1f0y9 7energy consumption patterns, we conducted a daily analysis by paying 16cloofs2e4 
+attention to the time of the year: spring, summer, fall, and winter. Overall, we found that daily energy 
+consumption was higher at night and in the afternoon than in the morning. Likewise, we found that 
+4.2. Comparison Results and Findings
+some hours can be important indicators of daily energy consumption in smart homes. Our results 
+also iDnduircinatge theatc eansersgtyu duys,e wleeveglsa tvhaerrye dsigeneifrigcaynctloyn asucrmospst isoenasdoantsa. Ubenfdooreubthteedrlye,s itdhen dtsemusaend  tfhoer 
+eHleEcMtrSic- IeonTeargpyp lincactrieoans,ebdu dt ualrsiongw thiele wthineytewr (eureseu osifn hgeiatt.eArss) aanreds udlet,cwreeasceodn ducrtiendg athbee fsourme-amnedr- a(uftseer 
+ocof maipr acroinsodnittionideresn)t.i Ffyindailfflyer, eonucre rsebseutlwtse ceonntfhiremtw tohamt odnuirtionrgin tghpe esrcihoodosl( smuimd-mJaenru bareyatko (mJuildy- S- eAputegmubste)r, 
+e2n01e8rgvys .cmonidsu-Jmanputiaorny tion msmida-rSte hpotemebse rw2it0h1 9t)h. eS isnecceonindM dexsicgon esnigerngiyficbainlltslya rienicsrseuaesdedo ndaueb itmo ovnitdheloy 
+gbamsise, coounrsaonleasl.y sis follows the same trend. According to our results, visually depicted in Figure 7,
+HEMOS-uIro Tanraeldyuscise sofe nsmeragryt choonmsuem enpetirogny fcronmsu4m2 kpWtiohnt aols9o0 lkeWd huse vtoe rpyrotwposme ao nsethrise.sW oef eantterrigbuy-tseatvhiensge 
+recsuomltsmtoenthdeatfiaocntst hthaatts cmaanr ht ehlopm resriedseindtesn ctsutf oelnloewrgeyd wthaesten aenrdgy l-oswaveirn egnreercgoym bmillesn. dOavteioranlsl,i ists uise vdebry 
+iHmEpMorSt-aIonTt .toA pdadyit icolonsaell cy,awreefuble tloie tvhee tuhsaet othf ebsoatthis rfoaoctmor lyigrhestsu altnsdw aeirre caolnsodidtiuoentiongth seysfotellmows. iAngccaosrpdeicntgs: 
+to Mexico’s Energy Ministry (SENER, by its Spanish acronym), both cause a great deal of electricity 
+w• asteIn. tWeree satlsfroo cmonsdmuacrttedh oam siemrueslaidtieonnt sofin IocTu tsteinrvgiceen erergqyuewstass, tsei,nacne dthdisis scyipstleinme ftuoncchtaionngaelietyn ewrgays 
+not ecxopnlosuitmedp dtiuorninhga bthites .case study. The results obtained from the simulation were satisfactory, thus 
+c•onfiArmdienqgu athteata HndEMopSti-mIoaTl iuss we eolfl dporempoatriecdd teov iicnevso, kpea rItoiTcu slearrvlyictehso asse swooitnh ahsi gthee rsudpemplaienrds faodroepnte trhgiys, 
+new spuacrhadaisgamir conditioners (e.g., limiting room temperature to 20–25 ◦. C and setting automatic device
+shutdown for empty rooms).
+4•.2. CAomccpeaprtiasonnc eRoesfuHltsE aMnSd -FIoinTdirnegcos mmendations for energy saving. Energy consumption is highly
+dependent on resident behavior. In this sense, the performance of our system is bound to whether
+During the case study, we gathered energy consumption data before the residents used the 
+residents follow HEMS-IoT recommendations. For instance, our results reveal behavioral changes
+HEMS-IoT application, but also while they were using it. As a result, we conducted a before-and-
+with respect to the use of the air conditioner. Initially, these were used for longer periods of time,
+after comparison to identify differences between the two monitoring periods (mid-January to mid-
+even in empty rooms; however, during the second monitoring period, we found evidence that
+September 2018 vs. mid-January to mid-September 2019). S◦ince in Mexico energy bills are issued on residents limited air conditioner temperatures to 18–24 C and set the application to automatically
+a bimonthly basis, our analysis follows the same trend. According to our results, visually depicted in 
+turn the air conditioner off once the room was empty.
+Figure 7, HEMS-IoT reduces energy consumption from 42 kWh to 90 kWh every two months. We 
+a•ttribSumtea rtthheosme e rreessuidltesn tstow hthoea ccfaecptt edthmato rsemHaErMt Sh-oIomTer erceosmidmenentsd aftoiollnoswaendd cthhaen geenderthgeyi-rsahvoimnge 
+recomaumtoemndaatitoionnhs aibssitusemd abnya gHeEdMtoS-bIeotTte. rAcdudt itthieoinraelnlye,r gwye wbaesliteev. e that the satisfactory results were 
+also due to the following aspects: 
+ 
+Figure 7. Energy consumption comparison.
+Figure 7. Energy consumption comparison. 
+4.3. User-Centered Evaluation
+ 
+It is very important that mobile applications achieve their goals regarding end-user satisfaction,
+which depends largely on quality aspects such as design, service, assistance, utility, and usability.
+On the other hand, to evaluate recommender systems, precision and accuracy metrics are widely
+used in the literature. However, several researchers have identified that the use of recommendation
+systems that provide personalized assistance to find relevant information generates a high perception
+of satisfaction [78,79]. In this regard, it is necessary to investigate recommendation systems from
+a user-centered perspective [80]. Therefore, the HEMS-IoT system was evaluated through the
+Energies 2020, 13, 1097 16 of 24 
+• Interest from smart home residents in cutting energy waste, and discipline to change energy 
+consumption habits. 
+• Adequate and optimal use of domotic devices, particularly those with higher demand for 
+energy, such as air conditioners (e.g., limiting room temperature to 20–25°C and setting 
+automatic device shutdown for empty rooms). 
+• Acceptance of HEMS-IoT recommendations for energy saving. Energy consumption is highly 
+dependent on resident behavior. In this sense, the performance of our system is bound to 
+whether residents follow HEMS-IoT recommendations. For instance, our results reveal 
+behavioral changes with respect to the use of the air conditioner. Initially, these were used for 
+longer periods of time, even in empty rooms; however, during the second monitoring period, 
+we found evidence that residents limited air conditioner temperatures to 18–24 °C and set the 
+application to automatically turn the air conditioner off once the room was empty.  
+• Smart home residents who accepted more HEMS-IoT recommendations and changed their home 
+automation habits managed to better cut their energy waste. 
+4.3. User-Centered Evaluation 
+It is very important that mobile applications achieve their goals regarding end-user satisfaction, 
+which depends largely on quality aspects such as design, service, assistance, utility, and usability. On 
+the other hand, to evaluate recommender systems, precision and accuracy metrics are widely used in 
+the literature. However, several researchers have identified that the use of recommendation systems 
+Ethneartg iepsr2o0v20i,d1e3 ,p10e9r7sonalized assistance to find relevant information generates a high percepti1o7no f o24f 
+satisfaction [78,79]. In this regard, it is necessary to investigate recommendation systems from a user-
+cUesnetre-rCeedn ptreicrsEpveacltuivaeti o[8n0]F.r Tamheerwefoorrke,f othreR HecEoMmSm-IeonTd esyr sStyesmte wmass[ 8e1v]awluhaitcehd itshbraosuegdho tnhea Uthseeorr-yCeanbtoruict 
+Ehuvamluanatbioenh aFvriaomr tehwaot rcka nfobre Ruesceodminmseitnudaetrio Snyssstuemchs a[s8t1h] ewuhseicohf ias sbpaesceidfi cosny sat etmhe.ory about human 
+behavTihoer tohvaetr caalln gboea ul soefdt ihni ssiltausattieovnasl usuatciho nasw thaes utosem ofe aa ssupreecitfhice suysseterm’s . perception of HEMS-IoT
+regarTdhine gotvheeraqlul agliotayl oofft htheirse claosmt meveanlduaattiioonn swgeans etroa tmedeabsyutrhee tshyes tuesmer,'tsh peelercveepltoiofnsa otifs fHacEtiMonS,-ItohTe 
+reegeacrtidviennge tshse,  aqnudaltihtye  ionft ethneti orenctoomumsee.nFdiagtuiorens8 gdeenpeicratstetdh ebtyh ethoere styicsatel mm,o tdheel luesveedl oinf tshaitsisefaxcpteiorinm, the ff ent.
+eSfpfeeccitfiivceanlleys,st,h aenhdy tphoet ihnetseenstiaoinm toto uesxe.p Flaiginurthe e8 pdeerpciecitvse tdher ethcoemormetiecnadl amtioodneql uuaselidty inb ythtihs eexupseerriambeonutt. 
+Sthpeeceinfiecraglyly-s, athvien hgyrpeocothmemseesn adimat itoon emxpeltahiond thaes wpeerlcleaisvehdo wrecpoemrcmeiveneddaqtuioanli tqyuianlflituye bnyc etsheth uesseyr satebmou’st 
+tehee cetniveregnye-sssaavnindgt hreecsoamtimsfaecntdioantiopner mceeivtheoddb ayst wheelul saesr .hFouwr tpheerrcmeiovreed,  tqhuisaleixtyp einrifmlueenntcecos nthsied seyrsetdemth'es ff
+eufsfeerc’tsivinenteenstsi oanndto thues esa[8ti2s]f,aacitmioinn pgetrocdeievteedrm biyn tehief tuhseers.y Fsutermth’esremoerceti,v tehnis eff essxpanerdimtheenut sceorn’ssipdeerrceediv tehde 
+usasteirs'fsa icntitoennthioanv etoa upsoes [i8ti2v]e, ainimfluinegn ctoe odnetuersmerisnteo icf othneti nsyuseteumsi’nsg eftfheectHivEeMneSs-sI oaTndsy tshtee mus.er's perceived 
+satisfaction have a positive influence on users to continue using the HEMS-IoT system. 
+ 
+Figure 8. User-centered theoretical model.
+Figure 8. User-centered theoretical model. 
+The people involved in this case study (21 women and 14 men between 18 and 59 years) were
+The people involved in this case study (21 women and 14 men between 18 and 59 years) were 
+asked questions to measure their experience and perceptions using HEMS- IoT. The questionnaire
+asked questions to measure their experience and perceptions using HEMS- IoT. The questionnaire 
+used in this work was adapted from standardized data collection instruments focused on measuring
+used in this work was adapted from standardized data collection instruments focused on measuring 
+user-system interaction.
+user-system interaction.  
+Specifically, the questionnaire used in [81] was slightly adapted to identify the user’s perception
+Specifically, the questionnaire used in [81] was slightly adapted to identify the user's perception 
+regarding perceived satisfaction, perceived system effectiveness, and the quality of energy-saving
+regarding perceived satisfaction, perceived system effectiveness, and the quality of energy-saving 
+recommendations. Meanwhile, the questionnaire proposed in [82] was used to measure the perceived
+recommendations. Meanwhile, the questionnaire proposed in [82] was used to measure the perceived 
+recommendation quality, and the questionnaires presented in [83] and [84] were used to identify the
+ user’s intention to use. Table 2 describes the final questionnaire, which is based on a five-point Likert
+scale ("Strongly disagree" to "Strongly agree") that helps quantify user satisfaction. Table 3 describes
+the results obtained for the perceived recommendation quality (PRQ) of the users, the perceived
+satisfaction (PS), perceived system effectiveness (PSE), as well as their intention to use (ITU). As can be
+observed, the average results were 3.81 for PRQ, 3.45 for PS, 2.98 for PSE, and 4.07 for ITU.
+Table 2. Questionnaire.
+Perceived Recommendation Quality Perceived System Effectiveness
+1. I like the energy-saving recommendations provided by
+HEMS-IoT. 11. The system is useful.
+2. The energy-saving recommendations fit my comfort 12. The system makes me more aware of energy
+preferences. consumption at home.
+3. The energy-saving recommendations provided by 13. I make better energy-saving decisions with
+HEMS-IoT were well chosen. HEMS-IoT.
+4. The energy-saving recommendations were relevant. 14. I can have better energy savings without useHEMS-IoT.
+5. The system provided various inefficient energy-saving 15. I can decrease the cost of energy
+recommendations. consumption using HEMS-IoT.
+Energies 2020, 13, 1097 18 of 24
+Table 2. Cont.
+Perceived Satisfaction Intention to Use
+6. I like the energy-saving recommendations I have 16. I will use this system again for energy
+accepted. saving.
+7. I am comfortable with the energy-saving 17. I will use this system more frequently for
+recommendations accepted. energy saving.
+8. I feel happy to have a more efficient energy 18. I will tell my friends or acquaintances about
+consumption. this system.
+9. I would recommend some of the energy-saving 19. I am very likely to use this system for energy
+recommendations I have accepted to friends or family. savings at home.
+10. The energy-saving recommendations fit my comfort 20. I am very likely that I would recommend my
+preferences. family to use this system.
+Table 3. Results of the user-centered evaluation.
+User PRQ PS PSE ITU
+HU1 3.8 3.2 3.2 3.8
+HU2 3.8 3.2 2.6 4.4
+HU3 4.2 3.4 3.2 3.8
+HU4 3.6 3.6 3.2 3.8
+HU5 3.4 3.2 3.2 3.8
+HU6 3.8 3.2 3.2 4.2
+HU7 3.6 3.4 2.8 3.8
+HU8 4.2 3.2 3.2 4.4
+HU9 3.4 3.4 2.6 3.8
+HU10 3.6 3.2 3.2 4.2
+HU11 4.2 3.2 2.8 4.2
+HU12 3.6 3.4 2.8 3.8
+HU13 3.8 3.4 2.8 3.8
+HU14 3.8 3.2 2.8 4.2
+HU15 3.6 3.4 3.2 4.2
+HU16 3.6 3.2 2.8 4.2
+HU17 3.6 3.4 2.6 4.2
+HU18 3.8 3.2 3.2 4.2
+HU19 4.2 4.2 3.2 3.8
+HU20 3.8 3.6 2.8 4.2
+HU21 3.8 3.6 3.4 3.6
+HU22 3.8 3.4 3.2 4.2
+HU23 3.8 3.8 2.8 4.2
+HU24 3.8 3.4 3.2 3.8
+HU25 3.6 3.4 2.8 3.8
+HU26 4.2 3.8 2.8 3.8
+HU27 4.2 3.6 2.6 4.4
+HU28 3.8 3.6 3.2 4.2
+HU29 3.8 3.6 2.6 4.2
+HU30 3.8 3.6 2.6 4.2
+HU31 3.8 3.8 3.2 4.4
+HU32 3.8 3.4 3.2 4.2
+HU33 3.8 3.6 3.2 4.2
+HU34 4.2 3.8 3.2 4.2
+HU35 3.8 3.2 2.8 4.2
+Avg. 3.81 3.45 2.98 4.07
+To identify the importance of all aspects presented in Figure 8, the obtained results were analyzed
+statistically by using the T (statistical) value, the p (importance) and the correlation (size effect). Figure 9
+depicts the results obtained from this analysis. Furthermore, Pearson correlation was performed
+to determine the relatedness between the perceived recommendation quality, the perceived system
+Energies 2020, 13, 1097 18 of 24 
+HU18 3.8 3.2 3.2 4.2 
+HU19 4.2 4.2 3.2 3.8 
+HU20 3.8 3.6 2.8 4.2 
+HU21 3.8 3.6 3.4 3.6 
+HU22 3.8 3.4 3.2 4.2 
+HU23 3.8 3.8 2.8 4.2 
+HU24 3.8 3.4 3.2 3.8 
+HU25 3.6 3.4 2.8 3.8 
+HU26 4.2 3.8 2.8 3.8 
+HU27 4.2 3.6 2.6 4.4 
+HU28 3.8 3.6 3.2 4.2 
+HU29 3.8 3.6 2.6 4.2 
+HU30 3.8 3.6 2.6 4.2 
+HU31 3.8 3.8 3.2 4.4 
+HU32 3.8 3.4 3.2 4.2 
+HU33 3.8 3.6 3.2 4.2 
+HU34 4.2 3.8 3.2 4.2 
+HU35 3.8 3.2 2.8 4.2 
+Avg. 3.81 3.45 2.98 4.07 
+To identify the importance of all aspects presented in Figure 8, the obtained results were 
+analyzed statistically by using the T (statistical) value, the p (importance) and the correlation (size 
+Eenffeergcite)s.2 F02ig0,u1r3e,  190 9d7epicts the results obtained from this analysis. Furthermore, Pearson correlatio1n9 wofa24s 
+performed to determine the relatedness between the perceived recommendation quality, the 
+epeerccetiivveende sssy, satnedmp eerfcfeecivtievdensaetsiss,f aacntidon p. eArsceciavnebde soabtsisefravcetdiofnro. mAsF igcaunre b9e,  poebrcseeirvveeddr efcroommm Feingduareti o9n, ff
+qpueraclietiyvepdo srietcivoemlymiennflduaetniocnes qtuhaeliptye rpcoeisviteidveslyys itnefmlueenceecsti tvheen pesesrc(erive0d.6 s7y5s,tepm e0f.f5e)catinvdenthesesp (re r=c 0.6ff = < eiv7e5d, 
+spa t<i s0f.a5c)t iaonnd( rthe0 p.8e9r1c,epived0 .s0a1t)i.sAfalcstoio, pn e(rrc e=i v0e.8d91sy, spt e<m 0.e01e)c. tAivlesnoe, spse(rrceiv0e.6d6 9s,ypstem0. 0e5f)feacntidvpenerecsesi v(re d= = < ff = <
+s0a.6ti6s9f,a pct <io 0n.0(5r) an0d.9 4p3e,rpceiv0e.d0 1s)ahtiasvfaectainonim (rp =o 0rt.9a4n3t,i pn fl<u 0e.0n1c)e hoanvteh aenu ismerp’osritnatnetn itnioflnuetoncues oe.n the user's = <
+intention to use. 
+ 
+Figure 9. Experiment results.
+Figure 9. Experiment results. 
+Finally, it should be noted that perceived satisfaction obtained higher correlation values than those
+Finally, it should be noted that perceived satisfaction obtained higher correlation values than 
+obtained by the perceived system effectiveness; hence, we can conclude that perceived satisfaction has
+those obtained by the perceived system effectiveness; hence, we can conclude that perceived 
+a stronger effect on user’s intention to use HEMS-IoT.
+satisfaction has a stronger effect on user's intention to use HEMS-IoT. 
+5. Conclusions
+5. Conclusions 
+Energy efficiency has become a key research area, because energy consumption exponentially
+increEasneesrgays yefefaicrisegnocyb hy,aps abretcicoumlaer lay kienyt hreesreeasricdhe narteiaal, sbeecctaour.seI fecnoemrgbyi nceodnswuimthpttihoenI eoxTppoanreandtiiaglmly, 
+hinocmreeasaeust oams ayteiaorns sgyos tbemy, spaarretipcurolamrliysi ning tehnee rrgeysisdaevnitniagl asletecrtonra.t iIvf ecso.mTbhienIeodT wcaitnhs tuhcec eIsosTfu pllayracdoilglemct,, 
+dhoismtreib auutteo,manadtioann asylyszteemdsa taaret oprcoomnviseirntgi tentoerkgnyo swavleidngge alatnerdniantifvoersm. aTthioe nIo; Th ocwane vsuerc,cIeosTsfudlelyv iccoelslefcotr, 
+sdmisatrritbhuotme, easnhda vaenalilmyzitee ddarteas otuo rccoesn.vTeorto ivt etroc okmnoewthliesdlgime iatnatdio inn,fiotrims iamtiponor; thanowt teovceorn, sIiodTe rdoetvhiecresd afotar 
+hsmanadrtli nhgomaletesr hnaavtiev elism—isteudc hreassomuraccehsi.n Teol eoavrnerincogmane dthbiisg ldimatiata—titoonc, oitl leisc ti,mmpaonratagnet, aton dcoannsaildyezre olathrgeer 
+v olumes of data. The big data analytics technologies are used to obtain and analyze large amounts of
+data, whereas machine learning algorithms and statistical models based on patterns and inferences
+are needed by the system to meet its goals. Additionally, machine learning provides alternatives to
+learning-based problems and identifies the background and characteristics of such problems in order
+to learn from them and increase system functioning.
+Current challenges in the residential sector related to energy consumption are areas of opportunity
+for the IoT paradigm, machine learning, and big data technologies. In this work, we proposed
+HEMS-IoT, a big data and machine learning-based smart home energy management system for
+home comfort, safety, and energy saving. Machine learning techniques and big data technologies are
+important in our work, because they are used by the system to analyze and classify energy consumption
+efficiency, identify user behavior patterns, and ensure home comfort. We used the machine learning
+algorithm J48 and Weka API to learn energy consumption patterns and user behavioral patterns. Also,
+RuleML and Apache Mahout were used to create energy-saving recommendations based on user
+preferences to preserve smart home comfort and safety. We presented a case study to validate HEMS-IoT,
+where we monitored a smart home to ensure home comfort and safety and reduce energy consumption.
+In conclusion, three factors were fundamental in achieving energy consumption reduction in this case
+study: (1) the commitment of smart home inhabitants to change their energy consumption habits,
+(2) follow-ups on the system’s energy-saving recommendations, and (3) the fact that the system allows
+users to modify the operating parameters of domotic devices. From this perspective, we trust that the
+results obtained in this work will be a motivation for more users to rely on HEMS-IoT when seeking a
+smart home management alternative that makes it possible to optimize energy consumption and thus
+make savings.
+Energies 2020, 13, 1097 20 of 24
+Our proposal has five main constraints. First, the HEMS-IoT mobile application only works on the
+Android operating system, even though we know that the tablet market is dominated by iOs. Second,
+our system is only compatible with some types of home automation sensor. Third, we only use big data
+technologies and the J48 machine learning algorithm. Fourth, the system does not generate customized
+energy-saving recommendations due to some limitations having arisen during the research process.
+Five, we did not collect data on energy consumption from domotic devices before the implementation
+of HEMS-IoT.
+As future work, we will seek to implement HEMS-IoT on a larger scale and among smart homes
+using a greater number of domotic devices. Additionally, we will intend to incorporate location-based
+functionalities in HEMS-IoT by relying on the GPS from mobile devices. In this sense, we expect that
+HEMS-IoT will be able to estimate residents’ arrival time at home to increase comfort by performing
+actions such as playing music or turning the air conditioner in advance based on the mood of the user.
+Finally, we will seek to include solar panels—in order to minimize electrical energy consumption—and
+implement more advanced security strategies, such as blockchain and cyber security.
+Author Contributions: Conceptualization, I.M.-C., G.A.-H. and M.A.P.-V.; Data curation, M.A.P.-V.; Formal
+analysis, L.R.-M. and J.O.O.-A.; Funding acquisition, G.A.-H., M.A.P.-V. and J.L.S.-C.; Investigation, J.L.S.-C.;
+Methodology, I.M.-C. and M.A.P.-V.; Project administration, G.A.-H.; Resources, G.A.-H.; Software, I.M.-C.,
+M.A.P.-V. and L.R.-M.; Supervision, L.R.-M. and J.O.O.-A.; Validation, I.M.-C., G.A.-H. and L.R.-M.; Visualization,
+J.L.S.-C. and J.O.-O.A.; Writing—original draft, I.M.-C.; Writing—review & editing, G.A.-H. and M.A.P.-V. All
+authors have read and agreed to the published version of the manuscript.
+Funding: This research was funded by Mexico’s National Council of Science and Technology (CONACYT)
+through project 52–2016: "Application of Big Data and Semantic Web techniques to Develop Intelligent Systems,"
+a postdoctoral grant, and a doctoral grant.
+Acknowledgments: This work was supported by Mexico’s National Technological Institute (TecNM) and
+sponsored by both Mexico’s National Council of Science and Technology (CONACYT) and the Secretariat of
+Public Education (SEP) through the PRODEP project (Programa para el Desarrollo Profesional Docente).
+Conflicts of Interest: The authors declare that there are no potential conflicts of interest with respect to the
+publication of this article.
+References
+1. Thema, J.; Suerkemper, F.; Couder, J.; Mzavanadze, N.; Chatterjee, S.; Teubler, J.; Thomas, S.; Ürge-Vorsatz, D.;
+Hansen, M.B.; Bouzarovski, S.; et al. The multiple benefits of the 2030 EU energy efficiency potential. Energies
+2019, 12, 2798. [CrossRef]
+2. Filho, G.P.R.; Villas, L.A.; Gonçalves, V.P.; Pessin, G.; Loureiro, A.A.F.; Ueyama, J. Internet of Things
+Energy-efficient smart home systems: Infrastructure and decision-making process. Internet Things 2019, 5,
+153–167. [CrossRef]
+3. Li, W.; Logenthiran, T.; Phan, V.; Woo, W.L. Implemented IoT based Self-learning Home Management System
+(SHMS) for Singapore. IEEE Internet Things J. 2018, 5, 2212–2219. [CrossRef]
+4. Matsui, K.; Yamagata, Y.; Kawakubo, S. Real-time sensing in residential area using IoT technology for finding
+usage patterns to suggest action plan to conserve energy. Energy Procedia 2019, 158, 6438–6445. [CrossRef]
+5. Bonomi, F.; Milito, R.; Zhu, J.; Addepalli, S. Fog Computing and Its Role in the Internet of Things. In
+Proceedings of the First Edition of the MCC Workshop on Mobile Cloud Computing, Helsinki, Finland,
+13–17 August 2012; pp. 13–15.
+6. Li, S.; Xu, L.D.; Zhao, S. The internet of things: A survey. Inf. Syst. Front. 2015, 17, 243–259. [CrossRef]
+7. Bandyopadhyay, D.; Sen, J. Internet of things: Applications and challenges in technology and standardization.
+Wirel. Pers. Commun. 2011, 58, 49–69. [CrossRef]
+8. Gawali, S.K.; Deshmukh, M.K. Energy autonomy in IoT technologies. Energy Procedia 2019, 156, 222–226.
+[CrossRef]
+9. Al-Ali, A.R.; Zualkernan, I.A.; Rashid, M.; Gupta, R.; Alikarar, M.A. Smart Home Energy Management
+System Using IoT and Big Data Analytics Approach. IEEE Trans. Consum. Electron. 2017, 63, 426–434.
+[CrossRef]
+Energies 2020, 13, 1097 21 of 24
+10. Schuelke-Leech, B.A.; Barry, B.; Muratori, M.; Yurkovich, B.J. Big Data issues and opportunities for electric
+utilities. Renew. Sustain. Energy Rev. 2015, 52, 937–947. [CrossRef]
+11. Huang, H.; Yu, H. Compact and Fast Machine Learning Accelerator for IoT Devices; Springer: Singapore, 2019;
+pp. 13–23.
+12. Alarifi, A.; Tolba, A. Optimizing the network energy of cloud assisted internet of things by using the adaptive
+neural learning approach in wireless sensor networks. Comput. Ind. J. 2019, 106, 133–141. [CrossRef]
+13. Machorro-cano, I.; Paredes-Valverde, M.A.; Alor-Hernandez, G.; del Pilar Salas-Zárate, M.;
+Segura-Ozuna, M.G.; Sánchez-Cervantes, J.L. PESSHIoT: Smart Platform for Monitoring and Controlling
+Smart Home Devices and Sensors. Technol. Innov. CITI 2019. Commun. Comput. Inf. Sci. 2019, 1124, 137–150.
+14. Paredes-Valverde, M.A.; Alor-Hernández, G.; García-Alcaráz, J.L.; del Pilar Salas-Zárate, M.;
+Colombo-Mendoza, L.O.; Sánchez-Cervantes, J.L. IntelliHome: An internet of things-based system for
+electrical energy saving in smart home environment. Comput. Intell. 2020, 36, 203–224. [CrossRef]
+15. Samuel, S.S.I. A review of connectivity challenges in IoT-smart home. In Proceedings of the 2016 3rd MEC
+International Conference Big Data Smart City, ICBDSC, Muscat, Oman, 15–16 March 2016; pp. 364–367.
+16. Kang, B.; Park, S.; Lee, T.; Park, S. IoT-based Monitoring System using Tri-level Context Making Model for
+Smart Home Services. In Proceedings of the 2015 IEEE International Conference on Consumer Electronics
+(ICCE), Berlin, Germany, 6–9 September 2015; pp. 1–2.
+17. Adiono, T.; Vidya, R.; Putra, W.; Fathany, M.Y.; Wibisono, M.A.; Adijarto, W. Smart Home Platform Based
+on Optimized Wireless Sensor Network Protocol and Scalable Architecture. In Proceedings of the 2015
+9th International Conference on Telecommunication Systems Services and Applications (TSSA), Bandung,
+Indonesia, 25–26 November 2015; pp. 1–5.
+18. Lee, N.K.; Lee, H.K.; Lee, H.W.; Ryu, W. Implementation of Smart home Service over Web of Object
+Architecture. In Proceedings of the 2015 International Conference on Information and Communication
+Technology Convergence (ICTC), Jeju Island, Korea, 28–30 October 2015; pp. 1215–1219.
+19. Montesdeoca-Contreras, J.C.; Avila-Campoverde, R.S.; Cabrera-Hidalgo, J.C.; Vintimilla-Tapia, P.E. Mobile
+Applications Using TCP/IP-GSM Protocols Applied to Domotic. In Proceedings of the 2015 XVI Workshop
+on Information Processing and Control (RPIC), Cordoba, Argentina, 6–9 October 2015; pp. 1–4.
+20. Chilipirea, C.; Ursache, A.; Popa, D.O.; Pop, F. Energy efficiency and robustness for IoT: Building a smart
+home security system. In Proceedings of the 2016 IEEE 12th International Conference on Intelligent Computer
+Communication and Processing (ICCP), Cluj-Napoca, Romania, 8–10 September 2016; pp. 43–48.
+21. Elkhorchani., H.; Grayaa, K. Novel home energy management system using wireless communication
+technologies for carbon emission reduction within a smart grid. J. Clean. Prod. 2016, 135, 950–962. [CrossRef]
+22. Salman, L.; Salman, S.; Jahangirian, S.; Abraham, M.; German, F.; Blair, C. Energy efficient IoT-based smart
+home. In Proceedings of the 2016 IEEE 3rd World Forum on Internet of Things (WF-IoT), Reston, VA, USA,
+12–14 December 2017; pp. 526–529.
+23. Baker, T.; Asim, M.; Tawfik, H.; Aldawsari, B.; Buyya, R. An Energy-aware Service Composition Algorithm
+for Multiple Cloud-based IoT Applications. J. Netw. Comput. Appl. 2017, 89, 96–108. [CrossRef]
+24. Matsui, K. An information provision system as a function of HEMS to promote energy conservation and
+maintain indoor comfort. Energy Procedia 2017, 105, 3213–3218. [CrossRef]
+25. Fensel, A.; Tomic, D.K.; Koller, A. Contributing to appliances’ energy efficiency with Internet of Things,
+smart data and user engagement. Future Gener. Comput. Syst. 2017, 76, 329–338. [CrossRef]
+26. Hossain, M.S.; Rahman, M.A.; Muhammad, G. Cyber–physical cloud-oriented multi-sensory smart home
+framework for elderly people: An energy efficiency perspective. J. Parallel Distrib. Comput. 2017, 103, 11–21.
+[CrossRef]
+27. Kibria, M.G.; Jarwar, M.A.; Ali, S.; Kumar, S.; Chong, I. Web Objects Based Energy Efficiency for Smart Home
+IoT Service Provisioning. In Proceedings of the 2017 Ninth International Conference on Ubiquitous and
+Future Networks (ICUFN), Milan, Italy, 4–7 July 2017; pp. 55–60.
+28. Chauhan, M.A.; Babar, M.A. Using Reference Architectures for Design and Evaluation of WoT: A Case of Smart
+Homes Domain, 1st ed.; Elsevier Inc.: Amsterdam, The Netherlands, 2017; pp. 205–228.
+29. Lanfur, G.O.F.; Pérez, J.F.P. Implementación de un Sistema de Seguridad Independiente y Automatización de
+una Residencia por medio del Internet de las Cosas. In Proceedings of the 2017 IEEE Central America and
+Panama Student Conference (CONESCAPAN), Panama City, Panama, 20–22 September 2017; pp. 1–5.
+Energies 2020, 13, 1097 22 of 24
+30. Iqbal, J.; Khan, M.; Talha, M.; Farman, H.; Jan, B.; Muhammad, A.; Khattak, H.A. A Generic Internet of
+Things Architecture for Controlling Electrical Energy Consumption in Smart Homes. Sustain. Cities Soc.
+2018, 43, 443–450. [CrossRef]
+31. Marinakis, V.; Doukas, H.; Tsapelas, J.; Mouzakitis, S.; Sicilia, Á.; Madrazo, L.; Sgouridis, S. From big data to
+smart energy services: An application for intelligent energy management. Future Gener. Comput. Syst. 2018.
+[CrossRef]
+32. Jo, H.; Yoon, Y.I. Intelligent smart home energy efficiency model using artificial TensorFlow engine. Hum.
+Cent. Comput. Inf. Sci. 2018, 8, 1–18. [CrossRef]
+33. Filho, G.P.R.; Mano, A.D.B.V.L.Y.; Villas, L.A.; Ueyama, J. A Low-Cost Smart Home Automation to Enhance
+Decision-Making based on Fog Computing and Computational Intelligence. IEEE Lat. Am. Trans. 2018, 16,
+186–191. [CrossRef]
+34. Tao, M.; Zuo, J.; Liu, Z.; Castiglione, A.; Palmieri, F. Multi-layer cloud architectural model and ontology-based
+security service framework for IoT-based smart homes. Future Gener. Comput. Syst. 2018, 78, 1040–1051.
+[CrossRef]
+35. Iqbal, A.; Ullah, F.; Anwar, H.; Kwak, K.S.; Imran, M.; Jamal, W.; Rahman, A.U. Interoperable
+Internet-of-Things platform for smart home system using Web-of-Objects and cloud. Sustain. Cities
+Soc. 2018, 38, 636–646. [CrossRef]
+36. Yassine, A.; Singh, S.; Hossain, M.S.; Muhammad, G. IoT Big Data Analytics for Smart Homes with Fog and
+Cloud Computing. Future Gener. Comput. Syst. 2018, 91, 563–573. [CrossRef]
+37. Matsui, K. An information provision system to promote energy conservation and maintain indoor comfort
+in smart homes using sensed data by IoT sensors. Future Gener. Comput. Syst. 2018, 82, 388–394. [CrossRef]
+38. Terroso-Saenz, F.; González-Vidal, A.; Ramallo-González, A.P.; Skarmeta, A.F. An open IoT platform for the
+management and analysis of energy data. Future Gener. Comput. Syst. 2019, 92, 1066–1079. [CrossRef]
+39. Park, J.; Kim, T.; Lee, C. Development of Thermal Comfort-Based Controller and Potential Reduction of the
+Cooling Energy Consumption of a Residential Building in Kuwait. Energies 2019, 12, 3348. [CrossRef]
+40. Bouaziz, M.; Rachedi, A.; Belghith, A.; Berbineau, M.; Alahmadi, S. EMA-RPL: Energy and Mobility Aware
+Routing for the Internet of Mobile Things. Future Gener. Comput. Syst. 2019, 97, 247–258. [CrossRef]
+41. Mancini, F.; Lo Basso, G.; De Santoli, L. Energy Use in Residential Buildings: Impact of Building Automation
+Control Systems on Energy Performance and Flexibility. Energies 2019, 12, 2896. [CrossRef]
+42. Sun, M.; Zhou, Z.; Wang, J.; Du, C.; Gaaloul, W. Energy-Efficient IoT Service Composition for Concurrent
+Timed Applications. Future Gener. Comput. Syst. 2019, 100, 1017–1030. [CrossRef]
+43. Meenaa, N.K.; Kumarb, A.; Singh, A.R.; Swarnkar, A.; Gupta, N.; Niazi, K.R.; Kumar, P.; Bansal, R.C. Optimal
+Planning of Hybrid Energy Conversion Systems for Annual Energy Cost Minimization in Indian Residential
+Buildings. Energy Procedia 2019, 158, 2979–2985. [CrossRef]
+44. Le, N.T.; Benjapolakul, W. Evaluation of Contribution of PV Array and Inverter Configurations to Rooftop
+PV System Energy Yield Using Machine Learning Techniques. Energies 2019, 12, 3158. [CrossRef]
+45. Castro-antonio, M.K.; Carmona-arroyo, G.; Herrera-luna, I.; Marin-hernandez, A.; Rios-figueroa, H.V.;
+Rechy-ramirez, E.J. An Approach based on a Robotics Operation System for the Implementation of
+Integrated Intelligent House Services System. In Proceedings of the 2019 International Conference on
+Electronics, Communications and Computers (CONIELECOMP), Cholula, Mexico, 27 February–1 March
+2019; pp. 182–186.
+46. Huh, J.H.; Otgonchimeg, S.; Seo, K. Advanced metering infrastructure design and test bed experiment using
+intelligent agents: Focusing on the PLC network base technology for Smart Grid system. J. Supercomput.
+2016, 72, 1862–1877. [CrossRef]
+47. Jung, S.H.; Huh, J.H. A Novel on Transmission Line Tower Big Data Analysis Model Using Altered K-means
+and ADQL. Sustainability 2019, 11, 3499. [CrossRef]
+48. Yassine, A.; Singh, S.; Alamri, A. Mining Human Activity Patterns from Smart Home Big Data for Healthcare
+Applications. IEEE Access 2017, 5, 13131–13141. [CrossRef]
+49. Zhao, Y.; Yu, Y.; Li, Y.; Han, G.; Du, X. Machine learning based privacy-preserving fair data trading in big
+data market. Inf. Sci. 2019, 478, 449–460. [CrossRef]
+50. Risteska Stojkoska, B.L.; Trivodaliev, K.V. A review of Internet of Things for smart home: Challenges and
+solutions. J. Clean. Prod. 2017, 140, 1454–1464. [CrossRef]
+Energies 2020, 13, 1097 23 of 24
+51. Rathore, M.M.; Paul, A.; Ahmad, A.; Rho, S. Urban planning and building smart cities based on the Internet
+of Things using Big Data analytics. Comput. Netw. 2016, 101, 63–80. [CrossRef]
+52. Machorro-Cano, I.; Alor-Hernández, G.; Cruz-Ramos, N.A.; Sánchez-Ramírez, C.; Segura-Ozuna, M.G. A
+Brief Review of IoT Platforms and Applications in Industry. In New Perspectives on Applied Industrial Tools and
+Techniques; Springer: Cham, Switzerland, 2018; pp. 293–324.
+53. Hui, T.K.L.; Sherratt, R.S.; Díaz Sánchez, D. Major requirements for building Smart Homes in Smart Cities
+based on Internet of Things technologies. Future Gener. Comput. Syst. 2016, 76, 358–369. [CrossRef]
+54. Sathyadevi, G. Application of Cart Algorithm in Hepatitis Disease Diagnosis. In Proceedings of the 2011
+International Conference on Recent Trends in Information Technology (ICRTIT), Chennai, India, 3–5 June
+2011; pp. 1283–1287.
+55. Pattanapairoj, S.; Silsirivanit, A.; Muisuk, K.; Seubwai, W.; Cha’on, U.; Vaeteewoottacharn, K.;
+Sawanyawisuth, K.; Chetchotsak, D.; Wongkham, S. Improve discrimination power of serum markers
+for diagnosis of cholangiocarcinoma using data mining-based approach. Clin. Biochem. 2015, 48, 668–673.
+[CrossRef]
+56. Tartar, A.; Niyazi, K.; Akan, A. A new method for pulmonary nodule detection using decision trees. In
+Proceedings of the 2013 35th Annual International Conference of the IEEE Engineering in Medicine and
+Biology Society (EMBC), Osaka, Japan, 3–7 July 2013; pp. 7355–7359.
+57. Chen, X.; Ching, W.; Aoki-kinoshita, K.F. Support Vector Machine Methods for the Prediction of Cancer
+Growth. In Proceedings of the 2010 Third International Joint Conference on Computational Science and
+Optimization, Huangshan, China, 28–31 May 2010; pp. 1–4.
+58. Yingchi, Y.; Hui, C.; Dong, W.; Wei, L.; Biyun, Z.; Zhongtao, Z. Diagnosis of pancreatic carcinoma based on
+combined measurement of multiple serum tumor markers using artificial neural network analysis. Chin.
+Med. J. 2014, 127, 1891–1896.
+59. Subbalakshmi, G.; Ramesh, K.; Rao, M.C. Decision Support in Heart Disease Prediction System using Naive
+Bayes. Indian J. Comput. Sci. Eng. 2011, 2, 170–176.
+60. Fageeri, S.O.; Ahmed, S.M.M.; Almubarak, S.A.; Mu’azu, A.A. Eye refractive error classification using
+machine learning techniques. In Proceedings of the International Conference on Communication, Control,
+Computing and Electronics Engineering (ICCCCEE), Khartoum, Sudan, 1–6 February 2019.
+61. Abdalla, A.M.M.; Dress, S.; Zaki, N. Detection of Masses in Digital Mammogram Using Second Order
+Statistics and Artificial Neural Network. Int. J. Comput. Sci. Inf. Technol. 2011, 3, 176–186. [CrossRef]
+62. Kureshi, N.; Abidi, S.S.R.; Blouin, C. A Predictive Model for Personalized Therapeutic Interventions in
+Non-small Cell Lung Cancer. IEEE J. Biomed. Health Inform. 2016, 20, 424–431. [CrossRef] [PubMed]
+63. Sood, S.K.; Mahajan, I. A Fog Based Healthcare Framework for Chikungunya. IEEE Internet Things J. 2017, 5,
+794–801. [CrossRef]
+64. Valiente-rocha, P.A.; Lozano-tello, A. Ontology-Based Expert System for Home Automation Controlling
+Ontology-Based Expert System for Home Automation Controlling. In Proceedings of the 23rd International
+Conference on Industrial Engineering and Other Applications of Applied Intelligent Systems, IEA/AIE 2010,
+Cordoba, Spain, 1–4 June 2010; Volume 6096, pp. 661–670.
+65. Wongpatikaseree, K.; Ikeda, M.; Buranarach, M.; Supnithi, T.; Lim, A.O.; Tan, Y. Activity Recognition
+using Context-Aware Infrastructure Ontology in Smart Home Domain. In Proceedings of the 2012 Seventh
+International Conference on Knowledge, Information and Creativity Support Systems, Victoria, Australia,
+8–10 November 2012; pp. 50–57.
+66. Comptona, M.; Barnaghi, P.; Bermudez, L.; García-Castro, R.; Corcho, O.; Cox, S.; Graybeal, J.; Hauswirth, M.;
+Henson, C.; Herzog, A.; et al. The SSN ontology of the W3C semantic sensor network incubator group. J.
+Web Semant. 2012, 17, 25–32. [CrossRef]
+67. Sezer, O.B.; Can, S.Z.; Dogdu, E. Development of a Smart Home Ontology and The Implementation of
+A Semantic Sensor Network Simulator: An Internet of Things Approach. In Proceedings of the 2015
+International Conference on Collaboration Technologies and Systems (CTS), Atlanta, GA, USA, 1–5 June
+2015; pp. 12–18.
+68. Lyazidi, A.; Mouline, S. ONDAR: An Ontology for Home Automation. In Proceedings of the 2015 15th
+International Conference on Intelligent Systems Design and Applications (ISDA), Marrakesh, Morocco,
+14–16 December 2015; pp. 260–265.
+Energies 2020, 13, 1097 24 of 24
+69. Alirezaie, M.; Renoux, J.; Köckemann, U.; Kristoffersson, A.; Karlsson, L.; Blomqvist, E.; Tsiftes, N.; Voigt, T.;
+Loutfi, A. An Ontology-based Context-aware System for Smart Homes E-care@home. Sensors 2017, 17, 1586.
+[CrossRef]
+70. Fernández, M.; Gómez-Pérez, A.; Juristo, N. Methontology: From Ontological Art Towards Ontological
+Engineering. In Proceedings of the Spring Symposium Series on Ontological Engineering, AAAI97, Stanford,
+CA, USA, 24–26 March 1997; pp. 33–40.
+71. Han, J.; Kamber, M.; Pei, J. Data Mining: Concepts and Techniques, 3rd ed.; Elsevier: Amsterdam, The
+Netherlands, 2012; pp. 327–391.
+72. Bourobou, S.T.M.; Yoo, Y. User Activity Recognition in Smart Homes Using Pattern Clustering Applied to
+Temporal ANN Algorithm. Sensors 2015, 15, 11953–11971. [CrossRef]
+73. Chen, C.; Das, B.; Cook, D.J. A Data Mining Framework for Activity Recognition in Smart Environments.
+In Proceedings of the 2010 Sixth International Conference on Intelligent Environments, Kuala Lumpur,
+Malaysia, 19–21 July 2010; pp. 80–83.
+74. Das, B.; Chen, C.; Dasgupta, N.; Cook, D.J.; Seelye, A.M. Automated Prompting in a Smart Home Environment.
+In Proceedings of the 2010 IEEE International Conference on Data Mining Workshops, Sydney, Australia, 13
+December 2010; pp. 1–8.
+75. Considine, J.; Li, F.; Kollios, G.; Byers, J. Approximate aggregation techniques for sensor databases. In
+Proceedings of the 20th International Conference on Data Engineering, Boston, MA, USA, 30 March–2 April
+2004; Volume 20, pp. 449–460.
+76. Rajagopalan, R.; Varshney, P.K. Data aggregation techniques in sensor networks: A survey. Electr. Eng.
+Comput. Sci. 2006, 6, 48–63. [CrossRef]
+77. Fasolo, E.; Rossi, M.; Widmer, J.; Zorzi, M. In-network aggregation techniques for wireless sensor networks:
+A survey. IEEE Wirel. Commun. 2007, 14, 70–87. [CrossRef]
+78. Konstan, J.A.; Riedl, J. Recommender systems: From algorithms to user experience. User Model. User Adapt.
+Interact. 2012, 22, 101–123. [CrossRef]
+79. McNee, S.M.; Riedl, J.; Konstan, J.A. Being accurate is not enough: How accuracy metrics have hurt
+recommender systems. In Proceedings of the CHI’06 Extended Abstracts on Human Factors in Computing
+Systems, Montreal, QC, Canada, 22–27 April 2006; pp. 1097–1101.
+80. Knijnenburg, B.P.; Willemsen, M.C. Evaluating Recommender Systems with User Experiments. In
+Recommender Systems Handbook; Springer: Boston, MA, USA, 2015; pp. 309–352.
+81. Knijnenburg, B.P.; Willemsen, M.C.; Gantner, Z.; Soncu, H.; Newell, C. Explaining the user experience of
+recommender systems. User Model. User Adapt. Interact. 2012, 441–504. [CrossRef]
+82. Lee, S.; Choi, J. Enhancing user experience with conversational agent for movie recommendation: Effects of
+self-disclosure and reciprocity. J. Hum. Comput. Stud. 2017, 103, 95–105. [CrossRef]
+83. Pu, P.; Chen, L.; Hu, R. A user-centric evaluation framework for recommender systems. In Proceedings of
+the RecSys’ 11 Fifth ACM Conference on Recommender Systems, Chicago, IL, USA, 23–27 October 2011;
+Volume 157, pp. 157–164.
+84. Herbjørn, N.; Breivik, E. The influence of media on advertising effectiveness a comparison of Internet, posters
+and radio. Int. J. Mark. Res. 2005, 47, 383–405.
+© 2020 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

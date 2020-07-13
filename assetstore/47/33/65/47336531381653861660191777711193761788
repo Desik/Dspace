@@ -1,0 +1,120 @@
+ 
+ 
+DSPACE – Usuarios y Grupos 
+ 
+Tutorial  
+Álvarez, Juan Pablo 
+Fernández, Gladys Vanesa 
+Facultad de Humanidades, UNMdP 
+Usuarios 
+DSpace es un sistema de colaboración que requiere una buena planificación previa de las 
+personas que interactuarán con él. Globalmente podemos hablar de un acceso público, que no 
+requiere ningún registro y permite la consulta de las colecciones y documentos públicos, y un 
+acceso registrado, que permite la consulta de colecciones restringidas así como interactuar con 
+el sistema para gestionar los documentos depositados. 
+Los usuarios pueden crearse de diferentes maneras: 
+Registro Automático 
+Un usuario puede darse de alta directamente desde la opción "Mi DSpace" que se encuentra 
+en la barra lateral izquierda de la página principal. El sistema envía un correo electrónico de 
+verificación antes de permitir llenar el formulario de alta. En este caso el usuario es asignado a 
+un grupo genérico de usuarios y se le permite suscribirse a las colecciones, con la finalidad de 
+recibir actualizaciones de nuevos ítems por correo electrónico. 
+En el procedimiento de Auto-Registro de un usuario, éste accede a la sección “Registro de 
+nuevo usuario” e introduce su dirección de correo electrónico. DSpace, de manera automática, 
+envía un correo (con un token de seguridad) a esa dirección para que se pueda continuar el 
+registro. Siguiendo las instrucciones del correo recibido, el usuario crea su cuenta, introducir 
+sus datos y una contraseña. A partir de ese momento, puede acceder a Dspace mediante el 
+formulario de login, con la dirección de correo y contraseña indicadas. Finalizado el proceso de 
+registro, el nuevo usuario es incluido en la Base de Datos de DSpace, con un identificador único 
+asociado. 
+Autoregistro 
+1)  Hacer clic en el enlace “Mi DSpace” de la página principal. Observará una ventana 
+solicitando su nombre de usuario y contraseña. Haga clic en el enlace que se encuentra en la 
+parte superior de la  ventana “¿Usuario nuevo? haga clic para registrarse.”. 
+ 
+ 
+ 
+2) Accederá a una página donde se le solicitará el correo electrónico. Ingréselo. Haga clic en 
+“Enviar”. Recibirá un correo electrónico de parte del sistema con el asunto “DSpace Account 
+Registration” (El asunto puede variar). 
+ 
+ 
+ 
+Advertencia: tenga en cuenta que el auto-registro sólo es posible si el servidor de correo fue 
+configurado previamente, puede leer el manual en configuraciones iniciales. 
+   
+Registro vía administrador 
+El administrador del sistema puede añadir usuarios manualmente desde la opción que se 
+encuentra al menú de administración. 
+En el procedimiento de Registro de usuario por el Administrador, es éste quien crea al nuevo 
+usuario, accediendo a la sección de “Gestión de usuarios”, sólo disponible para usuarios con 
+este rol, y pulsando el enlace correspondiente para añadir un nuevo usuario. El Administrador 
+debe introducir la información del nuevo usuario, incluyendo una dirección de correo 
+electrónico, y pulsar el botón “Crear usuario” para crear un nuevo usuario en DSpace. 
+Mediante este procedimiento, el nuevo usuario también es incluido en la Base de Datos de la 
+herramienta con un identificador único asociado. Sin embargo, en un principio no puede 
+acceder a la herramienta mediante contraseña, puesto que no tiene ninguna. Este sistema se 
+emplea principalmente cuando los credenciales de acceso a Dspace se reciben de otros 
+sistemas de identificación como un LDAP. Claro que habrá que configurar Dspace para ello. 
+ 
+ 
+Como segundo escenario para que el usuario creado mediante el sistema de Registro por un 
+Administrador pueda acceder a DSpace mediante contraseña, debería ser el Administrador 
+quien, desde la sección de “Gestión de usuarios”, pulse el botón “Restablecer contraseña” 
+correspondiente a dicho usuario. De esta forma, la herramienta envía, de manera automática, 
+un correo a la dirección de ese usuario para que pueda modificar su contraseña, o, en este 
+caso, introducir una contraseña por primera vez. 1 
+Una vez creados, el administrador del sistema puede asignarlos a grupos y a cada uno de estos 
+grupos se los pueden asignar privilegios (lectura, escritura, añadir, borrar y administrar) por 
+comunidades, colecciones o ítems concretos. Las combinaciones posibles son muchas; 
+difícilmente se querrá asignar privilegios concretos a un documento y normalmente lo que se 
+hace es crear un grupo por comunidad o colección. 
+ 
+Grupos Principales 
+Administradores: nivel máximo de DSpace. Posee todos los privilegios sobre el repositorio. 
+Creación de un administrador 
+1- Abrir cmd (Windows) o terminal (Linux) 
+2-  Windows: cd c:\dspace\bin Linux: cd /dspace/bin 
+3-  Tipear dspace create-administrator 
+A partir de aquí será solicitado un correo electrónico que oficiará a modo de usuario 
+First name: Nombre 
+Last Name: Apellido 
+Password: contraseña 
+Anonymous: indica que no se necesita ser miembro registrado para acceder a DSpace para 
+navegar y buscar. 
+Submit: Permite archivar registros en la colección a la que esté asignado 
+Además de estos grupos principales DSpace permite la definición de infinidad de grupos de 
+usuarios como Correctores de metadatos, validadores, etc. 
+Creación de grupos 
+                                                           
+1 Fuente: Blog: Hablando de DSpace. - http://www.arvo.es/dspace/  
+ 
+ 
+ 
+En la administración de DSpace, los grupos son los creados automáticamente los según las 
+propiedades  asignadas en la creación de la colección o los definidos por el administrador del 
+sistema.  
+1)  Hacer clic en el enlace grupos de la administración de DSpace. Accederá a una ventana 
+como la  siguiente, donde se  presentará una tabla con el nombre del grupo y dos botones 
+“Editar” y “Borrar”. 
+ 
+ 
+En la imagen: 
+El grupo de ID “1” es el grupo del administrador DSpace. Toda persona incluida en este grupo 
+tendrá propiedades de administrador. 
+El grupo de ID “0” es el grupo Anonymous. Este grupo incluye a todos los usuarios DSpace. 
+El grupo de ID “2” es el grupo “COLLECTION_1_SUBMIT” formado al crear la colección 
+“Trabajos de investigación”, dada la característica “Algunos usuarios podrán enviar a esta 
+colección”. 
+2) Haga clic en “Borrar” si desea eliminar el grupo. Si intenta borrar un grupo que está 
+referenciado a una política de autorización o a un flujo de trabajo (workflow) tendrá un error 
+interno del sistema. 
+3) Hacer clic en “Editar”. En  esta sección podrá modificar o ingresar quienes son las personas 
+autorizadas para formar parte del grupo, como puede ver en la siguiente imagen: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

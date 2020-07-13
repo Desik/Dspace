@@ -1,0 +1,15 @@
+# E-mail sent to DSpace users when new items appear in collections they are
+# subscribed to
+#
+# Parameters: {0} is the details of the new collections and items
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Repositorio TecNM Orizaba Subscripcion
+Hay nuevos elementos disponibles en las colecciones a las que se ha suscrito.:
+
+{0}
+
+Staff Repositorio TecNM Orizaba
+
+Si necesita ayuda con su cuenta, envíe un correo electrónico a
+soporte.repositorio@orizaba.tecnm.mx o llámanos al 272 72 44096 ext 1027.

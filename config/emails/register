@@ -1,0 +1,18 @@
+# E-mail sent to DSpace users when they register for an account
+#
+# Parameters: {0} is expanded to a special registration URL
+#
+# See org.dspace.core.Email for information on the format of this file.
+#
+Subject: Registro De Cuenta Repositorio Orizaba TecNM
+Para completar el registro en el Repositorio Orizaba TecNM, haga click en el enlace 
+de abajo:
+
+  {0}
+
+Si necesita ayuda con su cuenta, envíe un correo electrónico a
+soporte.repositorio@orizaba.tecnm.mx o llámanos al 272 72 44096 ext 1027.
+
+
+Staff Repositorio TecNM Orizaba
+

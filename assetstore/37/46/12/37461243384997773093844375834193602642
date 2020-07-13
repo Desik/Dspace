@@ -1,0 +1,2449 @@
+Subsecretaría de Educación Superior 
+Tecnológico Nacional de México  
+Instituto Tecnológico de Orizaba 
+   
+ 
+        “ A  ñ  o   d  e l   C  e  n t e  n a  r io    d e    la    P r o  m  u  l g  a c i ó  n   d e la Constitución Política de los Estados Unidos Mexicanos” 
+ 
+DIVISIÓN DE ESTUDIOS DE POSGRADO E INVESTIGACIÓN 
+ 
+OPCION I.- TESIS 
+ 
+TRABAJO PROFESIONAL 
+ 
+“DESARROLLO DE UNA APLICACIÓN E-LEARNING PARA 
+NIVEL SUPERIOR PARA LA RECOLECCIÓN DE DATOS Y  
+RETROALIMENTACIÓN A DISCENTES BASADA EN TÉCNICAS 
+DE ESTADÍSTICA TRADICIONAL.”  
+ 
+ 
+QUE PARA OBTENER EL GRADO DE:  
+ 
+MAESTRO EN 
+SISTEMAS COMPUTACIONALES  
+ 
+PRESENTA:  
+SAMUEL MONTIEL SANTOS 
+ 
+ 
+DIRECTOR DE TESIS: 
+Mtro. LUIS ANGEL REYES HERNÁNDEZ 
+ 
+ 
+ 
+CODIRECTOR DE TESIS: 
+DR. ASRDRÚBAL LÓPEZ CHAU 
+ 
+ 
+ 
+ORIZABA, VER. MÉXICO NOVIEMBRE 2017 
+                                          
+ 
+ 
+ 
+Ave nida Oriente 9 Núm. 852, Colonia Emiliano Zapata.  C.P. 94320    Orizaba, Veracruz, México 
+                                     Teléfonos: (272) 7 24 40 96    Fax.  (272) 7 25 17 28 
+                               e- mail: orizaba@itorizaba.edu.mx    www.itorizaba.edu.mx 
+ 1 
+ 
+Índice general 
+Resumen ................................................................................................................................. 6 
+Introducción ............................................................................................................................ 7 
+Capítulo 1. Antecedentes ........................................................................................................ 2 
+1.1. Marco teórico ........................................................................................................... 8 
+1.1.1. Aprendizaje ........................................................................................................... 8 
+1.1.2. E-learning .............................................................................................................. 8 
+1.1.3. M-learning ........................................................................................................... 10 
+1.1.4. LMS (Learning Management System) ................................................................ 11 
+1.1.5. Sistema Operativo ............................................................................................... 12 
+1.1.5.1. Android ......................................................................................................... 12 
+1.1.5.2. iOS ................................................................................................................ 14 
+1.1.5.3. Windows Phone ............................................................................................ 14 
+1.1.6. Estadística............................................................................................................ 15 
+1.1.6.1. Moda ............................................................................................................. 16 
+1.1.6.2. Mediana ........................................................................................................ 16 
+1.1.6.3. Media ............................................................................................................ 16 
+1.1.7. PhoneGap ............................................................................................................ 17 
+1.2. Planteamiento del problema ................................................................................... 18 
+1.3. Objetivo general y específico................................................................................. 19 
+1.3.1. Objetivo general .................................................................................................. 19 
+1.3.2. Objetivos específicos........................................................................................... 19 
+1.4. Justificación ............................................................................................................... 20 
+Capítulo 2. Estado de la práctica .......................................................................................... 21 
+2.1. Trabajos relacionados ................................................................................................ 21 
+2.2. Análisis comparativo de los trabajos relacionados .................................................... 28 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+Índice de Figuras 
+Figura 3.1. Comportamiento de la cuota del mercado de sistemas operativos móviles de 2009 a 
+2016…………………………………………………………………………………………....43 
+  
+4 
+ 
+Índice de Tablas 
+Tabla 2.1 Trabajos relacionados con el desarrollo…………………………………………….27 
+Tabla 3.1 Lista de plugins propios de PhoneGap……………………………………………..31 
+Tabla 3.2 Comparativa de las distintas herramientas de desarrollo…………………………...32 
+Tabla 3.3 Comparación de las distintas metodologías………………………………………...36 
+Tabla 3.4 Comparación entre los sistemas gestores de bases de datos………………………..39 
+Tabla 3.5 Comparación de los IDEs para el desarrollo de la aplicación……………………...39 
+Tabla 3.6 Comparación de los sistemas operativos para el desarrollo de la aplicación………42 
+Tabla 3.7 Cuota de mercado de los operativos móviles……………………………………….43 
+Tabla 3.8 Alternativas de solución…………………………………………………………….44 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+5 
+ 
+Resumen 
+El presente proyecto se centra en la importancia de la utilización de aplicaciones 
+móviles en el ámbito de la educación a nivel licenciatura, y en la necesidad de desarrollar 
+nuevas herramientas que permitan la transmisión de conocimientos de manera diferente, así 
+como también que sirvan de apoyo a los métodos de enseñanza que se utilizan actualmente. 
+En este sentido, el objetivo del presente trabajo es desarrollar una aplicación móvil e-
+learning, mediante el uso de herramientas adecuadas que sirvan para el correcto desarrollo de 
+aplicaciones móviles, para que se ocupe en grupos de discentes guiados por su profesor para 
+apoyar en sus métodos de aprendizaje.   
+Esto dado que los jóvenes que se encuentran cursando actualmente alguna licenciatura 
+aprenden de manera diferente en comparación con las generaciones anteriores, debido a que 
+hoy en día las personas, en la mayoría de los casos, se encuentran mejor comunicadas y 
+comparten constantemente gran cantidad de información, además de que están rodeadas de 
+diferentes medios que ofrecen todo tipo de contenido, el cual en su mayoría es de carácter de 
+entretenimiento, por lo que no existen suficientes canales que ofrezcan apoyo a la difusión o 
+mejora del aprendizaje en dichos jóvenes. 
+Como consecuencia a lo anterior surge la idea del desarrollo de dicha aplicación móvil 
+que se base en el esquema de e-learning y que se desarrollará como una aplicación híbrida, 
+haciendo que el mismo código se utilice para varios entornos de ejecución, para ello se 
+apoyará en el software PhoneGap que permite la exportación de proyectos a los distintos 
+sistemas operativos móviles con mayor población de uso, y con esto abarcar la mayor cantidad 
+de personas posibles. Se utilizará la herramienta de desarrollo integrado Eclipse para realizar 
+la codificación de la misma, así como SQLite para la gestión de información que utilice la 
+aplicación, junto con la metodología Mobile-D para el correcto desarrollo de dicha aplicación 
+en tiempo y forma con todas sus funciones planteadas. 
+ 
+6 
+ 
+Introducción 
+Hoy en día existen un sin fin de aplicaciones móviles y cada día se suman muchas más 
+a la larga fila de ellas, donde la mayoría se encuentran dirigidas hacia el público joven, debido 
+a que son los mayores consumidores de estos contenidos, por esta razón se crean en su 
+mayoría aplicaciones enfocadas en el entretenimiento y diversión, aplicaciones en donde se 
+gasta gran tiempo y recursos. 
+La problemática el proyecto de innovación se relaciona con el hecho de cómo hacer 
+llegar a los jóvenes nuevas formas de enseñanza y de cómo ofrecer  herramientas que sirvan 
+de apoyo constante a la absorción de conocimientos, mejorando con ello la calidad del 
+aprendizaje, todo lo anterior mediante el desarrollo de una aplicación móvil e-learning híbrida 
+que permita el uso constante de manera sencilla y sea una alternativa con relación a las 
+aplicaciones de entretenimiento. 
+Para ello, se construirá una aplicación móvil que se utilizará en ciertas clases, de igual 
+manera se diseñará una arquitectura adecuada junto con módulos de actividades y se 
+incorporará un mecanismo que recopile datos de desempeño escolar para su análisis. De esta 
+forma, se utilizará la aplicación en clases seleccionadas durante periodos de tiempos 
+pertinentes para la toma datos, que se analizarán utilizando técnicas de estadística como la 
+media aritmética en índice de aprobación o reprobación para evaluar el desempeño del 
+discente y con ello visualizar si existe una mejora en sus estudios con el antes y después del 
+uso de la aplicación. 
+Para una mejor comprensión de este trabajo, sus objetivos, metodología, entre otros 
+temas, el presente proyecto de innovación se encuentra formado por tres capítulos. En el 
+primero de ellos se describe el problema a resolver, los objetivos perseguidos y las razones 
+que justifican la necesidad de dar solución al problema. En el segundo se presenta un análisis 
+comparativo de los trabajos existentes que se relacionan con los procesos implicados en la 
+investigación descrita en este proyecto, mientras que en el tercero se plantean las alternativas 
+de solución al problema abordado, y se elige la alternativa más adecuada y las metodologías, 
+7 
+ 
+tanto para el desarrollo del proyecto como para llevar a cabo el desarrollo de la aplicación. De 
+igual forma, en ese último capítulo se incluye la planeación temporal correspondiente. 
+Capítulo 1. Antecedentes 
+Este capítulo presenta la información de referencia del proyecto de innovación, además del 
+problema a abordar, los objetivos que se esperan cumplir y las razones que justifican el hecho 
+de dar solución al problema. 
+1.1.  Marco teórico 
+En esta sección se presentan conceptos y definiciones que permiten un mejor 
+entendimiento de temas y palabras que se relacionan con el trabajo a desarrollar en este 
+proyecto de innovación. 
+1.1.1. Aprendizaje 
+El aprender [1] es un proceso que dura prácticamente toda la vida, por el cual una 
+persona sufre cambios relativamente permanentes en sus competencias en todas las 
+dimensiones, a partir de su interacción con el medio físico y sociocultural. El aprender es un 
+cambio que se presenta luego de logrado un aprendizaje, el sujeto en cuestión está en 
+condiciones de sentir, saber, hacer, algo que antes no era capaz, a eso se le denomina 
+aprendizaje.  
+1.1.2. E-learning 
+El e-learning [2]  está definido como el uso de las redes y las tecnologías multimedia 
+para incrementar la calidad del aprendizaje, permitiendo el acceso al conocimiento y a los 
+recursos remotos para el desarrollo de toda la sociedad. 
+Aunque existen varias definiciones complejas de e-learning, la más sencilla [2] define 
+que el e-learning hace uso de la información y las tecnologías computacionales para crear 
+experiencias de aprendizaje interactivas hacia el usuario. La definición se encuentra 
+8 
+ 
+deliberadamente abierta, permitiendo completarla o mejorarla libremente en cuanto a cómo se 
+formulan y crean experiencias. 
+Variedades de e-learning: 
+ Cursos autónomos: Son aquellos tomados por uno mismo a través de una 
+computadora, en este tipo de cursos no hay interacción con un maestro o con 
+compañeros de clase. 
+ Cursos salón-virtual: Clases en línea estructuradas similares a los cursos en salones 
+ordinarios. Incluyen en ocasiones reuniones en línea sincronizadas. 
+ Aprendizaje con juegos y simulaciones: Aprendizaje utilizando actividades 
+simuladas que requieren exploración y conducir a descubrimientos. 
+ E-learning incrustado: Aplicaciones e-learning incluidas en otros sistemas, tales 
+como un programa de computadora, un procedimiento de diagnóstico o ayuda en línea. 
+ E-learning mezclado: Utiliza varias formas de aprendizaje para cumplir un objetivo 
+único. Une el aula junto con actividades e-learning o varias formas de e-learning 
+únicamente. 
+ Aprendizaje móvil: Este tipo de aprendizaje se realiza mientras el estudiante se 
+mueve por el mundo. Auxiliado por dispositivos móviles tales como PDA (Personal 
+Digital Assistant, Asistente Personal Digital) y teléfonos inteligentes. 
+ Gestión del conocimiento: Usos generales del e-learning, documentos en línea y 
+multimedios convencionales para educar a poblaciones enteras y organizaciones, más 
+que solo individuales. 
+Todo lo anterior es solo el inicio, debido a que existe una infinidad de usos para el e-
+learning en la actualidad gracias a que se crea y realiza por la tecnología actual [2]. 
+Otra definición [3] menciona la continua asimilación del conocimiento y las habilidades 
+para estimular a las personas por eventos de aprendizaje síncronos y asíncronos y algunas 
+veces por las emisiones de gestión del conocimiento, las cuales tienen un origen, envío y 
+soporte por medio de tecnologías de Internet. 
+9 
+ 
+1.1.3. M-learning 
+M. Isidora et al. [4] definen como m-learning a todo aquel aprendizaje que involucre 
+dispositivos móviles. Los dispositivos móviles son dispositivos portátiles (que se utilizan en 
+cualquier lugar, que no están atados a un solo sitio), adecuados para mantenerlos en la mano 
+(no necesitan instalarse en una computadora en general), fáciles de transportar, de colocarse en 
+la bolsa o bolsillo y su batería se restaura en cualquier lugar, además de que cuentan con un 
+peso muy liviano. 
+En esta forma de educación a distancia, los aprendices móviles utilizan la tecnología 
+educativa disponible en su dispositivo móvil en varias ubicaciones dependiendo de su 
+disponibilidad de tiempo. El objetivo principal de utilizar estos dispositivos para propósitos 
+educativos es reducir el número de restricciones estático-espacio ligadas al aprendizaje normal 
+que se relaciona generalmente con la escuela, el aula, el hogar, para llevar de un modo más 
+cercano los cursos a los estudiantes, a través de los medios y dispositivos con los que ya están 
+familiarizados. De esta manera se crean  nuevos métodos de enseñanza que ayuden a los 
+estudiantes de una manera significativa, funcional y creativa durante su educación. 
+Beneficios del m-learning [5]: 
+ 
+ Interacción: El estudiante interactúa con los profesores. 
+ Portabilidad: Los dispositivos móviles son más ligeros que los libros y permiten a los 
+estudiantes tomar notas de tipo texto, imagen, vídeo o grabar sonido. 
+ Cooperación: Permite la cooperación entre los estudiantes de manera más fácil. Los 
+estudiantes colaboran incluso en lugares remotos. 
+ Mayor participación: A las nuevas generaciones les gusta usar dispositivos móviles. 
+ Practicidad: Los discentes estudian cuando tienen tiempo. Ayuda a los estudiantes con 
+discapacidades. 
+ Velocidad: Los materiales tradicionales de aprendizaje y formación tardan mucho tiempo 
+en estar preparados, con el aprendizaje móvil se preparan y están disponibles de forma 
+relativamente más rápida. 
+10 
+ 
+ Retención del conocimiento: El aprendizaje móvil es una herramienta de aprendizaje de 
+gran alcance que proporciona memorias rápidas y añade materiales extra a lo ya 
+aprendido. 
+ Reduce el costo de impresión. 
+ Permite una gestión más sencilla de datos. 
+1.1.4. LMS (Learning Management System) 
+Learning Management System (LMS), o Sistema de Gestión del Aprendizaje [6], es un 
+software instalado generalmente en un servidor web, que se emplea para crear, aprobar, 
+administrar, almacenar, distribuir y gestionar las actividades de formación virtual (se utiliza 
+como complemento de clases presenciales o para el aprendizaje a distancia).  
+Un LMS se centra en gestionar contenidos creados por una gran variedad de fuentes 
+diferentes. La labor de crear los contenidos para los cursos se desarrolla mediante un LCMS 
+(Learning Content Management System, Sistema Gestor de Contenido de Aprendizaje). Sus 
+principales usuarios son: los diseñadores instruccionales, que utilizan los contenidos para 
+estructurar los cursos; los profesores, que utilizan los contenidos para complementar su 
+material de clase, y los alumnos, que acceden a la herramienta para desarrollar sus tareas o 
+completar sus conocimientos.  
+Los LMS responden a las características que desde hace tiempo se venían señalando 
+para las llamadas aulas virtuales en actividades de enseñanza y aprendizaje. Por ello, también 
+se les llama plataformas de aprendizaje, ya que se convierten en un repositorio tanto de los 
+contenidos, instrucciones, materiales diversos y productos, como de las interacciones entre los 
+actores educativos. García P. [7] señala que los LMS son el sitio donde se realizan las 
+experiencias de aprendizaje.  
+Este software, utilizado para dar instrucciones y construir nuevos espacios educativos, 
+permite recurrir a diversas herramientas que facilitan la comunicación, los intercambios y la 
+11 
+ 
+colaboración. No obstante, la comunicación se fortalece entre estudiantes y tutores de manera 
+sincrónica o asincrónica. 
+1.1.5. Sistema Operativo 
+Un sistema operativo [8] se define como un programa de software. No importa donde 
+se encuentre almacenado, en un disco duro, en una ROM (Read Only Memory, Memoria de 
+solo lectura) o en una memoria flash, un sistema operativo se carga eventualmente en la 
+memoria de la computadora y sus instrucciones se ejecutan como cualquier otro programa de 
+software. 
+En segundo lugar, un sistema operativo es un modelo de recurso. Los sistemas 
+operativos están diseñados para presentar los diversos recursos de hardware y software con los 
+que cuenta  una computadora para que el usuario los utilice. Un sistema operativo construye 
+un modelo, un sistema, de cómo tratar los recursos de la computadora. El software trabaja con 
+este modelo para acceder y utilizar estos recursos. El modelo provee un apoyo a través de una 
+interfaz, la cual es el puente de comunicación entre el usuario y el sistema. 
+El sistema permite la correcta fusión entre el hardware y el software. Debido a que el 
+software ve y accede al hardware a través del modelo del sistema operativo. Un buen sistema 
+operativo se basa en un modelo intuitivo que permite la comunicación efectiva entre el 
+software y el hardware. 
+Finalmente un sistema operativo es esencial. Sin un sistema operativo una 
+computadora no es utilizable. Cualquier computadora general cuenta con uno de alguna forma. 
+El sistema operativo es la parte más esencial de una computadora. 
+1.1.5.1. Android 
+Android es un sistema operativo extensivo creado por Google, basado en una 
+plataforma de código abierto. El sistema operativo por sí mismo está basado en Linux Kernel 
+2.6 de diferentes versiones, que proveen y aseguran una completa seguridad del sistema como 
+12 
+ 
+un todo, gestión de memoria, gestión de proceso, acceso de red y control de todos los sensores 
+internos y componentes. Android [9] es por lo tanto un sistema operativo avanzado, se 
+construyó para permitir a los desarrolladores crear complejas aplicaciones móviles que 
+tuviesen características y funciones avanzadas, ofreciendo aplicaciones enriquecidas para los 
+usuarios.  
+En 2005, Google compró una pequeña empresa fundada por Andy Ruben, el fundador 
+de Danger, Inc. La nueva compañía de Ruben también incluía a Richard Minor de Orange, 
+Chris White de WebTV y Andy McFadden de WebTv y Moxi. Android fue un pequeño 
+misterio. Fue hecho un software para móviles, pero Google no daba detalles algunos o planes 
+futuros para Android. 
+Después de algunos rumores Google liberaba su propio competidor contra el iPhone. 
+Google introdujo un nuevo sistema operativo el 5 de noviembre de 2007, Google anunció el 
+Sistema operativo Android y la Alianza Abierta de Micro Dispositivos, un grupo de 
+compañías que ayudarían a desarrollarlo. Este grupo incluyó compañías telefónicas, desarrollo 
+de software, fabricación de dispositivos y marcas de componentes móviles.  
+Android tuvo una muy diferente filosofía cuando lo compararon con el iPhone de 
+Apple. Google permitió que cualquier persona pudiera usar Android en sus dispositivos de 
+manera gratuita, al igual que cualquiera tiene la posibilidad de modificar el propio sistema, y 
+cualquiera es capaz de desarrollar aplicaciones sin la necesidad de solicitar algún tipo de 
+permiso para colocarla en el Android Market Place. Google también creó el mercado de las 
+aplicaciones Android mediante la celebración de concursos para desarrolladores con premios 
+en efectivo, de manera que cuando el primer teléfono con sistema operativo Android saliera a 
+las tiendas para su compra, ya hubiese aplicaciones disponibles para su descarga. 
+Hoy en día Android se está moviendo más allá de sólo los teléfonos. Está 
+incrementando los lectores de libros electrónicos, tabletas y dispositivos médicos, por 
+mencionar algunos. El costo y la fácil personalización dan cabida a todo tipo de aplicaciones 
+para dispositivos portátiles. Los teléfonos Android se están convirtiendo en los favoritos de los 
+13 
+ 
+consumidores por lo que presenta un buen negocio para el desarrollo de aplicaciones. Debido 
+a que Android permite un alto nivel de personalización, las grandes empresas de desarrollo 
+crean teléfonos especialmente adecuados para las necesidades de sus empleados o sus clientes 
+[10]. 
+1.1.5.2. iOS 
+iOS es el sistema operativo creado por Apple para sus dispositivos móviles. Este nuevo 
+sistema vio la luz el 29 de junio de 2007 con el lanzamiento del primer iPhone y fue el primer 
+dispositivo en usar iOS. Actualmente, otros dispositivos de la empresa utilizan este mismo 
+sistema operativo: iPad, iPod Touch y Apple TV; aunque, seguramente, en el futuro se verán 
+más dispositivos que integrarán iOS para su funcionamiento y control. 
+La interfaz de iOS se basa en gestos multitáctiles que facilitan enormemente la tarea de 
+interactuar con los dispositivos de una forma más natural y creativa. El lanzamiento de iOS en 
+2007 revolucionó la industria de la telefonía móvil, gigantes intocables de aquella época como 
+Nokia, BlackBerry, Sony o Motorola vieron cómo sus terminales quedaban obsoletas de la 
+noche a la mañana y no supieron reaccionar a tiempo para competir con el diseño e innovación 
+de Apple. Hoy muchas de estas legendarias marcas siguen buscando un nuevo rumbo para 
+adaptarse a este mercado continuamente cambiante. 
+Desde su lanzamiento, iOS se ha renovado cada año con una nueva versión para 
+aportar nuevas funcionalidades y mejoras en el sistema operativo que han ido haciéndolo más 
+completo y estable. Se calcula que hoy en día cerca de 700 millones de dispositivos funcionan 
+con este sistema operativo en todo el mundo. Número que va en aumento año tras año [11]. 
+1.1.5.3. Windows Phone 
+Windows Phone [12] es el nuevo sistema operativo de Microsoft Corporation y se 
+lanzó en octubre de 2010. Después del lanzamiento oficial, hubo una serie de actualizaciones 
+para Windows Phone como el inicio de Windows Phone 7.5 (Mango). 
+14 
+ 
+Windows Phone tiene como lema “Colocar a las personas Primero”, y su principal 
+objetivo son los consumidores y usuarios finales. Windows Phone es el sucesor de la versión 
+previa del sistema operativo móvil de Microsoft conocida como Windows Mobile. Windows 
+Mobile fue un sistema operativo diseñado alrededor del Kernel Windows CE (Compact 
+Edition Edición Compacta). Windows Phone inició una nueva plataforma no compatible con 
+las últimas versiones de Windows Mobile, es decir, no tiene soporte de retro compatibilidad. 
+Por lo que las aplicaciones escritas para Windows Mobile no se ejecutarán sobre Windows 
+Phone. Windows Phone y Windows CE son sólo dos plataformas móviles diferentes 
+disponibles en el presente de Microsoft. 
+Windows Phone tiene una interfaz nueva y fresca llamada Modern UI (User Interface, 
+Interfaz de Usuario), que está inspirada por el sistema de transporte. 
+1.1.6. Estadística 
+Los conceptos y métodos estadísticos no son sólo útiles sino que con frecuencia son 
+indispensables para entender el mundo actual. Proporcionan formas de obtener ideas nuevas 
+del comportamiento de muchos fenómenos que se presentarán en el campo de especialización 
+escogido ya sea ingeniería o ciencia. 
+La disciplina de la Estadística [13] enseña cómo realizar juicios inteligentes y tomar 
+decisiones informadas entre la presencia de incertidumbre y variación. Sin incertidumbre y 
+variación, habría poca necesidad de métodos estadísticos o de profesionales en estadística. Si 
+cada componente de un tipo particular tuviera exactamente la misma duración, si las 
+resistencias producidas tuvieran el mismo valor, si las determinaciones de pH dieran 
+resultados idénticos y así sucesivamente, entonces una sola observación revelaría toda la 
+información deseada.  
+Dado lo anterior se dice que la estadística [14] es un conjunto de técnicas dirigidas a la 
+ordenación y análisis de datos obtenidos de muestras y a la obtención de interferencias 
+relativas a las poblaciones de las que proceden. 
+15 
+ 
+1.1.6.1. Moda 
+En un conjunto de datos la moda [15] es aquel valor numérico dentro del conjunto que 
+se presenta más veces, el más frecuente, el más común dentro de un arreglo de datos. 
+Ejemplo: El conjunto A = {3, 4, 7, 8, 3, 5, 5, 3} 
+Por lo que la moda resultante para el conjunto de datos anterior sería: 3. 
+1.1.6.2. Mediana 
+La mediana [15] es aquel valor numérico de la variable que divide en dos partes una 
+masa de información ordenada en forma ascendente. Está definición es consistente para 
+variables de tamaño n, siempre impar. Para variables cuyo tamaño es un número par, la 
+mediana es el promedio de los elementos centrales. 
+Ejemplo: Conjunto de datos impar. Conjunto X: 3, 4, 7, 8, 9, 10, 13. 
+Por lo que la mediana correspondiente para el conjunto anterior sería 8, por 
+posicionarse a la mitad del conjunto de datos. 
+Ejemplo: Conjunto de datos par. Conjunto Y: 3, 3, 4, 4, 6, 8. 
+Por lo que la mediana correspondiente para el conjunto anterior sería 4, dado que es el 
+promedio de los dos números situados a la mitad del conjunto de datos. 
+1.1.6.3. Media 
+En general, la media aritmética [16] es un promedio razonablemente estable. No es 
+afectada hondamente por algunos valores moderadamente pequeños o moderadamente grandes 
+y esta estabilidad aumenta con la frecuencia total n. Sin embargo, uno o más valores externos 
+algunas veces afectan grandemente su valor y reducen su utilidad. La media aritmética es una 
+medida estadística muy conveniente, debido a su estabilidad general. Tiene infinidad de usos 
+16 
+ 
+en campos diversos tales como la meteorología, medicina, antropología, economía, entre otros 
+muchos más. Por lo que la media aritmética [17] es la suma de todos los datos dentro de un 
+conjunto dividido por el número de dichos datos. 
+            
+ 
+1.1.7. PhoneGap 
+PhoneGap [18] es un marco de trabajo de código abierto para crear aplicaciones 
+móviles nativas usando HTML (HyperText Markup Language, Lenguaje de Marcado de 
+Hipertexto), CSS (cascading style sheets, Hojas de estilo Cascada), y JavaScript. PhoneGap se 
+utiliza para desarrollar aplicaciones para sistemas operativos móviles como iPhone, Android, 
+BlackBerry, Palm webOS, entre otros. Para usar PhoneGap, un desarrollador necesita aprender 
+cómo utilizar el kit de desarrollo estándar y sus herramientas. La ventaja de utilizar PhoneGap 
+es que el desarrollador de aplicaciones móviles coloca la aplicación y la instala en el 
+dispositivo del usuario final de manera sencilla haciendo que ésta se ejecute de manera nativa.  
+Como aplicación nativa, PhoneGap accede a ciertas capacidades que no se encuentran 
+en las aplicaciones web, tales como el acceso a los contactos, el uso de geolocalización, la 
+cámara y el acelerómetro, al igual que la capacidad de utilizar las API (Application 
+Programming Interface, Interfaz de Programación de Aplicaciones) de JavaScript de 
+PhoneGap. 
+Las aplicaciones híbridas se derivan de fuentes heterogéneas, o se componen de 
+elementos de diferentes tipos. Una aplicación híbrida [18] es aquella que se escribe con la 
+misma  tecnología utilizada para los sitios web y las implementaciones de la web móvil, y que 
+se instala o se ejecuta dentro de un contenedor nativo en un dispositivo  móvil. Es la 
+integración de la tecnología web y ejecución nativa. 
+PhoneGap es un ejemplo de los contenedores más populares para la creación de 
+aplicaciones móviles híbridas. Una aplicación híbrida utiliza un control de vista Web 
+17 
+ 
+(UIWebView en IOS, WebView en Android y otros) para presentar el código HTML y los 
+archivos JavaScript en un formato de pantalla completa, utilizando el rendering engine del 
+navegador. Este marco de trabajo es la prestación del navegador que se utiliza en iOS, 
+Android, Blackberry y otros. Eso significa que el HTML y JavaScript se utilizan para construir 
+una aplicación híbrida procesados por el motor de renderizado WebKit y que se muestra al 
+usuario en una pantalla completa de control de vista web, no en un navegador. 
+Para crear una aplicación nativa usando PhoneGap, los desarrolladores  comienzan con 
+la escritura de una aplicación web móvil utilizando HTML, CSS y JavaScript. Según Firtman 
+[19], PhoneGap no es un navegador, sino un marco de trabajo que crea aplicaciones  híbridas. 
+PhoneGap es un marco de trabajo que utiliza el motor nativo del navegador. En otras palabras, 
+PhoneGap es una aplicación nativa con una aplicación web en su interior. 
+1.2.  Planteamiento del problema 
+Las generaciones actuales de jóvenes universitarios en México y en todo el mundo 
+conviven rodeados de entornos tecnológicos, tales como teléfonos inteligentes, tabletas, 
+Internet, aplicaciones de moda y de todo tipo de gadget en general, que fácilmente distrae su 
+atención y por consecuencia faltas de concentración para desarrollar y desenvolverse en sus 
+actividades académicas que realizan diariamente en sus ambientes educativos. 
+Los discentes que hoy cursan sus estudios universitarios son completamente distintos a 
+los de años anteriores, por lo que los antiguos métodos de enseñanza que aún hoy se ocupan en 
+las escuelas, tales como explicaciones basadas en pizarrón, libros, exposiciones, entre otros 
+más, no son de su interés y son métodos aburridos para ellos. Por lo que sabiendo y 
+entendiendo lo anterior, la aplicación propuesta pretende entrar en su entorno de confort y 
+seguridad, aquél rodeado de tecnología, debido a que será una aplicación para teléfonos 
+móviles, un concepto que entienden y manejan sin problema. 
+La aplicación evaluará el desempeño aprendido de sus unidades o materias que se 
+encuentren cursando, mediante actividades diversas que se diseñarán a lo largo de desarrollo 
+18 
+ 
+del proyecto. Ingresada y procesada la información anterior, se aplicará estadística tradicional 
+para obtener errores y aciertos en las actividades definidas para medir su desempeño. Todo 
+con el objetivo de mejorar su aprendizaje otorgando una forma novedosa de enseñanza que 
+cautive al alumno y utilice diariamente para mejorar sus notas escolares. 
+1.3. Objetivo general y específico 
+Este capítulo presenta la información correspondiente al objetivo general y objetivos 
+específicos que darán como buen resultado la solución del proyecto de innovación. 
+1.3.1. Objetivo general 
+ Diseñar y desarrollar una aplicación móvil para e-learning que proponga actividades 
+académicas para alumnos de nivel superior, mediante la cual se recolecten datos de los 
+discentes y se les proporcione retroalimentación que les ayude a mejorar su desempeño 
+académico. Al igual que la propuesta de la arquitectura que sustente el desarrollo de la 
+aplicación. 
+1.3.2. Objetivos específicos 
+1. Diseñar un sistema software e-learning escalable que permita ser utilizado durante las 
+clases de una o más unidades de aprendizaje (materias, asignaturas y clases) de nivel 
+superior, con el propósito de evaluar el aprendizaje de los alumnos mediante 
+actividades diversas. 
+2. Diseñar una arquitectura adecuada para la aplicación propuesta. 
+3. Incorporar un mecanismo en el sistema software desarrollado,  que permita recopilar 
+datos de comportamiento de usuario, tales como tiempos de respuesta, errores y 
+aciertos, alumnos con los que forma equipos en las actividades, participaciones, entre 
+otras. 
+4. Construir el sistema software de e-learning. 
+5. Implementar el sistema software e-learning para las clases de una o más unidades de 
+aprendizaje. 
+19 
+ 
+6. Aplicar el software de e-learning desarrollado con grupos o clases piloto, durante un 
+periodo de tiempo adecuado para la extracción de datos.  
+7. Analizar los datos empleando técnicas estadísticas de tendencia central (media, 
+mediana y moda) para encontrar relaciones entre variables y desempeño académico de 
+estudiantes. 
+1.4. Justificación 
+Los nativos digitales, aquellas personas nacidas después del año 2000 cuando existía 
+una tecnología digital bastante desarrollada y al alcance de todos, son la nueva generación de 
+discentes que hablan el lenguaje de Internet, las computadoras, los teléfonos inteligentes, las 
+tabletas electrónicas y la realidad virtual. Los instructores, inmigrantes digitales, aquellos que 
+hablan una lengua anticuada (la de la era pre-digital antes del año 2000) luchan diariamente en 
+las aulas de clase para tratar de enseñar y educar a una población que habla completamente un 
+nuevo idioma, una población que abarca toda una nueva cultura. Impacientes y en constante 
+movimiento, los nativos digitales requieren de nuevos métodos innovadores para captar su 
+atención y mantener su interés debido a su alto déficit de atención ocasionado por juegos, 
+redes sociales, música, fotografía, correos electrónico y todo aquel contenido consumido por 
+ellos a través de dispositivos electrónicos móviles.  
+Es por ello que los teléfonos inteligentes ofrecen medios innovadores que permiten la 
+participación de los nativos digitales en sus propios entornos en los que conviven diariamente 
+y están acostumbrados. La tecnología ha avanzado de manera significativa permitiendo con 
+ello fomentar el aprendizaje electrónico como una herramienta de educación eficaz. Además 
+de que en ciertas situaciones las instalaciones físicas faltan debido a las limitaciones de 
+recursos, por lo que el e-learning es una herramienta que ofrece un complemento a esa 
+carencia de entornos físicos necesarios. Aunado a esto, la tecnología móvil ha permitido la 
+aceleración de extensiones portátiles basadas en el aprendizaje electrónico utilizadas en 
+móviles. 
+  
+20 
+ 
+Capítulo 2. Estado de la práctica 
+En esta sección se presenta el análisis del estado de la práctica, tanto de tecnologías 
+como de trabajos que se relacionan con el producto a desarrollar en este proyecto de 
+innovación. 
+2.1. Trabajos relacionados 
+En [4] se estableció que las nuevas tecnologías y la globalización brindan un cambio 
+rápido en todos los aspectos de la vida humana. Entre ellos el incremento del interés por los 
+dispositivos móviles y su uso para la enseñanza y la investigación. Esto debido a que los 
+dispositivos se usan en cualquier lugar y no están atados a un solo sitio, sólo es necesario 
+mantenerlos en la mano y son fáciles de llevar y transportar. Es por ello que se propuso utilizar 
+paquetes de software para examinar el modo de actuar que tienen los estudiantes sobre este 
+tipo de nuevas técnicas de enseñanza, ofreciendo calidad durante el proceso de absorción y 
+haciendo atractivo  el modo de enseñanza, tratando de obtener satisfacción durante el proceso 
+de educación vía móvil, y conducir a la mejora de la productividad y a un mejor rendimiento 
+del aprendizaje en los estudios. 
+ La integración de dispositivos móviles abrió las puertas de la movilidad real basada en 
+servicios 24/7, lo cual ha atraído a muchas personas a utilizarlos. Es por ello que se han 
+convertido en una respuesta sólida a una gran cantidad de problemas del mundo real, tales 
+como el aprendizaje y la educación. Por lo que en [20] se exploraron los factores que afectan 
+la aceptación de la experiencia de aprendizaje en el entorno estudiantil, ocupando para ello 
+investigaciones y metodologías de enfoque cuantitativo para la mejora del m-learning usada 
+en las escuelas utilizando el Modelo de Aceptación de Tecnología (TAM, Technology 
+Acceptance Model). El implementar este estudio de m-learning a un grupo de 250 estudiantes 
+proporcionó resultados estadísticos positivos debido a la gran construcción de aceptación 
+generada por ellos y a la mejora en sus experiencias de aprendizaje. 
+21 
+ 
+Durante los últimos 15 años, el sistema de educación en los países industrializados 
+como EUA (Estados Unidos de América), Canadá, UK (United Kingdom, Reino Unido), y 
+algunos países europeos fueron testigos de importantes reformas en los ambientes académicos.  
+El teléfono inteligente no es sólo un dispositivo de comunicación, sino que se ha convertido en 
+una mini computadora. Pero los beneficios educativos de los dispositivos móviles 
+permanecieron sin explorar, en particular en los países menos avanzados  en ámbitos de 
+educación.  Es por ello que en [21] se exploraron y analizaron críticamente las iniciativas de 
+m-learning de los países avanzados para descubrir los factores que facilitaron su adopción, 
+proporcionando lecciones para los países menos avanzados educativamente de Oriente Medio. 
+La reforma educativa a través de m-learning requiere una planificación adecuada, la 
+exploración de los recursos necesarios, así como el compromiso a nivel nacional. 
+Hoy en día existen varios sistemas operativos móviles que son muy populares a nivel 
+mundial, tales como iOS, Android, BlackBerry, Symbian, entre otros más, lo cual representa  
+un inconveniente para el desarrollo de aplicaciones móviles debido a los diferentes lenguajes 
+de programación y a los distintos modos de funcionamientos para cada uno de ellos. Es por 
+ello que en [22] se desarrolló una aplicación híbrida e-learning que ayuda a los estudiantes a 
+obtener información de ciertos cursos que se imparten, esta aplicación se ejecuta dentro de un 
+contenedor nativo en cada dispositivo móvil, utilizando HTML5, JavaScript y CSS. Como 
+resultado se obtuvo una aplicación que se ejecutó en plataformas cruzadas utilizando el mismo 
+código fuente, logrando con ello mejorar el proceso de aprendizaje, lo anterior se obtuvo dado 
+que el 66,67% de los estudiantes encuestados respondió que la aplicación era muy útil y 
+33,33% que era útil. 
+V. Bouki, et al. [23] describieron que algunas disciplinas como la social y las Ciencias 
+Políticas tradicionalmente usan juegos de mesa con el fin de enseñar a sus estudiantes los 
+conceptos y enfoques pertinentes. Es por ello que se planteó que la gamification beneficia  a 
+otras disciplinas, como por ejemplo para aquéllos que estudian leyes, por lo que se desarrolló 
+una aplicación móvil e-learning que permitiera familiarizarse con el pensamiento y lenguaje 
+legal de una manera eficiente, la cual se basó en un escenario hipotético acerca de un 
+incidente, haciendo que los estudiantes completaran ciertas tareas y lograran metas de 
+22 
+ 
+aprendizaje utilizando análisis, investigación  jurídica y casos de estrategia. Como resultado se 
+obtuvo una aplicación, la cual se construyó mediante  JavaScript y el software “Articulate 
+Storyline”, y fue publicada para múltiples formatos  permitiendo que fuera accesible por 
+medio de iPads, PC’s, laptops y otros más. 
+[24] En 2013 el promedio mensual del tiempo dedicado por persona fue de 185 horas 
+para televisión, 27 horas para la computadora, y 35 horas para dispositivos móviles. Un 9% de 
+esas 35 horas se dedica a los juegos, mientras la educación no es ni siquiera una categoría en 
+el informe. Por lo tanto, los consumidores están usando sus teléfonos inteligentes  y la 
+educación sigue siendo una en el uso emergente con un gran potencial. Dado lo anterior, en 
+[25] se desarrolló una aplicación experimental utilizando Java para dispositivos con sistema 
+operativo móvil Android para la preparación de un examen para obtener la acreditación para 
+guía turístico adaptando los contenidos a dicha aplicación, como una simulación del examen. 
+Como resultado los usuarios pudieron estudiar en cualquier momento y en cualquier lugar, sin 
+la necesidad de llevar libros y papel. La arquitectura es exportable a otros temas, ya que 
+permite la adaptación a otros exámenes oficiales con modificaciones fáciles. 
+ En [26] se describió  que el uso de la tecnología inalámbrica permite que los alumnos 
+tengan acceso a información y material de aprendizaje sin importar el lugar o el momento. El 
+m-learning (aprendizaje móvil) se eligió para desarrollar una herramienta que ayude a los 
+estudiantes a entender cómo funcionan los sistemas dinámicos. Por lo que se diseñó y 
+desarrolló una aplicación para el sistema operativo móvil Android que represente 
+matemáticamente este sistema, y para ello se implementó un modelo diferencial de 
+ecuaciones, utilizando el método numérico de Runge-Kutta para que pudiese resolver los 
+problemas de ecuaciones diferenciales que necesite el sistema para funcionar. Como 
+conclusión se obtuvo una aplicación móvil para Android, la cual es un primer paso para 
+desarrollar una plataforma que permita simular una variedad de sistemas dinámicos como 
+tanques, motores y otros. 
+Con base en un estudio de aplicaciones universitarias, resultados de encuestas, 
+propuestas de un concurso interno, estudios sobre el comportamiento de los usuarios y 
+23 
+ 
+finalmente en la arquitectura de información del TEC-Digital, M. Chacón y C. Garita [27] 
+decidieron que la primera aplicación del TEC Móvil, fuese Curso Móvil: un aplicación para 
+obtener información general sobre cursos. Esta aplicación, en un inicio estaba dirigida 
+principalmente a estudiantes, permitiendo acceder de manera fácil y directa a la información 
+básica asociada a los cursos activos en el periodo académico actual, incluyendo p.ej. nombre 
+del curso, aula, recursos, noticias, entre otros. El desarrollo de la aplicación permitió empezar 
+a abordar el tema de m-learning como una nueva modalidad de aprendizaje y tomar ventaja de 
+la creciente utilización de celulares inteligentes y tabletas electrónicas en Costa Rica. 
+El gobierno chino promueve reformas para promover cursos en línea para mejorar la 
+transformación de la educación y la mejora del pensamiento. Por lo que  en [28] se exploró 
+integrar la tecnología m-learning en los cursos en línea que se utilizan en la Escuela de 
+Educación Continua de la Universidad de Pekín. Este marco de trabajo proporcionó a los 
+estudiantes un modo de aprendizaje combinado, en donde los estudiantes pudieron acceder a 
+través de laptop, teléfonos móviles o tablet sin ningún problema, y explorar las diferencias 
+entre los diferentes dispositivos. En el diseño del sistema móvil, se definió un procedimiento 
+basado en línea de tiempo,  por lo que se utilizó el calendario como interfaz, mostrando  las 
+tareas de aprendizaje disponibles, y se dio la oportunidad de interacción entre tutores y 
+estudiantes. Este diseño ayudó a los estudiantes a dominar su propio progreso, creando un 
+ambiente cómodo y libre permitiendo mejorar la eficiencia y eficacia del aprendizaje. 
+Originado de la educación a distancia, el m-learning se desarrolla a partir del e-
+learning y es una extensión de él debido a que se expande en cualquier lugar y en cualquier 
+momento. La Universidad de Hong Kong cuenta con un sistema LMS por el que se accede de 
+manera Web, pero también se desarrolló una aplicación móvil denominada “HKU Space Soul” 
+con los objetivos de mejorar las experiencias de enseñanza  en los estudiantes y trasladarlos a 
+una plataforma móvil, facilitando con esto la mejora continua del aprendizaje. Como resultado 
+de la liberación de la aplicación móvil, el total de número de accesos al LMS vía aplicación 
+móvil aumentó, mientras que el número de accesos desde el navegador web tradicional 
+disminuyó. Por lo que en [29] se mostró la importancia de ofrecer nuevos soportes 
+24 
+ 
+tecnológicos y servicios a los profesores y estudiantes, debido a que con ello el uso de la 
+tecnología educativa móvil mejora la enseñanza y las experiencias de aprendizaje. 
+En [30] se manejó un proyecto basado en una actividad digital apoyada en un juego 
+móvil, de forma que aumente la independencia de aprendizaje e incremente la experiencia 
+propia en ese entorno. Por esta razón se desarrolló una aplicación móvil llamada CyberAware, 
+destinada a la educación y la conciencia de la seguridad cibernética, fomentándola en factores 
+educativos, con el objetivo de familiarizar a los estudiantes con las tecnologías de seguridad 
+cibernética fundamentales que se necesitan al estar conectados a Internet y mantener la 
+protección continua contra el malware, los ataques cibernéticos, y el spam. De acuerdo con un 
+análisis, antes de jugar el juego, el 18,6% de los estudiantes fueron capaces de reconocer 
+cuatro tecnologías que se requieren para mantener sus dispositivos protegidos. Después de 
+jugarlo, este resultado se mejoró casi en un 32,6% por lo que este modelo de motivación 
+maximiza los resultados de aprendizaje. 
+Hoy en día hay un gran número de universidades y organizaciones que trabajan en el 
+desarrollo de laboratorios virtuales y remotos. Pero cuando los estudiantes se encuentran fuera 
+de su escuela o en casa, les gustaría tener acceso a esos recursos para repasar y mejorar sus 
+habilidades prácticas. Es por ello que S. Martin et al. en [31] desarrollaron una arquitectura 
+para el apoyo a la creación de aplicaciones m-learning que consuman la información alojada 
+en su LMS. Por esta razón, el middleware que se propuso fue una interfaz que pudiese 
+interactuar con estas plataformas móviles, permitiendo a los estudiantes el acceso a los 
+contenidos y servicios en cualquier momento, en cualquier lugar y en cualquier tipo de 
+dispositivo. Como resultado final se logró generar una clasificación de los diferentes tipos de 
+aplicaciones que proporcionan experiencia de aprendizaje y los detalles específicos necesarios 
+del diseño del middleware propuesto.  
+La Universidad Complutense de Madrid desarrolló una aplicación para facilitar la 
+gestión necesaria para todas aquellas actividades realizadas en todos los niveles de la 
+universidad, por lo que se creó una aplicación móvil Android que permitió a los estudiantes 
+interactuar con todas las actividades definidas dentro de la aplicación. Además el usuario 
+25 
+ 
+profesor es responsable de configurar y gestionar las actividades propuestas y aceptar si así lo 
+desea a los alumnos interesados en los cursos que imparte. Como conclusión en [32] se obtuvo 
+una aplicación Android que permitió el acceso a la gestión de información relacionada con 
+actividades en las que estén registrados los alumnos pero también, esta herramienta abrió la 
+puerta a dos líneas de trabajo a futuro, las cuales son aumentar la funcionalidad de la 
+aplicación con nuevas mejoras para los estudiantes y  trasladar lo que se ha desarrollado y se 
+está mejorando a un entorno nuevo como es el sistema móvil iOS. 
+Reconociendo el enorme potencial de las aplicaciones de Android, en [33] se 
+desarrolló una aplicación móvil para simular y comparar la implementación de los tres 
+métodos de Black Scholes sobre una plataforma móvil con el objetivo de animar a los 
+estudiantes de ingeniería financiera para explorar el mundo de los Modelos de Black-Scholes 
+y durante el proceso aprender más sobre el riesgo de los instrumentos financieros y aprender a 
+ser más prudentes debido a los escándalos financieros. Como conclusión en [33] se presentó 
+dicha aplicación basada en Android de los modelos clásicos de valoración de Black Scholes en 
+los teléfonos inteligentes. Las generaciones jóvenes aprenden las trampas en el comercio 
+excesivo de productos derivados como parte de su educación.  Por lo que la aplicación 
+permitió a los estudiantes explorar riesgos ocultos dentro de esta red que dan lugar a un 
+colapso financiero sistémico. 
+La computación en la nube es el desarrollo del procesamiento distribuido. Se 
+caracteriza por almacenamiento masivo fiable y con potentes capacidades de computación, lo 
+que dará efectos positivos en el pluralismo en la educación orientada a la información. Google 
+App Engine (GAE) es una nueva generación de plataformas de desarrollo de aplicaciones web 
+basadas en la nube que permite a sus usuarios desarrollar y operar aplicaciones web en la 
+infraestructura de Google. GAE es fácil de construir y mantener, y se amplía fácilmente con 
+base en las necesidades de tráfico de acceso de usuario y almacenamiento de datos. En [34] se 
+describió la definición y las características de la plataforma de computación en la nube, y la 
+introducción de la plataforma de desarrollo de App Engine para Java de Google. Se cree que 
+los desarrolladores son capaces de construir aplicaciones educativas coloridas y altamente 
+personalizadas con GAE. 
+26 
+ 
+En [15] se presentó un enfoque para evaluar y predecir el nivel de competencia del 
+estudiante cuando se utiliza una determinada estrategia de enseñanza. Utilizando una 
+de las técnicas del machine-learning, en particular, el uso de circuitos lógicos/redes 
+para dicha predicción. El modelo matemático de los circuitos lógicos se utiliza para 
+evaluar el nivel de competencia. Proponen también un método para sintetizar el Circuito 
+lógico resultante que predice la efectividad del proceso de enseñanza cuando 
+dos estrategias se combinan. Los resultados preliminares experimentales demuestran 
+la escalabilidad esperada y la aplicabilidad del enfoque propuesto. 
+En [16] se propone un método de predicción de deserción para cursos de elearning, 
+basado en tres técnicas populares de machine-learning y datos detallados de 
+los estudiantes. Las técnicas de aprendizaje mecánico utilizadas son las redes neuronales feed-
+forward, las máquinas vectoriales de apoyo y el conjunto probabilístico 
+simplificado ARTMAP (Teoría de la Resonancia Adaptativa). El método se examinó 
+en términos de precisión general, sensibilidad y precisión y sus resultados fueron 
+altos, lo que indica que el esquema era preciso tanto en la identificación correcta de 
+los abandonos como en evitar las clasificaciones erróneas más completas. 
+Por otra parte, en [17] se construyó un sistema de evaluación de la gestión de los 
+estudiantes a través de la tecnología JSP (Java Server Pages), realizando un análisis 
+en profundidad para el marco de evaluación reciente y el procesamiento de datos no 
+estructurados y Datos semi-estructurados. Por otro lado, considerando la complejidad 
+de la información para la gestión estudiantil y la subjetividad de las mediciones, se 
+propuso un algoritmo basado en la Red Neural Artificial (ANN Artificial Neural Network) con 
+el objetivo de construir un modelo integrado inteligente a través de la 
+tecnología de minería de datos. Al evaluar un conjunto de datos de gestión recogidos 
+de una escuela politécnica se mostró la efectividad del algoritmo propuesto.
+27 
+ 
+2.2. Análisis comparativo de los trabajos relacionados 
+La Tabla 2.1 concentra la información del análisis comparativo realizado a los artículos relacionados con el trabajo a desarrollar 
+en este proyecto de innovación. 
+Tabla 2.1 Trabajos relacionados con el desarrollo. 
+Artículo Objetivo Tecnologías Resultado Estado 
+[4] Fomentar nuevas técnicas de enseñanza m-learning Al analizar los resultados por medio del software Concluido. 
+mejorando el proceso de absorción y haciendo D. Móviles SPSS v. 17 y LISREL v. 8.8 quedó demostrado la  
+más atractivo  el modo de aprendizaje para SPSS v. 17  mejora en la productividad y un mejor 
+después analizar los resultados con software LISREL v. 8.8 rendimiento de los estudiantes al ocupar  m-
+estadístico especializado. Internet learning. 
+Wireless 
+[20] Explorar los factores que afectan la aceptación m-learning Los resultados generados por las encuestas de 250 Concluido. 
+del aprendizaje m-learning  y examinar los D. Móviles personas revelan un éxito en el marco propuesto 
+resultados por medio de análisis de regresión y SPSS facilitando la absorción de este método de 
+media. Internet enseñanza reflejado en su mejora de aprendizaje. 
+Wireless 
+[21] Descubrir  los factores que facilitaron la m-learning Los resultados arrojados muestran claramente los Concluido. 
+adopción del  m-learning  en países D. Móviles factores mínimos y necesarios para que un país 
+desarrollados para generar métodos de inserción Internet menos desarrollado dé los primeros pasos para 
+a países menos desarrollados de oriente medio. incursionar en la educación  m-learning. 
+[22] Desarrollar una aplicación móvil e-learning que m-learning Se obtuvo una aplicación móvil que se logró Concluido. 
+se ejecute en los distintos sistemas móviles más Android ejecutar en plataformas cruzadas utilizando el 
+usados actualmente. iOS mismo código fuente. 
+PhoneGap 
+HTML5 
+JavaScript 
+CSS 
+JQueryMobile 
+[23] Realizar una aplicación tipo juego móvil e-learning Se obtuvo una aplicación que se ejecutó en varias  Concluido. 
+28 
+ 
+Artículo Objetivo Tecnologías Resultado Estado 
+ e-learning que se ejecute en ciertas plataformas Gamificación plataformas.  
+disponibles como iOS, PC’s y Laptops. iOS 
+JavaScript 
+Articulate- 
+Storyline 
+HTML5 
+[25] Desarrollar una aplicación para dispositivos con e-learning Se obtuvo una aplicación que se descarga desde Concluido. 
+S.O. Android, la cual permita simular una Gamificación los mercados actuales, y simula por medio de 
+evaluación oficial. Android preguntas un examen oficial. 
+Java 
+[26] Construir una aplicación móvil para Android que m-learning Se obtuvo una aplicación para sistemas Android Concluido. 
+utilice el método numérico de Runge-Kutta para Eclipse IDE que resuelve ecuaciones diferenciales y abrió la 
+resolver ecuaciones diferenciales necesarias para XML puerta para desarrollar futuras aplicaciones más 
+un sistema dinámico. Android complejas. 
+[27] Llevar a cabo la primera aplicación para el m-learning Se logró obtener la primera aplicación móvil Concluido. 
+Instituto Tecnológico de Costa Rica que Eclipse IDE realizada por y para el Tecnológico de Costa Rica. (Mejoras 
+permitiera a los alumnos de la institución Java continuas 
+acceder a los cursos activos del periodo Android de la 
+académico actual. ADT aplicación.) 
+(Android 
+Development 
+Tools) 
+HTTP 
+SQLite 
+[28] Crear una aplicación móvil que permitiera el m-learning Se logró el desarrollo  de una aplicación móvil que Concluido. 
+estudio del aprendizaje combinado en iOS permitiera el acceso a cursos ya disponibles para (Mejoras en 
+estudiantes de la Universidad de Pekín.  otras plataformas y estudiar el mejoramiento del la interfaz a 
+aprendizaje en los estudiantes. futuro). 
+[29] Realizar una aplicación móvil que se conecte al e-learning Se obtuvo una aplicación móvil que se conecta al Concluido. 
+LMS de la Universidad de Hong Kong y permita m-learning LMS de la Universidad de Hong Kong y con esto 
+el acceso a estudiantes y profesores. LMS migrar sus servicios a un entorno móvil. 
+29 
+ 
+Artículo Objetivo Tecnologías Resultado Estado 
+  Android   
+iOS 
+[30] Desarrollar una aplicación móvil  DGBL que DGBL Se consiguió una aplicación que permite la Concluido. 
+permita la concientización de los peligros de ADT percepción de los peligros de Internet en (Abordar 
+Internet  en alumnos de educación primaria, si no Android estudiantes de educación primaria. nuevos 
+se cuenta con las herramientas necesarias. iOS temas como 
+HTML5 la 
+privacidad) 
+[31] Desarrollar una arquitectura Middleware que e-learning Se desarrolló una arquitectura Middleware que Concluido. 
+permita la interconexión entre un LMS m-learning interconectó los servicios del LMS existente con 
+universitario y  aplicaciones móviles. LMS una aplicación móvil para su acceso remoto. 
+Android 
+IOS 
+Middlewware 
+[32] Construir una aplicación móvil para Android que e-learning Se obtuvo una aplicación móvil que permite la Concluido.  
+permita la gestión de actividades en las que está m-learning gestión general de actividades. Obteniendo con (Añadir 
+registrado un alumno, mejorando con esto el LMS esto un mejor control de las actividades mejoras y 
+acceso a la información disponible. Android disponibles que se llevan a cabo y los puntajes desarrollar 
+MySQL obtenidos en cada una de ellas. una versión 
+para iOS) 
+[33] Desarrollar una aplicación educacional para el e-learning Se generó una aplicación para dispositivos Concluido. 
+sistema Android que permita ejecutar los tres m-learning Android que permite comparar la ejecución de los 
+modelos de los métodos de Black Scholes para Android. tres modelos de Black Scholes y compararlos para 
+alumnos de educación financiera. entender los riesgos de un colapso financiero. 
+[34] Describir la plataforma de desarrollo GAE junto GAE Se generó un trabajo que describe y muestra las Concluido. 
+con sus características y ventajas al momento de Java ventajas y características de crear aplicaciones 
+desarrollar tecnología basada en la nube. JSP web con la plataforma de desarrollo GAE de 
+JDO Google, permitiendo crear infinidad de 
+JPA herramientas basadas en la nube. 
+ 
+30 
+ 
+ 
+ 
+Conclusión del análisis comparativo 
+ En este análisis comparativo se presentó el estudio de distintas investigaciones y casos de 
+estudio sobre el desarrollo, utilización y uso de aplicaciones móviles enfocadas hacia temas e-
+learning, en los cuales se logró observar algunas variedades de utilización y los distintos tipos de 
+estrategias con el fin de obtener un uso adecuado de los teléfonos inteligentes y con ello aprovechar 
+la tecnología ofreciendo herramientas nuevas y diferentes en el ámbito de la educación y el 
+aprendizaje. En conclusión de los artículos analizados se tiene que la mayoría instituciones u 
+organizaciones que han realizado aplicaciones e-learning definen sus estrategias acorde a sus 
+necesidades y posibilidades de acción, logrando con esto cumplir sus objetivos planteados. Lo cual 
+indica que el desarrollar aplicaciones para dispositivos móviles o no móviles bajo el esquema e-
+learning es necesario, dado que son herramientas extra que son utilizadas a favor de las personas y 
+de la mejor forma posible y además son bien aceptadas debido a que ofrecen ciertas comodidades, 
+una de ellas es la movilidad. Gracias a que la tecnología avanza constantemente y los precios de los 
+dispositivos disminuyen, mucha gente tiene la posibilidad de acceso a ellos por lo que existen gran 
+variedad de temas que serían resueltos con aplicaciones móviles. 
+  
+            
+                                     
+ 
+ 
+ 
+Capítulo 3. Aplicación de la Metodología 
+El presente capítulo describe la metodología utilizada durante el desarrollo de la tesis de 
+acuerdo con la problemática que se estudia en esta investigación y al objetivo trazado para su 
+solución, ambos aspectos descritos en el apartado 1.3 del capítulo uno, se necesita diseñar y 
+desarrollar una aplicación móvil para e-learning que permita la realización de quizzes académicos 
+para alumnos de nivel superior, y que mediante los cuales se recolecten datos de los discentes y se 
+les proporcione cierta retroalimentación basada en sus respuestas para mejorar su desempeño 
+académico. Para lograr lo anterior se diseñó una arquitectura que sustente el desarrollo de la 
+aplicación y que contempla todo lo necesario para lograr los objetivos planteados.  
+En este capítulo se describe: la arquitectura de la aplicación diseñada, el proceso para el 
+desarrollo de la aplicación móvil guiado por la metodología Mobile-D y el uso de machine-learning 
+para el análisis de datos. 
+3.1. Introducción 
+En esta sección se presenta la metodología utilizada para el desarrollo de la tesis, la cual se 
+basa en la metodología Mobile-D y se contempla a través de cinco fases. El seguimiento y 
+cumplimiento de cada una de estas fases permitió culminar en tiempo y forma la solución del 
+problema propuesto. En la figura 3.1 se presenta cada una de las fases y las actividades que se 
+realizaron en ellas, las cuales se describirán a continuación: 
+ 
+Figura 3.1  Metodología divida en fases y etapas. 
+  
+            
+                                     
+ 
+ 
+ 
+Fase I: Levantamiento de información 
+En ésta primera fase, se adquirió la información necesaria para orientar adecuadamente el 
+proyecto y para lograr esto, fue necesario hacer una revisión del estado del arte relacionado con la 
+solución informática que se busca implementar, para así proceder posteriormente a realizar las 
+actividades sugeridas por la metodología Mobile-D. Como resultado de dichas revisiones se generó 
+un análisis comparativo de aplicaciones similares y la diferencia entre esos trabajos y el que se 
+pretende realizar. 
+Fase II: Exploración 
+En ésta fase apoyándose en las recomendaciones de la metodología Mobile-D, se pretende 
+llevar a cabo el proceso inicial de planificación, así como también, establecer los conceptos cásicos 
+del proyecto. El propósito de esta fase es la planificación, esta fase es muy importante para 
+establecer las bases para una implementación bien controlada de software, la arquitectura del 
+producto, el proceso de desarrollo y la selección del medio ambiente. 
+Las actividades a realizar en esta fase son: 
+ Establecer los clientes potenciales. 
+ Definir el grupo de Stakeholders. 
+ Definir el entorno del proyecto. 
+ Definir la arquitectura a utilizar. 
+Fase III: Inicialización 
+Ésta fase está pensada para posibilitar el éxito de las siguientes fases, por tal motivo, la meta 
+será preparar el proyecto para evitar todos los posibles problemas que puedan surgir durante el 
+desarrollo de la solución informática. Además, se prepararán todos los recursos físicos, tecnológicos 
+y de comunicaciones para las actividades de producción. 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+Para llevar a buen término ésta fase, se proponen las siguientes actividades: 
+ Configurar el entorno de desarrollo del proyecto (IDE´s, dispositivos, periféricos). 
+ Entrenarse sobre los conceptos y el uso de las herramientas que se utilizarán. 
+ Definir los medios de comunicación con los clientes y stakeholders. 
+ Construir el plan inicial del proyecto. 
+Fase IV: Producción 
+En ésta fase se llevó a cabo toda la implementación de la solución informática usando un 
+ciclo de desarrollo iterativo e incremental para poner en funcionamiento la operatividad requerida 
+del producto, para esto se realizó el desarrollo de cada uno de los módulos planteados en la 
+arquitectura diseñada en la fase de inicialización. 
+Fase V: Estabilización 
+La metodología Mobile-D contempla ésta etapa para hacer una integración completa del 
+sistema en los casos en que el desarrollo del proyecto se encuentra divido en áreas geográficas 
+diferentes. El proyecto actual no sigue ese comportamiento sin embargo ésta fase se usará para 
+hacer la integración y estabilización de los sub-sistemas que involucra la solución informática de 
+modo que se vinculen los módulos separados en una única aplicación 
+Fase VI: Pruebas y preparación del sistema 
+Una vez terminado totalmente el desarrollo se pasará a la fase de pruebas, donde se iterará 
+hasta llegar a una versión estable del producto según lo establecido por el cliente. Si es necesario se 
+reparan errores pero no se desarrolla nada nuevo. Una vez terminado todas las fases se debería 
+contar con una aplicación publicable y entregable al cliente. 
+3.2. Diseño de la aplicación 
+La fase de diseño en el desarrollo de software permite que todos los involucrados en el 
+proceso a través de una descripción visual de todo el sistema conozcan su comportamiento antes de 
+llevarlo a cabo, así como estimar tiempos y costos de construcción, detección de errores y 
+            
+                                     
+ 
+ 
+ 
+corrección en etapas tempranas. Entre las muchas actividades en la fase de diseño, una de ellas es la 
+definición de la arquitectura del sistema para identificar las necesidades reales a cubrir por el mismo 
+y con ello contemplar los puntos necesarios para el desarrollo del sistema. En la Figura 3.2 se 
+representa la arquitectura para el desarrollo de la aplicación que en este trabajo se propone.  
+3.2.1. Arquitectura 
+Los patrones arquitectónicos son muy utilizados en el diseño de la arquitectura de software 
+porque proporcionan soluciones a problemas comunes dentro del entorno y su efectividad ha sido 
+utilizada para el desarrollo de muchos proyectos por lo que ha llegado a ser muy conocida. Estos 
+patrones de alto nivel ayudan a definir la estructura y organización de los sistemas de software. Su 
+aplicación ha generado grandes beneficios en el desarrollo de software como son: reducción en 
+tiempos de desarrollo, mayor robustez, mayor calidad y facilidad en el mantenimiento. La 
+arquitectura propuesta se fundamentó sobre uno de los patrones de arquitectura más utilizados [1] 
+para el desarrollo de aplicaciones web, conocido como Modelo-Vista-Controlador (MVC). Dicho 
+patrón se utilizó en dos ocasiones para diseñar y cubrir completamente con las necesidades del 
+problema, por lo que se contempló una aplicación Web y móvil. En la Figura 3.1 se muestra la 
+arquitectura para el sistema propuesto. 
+            
+                                     
+ 
+ 
+ 
+ 
+ 
+Figura 3.1  Patrón arquitectónico MVC aplicado en el sistema propuesto. 
+Como se puede observar en la figura 3.1 la estructura y organización que propone el patrón 
+arquitectónico MVC proporciona un buen acoplamiento entre los componentes involucrados y los 
+cambios solo serán perceptibles para las partes directamente inmiscuidas en el sistema. 
+3.2.1.1. Patrón Arquitectónico MVC para aplicación Web 
+Como se mencionó en el párrafo anterior, se consideró una aplicación Web, dicha 
+aplicación se encuentra construida sobre el marco de trabajo Java Server Faces para 
+hacer uso de todas las ventajas y herramientas al construir aplicaciones Web.  Para ello el patrón 
+MVC define tres capas dentro de la aplicación separando la lógica de negocio de la representación y 
+la persistencia. Para comprender mejor esto se ofrece una descripción explicando la sección 
+marcada de color gris de la Figura 3.1. 
+Cliente: El cliente es aquel usuario que solicita el servicio, en este caso a través de un 
+navegador Web convencional o un navegador Web móvil, ambos realizan peticiones de manera 
+independiente al marco de trabajo Java Server Faces solicitando la 
+            
+                                     
+ 
+ 
+ 
+información que se necesite, el marco recibe las peticiones y las procesa de manera 
+adecuada arrojando un resultado satisfactorio o en su defecto alguna página de 
+error. 
+Modelo: Agrupa la lógica de la aplicación representada en los beans administrados que tienen 
+acceso a los componentes de la interfaz y pasan información a los beans de modelo, estos últimos 
+representan las clases importantes del dominio y realizan solicitudes a los Servicios Web basados en 
+SOAP y estos a su vez interactúan con el JDBC para controlar el acceso al gestor de base de datos 
+PostgreSQL y manipular la información para después ser proyectada en la vista del cliente. 
+Vista: La vista son todas aquellas pantallas que se despliegan hacia el cliente, desde 
+solicitudes de información, enlaces, formularios, gráficos, errores, etc. Para lograr lo anterior se 
+utilizan archivos XHTML que permiten el manejo de la interacción con el usuario; para este 
+propósito se utilizan etiquetas propias de JSF y componentes de la biblioteca PrimeFaces. 
+Controlador: Dado que la arquitectura contempla el marco de trabajo Java Server 
+Faces, el componente Faces Servlet funge como controlador recibiendo las peticiones del cliente,  
+este a su vez tiene el trabajo de ser el intermediario entre el modelo y la vista, por lo que si el cliente 
+necesita cierta información, el controlador deberá gestionar las peticiones de los recursos al modelo, 
+instanciando a los JavaBeans necesarios para el proceso de obtención de información y a su vez 
+preparando la vista para el despliegue de información como respuesta hacia el cliente. 
+3.2.1.1.1. Servicio Web y Gestor de Base de Datos 
+El servicio Web SOAP se aloja en un servidor de aplicaciones GlassFish a la espera de 
+peticiones por parte del bean administrado, éste contiene todos los diferentes 
+métodos necesarios para cubrir todas las solicitudes que se realicen. Los datos son 
+gestionados por PostgresSQL, donde es almacenada la información. 
+3.2.1.2. Patrón Arquitectónico MVC para aplicación Móvil 
+Como se mencionó en el apartado 3.1.1, se contempló también una aplicación móvil, dicha 
+aplicación se encuentra construida bajo HTML5, JavaScript y CSS lo cual permite desarrollar 
+            
+                                     
+ 
+ 
+ 
+aplicaciones para distintos entornos bajo un mismo código. Para ello el patrón MVC define tres 
+capas separando la lógica de negocio de la representación y de la persistencia. A continuación se 
+ofrece una descripción de la figura 3.1 explicando la sección que no está remarcada en tonos grises. 
+Cliente: El cliente es la propia aplicación móvil, dicha aplicación se compone por 
+páginas HTML5 empaquetadas por el marco de trabajo PhoneGap. La aplicación 
+realiza peticiones por medio del protocolo HTTP solicitando la información que se 
+necesite, procesando de manera adecuada los datos y arrojando un resultado satisfactorio o en su 
+defecto alguna página de error. 
+Modelo: Como modelo se tiene el proveedor de servicios RESTful, estos tienen la 
+tarea de acceder a la información sin que el controlador se entere. Para este caso el 
+controlador realiza solicitudes de información al modelo, éste a su vez realiza peticiones al gestor 
+de base de datos PostgreSQL donde se encuentra almacenada la información, se 
+procesa y se proyecta en la vista para el cliente. 
+Vista: La vista son todas aquellas páginas que se despliegan hacia el cliente, desde 
+solicitudes de información, peticiones a otros enlaces, errores, etc. y que son páginas HTML junto 
+con código JavaScript que dan la apariencia al usuario de aplicación móvil pero que se encuentran 
+contenidas dentro de la misma. 
+Controlador: La biblioteca multiplataforma de JQuery junto con JavaScript fungen como 
+controlador para esta parte, recibiendo las peticiones del cliente. El controlador tiene el trabajo de 
+ser el intermediario entre el modelo y la vista, por lo que si el cliente necesita cierta información,  el 
+controlador deberá solicitar al modelo dichos datos para el proceso y a la vez preparando la vista 
+para el despliegue de información como respuesta hacia el  
+cliente. 
+3.2.2. Análisis de requerimientos 
+En esta etapa se identifican los requerimientos, propósitos y metas de la aplicación para 
+representarlos como casos de uso. Da lugar a un diagrama de casos de uso. El primer paso es 
+conocer los diferentes actores de la aplicación y qué actividades realizan. Esta etapa sólo se 
+            
+                                     
+ 
+ 
+ 
+generalizan los objetivos que se requieren obtener y quienes participan  en las tareas definidas. La 
+Tabla 3.1 muestra cada uno de los actores y su descripción. 
+Tabla 3.1 Lista de usuarios y actividades  para la plataforma 
+Usuario Tareas 
+Alumno 1. Iniciar sesión. 
+2. Realizar evaluación. 
+3. Consultar resultados. 
+4. Consultar historial. 
+5. Gestionar perfil. 
+Profesor 6. Iniciar sesión. 
+7. Gestionar preguntas. 
+8. Gestionar cursos. 
+9. Gestionar evaluaciones. 
+Administrador 10. Iniciar sesión.   
+11. Gestionar administradores. 
+12. Gestionar Profesores. 
+13. Gestionar Alumnos. 
+Después de identificar los actores y las funciones que debe realizar la aplicación, se 
+representaron las relaciones entre estos mediante un diagrama de casos de uso, mostrado en la 
+Figura 3.2. 
+ 
+Figura 3.2  Diagrama de casos de uso de la aplicación. 
+ 
+            
+                                     
+ 
+ 
+ 
+Los tres actores Administrador, Profesor y Alumno deben autenticarse en el sistema para 
+realizar sus operaciones de cada usuario y por tanto, también pueden finalizar su sesión en el 
+momento que así lo consideren. El Administrador es el rol encargado de gestionar los usuarios 
+registrados en la aplicación, ya sean alumnos, profesores o administradores, por lo que tiene 
+permisos para insertar nuevos registros y modificarlos, consultar o eliminar algún registro existente. 
+El rol Profesor es el encargado de gestionar preguntas, cursos y evaluaciones dentro del sistema por 
+lo que puede insertar, consultar, modificar y eliminar dichos registros antes mencionados. Por 
+último el Alumno simplemente realiza las evaluaciones disponibles, consulta los resultados de las 
+mismas y puede modificar su información. 
+Es mediante este diagrama de casos de uso que se representan las interacciones de los 
+actores con la aplicación identificando así los requerimientos funcionales. 
+3.2.3. Caso de Uso  Administrador “Gestionar Administradores” 
+ El caso de uso “Gestionar Administradores” implica gestionar el módulo de los usuarios 
+con nivel administrador, con lo que se cuentan con las opciones de dar de alta, consultar, modificar 
+o eliminar algún registro, cabe mencionar que este módulo es exclusivo del usuario Administrador 
+y para poder acceder se debe autentificar, la Fig. 3.2 muestra el diagrama de caso de uso detallado 
+y en la Tabla 3.2 la descripción breve del mismo. 
+ 
+ 
+Figura 3.2  Diagrama de casos de uso “Gestionar Administradores”  detallado. 
+            
+                                     
+ 
+ 
+ 
+ 
+Tabla 3.2 Descripción del caso de uso “Gestionar Administradores” 
+ 
+Clave  Caso de Uso Descripción  
+CU01 Consultar Admin.  El administrador consulta la información de un registro.  
+CU02 Alta Admin. El administrador ingresa un registro nuevo al sistema. 
+CU03 Modificar Admin. El administrador modifica la información de un registro. 
+CU04 Baja Admin. El administrador elimina un registro del sistema. 
+ 
+3.2.4. Caso de Uso  Administrador “Gestionar Profesores” 
+ El caso de uso “Gestionar Profesores” implica gestionar el módulo de los usuarios con nivel 
+Profesor, con lo que se cuentan con las opciones de dar de alta, consultar, modificar o eliminar 
+algún registro, cabe mencionar que este módulo es exclusivo del usuario Administrador y para 
+poder acceder se debe autentificar, la Fig. 3.3 muestra el diagrama de caso de uso detallado y en la 
+Tabla 3.3 la descripción breve del mismo. 
+ 
+Figura 3.3  Diagrama de casos de uso “Gestionar Profesores”  detallado. 
+ 
+Tabla 3.3 Descripción del caso de uso “Gestionar Profesores” 
+ 
+Clave  Caso de Uso Descripción  
+CU05 Consultar Profesor  El administrador consulta la información de un registro.  
+CU06 Alta Profesor El administrador ingresa un registro nuevo al sistema. 
+CU07 Modificar Profesor El administrador modifica la información de un registro. 
+CU08 Baja Profesor El administrador elimina un registro del sistema. 
+ 
+            
+                                     
+ 
+ 
+ 
+3.2.5. Caso de Uso  Administrador “Gestionar Alumnos” 
+ El caso de uso “Gestionar Alumnos” implica gestionar el módulo de los usuarios con nivel 
+Alumno, con lo que se cuentan con las opciones de dar de alta, consultar, modificar o eliminar 
+algún registro, cabe mencionar que este módulo es exclusivo del usuario Administrador y para 
+poder acceder se debe autentificar, la Fig. 3.4 muestra el diagrama de caso de uso detallado y en la 
+Tabla 3.4 la descripción breve del mismo. 
+ 
+Figura 3.4  Diagrama de casos de uso “Gestionar Alumnos”  detallado. 
+ 
+Tabla 3.4 Descripción del caso de uso “Gestionar Alumnos” 
+ 
+Clave  Caso de Uso Descripción  
+CU09 Consultar Alumno  El administrador consulta la información de un registro.  
+CU010 Alta Alumno El administrador ingresa un registro nuevo al sistema. 
+CU011 Modificar Alumno El administrador modifica la información de un registro. 
+CU012 Baja Alumno El administrador elimina un registro del sistema. 
+3.2.6. Caso de Uso  Profesor “Gestionar Preguntas” 
+ El caso de uso “Gestionar Preguntas” implica gestionar el módulo de preguntas, cabe 
+mencionar que las preguntas cuentan con un atributo área y pueden der ser cuatro tipos: abierta, 
+falso/verdadero, múltiple o imagen, este módulo es necesario para la creación de una evaluación. 
+Se cuentan con las opciones de dar de alta, consultar, modificar o eliminar algún registro, cabe 
+mencionar que este módulo es exclusivo del usuario Profesor y para poder acceder se debe 
+autentificar, la Fig. 3.5 muestra el diagrama de caso de uso detallado y en la Tabla 3.5 la 
+descripción breve del mismo. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 3.5  Diagrama de casos de uso “Gestionar Preguntas”  detallado. 
+ 
+Tabla 3.5 Descripción del caso de uso “Gestionar Preguntas” 
+ 
+Clave  Caso de Uso Descripción  
+CU013 Consultar Pregunta  El profesor consulta la información de un registro.  
+CU014 Alta Pregunta El profesor ingresa un registro nuevo al sistema. 
+CU015 Modificar Pregunta El profesor modifica la información de un registro. 
+CU016 Baja Pregunta El profesor elimina un registro del sistema. 
+3.2.7. Caso de Uso  Profesor “Gestionar Cursos” 
+ El caso de uso “Gestionar Cursos” implica gestionar el módulo de cursos, en esta opción el 
+profesor da de alta todas las materias que imparte y de las que se encuentra en crear evaluaciones. 
+Al crear un curso el profesor tiene la opción de agregar alumnos a su materia o en su defecto 
+eliminar alumnos inscritos en ella. Se cuentan con las opciones de dar de alta, consultar, modificar 
+o eliminar algún registro, cabe mencionar que este módulo es exclusivo del usuario Profesor y para 
+poder acceder se debe autentificar, la Fig. 3.6 muestra el diagrama de caso de uso detallado y en la 
+Tabla 3.6 la descripción breve del mismo. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 3.6  Diagrama de casos de uso “Gestionar Cursos”  detallado. 
+ 
+Tabla 3.6 Descripción del caso de uso “Gestionar Cursos” 
+ 
+Clave  Caso de Uso Descripción  
+CU017 Consultar Curso  El profesor consulta la información de un registro.  
+CU018 Alta Curso El profesor ingresa un registro nuevo al sistema. 
+CU019 Modificar Curso El profesor modifica la información de un registro. 
+CU020 Baja Curso El profesor elimina un registro del sistema. 
+CU021 Agregar Alumno El profesor agrega a un alumno a un curso existente. 
+CU022 Eliminar Alumno El profesor elimina a un alumno de un curso existente. 
+3.2.8. Caso de Uso  Profesor “Gestionar Evaluaciones” 
+ El caso de uso “Gestionar Evaluaciones” implica gestionar el módulo de evaluaciones, en 
+esta opción el profesor da de alta todas las evaluaciones que desea de un curso. Al crear una 
+evaluación el profesor tiene la opción de agregar preguntas existentes de su área a una evaluación o 
+en su defecto eliminar preguntas agregadas en ella. Se cuentan con las opciones de dar de alta, 
+consultar, modificar o eliminar algún registro, cabe mencionar que este módulo es exclusivo del 
+usuario Profesor y para poder acceder se debe autentificar, la Fig. 3.7 muestra el diagrama de caso 
+de uso detallado y en la Tabla 3.7 la descripción breve del mismo. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 3.7  Diagrama de casos de uso “Gestionar Evaluaciones”  detallado. 
+ 
+Tabla 3.7 Descripción del caso de uso “Gestionar Evaluaciones” 
+ 
+Clave  Caso de Uso Descripción  
+CU023 Consultar Evaluación  El profesor consulta la información de un registro.  
+CU024 Alta Evaluación El profesor ingresa un registro nuevo al sistema. 
+CU025 Modificar Evaluación El profesor modifica la información de un registro. 
+CU026 Baja Evaluación El profesor elimina un registro del sistema. 
+CU027 Agregar Pregunta El profesor agrega una pregunta a una evaluación. 
+CU028 Eliminar Pregunta El profesor elimina una pregunta de una evaluación. 
+3.2.9. Caso de Uso  Alumno 
+ El caso de uso “Alumno” implica todas las actividades disponibles para este actor, como 
+son la de “Realizar evaluación” donde podrá ver los quizzes  disponibles de los cursos de donde 
+esté inscrito. En “Consultar Resultados” podrá observar las calificaciones obtenidas de dichas 
+evaluaciones que haya presentado con anterioridad. También tiene la opción de gestionar el 
+módulo de Perfil, el cual permite modificar su usuario actual por uno distinto y la actualización de 
+su contraseña. Todas las opciones anteriores son exclusivas del usuario Alumno y para poder 
+acceder se debe autentificar, la Fig. 3.8 muestra el diagrama de caso de uso detallado y en la Tabla 
+3.8 la descripción breve del mismo. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 3.8  Diagrama de casos de uso “Gestionar Evaluaciones”  detallado. 
+ 
+Tabla 3.8 Descripción del caso de uso “Gestionar Evaluaciones” 
+ 
+Clave  Caso de Uso Descripción  
+CU029 Realizar evaluación  El alumno realiza una evaluación existente.  
+CU030 Consultar resultados El alumno consulta los resultados de sus evaluaciones. 
+CU031 Consultar historial El alumno consulta su historial. 
+CU032 Modificar usuario El alumno actualiza su usuario por uno diferente. 
+CU033 Modificar contraseña El alumno actualiza su contraseña de acceso. 
+3.2.3. Modelado de la Base de Datos 
+La Fig. 3.9 muestra el modelado de la Base de Datos. 
+ 
+Figura 3.9  Modelado de la Base de Datos. 
+            
+                                     
+ 
+ 
+ 
+3.2.4. Diseño Conceptual de la aplicación. 
+Las siguientes figuras corresponden a la construcción del modelo orientado a objetos a 
+través de diagramas de clases en UML que contemplan los conceptos necesarios y a los actores 
+identificados en el análisis de requerimientos. 
+La figura 3.10 representa el diagrama de clases correspondiente a la aplicación web que 
+permitirá la interacción con los usuarios a través de un navegador web. 
+ 
+Figura 3.10  Diagrama de clases de la aplicación web. 
+ 
+            
+                                     
+ 
+ 
+ 
+ La figura 3.11 representa al diagrama de clases correspondiente al servicio web que se 
+utilizará para estar a la escucha de las peticiones del servicio web antes mencionado. 
+ 
+ 
+Figura 3.11  Diagrama de clases del servicio web. 
+ 
+            
+                                     
+ 
+ 
+ 
+Finalmente la figura 3.12 muestra el diagrama de clases para los servicios RESTful que se 
+comunicarán con la aplicación móvil. 
+ 
+Figura 3.12  Diagrama de clases del servicio RESTful. 
+ La figura 3.13 representa el diagrama de despliegue donde muestra el cliente a través de un 
+navegador web que accede a la aplicación web, la cual está en un servidor web y esta a su vez 
+accede a la base de datos PostgreSQL. 
+ 
+Figura 3.13  Diagrama de despliegue de la aplicación web. 
+            
+                                     
+ 
+ 
+ 
+ La figura 3.14 representa el diagrama de despliegue donde muestra el cliente a través de un 
+teléfono inteligente con la aplicación móvil instalada que accede al servicio RESTFul, el cual está 
+en un servidor web y esta a su vez accede a la base de datos PostgreSQL. 
+ 
+Figura 3.14  Diagrama de despliegue  de la aplicación móvil. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+4.0. Resultados 
+Este capítulo presenta los resultados obtenidos con dos casos de estudio propuestos para la 
+recolección de datos a través de evaluaciones académicas y la retroalimentación a discentes basada 
+en técnicas estadísticas. 
+4.1. Lanzamiento de aplicación móvil a Google Play Store 
+Debido a que se desarrolló una aplicación móvil para teléfonos inteligentes, era complicado 
+instalar dicha aplicación de manera individual por medio del módulo de desarrollador disponible en 
+cada teléfono y también requería el mismo procedimiento al realizar alguna actualización, por lo 
+que se dio a la tarea de registrar la aplicación en la Google Play Store, esto a razón de que Google 
+ofrece mayor facilidad al subir aplicaciones a su plataforma, es más económico el pago de derechos 
+de desarrollo y el grupo que se utilizó para las pruebas contaban con dispositivos Android, y así de 
+esta manera facilitar la instalación de la aplicación en cada equipo. Simplemente se debe tener una 
+cuenta de Google registrada en su teléfono y acceder vía navegador Web o desde la aplicación 
+móvil y acceder a la tienda de aplicaciones de Google. 
+4.1.1. Registro en Google Play Console 
+Para subir aplicaciones a la tienda de Google es necesario realizar un pago de $20 USD, el cual te 
+permite tener acceso a la consola de desarrollo de Google, la cual es la interfaz principal para 
+gestionar las aplicaciones que se desarrollen y estén disponibles en la tienda.  
+ 
+ 
+Figura 4.1  Consola de aplicaciones de Google Play 
+            
+                                     
+ 
+ 
+ 
+4.1.2. Registro de Aplicación en Google Play Console 
+Para registrar una aplicación se debe colocar un “título”, el cual es el que aparecerá en la 
+tienda de aplicaciones y con el podrán buscarlo en la misma, de igual  forma se debe colocar una 
+“descripción breve” donde se coloca de manera concisa el objetivo de la aplicación, también existe 
+la sección de “descripción completa” donde es posible explayarse y abarcar todos las tareas y 
+actividades que es capaz de realizar la aplicación. 
+ 
+Figura 4.1  Colocación de datos de la aplicación. 
+En la siguiente sección se solicita la subida de archivos gráficos, con cual es necesario 
+colocar imágenes de la aplicación, obligatoriamente se deben subir mínimo dos hasta un máximo de 
+ocho pantallas donde se muestre la ejecución en un teléfono móvil y opcionalmente si se cuentan 
+con imágenes en tableta, Android TV y Android Wear, esto sólo si se ejecuta también en dichas 
+plataformas extras. Esto conlleva a la facilidad de que el usuario observe a través de la tienda como 
+luce la aplicación que desea instalar en su dispositivo y de esa forma esté consciente de las 
+funciones que realiza la misma. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.2  Carga de archivos gráficos de la aplicación. 
+La siguiente sección es similar al anterior dado que se requieren cargar recursos gráficos, 
+pero en esta ocasión se refieren al ícono de la aplicación, el cual debe tener una resolución de 512 x 
+512 pixeles y ser en formato PNG (Portable Network Graphics), esta imagen que se solicita es la 
+que aparecerá en la sección de lista búsqueda junto con el título correspondiente. También se 
+solicita un “gráfico de la función” el cual es sencillamente el banner que aparece a la espalda de la 
+aplicación, normalmente se ocupa para colocar información relacionada a la aplicación, nombre de 
+la empresa de desarrollo o para otros fines que convenga, dado que es una de las primeras imágenes 
+que visualiza el usuario al acceder, cabe mencionar que esta imagen solo se muestra cuando se 
+accede desde la aplicación móvil de la tienda de Google. Opcionalmente se pueden colocar gráficos 
+promocionales y banner de televisión si así se desea, dado que actualmente algunos televisores 
+modernos incluyen Android TV preinstalado por lo cual ahora posible desarrollar aplicaciones para 
+estos equipos electrónicos y abarcando una sección en la tienda de aplicaciones. 
+ 
+            
+                                     
+ 
+ 
+ 
+ 
+ Figura 4.3  Carga de ícono y banners. 
+ Dado que el alcance que tienen las aplicaciones es muy amplio, se debe clasificar el tipo de 
+aplicación que se está desarrollando, para ello está trabajo se catalogó como aplicación en la 
+sección de educación, con ello se obtuvo el certificado que avala el tipo de contenido que se 
+muestra dentro de ella.  
+ 
+Figura 4.4  Categorización de la aplicación. 
+ 
+            
+                                     
+ 
+ 
+ 
+ En la penúltima sección del registro de aplicación se deben de registrar datos informativos 
+del desarrollador como si cuenta con algún sitio web, teléfono de contacto y dirección de correo 
+electrónico, de esta forma si algún usuario desea obtener más información, sugerencia o queja 
+pueda hacerlo por estos medios extras.  
+ 
+Figura 4.5  Información de contacto. 
+ Por último existen tres categorías en donde se puede liberar la aplicación, la primera es la 
+sección “Alfa”, el colocar aquí el proyecto significa que aún no se encuentra en una versión estable 
+y que puede contar con una gran cantidad de errores dentro de su funcionamiento. La sección 
+“Beta” es una etapa muy común dentro del desarrollo de aplicaciones, normalmente significa que el 
+proyecto ya se encuentra en una versión estable para su funcionamiento, pero que todavía cuenta 
+con cierto número de errores y que se encuentra en una fase de pruebas para lograr resolverlos. En 
+ambas etapas anteriores el desarrollador cuenta con la posibilidad de decidir quién tendrá acceso a 
+la aplicación, existe la posibilidad de enviar invitaciones a personas especificas o liberarlo en la 
+zona de desarrollo para que sea probado libremente por otros programadores y estos califiquen el 
+trabajo. La siguiente fase es la de Producción, el producto se encuentra listo y funcional para ser 
+utilizado por todo el mundo, por lo que ahora es posible ser descargado por cualquier usuario 
+dentro de la tienda de aplicaciones. Otro punto que también se gestiona en esta sección es la de 
+elegir en qué países se encontrará disponible la aplicación o en qué países no se podrá acceder a 
+ella. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.6  Etapas de la aplicación. 
+4.2. Gestión del usuario Docente 
+La gestión del usuario docente se encarga de administrar las actividades disponibles para 
+dicho usuario, tales como editar su información personal como usuario de acceso al sistema, 
+contraseña de ingreso, nombre y apellidos, área docente a la que pertenece entre otros más. 
+Creación y administración de materias que imparte, gestión de preguntas y gestión de evaluaciones, 
+las opciones anteriores si irán explicando de manera detallada en los siguientes puntos. 
+4.2.1. Gestionar un Curso 
+Gestionar curso permite al usuario docente, crear los cursos que él desee, modificar la 
+información referente a un curso existente en su cuenta, eliminar o dar de baja algún registro 
+almacenado y finalmente gestionar alumnos dentro de un curso. El primer paso es el dar de alta un 
+curso que se encuentre impartiendo el docente, esto para llevar de mejor manera un control real 
+sobre las materias que esté llevando durante su ciclo escolar. Para ello, en la pantalla principal se 
+debe desplazar el mouse hacia la sección de gestión para desplegar un submenú que mostrará otras 
+            
+                                     
+ 
+ 
+ 
+opciones, entre ellas la opción de “Cursos” la cual es la que se debe seleccionar para proceder al 
+siguiente punto. 
+ 
+Figura 4.7  Selección de Cursos en la pantalla principal. 
+Después de haber dado clic se desplegará la pantalla principal de gestión de cursos donde se 
+desplegarán los cursos actuales que tenga el profesor, para dar de alta un nuevo curso se debe 
+seleccionar la opción de “Registrar nuevo Curso” para lograr ingresar un curso al sistema. 
+ 
+Figura 4.8  Selección de Registro de nuevo curso. 
+            
+                                     
+ 
+ 
+ 
+Al terminar la carga de la página, se desplegará una tabla con la solicitud de datos que se 
+deben ingresar con relación al nuevo curso que se desea ingresar al sistema, dicha información es la 
+siguiente: Clave de la materia, nombre de la materia, clave del aula, días que se imparte, horario, 
+límite de alumnos y el estatus inicial del curso. Al terminar el llenado del formulario se procede con 
+el botón guardar el cual procederá con la petición y almacenará la información en el sistema. 
+ 
+Figura 4.9  Ingreso de datos para nuevo curso. 
+Si la información ingresada en el punto anterior es correcta guardará la información y 
+retornará a la gestión de cursos mostrando el nuevo curso en la lista principal y con ello el curso se 
+encontrará dado de alta y listo para trabajar con él. 
+ 
+Figura 4.10  Curso nuevo en la pantalla de gestión de cursos. 
+            
+                                     
+ 
+ 
+ 
+Ahora procedemos con asignar alumnos al curso nuevo que se acaba de crear, para ello 
+colocamos el cursos sobre el botón de opciones que se encuentra del lado derecho del registro que 
+se desea modificar, al dar clic sobre él se desplegará un submenú, dentro de éste se debe seleccionar 
+la opción de “Gestionar Alumnos”. 
+ 
+Figura 4.11  Selección de Gestión de Alumnos en el menú. 
+ Al terminar la carga de la página, se desplegará la “Gestión de Alumnos” la cual muestra los 
+alumnos que se encuentren registrados dentro del área que se encuentre impartiendo el profesor. 
+Una de las opciones disponibles para él, es poder filtrar la información por clave del alumno, 
+nombre, apellido paterno y materno. En el siguiente ejemplo se filtró la información por clave del 
+alumno y se colocó que sólo muestre aquellos registros que coincidan con la información “172722”, 
+después de esto se realiza un clic sobre las opciones disponibles por alumno y se selecciona 
+“Agregar alumno”. 
+ 
+Figura 4.12  Agregando un alumno a un curso. 
+            
+                                     
+ 
+ 
+ 
+ Al realizar la acción anterior, se agregará el alumno seleccionado al curso que previamente 
+se había seleccionado, para confirmar lo anterior el nuevo alumno ahora se mostrará en la sección 
+inferior de “Alumnos Inscritos”, tal y como se muestra en la siguiente imagen: 
+ 
+Figura 4.13  Alumno agregado correctamente. 
+ De esta manera se puede agregar a un alumno registrado en el sistema a un curso que haya 
+dado de alta el profesor. 
+4.2.2. Gestionar preguntas 
+ La opción de gestionar preguntas permite al usuario profesor, crear  y manejar las preguntas 
+que él necesite, modificar información referente a alguna de ellas y eliminar o dar de baja algún 
+registro previamente almacenado. Para ello antes que todo se debe dar de alta alguna pregunta, este 
+es el primer paso si se desea realizar alguna evaluación, dado que las preguntas que se agreguen a la 
+evaluación deben existir primero en el sistema. El sistema cuenta con el manejo de cuatro tipos de 
+preguntas las cuales son: pregunta abierta, pregunta de opción múltiple, pregunta de opción múltiple 
+con imagen y finalmente pregunta de tipo falso/verdadero, más adelante se mostrará el manejo de 
+cada una de ellas. Para poder crear alguna pregunta se debe desplazar a la sección de “Gestión de 
+Preguntas”,  por default al iniciar sesión en el sistema es la página que se desplegará al inicio, pero 
+si no fuese así en la pantalla se debe desplazar el mouse hacia la sección de gestión para desplegar 
+un submenú que mostrará otras opciones, entre ellas la opción de “Preguntas” la cual es la que se 
+debe seleccionar para proceder al siguiente punto. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.14  Acceso a la Gestión de preguntas. 
+ En la sección de “Gestión de preguntas” se cuentan con dos opciones en la parte inferior, 
+una de ellas es la de “Registrar nueva pregunta”, se debe proceder a ella colocando el cursor sobre 
+dicho botón y dando un clic para acceder a la sección de creación. 
+ 
+Figura 4.15  Acceso al registro de nueva pregunta. 
+ En la nueva interfaz será posible agregar una nueva pregunta, para ello se despliega una 
+tabla que solicita el llenado de ciertos campos, los cuales son los siguientes: 
+ Pregunta: En esta sección se escribe la pregunta que se desea realizar y es la que aparecerá 
+en la aplicación al momento de realizar la evaluación correspondiente. 
+            
+                                     
+ 
+ 
+ 
+ Tipo de pregunta: Como se describió en el párrafo anterior, aquí es posible seleccionar la 
+clase de pregunta que se desea formular de los cuatro tipos disponibles. (Abierta, opción 
+múltiple, opción múltiple con imagen y falso/verdadero). 
+ Imagen: El botón de imagen sólo está disponible si el tipo de pregunta seleccionada es de 
+tipo imagen, esto concede el desbloqueo del botón para aceptar la carga de una imagen al 
+sistema ligada a la pregunta que se va a crear. 
+ Respuesta 1 – 4: Aquí se colocan las respuestas posibles para la pregunta, cabe mencionar 
+que las preguntas se van habilitando y bloqueando dependiendo el tipo de pregunta que se 
+haya seleccionado. Esto se mostrará más adelante. 
+ Respuesta correcta: En esta sección se selecciona la respuesta correcta a la pregunta que se 
+está creando. 
+ 
+Figura 4.16  Creación de pregunta. 
+4.2.2.1. Creación de pregunta Abierta 
+Al entrar a la sección de creación de pregunta, por default está seleccionado pregunta de tipo 
+abierta, por lo que sólo será necesario escribir la pregunta que se desea realizar en la parte que dice 
+“Pregunta”. Después de ello simplemente será necesario pulsar el botón de guardar colocado en la 
+parte inferior, esto dado que al ser pregunta de tipo abierta ya no es necesario realizar algún otro 
+cambio, esto porque el usuario alumno deberá colocar su respuesta de manera personal, además de 
+            
+                                     
+ 
+ 
+ 
+que las opciones de respuesta y respuesta correcta se encontrarán bloqueadas por no ser del tipo 
+indicado para su edición. 
+ 
+Figura 4.16  Creación de pregunta abierta. 
+Si todo salió correcto durante proceso del alta de la pregunta, el sistema debe regresar a la 
+sección de Gestión de preguntas. La pregunta que se ha creado aparecerá al final de la lista. Esto 
+porque al momento de realizar la petición de preguntas totales, los registros se ordenan por el orden 
+de creación de los mismos. Para ello se muestran 10 preguntas por pantalla, por lo que si la pregunta 
+no aparece en la primera sección simplemente se debe dar clic al número de página deseada o al 
+botón de siguiente para desplegar las siguientes preguntas, para este ejemplo la pregunta que se ha 
+registrado se encuentra en la página dos al final de la lista. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.16  Pregunta abierta creada de forma correcta. 
+4.2.2.2. Creación de pregunta Múltiple con imagen 
+Para crear una pregunta múltiple con imagen, se debe acceder nuevamente por medio de la 
+gestión de preguntas seleccionando el botón de Registrar nueva pregunta. Dentro de la sección de 
+Nueva pregunta, como primer punto se debe colocar la pregunta referente al tema que se desea 
+cuestionar. 
+ 
+Figura 4.17  Escritura de pregunta. 
+Después de lo anterior se debe dar clic en el tipo de pregunta y seleccionar imagen, esto hará 
+que se desbloquee el botón de carga de archivos. 
+ 
+Figura 4.18  Selección de tipo de pregunta Imagen. 
+            
+                                     
+ 
+ 
+ 
+Se debe proceder con la selección del archivo de tipo imagen, para ello se debe dar clic en el 
+botón que tiene la leyenda “imagen” el cual se ha desbloqueado al momento de seleccionar este tipo 
+de pregunta. 
+ 
+Figura 4.18  Preparación para la carga de imagen. 
+Al dar clic sobre dicho botón se desplegará una ventana de búsqueda de archivos, para esta 
+sección simplemente se debe elegir el archivo de tipo imagen de su elección, cabe mencionar que 
+sólo se admiten archivos de tipo jpg y png con un tamaño máximo de 1024kb. Teniendo el archivo 
+a su disposición se debe seleccionar y dar clic en el botón Abrir para su elección. 
+ 
+Figura 4.19  Selección de archivo de tipo imagen. 
+Después de haber seleccionado el archivo de tipo imagen, el explorador de archivos se 
+cerrará regresando a la anterior pantalla, pero con la diferencia de que junto al botón de Imagen 
+aparecerá el nombre de la imagen junto con su extensión de archivo. 
+ 
+Figura 4.20  Selección de archivo de tipo imagen exitoso. 
+            
+                                     
+ 
+ 
+ 
+Ahora simplemente se deben rellenar los espacios de respuestas para proseguir con la 
+creación de la pregunta. 
+ 
+Figura 4.21 Llenado de posibles respuestas para la pregunta. 
+El paso siguiente es seleccionar la respuesta correcta de las anteriores que se han colocado, 
+para ello simplemente se debe dar clic en la sección de respuesta correcta, esto desplegará las 
+respuestas de la uno a la cuatro y simplemente se debe seleccionar la verdadera. Para este ejercicio 
+la respuesta correcta es la tres por lo que se seleccionará esa. 
+ 
+Figura 4.22 Elección de respuesta correcta. 
+Para finalizar la creación de la pregunta, simplemente dar clic en el botón de guardar para 
+almacenar la pregunta y regresar a la gestión de preguntas, se debe recordar que la pregunta se 
+encontrará al final de la lista por ser la más nueva. 
+ 
+Figura 4.23 Guardado de pregunta. 
+ 
+            
+                                     
+ 
+ 
+ 
+ Simplemente para verificar que se la pregunta se haya agregado correctamente, accedemos a 
+la gestión de preguntas  y se podrá visualizar que la pregunta sí existe, por lo cual el proceso de 
+creación de una pregunta de tipo múltiple con imagen fue correcto. 
+ 
+Figura 4.24 Verificación de creación de pregunta. 
+4.2.2.3. Creación de pregunta Falso/Verdadero 
+Para crear una pregunta de tipo Falso/verdadero, se debe acceder nuevamente por medio de 
+la gestión de preguntas seleccionando el botón de Registrar nueva pregunta. Dentro de la sección de 
+Nueva pregunta, como primer punto se debe colocar la pregunta referente al tema que se desea 
+evaluar. 
+ 
+Figura 4.25 Escritura de pregunta. 
+Después de lo anterior se debe dar clic en el tipo de pregunta y seleccionar falso/verdadero, 
+esto hará que se desbloqueen únicamente las respuestas uno y dos, esto dado que el tipo de pregunta 
+sólo maneja dos respuestas. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.26 Selección de pregunta falso/verdadero. 
+Siguiendo con el proceso ahora se deben rellenar los espacios de respuestas para proseguir 
+con la creación de la pregunta. Cabe resaltar que al seleccionar el tipo Falso/Verdadero, sólo es 
+posible llenar la respuesta uno y dos, y que las casillas de respuestas tres y cuatro se encuentran 
+bloqueadas, esto dado que el sistema responde dependiendo el tipo de pregunta. 
+ 
+Figura 4.27 Llenado de posibles respuestas para la pregunta. 
+El paso siguiente es seleccionar la respuesta correcta de las anteriores que se han colocado, 
+para ello simplemente se debe dar clic en la sección de respuesta correcta, esto desplegará 
+únicamente las respuestas uno y dos como se mencionó en el párrafo anterior el seleccionar 
+pregunta de tipo falso/verdadero también afecta a las respuestas. Ahora simplemente se debe 
+seleccionar la verdadera. Para este ejercicio la respuesta correcta es la dos por lo que se seleccionará 
+esa. 
+ 
+Figura 4.28 Elección de respuesta correcta. 
+            
+                                     
+ 
+ 
+ 
+Para finalizar la creación de la pregunta, simplemente se debe dar clic en el botón de guardar 
+para almacenar la pregunta y regresar a la gestión de preguntas, se debe recordar que la pregunta se 
+encontrará al final de la lista por ser la más nueva. 
+  
+Figura 4.29 Guardado de pregunta. 
+ Simplemente para verificar que se la pregunta se haya agregado correctamente, accedemos a 
+la gestión de preguntas  y se podrá visualizar que la pregunta sí existe, por lo cual el proceso de 
+creación de una pregunta de tipo falso/verdadero fue correcto. 
+ 
+Figura 4.30 Verificación de creación de pregunta. 
+ 
+4.2.2.4. Creación de pregunta Múltiple. 
+Para crear una pregunta de tipo Múltiple, se debe acceder nuevamente por medio de la 
+gestión de preguntas seleccionando el botón de Registrar nueva pregunta. Dentro de la sección de 
+Nueva pregunta. Como primer punto se debe colocar la pregunta referente al tema que se desea 
+evaluar. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.31 Escritura de pregunta. 
+Después de lo anterior se debe dar clic en el tipo de pregunta y seleccionar múltiple, esto 
+hará que se desbloqueen las respuestas de la uno a la cuatro, esto dado que el tipo de pregunta 
+maneja cuatro respuestas. 
+  
+Figura 4.32 Selección de pregunta tipo múltiple. 
+Siguiendo con el proceso, ahora se deben rellenar los espacios de respuestas para proseguir 
+con la creación de la pregunta.  
+  
+Figura 4.33 Llenado de posibles respuestas para la pregunta. 
+El paso siguiente es seleccionar la respuesta correcta de las anteriores que se han colocado, 
+para ello simplemente se debe dar clic en la sección de respuesta correcta, esto desplegará las 
+respuesta de la uno a la cuatro. Ahora simplemente se debe seleccionar la verdadera. Para este 
+ejercicio la respuesta correcta es la dos por lo que se seleccionará esa. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.34 Elección de respuesta correcta. 
+Para finalizar la creación de la pregunta, simplemente se debe dar clic en el botón de guardar 
+para almacenar la pregunta y regresar a la gestión de preguntas, se debe recordar que la pregunta se 
+encontrará al final de la lista por ser la más nueva. 
+  
+Figura 4.35 Guardado de pregunta. 
+ Simplemente para verificar que se la pregunta se haya agregado correctamente, accedemos a 
+la gestión de preguntas  y se podrá visualizar que la pregunta sí existe, por lo cual el proceso de 
+creación de una pregunta de tipo falso/verdadero fue correcto. 
+ 
+Figura 4.36 Verificación de creación de pregunta. 
+4.2.3. Gestionar Evaluaciones 
+ La opción de gestionar evaluaciones permite al usuario profesor, crear  y manejar las 
+evaluaciones, modificar información referente a alguna de ellas y eliminar o dar de baja algún 
+registro previamente almacenado. Para ello antes que todo se debe dar de alta alguna evaluación, el 
+objetivo principal de las evaluaciones es poder valorar a través de estas a los alumnos de cierto 
+            
+                                     
+ 
+ 
+ 
+grupo y con ello ofrecer una retroalimentación mostrándoles sus errores y aciertos en cada 
+evaluación. Para poder crear una evaluación se debe desplazar a la sección de “Gestión de 
+Evaluaciones”,  en la pantalla se debe desplazar el mouse hacia la sección de gestión la cual se sitúa 
+en el menú lateral izquierdo para desplegar un submenú que mostrará otras opciones, entre ellas la 
+opción de “Evaluaciones” la cual es la que se debe seleccionar para proceder al siguiente punto. 
+ 
+Figura 4.37 Accediendo a la Gestión de evaluaciones. 
+Ya en la página de Gestión de evaluaciones se deberán desplegar las evaluaciones totales 
+que haya creado el profesor, en caso de que no tenga ninguna evaluación creada no se mostrará 
+registro alguno. Para crear una evaluación se debe hacer clic en el botón de “Registrar nueva 
+evaluación” situado en la parte inferior de la tabla. Este cargará una nueva pantalla para el llenado 
+de datos. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.38 Accediendo a la creación de una nueva evaluación. 
+Cuando la página se haya cargado, se notará que se solicita información referente a la nueva 
+evaluación que se desea registrar. Los datos que se necesitan son los siguientes: 
+ 
+Figura 4.39 Creación de una evaluación. 
+ Nombre de la materia: Aquí se debe seleccionar el curso al cual pertenecerá la evaluación, 
+cabe mencionar que una evaluación no puede existir si previamente no se registró el curso 
+correspondiente, es por ello que al seleccionar esta pestaña aparecerán los cursos que ha 
+creado el profesor, en dado caso no aparezca cierto curso deberá darlo de alta en el sistema. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.40 Selección del curso. 
+ Descripción: En esta sección se coloca una breve descripción de la evaluación, como por 
+ejemplo la unidad de la que trata la evaluación, o tema visto en alguna clase, es una 
+referencia hacia el alumno respecto al tema de la evaluación. 
+ 
+Figura 4.41 Escritura de la descripción de la evaluación. 
+ Intentos: En esta parte el profesor programa el número de veces que el alumno podrá 
+realizar la evaluación con un mínimo de un intento hasta un máximo de cinco intentos. 
+ 
+Figura 4.42 Colocación del número de intentos disponibles. 
+Después de llenar los datos necesarios del formulario se procede con el guardado de la 
+evaluación, para ello basta con dar clic en el botón guardar para almacenar la evaluación. 
+Como en los procesos anteriores después de guardar correctamente un registro, el sistema 
+retornará a la gestión correspondiente, en este caso a la Gestión de evaluaciones donde se podrá 
+apreciar el nuevo registro al final de la lista, lo indicará que el proceso fue satisfactorio.  
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.43 Verificación de evaluación nueva. 
+Hasta este punto la evaluación almacenada no es más que un cascarón vació dado que no 
+cuenta con ninguna pregunta ligada a ella, por lo que ahora el siguiente paso es agregar preguntas a 
+esta nueva evaluación y con ello dar forma a esta prueba que evalúa los conocimientos.  
+Para lograr esto nos colocamos sobre el registro previamente creado y se dará clic sobre el 
+botón de opciones situado a la derecha del registro, este contiene un pequeño submenú que 
+contendrá la opción de Gestionar preguntas el cual se le dará clic para que éste cargue la pantalla 
+correspondiente para agregar el número deseado de preguntas. 
+ 
+Figura 4.44 Accediendo a la gestión de preguntas. 
+            
+                                     
+ 
+ 
+ 
+Esta interfaz es similar a la de gestión de alumnos de la sección de cursos, la diferencia que 
+en vez de alumnos disponibles para agregar a un curso se muestran preguntas disponibles para 
+agregar a la evaluación seleccionada. 
+ 
+Figura 4.45 Gestión de preguntas. 
+Para este ejemplo se tomarán las cuatro preguntas que se crearon previamente en la sección 
+de preguntas. Para ello se seleccionará pregunta por pregunta y se dará clic sobre el botón de 
+opciones y se dará clic sobre la opción “Agregar pregunta” así sucesivamente hasta colocar las 
+cuatro preguntas en la evaluación. 
+ 
+Figura 4.46 Seleccionando las preguntas para la evaluación. 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+De esta manera se tendrán añadidas cuatro preguntas a la evaluación seleccionada. 
+ 
+Figura 4.47 Preguntas añadidas correctamente a la evaluación. 
+De esta forma se cuenta ahora con una evaluación completamente funcional que contiene 
+cuatro preguntas. Este es el proceso actual para la creación de cursos, gestión de alumnos, preguntas 
+y evaluaciones de parte del profesor. 
+4.2.4. Modificación de información a través de opción Mi Perfil. 
+Un usuario de tipo profesor registrado en el sistema, también cuenta con la opción de 
+modificar su propia información, esto por si así lo requiera. Para ello se debe acceder la opción de 
+Mi Perfil, situada en la barra lateral izquierda, simplemente se debe dar clic para acceder a la 
+modificación de información. 
+ 
+Figura 4.48 Accediendo a la opción de Mi Perfil. 
+            
+                                     
+ 
+ 
+ 
+ Al entrar a esta opción se cargará la información actual correspondiente al usuario, es 
+decisión del usuario el cambiar algún dato si así lo desea. Al terminar la edición basta con dar clic 
+en el botón Modificar para actualizar los cambios. 
+ 
+Figura 4.49 Modificación de datos actuales. 
+4.3. Instalación de aplicación móvil en un dispositivo Android. 
+Para proceder a realizar evaluaciones es necesario que los alumnos que van a presentar 
+exámenes de alguna materia registrada en el sistema tengan instalada la aplicación en su dispositivo 
+Android, esto dado que en caso contrario de no tenerla no podrán acceder al sistema junto con todas 
+las opciones disponibles para ellos y por ende a las evaluaciones preparadas por su profesor. 
+Para lograr lo anterior se debe acceder a la Google Play Store como se muestra en la imagen 
+de la figura 4.50, la cual es la tienda de aplicaciones de Google donde se aloja la aplicación 
+desarrollada, esto debido que la tienda ofrece facilidad de instalación, control de versiones y alcance 
+hacia los alumnos sin restricción de sitio y distancia, debido a que sólo es necesario su cuenta de 
+Google registrada en su dispositivo e Internet para lograr correctamente la instalación. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.50 Ícono de Google Play y búsqueda de la aplicación. 
+Dentro de la aplicación Google Play Store se debe realizar una búsqueda en la barra superior 
+para lograr ubicar la aplicación que se necesita instalar tal y como se muestra en la figura 4.50, para 
+ello se debe colocar la palabra “Mochuelo” la cual es parte del nombre de la aplicación y después 
+presionar el botón de buscar ubicado en la parte inferior izquierda del teclado (puede variar la 
+ubicación dependiendo del modelo y aplicación instalada), este realizará la petición para regresar 
+todas las posibles coincidencias con la palabra que se ha ingresado para después mostrar la 
+información en pantalla tal y como se muestra en la figura 4.51. Al desplegar los resultados 
+correspondientes basta con seleccionar la aplicación, en este caso se busca la aplicación “Mochuelo 
+Learning” la cual fue la primera en la lista debido a que fue el resultado con más grado de 
+coincidencia en la búsqueda.  
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.51 Búsqueda de la aplicación y resultado. 
+Después de seleccionar la aplicación, esta desplegará la información correspondiente como 
+el banner, imagen, título, descripción, tipo, entre otros más. Una de las opciones que también 
+aparece en pantalla es el botón de instalar, el cual descargara los archivos necesarios en el 
+dispositivo móvil e instalará la aplicación, para lograr eso basta son presionar sobre el botón para 
+que el proceso de comienzo. 
+Cuando finalice la instalación, la pantalla mostrará dos nuevos botones, uno es el de 
+desinstalar por si ya no se desea más mantener la aplicación en el dispositivo y el otro botón es el de 
+abrir, por si se necesita ejecutar inmediatamente la aplicación recién instalada. Los botones 
+anteriores indican que la aplicación se instaló correctamente. 
+            
+                                     
+ 
+ 
+ 
+Cabe mencionar también que, la aplicación creará un ícono de acceso en el cajón de 
+aplicaciones, esto depende del modelo del dispositivo y del fabricante, dado que cada uno 
+personaliza la capa de Android de diferente manera, pero el ícono el de aplicación estará 
+representado por la forma de un búho. 
+ 
+Figura 4.52 Instalación de la aplicación. 
+ El proceso anterior se debe realizar con cada dispositivo móvil perteneciente a cada alumno 
+del grupo, de esta forma cada uno tendrá acceso a la aplicación para realizar las evaluaciones que el 
+profesor fabrique dentro del sistema. Para abrir la aplicación basta con colocar el dedo sobre su 
+ícono para proceder con el lanzamiento de la aplicación. 
+ 
+            
+                                     
+ 
+ 
+ 
+4.4. Configuración inicial de la aplicación móvil. 
+Cuando se instale por primera vez la aplicación se solicitará una breve configuración inicial, 
+esto dado que se necesita ubicar la dirección del servidor, el cual estará pendiente de las peticiones 
+de la aplicación para lograr responder de la manera más adecuada a la solicitud. 
+Una vez ingresada la dirección del servidor y el puerto correspondiente del mismo, 
+únicamente será necesario seleccionar el botón actualizar para guardar los cambios, 
+automáticamente la aplicación cambiará a la pantalla de acceso para poder ingresar a la aplicación 
+con un usuario y contraseña de usuario.  
+                
+Figura 4.53 Configuración inicial de la aplicación. 
+ 
+            
+                                     
+ 
+ 
+ 
+4.5. Gestión del usuario Discente en la aplicación móvil. 
+La gestión del usuario discente dentro de la aplicación móvil se encarga de administrar las 
+actividades disponibles para dicho usuario, tales como editar su información personal como usuario 
+de acceso al sistema, contraseña de ingreso, nombre y apellidos, entre otros datos más disponibles 
+dentro de esa sección. También se cuenta la opción de realizar quizzes académicos que haya 
+preparado el usuario profesor para dicho curso donde se encuentre asignado el alumno. De igual 
+forma cuando el usuario haya resuelto alguna evaluación, esta estará disponible en la sección de 
+“Calificaciones” donde podrá visualizar su retroalimentación de errores ya aciertos. Y por último 
+también se cuenta con la sección de “Gráficos” donde el usuario podrá observar de manera visual 
+por medio de graficas sus calificaciones donde podrá haber altas y bajas en sus calificaciones. 
+4.5.1. Iniciando sesión dentro de la aplicación usuario Discente. 
+Para ingresar al sistema primero se debe abrir la aplicación, para ello se busca la aplicación 
+dentro del cajón de aplicaciones disponibles hasta encontrar la aplicación Mochuelo, para abrir la 
+aplicación basta con seleccionarla para iniciar su ejecución. 
+Si la aplicación se encuentra configurada correctamente no solicitará el ingreso de la 
+dirección del servidor sino que iniciará automáticamente solicitando un usuario y una contraseña 
+para dar acceso al sistema. En caso contrario se deberá configurar como si indica en el punto 4.4 de 
+este documento. 
+Para acceder al sistema se debe ingresar un nombre de usuario registrado en el sistema junto 
+la contraseña que el usuario configuró para acceder a su cuenta. Si el usuario ingresa un nombre de 
+usuario no valido y/o una contraseña incorrecta el sistema responderá con un mensaje indicando que 
+los datos son incorrectos, esto dado que la aplicación envía la información al sistema para su 
+validación. En caso de que la información sea correcta se permitirá el acceso al sistema mostrando 
+la gestión del usuario discente junto con todas las actividades disponibles para dicho usuario. Lo 
+anterior se muestra alusivamente en las siguientes imágenes. 
+            
+                                     
+ 
+ 
+ 
+           
+Figura 4.54 Selección de aplicación e ingreso al sistema. 
+          
+Figura 4.55 Datos de ingreso incorrectos y pantalla de ingreso al sistema con datos correctos. 
+            
+                                     
+ 
+ 
+ 
+4.5.2. Modificación de datos en opción de Mi Perfil”. 
+La opción de Mi Perfil permite al usuario discente realizar la modificación de sus datos, tales como: 
+ Nombre de usuario: El cual si se desea modificarlo deberá ser un nombre de usuario que 
+otro usuario no esté utilizando, para esto el sistema realiza una búsqueda y  validación, si 
+encuentra alguna coincidencia notificará al usuario por medio de un mensaje en pantalla. 
+ Password: La contraseña es muy importante dado que es parte de la llave de acceso al 
+sistema. El usuario cuando se registra en el sistema ingresa su propia contraseña, pero en 
+dado caso la quiera modificar por alguna situación aquí lo podrá realizar. 
+ Repitición de password: Esto es por medida de seguridad dado que para asegurar que el 
+usuario escriba correctamente su contraseña se le solicita que la ingrese nuevamente, de esta 
+manera el sistema valida que ambas sean correctas de esa forma permitirá el cambio, en caso 
+contrario mostrará un mensaje en pantalla indicando que alguna de los dos es diferente de la 
+otra. 
+ No. Control: Normalmente todo alumno tiene algún número único de control dentro de una 
+institución escolar, por lo que este campo tiene la función de almacenarlo. 
+ Nombre: El nombre del usuario. 
+ Apellidos paterno y materno: Los apellidos del usuario. 
+ Edad: La edad del usuario. 
+ Área: El área o carrera en la cual se encuentre el usuario estudiando. 
+ Género: El género del usuario. 
+ Actualizar: El botón actualizar envía toda la información ingresada para su validación, 
+principalmente el usuario y contraseñas, si todo es correcto se procederá con la actualización 
+en base de datos. 
+Después de la modificación, el sistema muestra un mensaje que la información fue 
+actualizada correctamente y automáticamente regresará a la pantalla principal de la gestión del 
+discente. Lo anterior se muestra alusivamente en las siguientes imágenes. 
+            
+                                     
+ 
+ 
+ 
+                 
+Figura 4.56 Ingreso de datos para actualización de información. 
+                  
+Figura 4.57 Validación de contraseñas y de disponibilidad de nombre de usuario. 
+            
+                                     
+ 
+ 
+ 
+4.5.3. Realizando una evaluación. 
+De manera informática para realizar una evaluación primero se debe recordar que, el usuario 
+profesor debió crear un curso, añadir un usuario discente de su misma área de trabajo al grupo 
+creado, y finalmente crear una evaluación que se encuentre ligada al mismo curso, de esa forma de 
+completa el circulo para realizar una evaluación. Ahora simplemente el usuario deberá acceder a 
+través de su gestión principal como se explica a continuación. 
+ 
+Figura 4.58 Selección de “Tus Cursos” dentro de la gestión del discente. 
+Para ello el usuario discente dentro de su gestión principal, deberá de ingresar a la sección 
+de “Tus Cursos”, dentro de la misma se mostrarán todos los cursos o materias en los que se 
+encuentre inscrito, aquí simplemente deberá seleccionar el curso al cual desea acceder. 
+            
+                                     
+ 
+ 
+ 
+Como se mencionó en el párrafo anterior al desplegarse los cursos el usuario se encuentra en 
+la libertad de seleccionar el adecuado que cuente con la evaluación a resolver. Para ello solamente 
+deberá seleccionarlo para visualizar qué evaluaciones se encuentran disponibles para dicho curso.  
+En la figura 4.59 se muestran cuatro cursos disponibles en el cual el usuario se encuentra inscrito en 
+esos cursos, para continuar se seleccionará la materia de “Estructura de Datos” para proseguir con el 
+ejercicio. 
+ 
+Figura 4.59 Selección de “Tus Cursos” dentro de la gestión del discente. 
+Después de haber seleccionado el curso se mostrarán las evaluaciones disponibles para dicha 
+materia, tal y como se muestra en la imagen 4.60 la cual muestra únicamente una evaluación, para 
+acceder a la misma se deberá seleccionarla para preparar el proceso de resolución de evaluación. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.60 Lista de evaluaciones disponibles para un curso. 
+Después de seleccionar la evaluación, el sistema preparará las preguntas relacionadas a ella, 
+para ello se muestra previamente información de la materia tal y como se muestra en la figura 4.61 
+donde se lograr visualizar el nombre del curso, el título de la evaluación, el número de intento 
+actual y el número de intentos totales disponibles, como nota se debe recordar que el número de 
+intentos es la el número de veces que un usuario discente podrá resolver una evaluación, está 
+configuración la especifica el usuario profesor a través de la gestión de evaluaciones disponible en 
+su sesión web del sistema. Para iniciar la evaluación el usuario discente deberá presionar el botón 
+de “Iniciar Evaluación” situado en la parte baja de la pantalla para dar inicio al proceso de 
+resolución de la evaluación y muestra de preguntas disponibles. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.61 Lista de evaluaciones disponibles para un curso. 
+Al momento de que el usuario discente presione el botón de “Iniciar Evaluación” se 
+mostrarán las preguntas ligadas a dicha evaluación, tales se irán mostrando una a una hasta que el 
+usuario discente presione el botón de “Siguiente”  para desplegar la pregunta que prosigue, así 
+sucesivamente hasta que aparezca el botón de “Finalizar” para concluir la evaluación, cabe destacar 
+que el usuario cuenta con la posibilidad de cambiar su respuesta a de alguna pregunta previa 
+simplemente con presionar el botón “Regresar” hasta llegar a la que desea actualizar. A 
+continuación en las siguientes imágenes se mostrará dicho proceso con los cuatro tipos de preguntas 
+disponibles en el sistema. 
+ 
+            
+                                     
+ 
+ 
+ 
+4.5.3.1. Pregunta Abierta. 
+La primera pregunta de esta evaluación es una pregunta de tipo abierta por lo que el sistema 
+despliega una caja para ingreso de texto donde el usuario discente podrá colocar la información que 
+según su criterio sea correcta para responder dicha pregunta. Cuando el usuario esté listo bastará 
+con presionar el botón “Siguiente” para continuar con la siguiente pregunta de la evaluación. La 
+figura 4.62 muestra visualmente lo explicado durante el párrafo. 
+ 
+Figura 4.62 Lista de evaluaciones disponibles para un curso. 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+4.5.3.2. Pregunta múltiple con imagen. 
+La siguiente pregunta de la evaluación es de tipo múltiple con imagen, la cual es desplegada 
+en pantalla, cabe mencionar brevemente en este punto que la imagen es transferida desde el servidor 
+hacia el dispositivo y adaptada a la pantalla de manera que la imagen se pueda amoldar 
+correctamente a la resolución del dispositivo que se encuentre ejecutando la aplicación. En las 
+siguientes imágenes de la figura 4.63 se logra apreciar el despliegue de la pregunta en dos equipos 
+distintos, por una lado la imagen de la izquierda muestra un equipo telefónico Android con pantalla 
+de cinco pulgadas y por el lado derecho un iPad de siete pulgadas con mayor resolución de pantalla 
+lo cual permite visualizar de mejor manera la pregunta. El usuario simplemente debe seleccionar la 
+respuesta más adecuada a la pregunta presentada en su pantalla y cuando se encuentre listo 
+presionar el botón “Siguiente” para continuar con la siguiente pregunta o en caso contrario verificar 
+su respuesta de la pregunta anterior presionando el botón “Anterior”. 
+ 
+Figura 4.63 Despliegue de pregunta múltiple con imagen en dos distintos equipos. 
+            
+                                     
+ 
+ 
+ 
+4.5.3.3. Pregunta Falso/Verdadero. 
+La pregunta que precede a la anterior es de tipo Falso/Verdadero o explicado de otra manera, 
+de las dos respuestas mostradas en pantalla solamente una de ellas es la correcta, por lo que el 
+usuario debe analizar según sus conocimiento cuál de ellas es la correcta para seleccionarla y 
+obtener el punto correspondiente en este inciso. Cuando el usuario se encuentre listo bastará con 
+presionar el botón “Siguiente” para desplegar la siguiente pregunta de la evaluación, en caso 
+contrario de que desee verificar alguna de sus respuestas anteriores deberá presionar el botón 
+“Anterior” hasta llegar a la pregunta que le interesa verificar. La figura 4.64 muestra la pregunta 
+explicada en este párrafo. 
+ 
+Figura 4.64 Despliegue de pregunta Falso/Verdadero. 
+ 
+            
+                                     
+ 
+ 
+ 
+4.5.3.4. Pregunta de tipo opción múltiple. 
+La pregunta que finaliza la evaluación es de tipo opción múltiple. El usuario deberá 
+seleccionar alguna de las cuatro opciones disponibles para este tipo de pregunta, la respuesta 
+correcta dependerá del usuario y de su selección correcta. Cuando el usuario se encuentre listo 
+bastará con presionar el botón “Finalizar” para dar por terminada la evaluación y dar paso al 
+proceso de calificación y almacenaje o en caso contrario de que desee verificar alguna de sus 
+respuestas anteriores deberá presionar el botón “Anterior” hasta llegar a la pregunta que le interesa 
+verificar. La figura 4.65 muestra la pregunta explicada en este párrafo. 
+ 
+Figura 4.65 Despliegue de pregunta de opción múltiple. 
+ 
+ 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+4.5.3.5. Finalizar evaluación. 
+Cuando el usuario haya presionado el botón de “Finalizar” se dar por terminada la 
+evaluación por lo cual el sistema inicia el proceso de validación y calificación, este proceso verifica 
+lo que haya respondido el usuario discente en cada pregunta de la evaluación con lo que haya 
+colocado el usuario profesor en cada pregunta al momento de darlas de alta. Si el usuario discente 
+respondió correctamente una pregunta se tomará como un punto, al finalizar los puntos se 
+contabilizarán y se aplicará una regla de tres con el total de preguntas de la evaluación y el número 
+de respuestas correctas, después de esto el sistema arrojará la calificación en pantalla. La figura 4.66 
+muestra la calificación para esta evaluación. 
+ 
+Figura 4.66 Despliegue de calificación para evaluación.  
+ 
+            
+                                     
+ 
+ 
+ 
+4.5.4. Consultando la retroalimentación de las evaluaciones. 
+La tercera sección de la gestión del discente es la de “Calificaciones”, en ella se podrán 
+localizar todas las evaluaciones que el usuario haya respondido. Para acceder a esa opción basta con 
+presionar sobre el botón de “Calificaciones” para acceder. La figura 4.67 muestra la opción 
+disponible en la gestión del discente. 
+ 
+Figura 4.67 Accediendo a la retroalimentación. 
+Nuevamente como en la sección de evaluaciones, al momento de presionar y entrar a la 
+sección de evaluaciones se muestran todos los cursos en los cuales se encuentra registrado el 
+usuario discente. La diferencia es que ahora se muestra a través de listas desplegables, se debe 
+seleccionar alguna materia y esta mostrará las evaluaciones pertenecientes a dicho curso y 
+desplegará las evaluaciones que el usuario ya haya presentado anteriormente. En las imágenes de la 
+            
+                                     
+ 
+ 
+ 
+figura 4.68 se muestra el menú desplegable de la materia “Algebra” y las dos evaluaciones que 
+presentó el usuario, en este caso “Unidad 1” oportunidad uno y “Unidad 2” oportunidad uno 
+respectivamente. Y en la segunda imagen se muestra la evaluación que previamente se había 
+resuelto perteneciente a “Estructura de Datos”. 
+ 
+Figura 4.68 Accediendo a la retroalimentación. 
+Para revisar la retroalimentación basta con seleccionar la evaluación que se desea revisar, en 
+este caso se va a revisar la evaluación que previamente se había respondido, se seleccionará el curso 
+de “Estructura de Datos” y debajo la evaluación. De esta manera accederemos a los resultados que 
+obtuvo el usuario discente ingresado en el sistema. Como se muestra en la figura 4.69 se despliega 
+la información de la evaluación como la materia a la que pertenece, el título de la evaluación, el 
+número de oportunidad y en forma de lista se muestra la pregunta que se hizo, la respuesta correcta 
+            
+                                     
+ 
+ 
+ 
+a la pregunta, la respuesta que seleccionó el usuario o respondió y el estado de la pregunta si fue 
+correcta o incorrecta, así sucesivamente hasta finalizar con todas las preguntas de la evaluación.  
+                       
+                         
+Figura 4.69 Retroalimentación de la evaluación resuelta. 
+En la parte final de la retroalimentación se encontrará la calificación asignada para la 
+evaluación, junto con una imagen alusiva otorgada al discente.  
+            
+                                     
+ 
+ 
+ 
+4.5.5. Consultando la opción de gráficos. 
+La opción de gráficos corresponde a la posibilidad de que el usuario discente vea de manera 
+gráfica su desempeño. Para acceder a esta opción solamente es necesario que el usuario seleccione 
+la opción de “Gráficos” en la pantalla principal de la gestión de usuario, localizada como cuarta 
+opción en el menú. 
+ 
+Figura 4.70 Accediendo a los gráficos disponibles. 
+Se cuentan con dos opciones disponibles en esta sección, el usuario puede visualizar un 
+gráfico de la información por promedio General o visualizar el promedio de cada curso al cual esté 
+inscrito el discente por separado. La figura 4.71 muestra estas dos opciones. 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.71 Opciones disponibles en la sección de gráficos. 
+ 
+ 
+4.5.5.1. Consultando promedio general. 
+La opción de promedio general consulta todos los cursos a los que esté inscrito el usuario y 
+busca cada evaluación que haya resuelto el usuario, de esta manera contabilizará todas las 
+calificaciones por curso, obtendrá su promedio y lo desplegará en pantalla, así sucesivamente con 
+todo lo que encuentre. La Figura 4.72 muestra el gráfico desplegado con la información obtenida.  
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.72 Opciones disponibles en la sección de gráficos. 
+ 
+Como se mostró en la imagen anterior la imagen se gráfica con la información de cada 
+curso, para este ejemplo, el usuario cuenta con cuatro cursos por lo que se grafican cuatro puntos y 
+se colocan de acuerdo al promedio que tienen. En la sección de descripciones se coloca una tabla 
+que desglosa la información que se muestra en pantalla como es el número para referenciar la celda 
+con el gráfico, el nombre de la materia a la que está inscrito y el promedio por curso. Finalmente se 
+termina con el promedio general de todos los cursos. 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+4.5.5.2. Consultando promedio por materia. 
+Está opción está diseñada para visualizar individualmente por curso las evaluaciones 
+realizadas para cada materia, para ello se debe seleccionar el curso de la lista de la sección de 
+materia, inmediatamente la aplicación graficará la información obtenida para dicho campo. 
+ 
+Figura 4.73 Selección del curso a graficar. 
+      
+Figura 4.74 Gráfico del curso seleccionado. 
+            
+                                     
+ 
+ 
+ 
+Como la gráfica que se utiliza es de puntos y la materia “Estructura de datos” sólo cuenta 
+con un registro por ese motivo sólo se ve un punto colocado en el 100, pero si ahora seleccionamos 
+el curso de  “Programación Estructurada” notaremos que existen más registros y se visualiza de 
+mejor manera. Para ello la figura 4.75 muestra esa información. 
+     
+Figura 4.75 Gráfico del segundo curso seleccionado. 
+De esta manera se asegura que la información se desplegará de manera correcta al momento 
+de obtener los promedios tanto general como por materia. 
+De esta manera de concluye la visualización de información por medio de la opción de gráficos 
+a través de la gestión del usuario discente. 
+            
+                                     
+ 
+ 
+ 
+4.6. Gestión del usuario Profesor en la aplicación móvil. 
+El proceso para el inicio se sesión para el usuario profesor es el mismo que para el usuario 
+discente, la diferencia entre uno y otro es el tipo de usuario, el profesor debe ingresar su nombre de 
+usuario y su contraseña en la sección de ingreso, pero cuando se valida la información, el sistema 
+identifica el tipo de usuario por lo que si fue usuario discente lo envía a su gestión adecuada a su 
+perfil y si es usuario profesor lo envía a una interfaz diferente la cual se ilustra en la figura 4.76. 
+Esta interfaz maneja dos opciones principales, la opción de “Mi Perfil” que al igual que como se 
+mostró con el usuario discente, esta permite la modificación de información del usuario, como sus 
+claves de acceso y detalles personales. La segunda opción que corresponde a “Gráficos” despliega 
+una serie de gráficas de acuerdo a la información que se obtenga de la base de datos con base a las 
+calificaciones de los alumnos. 
+ 
+Figura 4.76 Gestión Profesor. 
+            
+                                     
+ 
+ 
+ 
+Dado que la ejecución de la opción de “Mi Perfil” ya fue mostrada en la sección del 
+discente, ésta no se mostrará y se centrará en la opción de Gráficos.  
+Para entender correctamente esta sección se abordará lo siguiente. Como se comentó al 
+principio del capítulo cuatro se cuentan con dos casos de estudio, uno de ellos consta de la siguiente 
+forma: se aplicó una evaluación perteneciente a la materia de “Programación Estructurada” la cual 
+contaba con 23 alumnos inscritos y otro grupo pero de la materia de “Programación” con 20 
+alumnos, ambos cursos impartidos por el Dr. Asdrúbal López Chau en la Universidad Autónoma 
+del Estado de México, Campus Zumpango de Ocampo, Estado de México. 
+Para ello el Dr. Asdrúbal utilizó la plataforma para crear las evaluaciones que se iban a 
+utilizar para los casos de estudio. Se crearon dos evaluaciones una utilizada en la materia de 
+“Programación Estructurada” configurada para ser presentada sólo una vez y otra evaluación para la 
+materia de “Programación” pero configurada para ser realizada dos veces y de esa manera probar la 
+respuesta del sistema.  
+ 
+Figura 4.77 El Dr. Asdrúbal creando las evaluaciones utilizando el sistema. 
+ 
+            
+                                     
+ 
+ 
+ 
+Las evaluaciones fueron presentadas en el laboratorio de computación para ambos grupos en 
+horario de clase, utilizando la computadora asignada para cada discente, cabe destacar que este 
+proyecto está construido bajo HTML, CSS y JavaScript por lo que aunque hemos visto la ejecución 
+en aplicación Android también es posible utilizarlo bajo un navegador de Internet común, esto se 
+decidió así dado que aún no se contaba con la aplicación registrada en la Google Play Store y 
+tampoco se contaba con soporte de señal inalámbrica, por lo que se prefirió ejecutarla en 
+computadoras para mayor facilidad. 
+Otro punto importante a resaltar es que tanto el usuario profesor como los 43 alumnos 
+utilizaron el sistema de la manera que se ha explicado anteriormente. Todos se registraron de 
+manera personal, el profesor creó un curso, asigno discentes, creó preguntas y creó evaluaciones. 
+Por otro lado los 43 usuarios de igual forma se registraron, editaron su información, presentaron las 
+evaluaciones, verificaron sus respuestas por medio de la retroalimentación y consultaron las 
+gráficas de su desempeño. Lo cual ha sido lo que se ha venido presentando durante todo el capítulo 
+cuatro. 
+De esta manera los datos que se van a presentar corresponden a la información obtenida de dichas 
+evaluaciones respondidas por los discentes de dicho instituto. A continuación la figura 4.78 muestra 
+el proceso de obtención de datos antes descrito. 
+  
+ 
+Figura 4.78 Dos grupos distintos resolviendo distintas evaluaciones. 
+            
+                                     
+ 
+ 
+ 
+4.6.1. Consultando la opción de gráficos. 
+La opción de gráficos corresponde a la posibilidad de que el usuario profesor vea de manera 
+gráfica el desempeño de sus discentes. Para acceder a esta opción solamente es necesario que el 
+usuario seleccione la opción de “Gráficos” en la pantalla principal de la gestión de usuario, 
+localizada como segunda opción en el menú. Dentro de esta sección se encontraran nuevamente dos 
+opciones similares a las que aparecen en la sección de gráficos del alumno. Una de ellas es la de 
+“General” nuevamente esta opción permite visualizar el promedio general pero todos los alumnos 
+agrupados por cursos y obteniendo el promedio para cada curso. Y la otra opción es “Por Materia” 
+en esta opción existe una lista desplegable para mostrar todos los cursos que le pertenecen al 
+usuario profesor y consultar de manera individual su información. A continuación se irán 
+presentando imágenes que representan todo lo descrito en este párrafo. 
+ 
+Figura 4.79 Opciones disponibles de visualización de gráficos. 
+            
+                                     
+ 
+ 
+ 
+Para mostrar la visualización de datos se seleccionará la primera opción la cual es 
+“General”. Esta opción como se explicó anteriormente muestra de manera gráfica el promedio por 
+curso de las materias que tenga a su cargo el profesor. Cabe mencionar que para obtener los datos se 
+consultan las calificaciones de todos los alumnos inscritos en cada curso para de forma obtener el 
+promedio que se muestra en pantalla. La sección de “Descripciones” muestra la información 
+referente a cada número graficado en la tabla, tal como nombre de la materia y promedio general 
+del curso. 
+         
+Figura 4.80 Visualización de la opción “General”. 
+Siguiendo con la otra opción disponible de “Por Materia” se seleccionará primero la materia 
+de “Programación Estructurada” en el menú de “Gráficos” dado que fue la primera evaluación en 
+realizarse a los discentes de dicho curso. Al seleccionar una materia se desplegará una nueva 
+ventana que mostrará todas las evaluaciones ligadas a dicho curso y de esta manera el usuario 
+            
+                                     
+ 
+ 
+ 
+Profesor seleccione el número de intento que desee visualizar gráficamente. En las siguientes 
+figuras se muestra la información correspondiente a dicho proceso. 
+ 
+Figura 4.81 Visualización de evaluaciones pertenecientes al materia de Programación Estructurada. 
+ Después de seleccionar la evaluación correspondiente se desplegará la información de las 
+calificaciones de todos los alumnos inscritos en dicho curso que hayan resuelto la evaluación 
+seleccionada. Para ello en las siguientes figuras se visualiza que la gráfica cuenta con 23 registros 
+que corresponden a los alumnos, la gráfica coloca los puntos de acuerdo a la calificación obtenida 
+por cada uno de ellos. Los datos que aparecen en la descripción comprenden al número de 
+referencia del alumno, su nombre ordenado por apellido paterno y la calificación obtenida. En las 
+siguientes figuras se muestra dicho proceso. 
+ 
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.82 Visualización de los 23 registros en el gráfico.  
+ 
+Figura 4.83 Descripción de la información graficada.  
+            
+                                     
+ 
+ 
+ 
+ 
+Figura 4.84 Continuación de la información graficada y el promedio general del curso.  
+Ahora se mostrarán los datos del segundo grupo perteneciente al curso de “Programación”, 
+para este grupo de aplicó una evaluación dos veces, por lo que las imágenes que se muestren serán 
+del primer intento seguido del segundo intento, esto para comparar resultados entre cada 
+evaluación. 
+ 
+Figura 4.85 Visualización de evaluación Condiciones, oportunidad 1 y 2.  
+            
+                                     
+ 
+ 
+ 
+     
+Figura 4.86 Comparación entre gráficos del primer intento contra el segundo.  
+    
+Figura 4.87 Visualización de resultados entre el primer intento y el segundo.  
+            
+                                     
+ 
+ 
+ 
+     
+Figura 4.88 Visualización de resultados entre el primer intento y el segundo junto con el promedio general para cada 
+evaluación.  
+ Como se logró apreciar en la comparación de los promedios, se obtiene una mejora en el 
+segundo intento. Algunos discentes mejoraron su calificación, pero otros disminuyeron. Por lo que 
+el realizar una segunda oportunidad de examen permite a unos discentes mejorar su calificación 
+obtenida del primer intento, pero también existe el riesgo de disminuir su calificación. 
+ 
+ 
+ 
+ 
+ 
+ 
+            
+                                     
+ 
+ 
+ 
+ 
+            
+                                     
+ 
